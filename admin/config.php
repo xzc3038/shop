@@ -1,18 +1,18 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://www.upload.com/admin/');
-define('HTTP_CATALOG', 'http://www.upload.com/');
+define('HTTP_SERVER', 'http://www.shop.com/admin/');
+define('HTTP_CATALOG', 'http://www.shop.com/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://www.upload.com/admin/');
-define('HTTPS_CATALOG', 'http://www.upload.com/');
+define('HTTPS_SERVER', 'http://www.shop.com/admin/');
+define('HTTPS_CATALOG', 'http://www.shop.com/');
 
 // DIR
-define('DIR_APPLICATION', 'D:/work/upload/admin/');
-define('DIR_SYSTEM', 'D:/work/upload/system/');
-define('DIR_IMAGE', 'D:/work/upload/image/');
+define('DIR_APPLICATION', 'D:/work/shop/admin/');
+define('DIR_SYSTEM', 'D:/work/shop/system/');
+define('DIR_IMAGE', 'D:/work/shop/image/');
 define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
-define('DIR_CATALOG', 'D:/work/upload/catalog/');
+define('DIR_CATALOG', 'D:/work/shop/catalog/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
