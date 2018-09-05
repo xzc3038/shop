@@ -1,57 +1,139 @@
 {{ header }}
-<div id="account-account" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  {% if success %}
-  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
-  {% endif %}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h3>{{ text_my_account }}</h3>
-      <ul class="list-unstyled">
-        <li><a href="{{ edit }}">{{ text_edit }}</a></li>
-        <li><a href="{{ password }}">{{ text_password }}</a></li>
-        <li><a href="{{ address }}">{{ text_address }}</a></li>
-        <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-      </ul>
-      {% if credit_cards %}
-      <h3>{{ text_credit_card }}</h3>
-      <ul class="list-unstyled">
-        {% for credit_card in credit_cards %}
-        <li><a href="{{ credit_card.href }}">{{ credit_card.name }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      <h3>{{ text_my_orders }}</h3>
-      <ul class="list-unstyled">
-        <li><a href="{{ order }}">{{ text_order }}</a></li>
-        <li><a href="{{ download }}">{{ text_download }}</a></li>
-        {% if reward %}
-        <li><a href="{{ reward }}">{{ text_reward }}</a></li>
-        {% endif %}
-        <li><a href="{{ return }}">{{ text_return }}</a></li>
-        <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-      </ul>
-      <h3>{{ text_my_affiliate }}</h3>
-      <ul class="list-unstyled">
-        {% if not tracking %}
-        <li><a href="{{ affiliate }}">{{ text_affiliate_add }}</a></li>
-        {% else %}
-        <li><a href="{{ affiliate }}">{{ text_affiliate_edit }}</a></li>
-        <li><a href="{{ tracking }}">{{ text_tracking }}</a></li>
-        {% endif %}
-      </ul>
-      <h3>{{ text_my_newsletter }}</h3>
-      <ul class="list-unstyled">
-        <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
-      </ul>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+<div class="she-my-wrap container">
+  <ol class="position she-breadcrumb">
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <span class="selected"> My ACCOUNT</span>
+    </li>
+  </ol>
+  <div class="row">
+    {{ column_left }}
+    <div class="she-center col-sm-9 col-xs-12 peracc">
+      <h3 class="she-tl-h3">My ACCOUNT</h3>
+      <div class="list-wrap">
+        <ul>
+          <li class="list-item">
+            <div class=" col-xs-6 peracc-left">
+              <div class="con-left">
+                <div class="con-left-h">
+                  <h4>Hello, <span>16958398</span></h4>
+                </div>
+                <div class="con-left-p">
+                  <p style="margin: 0px;">                                                                                                                                                                    <span>
+                       You have <strong>100</strong> SheIn Points now, which can be used in your next purchase.
+                    </span>
+                  </p><p style="margin: 0px;">Want to be a <strong style="color: rgb(0, 0, 0);">VIP</strong>? <a style="color: rgb(0, 0, 0); text-decoration: underline;" href="https://www.shein.com/index.php?model=member_article&amp;action=shein_class">Join new SheIn Membership</a> to get <strong> FREE coupons</strong> !</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 peracc-right">
+              <div class="con-right">
+                <fieldset>
+                  <legend style="padding-left: 1px; text-align: center;">
+                    <p style="left: 208px;"><i class="iconfont notice-icon" style="margin-right: 10px; font-size: 17px;"></i>I want to spend my points!</p>
+                  </legend>
+                  <div class="con-right-p">
+                    <ol>
+                      <li class="center-fir">
+                        Use in your purchase, <a href="http://www.shein.com/?icn=erasepoints&amp;ici=www_myaccount&amp;url_from=wwwerasepointsmyaccount">SHOP NOW </a>&gt;
+                      </li>
+                      <!--  暂时废弃
+                          <li>2. Use 10 points exchanges discounts, <a href='http://www.shein.com/in-it-to-win-it.html?icn=inittowinit&ici=www_myaccount&url_from=wwwinittowinitrightlink'>right here </a>></li>
+                      -->
+                    </ol>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class=" col-xs-6 peracc-left">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=account_setting"> Account Setting</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">Update your email address and we’ll serve you better in the future with personal shopping assistance.</p>
+              </div>
+            </div>
+            <div class="col-xs-6 peracc-right">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=member_order">My Orders</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">What you bought are all here, you can check them at anytime.</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class=" col-xs-6 peracc-left">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=account&amp;action=address">My Address Book</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">Create and store shipping addresses for easy access any time you're signed in at SheIn.com.</p>
+              </div>
+            </div>
+            <div class="col-xs-6 peracc-right">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=account_setting&amp;action=password">Edit Password</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">To keep your account safe that you can edit your password, make it easy to be remembered! We recommend you do it and it won’t  take you long.</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class=" col-xs-6 peracc-left">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=lookbook&amp;action=image_upload">Style Gallery</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">Upload and share your looks with millions of SheIners.</p>
+              </div>
+            </div>
+            <div class="col-xs-6 peracc-right">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=free_trial&amp;action=report_list_upload">Free Trial Report</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">Upload your free trial expericence.</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class=" col-xs-6 peracc-left">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=wishlist">My Wishlist</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">Keep tracking of what you want.</p>
+              </div>
+            </div>
+            <div class="col-xs-6 peracc-right">
+              <div class="title">
+                <h5 class="item-title"><a href="https://www.shein.com/index.php?model=member_point">Bonus Point Program</a></h5>
+              </div>
+              <div class="conter">
+                <p class="item-p">Share links to earn SheIn bonus points<br>
+                  <a href="http://www.shein.com/bonus-point-program-a-371.html">click here to learn more.</a>
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="con-foot">
+          <div style="text-align: center;">
+            <a class="she-btn-white j-member-accout-signout" href="https://www.shein.com/logout.php">Sign out</a>
+          </div>
+          <div class="con-foot-p">
+            <p style="margin-top: 10px;">It’s better to sign out after you finish your shopping so that you could make sure that your account safe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {{ footer }}
