@@ -3,164 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="259846e3-ed26-4194-b1b5-aa81f34d416f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/00/00aa3e5e9404540845d63e0afa251be82385f7ebf0459e8d91314341bdad512b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/01/01293945394a2f0440908c2ff78e897ace8b3c09d0fb123e2f5ba8e8589d16a8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/02/0211de38f09259553e7119b85d5a6d2118c01de73921ea39bac26a8eacc76063.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/02/024462dbca2fec4565de5817ecf9b642cb04e32bd5542d122fd4913f9ecf1b3f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/02/02fde07a8447cdb2fb52f7672ea85b9cb43b88629fa6ad7129da6f9f0b306de9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/03/03cbf84cde0c95f34462b56aedbb0ce6df7ed04ba6d0c656c2aa1c285ae96fec.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/05/05375f3aac1f9e3391b19138d27df21880753dcd65c480f671cb65ac9bf10860.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/05/055cce46f2de9a2bdb42c34de8da02aa6127501f785f597c1b74ad029f9e3663.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/06/06cb1e511472413e750121a4acaaa370b2ab5e00864d033f3e2493648f888d95.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/08/086e9fc9bc6e06ededc6f436116b8d76aa7d3053d054879e8d07b8418c55e012.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/0a/0a22dcd5c79d49f70e824f2c265a23a2a6176c364864bdff002d76bbe333126a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/0b/0b3bc160547896aec217d59f32ae9b93b3f6124f6e9e9a12a79f4bad83486e9b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/0b/0b5773a02df7a111af13220f48ce925b5da2e4f5a2dfcaac97fba6c39fed5072.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/0e/0e0c96328fc913c35cc1bafb549b4c44fecbc943932a6bc790e6c4fd33038213.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/0e/0e7b888f0e9fb06bd16523059e8e6e593f2d50086fbb87114f234180ab7899d8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/0f/0faf927af03b822a9812188710cee4ba0299b81b15d2e2c8dc1b76e351e4670c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/10/1033773784097e78982764d703e2d0a040bb6c9991c06c37a30d8fd97c244d3b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/12/120f41e3f09c881ea329be85dac9a3582af550b730994a056af802c27085992e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/13/13fe9edbe524e135960f6f76833a808b78ed23d9bf325bc68dbb369a0eee09ae.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/17/173064cab0b8f24eaa882611f31175dcaf19ad50251be56afd8f5936dc4c432b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/19/193ed932db50469085eb819c8db7eab2625d85c87857940f50df1f5c6d549895.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/19/19731453f117c87bff2dc69653b12c82e92d7107a499d0ff36ec39fe13e849f1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/19/19953798e36d146409c4cbe81bc59dd031ed16d7d2da368b9ca5ae64aa5701bd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/19/199e214014acd01639657caae2fbac58677f3e96168772f4d7b9daf0f033d54d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/1a/1a154e34cf867338db009e093db62a14106f5dff6a6573818ffda22e8dfb37f2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/1a/1ab83bd7a8bb5cff7e518d713d1992f5439ead8e7f5a16d2bc1228b14be0fd3b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/1b/1bfd7ce38d04822e2d4fff10d6a49a4d9de0ed9d541a35c97af5e0e1d1993760.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/1c/1c35e1acdbc02b2347d7e7cd04c13deecce814ada158239ae6028da527ffeebb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/1c/1c656ad887b2f84c7e7aed66329d6cf9705e2151c9a971d1a6c81fadf795c973.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/21/214f2517d92acbc5e7bc57718c3f6aa5396ae9da11f5bc9fef900acd6c817e79.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/21/21cd434c120ff520398f870e778db8a000c80780be1e88999dbdeac293333bc0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/24/2483f031696d0951768a30ff154278cff371312f5ae619f3e0daa05e17eb91db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/27/277008da371c2f455a508fa5c691766a69948e527c9484d8f943e2cd48f1d3a5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/28/285b016b54d25a1aacee52d72951dbe81b2dacc5998a9ca5d0b141248dead870.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/29/29a1c2418f4e1ef62a763da94e3505c6470f6c2c0836440b70c13e6799d0bc58.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/2a/2ab4b197c0f99dae214d6768c9708d0a279c409f30731e1ab43bd829891a6f21.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/31/318d5ca8a0f3d219d027c130afcc54bf6442c9f4aa5ba5a669b61436f712c5e9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/31/31aead1ca4982b337f496f1558aead04c9fd222cd16314e1fccb844c6ac6be0d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/34/3448739866b71a68b7890b304856aac41241047fa7cc61097695cae88e832059.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/34/34a0ea37502cd0fe2f65d9dfab18dd407533ce9b77ff40b5319f3a991a781e67.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/35/3517f0693b25ed31823c83de91d06668e7d2b874dd4d7f6114cc96b92dc9860e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/36/36022600813f3e49adcd5ff6a09a3a2595c74b31dd82b97102cc93c46dbef5a5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/36/36f05ce4258c235ce8e33be98adfc28bcc39c947443fc955d4fabea9b50da528.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/37/37a77f0ef06c0c1c713660682b4b118b6ed5e8e487237630f6e20c8d04df3853.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/38/385cfb65df7591be61c9abb3b98cba9258ec0c4797ccc87d5b74d3fd01c15e03.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/39/398430b4aae2a84dfa59ae0936f7028797634074a88388a6657bde535fe840c6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/3a/3a9713c196a741bd18ae923296e551d2ea02ad86af29d913acfc98f30464d916.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/3c/3ca54626363449ee22483fb0f4c980c5cbdb1783a68ba1c7bd95dd0a228feeee.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/3d/3d7f643f7a2e8894110d43c17c258c331ef46a7e6f3811145798709faa778404.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/3f/3fc392b5eb3c9d10f04956e5503fc25d8add253276676485bd3683a41b816ec9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/45/4501ffbec9c73858c4e06f45fda422abd1f1b4a63034c87ef10425e0dba8ccf8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/47/47b3f9138134f151836639a890d18a0082e00f7009b95fa974a2460307322571.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/48/48473c9e1d516c8550615d3bafca366ab70e91ede45101dd68e35d53b4fcdc86.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/48/486578c72e01231f0fab0441bbaa4c492aa7fb62b556e28e98016dca3c4b8c00.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/49/49fb01535d84fe6b3726c57770fb16fa4cca862d7de245dcf6e03e46f04ff7bf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/4a/4a11e2eab479cb8bdbe85c6d02eebb07408fddc426f31a6df9a66b3d7ecae9a6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/4a/4a1c49bd6af2bb47c2f2d82bc622ca8602986f97ab9482bfc79c0ce1c0498379.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/4a/4a72b45dbb01436573615c606bfbd4cf155803da5ff65f2187f1ac7c054363aa.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/4a/4afbdc9eeea8e05ed7ced1925ed81f473dd952800d831f110404defbf4391523.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/4b/4b8a85e6747323c2ac9f8b5539e16b8126dfc511313705e1fa0c0c93777679b7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/4c/4c771f60b7196a79eae5ad42558d3fb551b09a8d15da98f1fbb030d758ea72dd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/52/52bfc21b2cea00e6987ffa1cc6c8ce56ce170b44b2e755d9992a9fd787f1791d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/57/577c692556543f9ff00e7d7c0e953656ee778c588a97050a744fd0aedddc9805.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/59/5929665577e7151b107931176361c1088df005fbea84ee1e9ddced2f1aff7f5c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/59/5969fee0dd486dd9af6d6d5f8eabaae3c9e22cfb8bebb952464293e06ecd752e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/59/59833b661b63da4c96d1e3f23f1a04a099d503df37e6a7b24174f52ffeceb634.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/60/604846e6318ee1874cf86a3606906dbe24908f4b06adc52bb8dd105912a0d9c6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/60/60b0e865f5c5d686b8094cc8689bcb2a07ab82902c74507c4f56888ea74e8fee.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/64/64ea5fbea8d357a78f69b6ced5142fcdb69c59be995d45fc88a103c69d64af54.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/68/68ef6e360571c1bed3dd660cc397282a8adba9d0b27928a0af23e9ee8fd5b770.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/6a/6a62c39a394372b020977fb4cd11f8e555e6054e9bb1e40e0cdda8408ade6eae.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/6e/6e1981516c21c5ccd73c688bcfa00d58fdaa6e513f99d0daa23b83fbb33172a6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/6f/6f08d1bd23943ff7af9f1c5b3163f5fb2df61659fdd39fd1351d5a347fe89a09.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/6f/6f476a2147eb477ea326ca7402e1ffd5e91bb443e4c4fa0138b9d3764ba16bca.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/70/70e6fe9e3b9a262f94380521f154df16609bbda6d2b5d7812d392ce22c1e0d8a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/72/720c5e975c307e86f131c03815ecb3e8eb059b3f6b25940a4ef084da6f2369ec.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/74/74bdaa8609f0741b70b2e04108df34b700a2e4d45c804a839d85b2699a03d083.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/75/75dd99caa96eb34cbb1662ddf49b09a001ec954d632e602c86839cee66b05c7d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/76/76793f0188ed0ac17061944e91822cae7ec5363bb4e4273018b5f770f291d2ab.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/78/78d5cf34575cde3b4fe295441e0ad78299fef5c9eab4cacb2e2c13ca344d9fad.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/79/7968f9b970355dbe40c75635948cde13d5efe66e6f355bc6327a977270373813.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/7b/7bd3ccd5b73a29dca0547e94edff3d2bf01cd85d50dd8cba72db007da9b3a170.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/7d/7dabc62fec0f00c0f88189be67a0d7c291c5c476b0ee30b7a4ffccfe376aa26e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/80/80a1cfd18f3ee87bc2b31050d6f3d510234582108f9f366a76d2c01d53ff3926.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/85/85c4b36dd26cc8638a99007da29b2ccc30bfa4f04d7880cd9586b7aa459c59e0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/88/88386ef516a4860dad204371cdf994cd4fc6d8a920ad2ae8430966381fbc28bb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/8e/8ea00acbf2c829da7b2f22c1f319c1675f43e82681a0ea5f5d5e7b8929a354cf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/8e/8ec619d75fda471ea36cba378451d036a032d946abce9674c0560d14d4950c3b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/90/904395ff7ab12fc20be3ef5c7d3af8cc95e74b8f3ceb7651c359abfb5f773eea.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/92/92b27ad2502310b54e802fd61931a3a3e8b849ce31ae107f0f77c3b99d13fdda.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/93/937738010d873988d49b0bd72459cef45eb550a2f4ef46acfad720f6c9f5c64d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/94/94c335b200da6eddf68f033a7b3241837ededc303141d04fa3ace1ec2a3f9a7a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/96/96153fc5bdb8e09837f7818303a2730663580e327d5d8e9227f9313011e63034.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/97/97f12bef93e770a954022ab97f4377136adcb1fd3d95326812b1b2e46f0230c8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/97/97f904566168d9dbc45c6fc4c892302878f07ecc94ed6674fe82de7203b5de0d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/98/987ea02dacd7a3a340aaf4c6b78f8fcd505415f5bde30a8793131d95c620657b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/9a/9ae4846e8ccface5d1915a021321812a043ce68f10c87db339f7945e5053b5d7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/9d/9db2f3b1650486557cf3a722d826397f89c9b608f73658220e5932dd51e78dbf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/9e/9e2b88e23f894d58ff227e196601115511985ffd037be0ef986c30c9117193c5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/a2/a202a2ff90d9aeb1b2df5af6bd8478a35e5607ad37ba4273377462fc77f1f6c9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/aa/aa8a69506ab500fcc08e8c1b273e7d3b537d4b72d926bf5d9d08fb84f96550b6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/ac/ac037a0d3868938d81e4965c4a2ef8a8c8f36a99ca743facfce4630388cdf53e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/af/af07cad206a8626574533fe321fcc3028ee3f0640d1d507f187b9c438e3156c0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/af/afb4e2f7c8a83e3e44d5b98f8f78805b19462d01cc2becb1146c298a672f573d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b1/b1e323646673df6c2d6cd4246365288d57518da15eaa8aa2d518fb9c8df77f7d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b2/b2f26a30cd3bc3d68cae7067abbb0dc6f6440a72c8184772c0de00b44461f1db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b4/b43b71ddd1bdc881781a81261d75db0135087865ca23c2fdc85b0d8ea4b9d514.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b7/b7d6b273765f9bc8064f1ea98c35c052c44eda8c163b5d51b4672d4af43696c0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b8/b862bfcaa1d772414d7317ac63b2cf5b4517076b64aa05a485299512cc18f3a4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b8/b8f07beecfed04cc70ee7f4ae4b0fe79ef27d7c32870ed8c38098652031ce0c7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/b9/b9216f08f060deba28be21feb1d05d21381331e2418c460c1dd56786bc72d1c5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/bc/bc1dfd7e8a637c31b96303f1d18263d44c780bbb35c43c0ae38cf32547a53d20.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/bd/bd8ab01517f04d1d354fd0dc8c661c10782078ad390efff8726f48df0bcb89a3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c0/c0a257725e5f1336223e7ffc4097002ab6de4476c1a11d1cf3724942055a4884.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c0/c0a99935a0b891d9c4de693f94505b70a3b51d7739fb6835bcdae5ded013d6ef.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c0/c0fb997d3fefff1aa5c018b3794b098a55851e441ae5bb1beb19a58a8e140588.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c1/c144fa603cad20c67f348e5d5b4e80cf49c0912705ecea4efc7e27dbf0efacd1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c3/c30f2a63f1189d0b224978ee15faae29be74b4de6b4c98a1188c268c1a1fd703.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c3/c37a6601bae088e8f0082d513daa70f6f172a09e1ba7f0ee9a3524eca8591d94.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c3/c3d98f326402893cc3426ebb67b1127050797cbe18698bdb89e55ae658eaccfd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c7/c70b408d37353c192756892efddc6d83f6d227fb57ace231a23d7b4e50b86ad9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c9/c98d0f962664a4b189ca2380f037e376f1f9fa9fc4230980dca9dc8a4c95b755.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c9/c9df1892996ce4ca2a16dc3c802d5b5ef8abc07a0d33ee862a489dda91f2eda2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1535968253" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.manufacturer.0.1535965589" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.product.latest.1.0.1.10.1535965588" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1535968265" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cb/cb4f1e442bd9a13936d67ec5a4b06d5c9e0cf4520a463dc9bd623686d05971f5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/ce/ce4e404ae0dae1dbc5f4d1bcc9963c801792a7bd5d3c6c2fd6905d8f59de73d3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/ce/ce979fc09fb0a783a7fcdf4e70b1e992365d06a9428cd062864a32b309e48bc8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cf/cfced4f82377c80e213e2737e12e3818184d5be8d73fdc86ca85173d4362ec79.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d1/d1272b6d2b30fc22d65f9edde0786910c638f130ada5e44ff8728f4c538c20bf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d3/d3c0084ef150f972c8a9d5353f7452835ca53b413f0f699dbf7d695dbfb11b6f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d3/d3c84dfca3c1651f5dc4421ecb126629bc52e12fbc32c8cfa49388485f49ed19.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d7/d73df44681c2652dd455aa67b3d04a8976815ddbf4e29795adb879b36eb129a8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d7/d7996f4dcea60ce47cb0996bab27d1e059a7fa493570928e680c589b1c00e61a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d8/d82b5bf6cac018089f8e018a5987ad920dbb4f27fbb08908f016d73792791237.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/d9/d9bf121e8c0d3bcc036dc2cff2f24df8aebbeae51f13d3a654cf97f2b4abd062.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/da/da409d4737a9acd80ec9275209b3c8257eb877c250c65bdf36ad0e2b29400488.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/de/defd93ab569902c223bc3c7b255c5eedfd62e19256db0bd73c7a22d7b3fead4f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/df/dfb35268335dee264b451582a8389ec2bdca1ad3858989390709cf33c693a96a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/e1/e16cd3ef0c8c1eb975ea1805e5dd6d31eb06b2f2537aea4b88d68d2dd70e8ac8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/e3/e304197c66c3d9810cbef8a88381363ee6cd1f5d981a9ed1ffc76b659e10bfb1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/e6/e6cfb508ab5b99fc8d7a89bba26be9c6f205e869fb362f7a94030f9aa99a3edb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/e6/e6e767126154383af98ed600fb35b28413b6bbdf1e2d95abce3f88097293c7d5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/ea/eab1ceb4630b90c049468c7dd6e13146f76862d384b39fb4ef40d66491061025.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/ea/eadd1c63fec0755eb25e46291d6a026bd2706cd0ed202f5ce510888aa19cb48f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/eb/eb6e24808b0ac4a1d824e2056280a01a27b61d6314692b15272ce9a9e4f8f674.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/f1/f1a11bf5803696c87a1a2b1ced8ca1882fc460a83e552cacb4393348c3005a4a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/f1/f1d7d122a2d6e1de39b5c4a7b45816b6974f190d19a245dece4b5ccfddbb5df8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/f6/f6519b82f72c6be2be6d884a5d4ca9951b567eaf9142fea3d11f08def30792d5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/f7/f723c3008ea320a69590f528f953ec46750ac3dbea556e851f9fd3d432a86bed.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/fe/fe16afc3318d69c69884dea5e21391fa8ad9fded9ba6b1248f151cda7402114b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/新建文本文档.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -171,52 +13,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/home.twig">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
+            <state relative-caret-position="228">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="footer.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+            <state relative-caret-position="228">
+              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig">
+      <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/account/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="225">
+              <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="login.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/login.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="120" column="12" lean-forward="true" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/index.css">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/account/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="132" column="46" selection-start-line="132" selection-start-column="46" selection-end-line="132" selection-end-column="46" />
+            <state relative-caret-position="-798">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -250,6 +87,8 @@
         <option value="$PROJECT_DIR$/catalog/view/theme/journal2/css/index.css" />
         <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig" />
         <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/login.twig" />
       </list>
     </option>
   </component>
@@ -262,7 +101,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-6" />
     <option name="width" value="1936" />
     <option name="height" value="1047" />
@@ -273,7 +112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,13 +134,6 @@
               <item name="shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -318,7 +149,7 @@
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shop" type="b2602c69:ProjectViewProjectNode" />
@@ -326,37 +157,7 @@
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -365,58 +166,15 @@
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="journal2" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,14 +213,17 @@
       <workItem from="1535956619054" duration="1706000" />
       <workItem from="1535958757691" duration="12835000" />
       <workItem from="1536023519703" duration="8112000" />
+      <workItem from="1536033939378" duration="4095000" />
+      <workItem from="1536110969863" duration="2161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22653000" />
+    <option name="totallyTimeSpent" value="28909000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -470,20 +231,20 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,6 +254,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -514,27 +285,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/search.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/home.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/search.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/home.twig" />
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -542,13 +295,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opencart.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="15050" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/opencart.sql" />
     <entry file="file://$PROJECT_DIR$/admin/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -566,37 +313,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opencart.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="15050" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/affiliate.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/login.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/content_top.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/account/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/opencart.sql" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/affiliate.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/login.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/content_top.twig" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -604,24 +324,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess.txt" />
     <entry file="file://$PROJECT_DIR$/storage/logs/error.log" />
     <entry file="file://$PROJECT_DIR$/storage/logs/openbay.log" />
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/column_left.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/cart.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/column_left.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/cart.twig" />
     <entry file="file://$PROJECT_DIR$/admin/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -632,30 +342,10 @@
     <entry file="file://$USER_HOME$/Desktop/upload/admin/config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/address_form.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="417" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/account.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/version.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/search.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/address_form.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/account.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/version.php" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/search.twig" />
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -690,49 +380,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/home.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/header.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/icons/fonts/font_92762_0ztrv6q6q0ejyvi.eot">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/icons/fonts/font_92762_0ztrv6q6q0ejyvi.woff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="132" column="46" selection-start-line="132" selection-start-column="46" selection-end-line="132" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/home.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/header.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/icons/fonts/font_92762_0ztrv6q6q0ejyvi.eot" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/icons/fonts/font_92762_0ztrv6q6q0ejyvi.woff" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/css/index.css" />
     <entry file="file://$PROJECT_DIR$/system/startup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -740,20 +393,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig" />
+    <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        <state relative-caret-position="228">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig">
+    <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+        <state relative-caret-position="323">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/account/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/login.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="120" column="12" lean-forward="true" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
         </state>
       </provider>
     </entry>
