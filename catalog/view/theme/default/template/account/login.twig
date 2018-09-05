@@ -1,47 +1,121 @@
 {{ header }}
-<div id="account-login" style="background-image:url(catalog/view/theme/default/image/login-bg.png)">
-  <div class="container">
-    {{ include(helper.template('_partial/breadcrumb')) }}
-    <div class="row">
-      <div id="content" class="col-sm-12">{{ content_top }}
-        {% if false %}
-        <div class="col-sm-6">
-          <div class="well">
-            <h2>{{ text_new_customer }}</h2>
-            <p><strong>{{ text_register }}</strong></p>
-            <p>{{ text_register_account }}</p>
-            <a href="{{ register }}" class="btn btn-primary">{{ button_continue }}</a></div>
+<div class="container" style="margin-top: 64px;">
+  <div class="row main-login-bg">
+    <!--  -->
+    <div class="col-sm-2 login-con"></div>
+    <div class="col-sm-3 login-con">
+      <div class="sign-in">
+        <div class="sign-in-title">
+          <h2>Sign In</h2>
         </div>
-        {% endif %}
-        <div class="well login-wrapper">
-          <h2>{{ text_returning_customer }}</h2>
-          {% if success %}
-          <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
-          {% endif %}
-          {% if error_warning %}
-          <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
-          {% endif %}
-          <form action="{{ action }}" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label class="control-label" for="input-email">{{ entry_email }}</label>
-              <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="input-password">{{ entry_password }}</label>
-              <input type="password" name="password" value="{{ password }}" placeholder="{{ entry_password }}" id="input-password" class="form-control" />
-            </div>
-            <div class="form-group register-box">
-              <a class="pull-left" href="{{ forgotten }}">{{ text_forgotten }}</a>
-              <a class="pull-right" href="{{ register }}">{{ text_new_customer }}</a>
-            </div>
-            <input type="submit" value="{{ button_login }}" class="btn btn-primary" />
-            {% if redirect %}
-            <input type="hidden" name="redirect" value="{{ redirect }}" />
-            {% endif %}
-          </form>
+        <div class="sign-in-detail">
+          <p class="login-prompt" id="login_error"></p>
+          <div class="list-input">
+            <form name="theForm" method="post" onsubmit="return check_form();" class="j-login-form" action="file:///E:/%E7%AB%99%E7%82%B9/login/index.html">
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">Email Address:</span>
+                </div>
+                <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
+                <input class="inputMailList" name="email" value="" id="returning_email" type="text" />
+                <p class="login-title-p"> <font id="login_address_tip"></font> </p>
+              </div>
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">Password:</span>
+                </div>
+                <input name="password" value="" id="returning_password" type="password" />
+                <p class="login-title-p"> <font id="login_password_tip"></font> </p>
+              </div>
+              <div class="sign-in-btn sign-in-lt">
+                <input name="return" type="hidden" />
+                <input name="return_log" id="return_log" value="http%3A%2F%2Fwww.shein.com%2F" type="hidden" />
+                <div class="g-recaptcha" data-sitekey="6LcoBR4UAAAAAIi5xU3U_q37C3nFaSckeMaT-P5j" style="display: none;"></div>
+                <p class="login-recaptcha-prompt" id="recaptcha_error"></p>
+                <button class="she-btn-black she-btn-l j-signin-loading" disabled="" style="display: none;">
+                  <div class="la-ball-pulse la-ball-pulse-white">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div> </button>
+                <input class="submit-button she-btn-black she-btn-l j-signin-submit" name="submit" value="Sign In" type="submit" />
+                <p> <a class="forget-sign-in" href="http://www.shein.com/forget_password.php">Forgot your password?</a> </p>
+              </div>
+              <div class="sign-in-con-divide">
+                <span>Or</span>
+              </div>
+              <div class="sign-in-facebook">
+                <div class="facebook-lodin">
+                  <a class="she-btn-black she-btn-l" href="javascript:fbLoginBegin('login');"><i class="iconfont facebook-icon"></i>Sign in With Facebook</a>
+                </div>
+                <div style="margin-top: 16px;">
+                  <span class="facebook_title"> <strong>US$3 off</strong> for the first order <em>Review&amp;earn extra <strong style="display: none;">5</strong> <strong>100</strong> points</em> </span>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        {{ content_bottom }}</div>
+        <br class="clear" />
       </div>
+    </div>
+    <div class="col-sm-1 sign-in-rightborder login-con"></div>
+    <div class="col-sm-1 login-con"></div>
+    <div class="col-sm-3 login-con">
+      <div class="new-toshein">
+        <div class="sign-in-title">
+          <h2>New to SheIn</h2>
+        </div>
+        <div class="sign-in-detail">
+          <div class="list-input">
+            <form action="https://www.shein.com/index.php?model=login_register&amp;action=register" id="check-register" name="theForm_1" method="post">
+              <p id="register_forbiden" class="register_more_title" style="display: none; text-align: left;">We're so sorry to inform you that your IP is limited to register more . For further help, please <a onclick="showPreRobot()" style="color: rgb(0, 0, 255);" href="javascript:vold(0)">contact us</a> !</p>
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">Email Address:</span>
+                </div>
+                <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
+                <input class="inputMailList-one" name="email" value="" size="41" maxlength="96" id="email" type="text" />
+                <p class="login-title-p"> <font id="error_email">The Email has been used by others. Please specify another Email.</font> </p>
+              </div>
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">Password:</span>
+                </div>
+                <input name="password" size="21" maxlength="40" id="password" onkeyup="this.value=this.value.replace(/\s+/g,'')" type="password" />
+                <p class="login-title-p"> <font id="error_password"></font> </p>
+              </div>
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">Confirm Password:</span>
+                </div>
+                <input name="password1" size="21" maxlength="40" id="password1" onkeyup="this.value=this.value.replace(/\s+/g,'')" type="password" />
+                <p class="login-title-p"> <font id="error_confirm_password"></font> </p>
+              </div>
+              <div style="display: none;">
+                <div class="Agree_Provision Provision_register" style="display: none;">
+                  <p class="Agree_Provision" id="Agree_Provision"> <input name="privacy" id="privacy" checked="checked" type="checkbox" /> <label for="privacy">Subscribe SheIn fashion news mail. We do not disclose any personal data to third parties.</label> </p>
+                </div>
+              </div>
+              <div class="sign-in-btn" style="margin-top: 36px;">
+                <input name="last_email" id="last_email" value="16958398@qq.com" type="hidden" />
+                <input name="token" id="token" type="hidden" />
+                <input name="return" value="http://www.shein.com/" type="hidden" />
+                <input name="subscribe" value="subscribe" id="subscribe" type="hidden" />
+                <button class="she-btn-black she-btn-l j-register-loading" disabled="" style="display: none;">
+                  <div class="la-ball-pulse la-ball-pulse-white">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div> </button>
+                <input id="submitBtn" onclick="check_form_1();" class="submit-button she-btn-black she-btn-l j-register-submit" value="Register" type="button" />
+                <p class="register_why" style="text-align: center;"> <a class="why-register" href="http://www.shein.com/Why-Register-a-369.html" target="_top">Why Register?</a> ( Get <strong>US$3 off</strong> coupon and <a class="why-register why-register-more" href="http://www.shein.com/Why-Register-a-369.html" target="_top"><strong>more</strong></a>) </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br class="clear" />
+    </div>
   </div>
 </div>
 {{ footer }}

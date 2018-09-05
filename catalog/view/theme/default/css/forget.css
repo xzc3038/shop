@@ -1,0 +1,57 @@
+html { font-family: sans-serif; }
+body { margin: 0px; }
+img { border: 0px none; }
+input { margin: 0px; font: inherit; color: inherit; }
+html input[type="button"] { cursor: pointer; }
+input::-moz-focus-inner { padding: 0px; border: 0px none; }
+input { line-height: normal; }
+
+* { box-sizing: border-box; }
+*::after, *::before { box-sizing: border-box; }
+html { font-size: 10px; }
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 1.42857; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
+input { font-family: inherit; font-size: inherit; line-height: inherit; }
+img { vertical-align: middle; }
+h2 { font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+h2 { margin-top: 20px; margin-bottom: 10px; }
+h2 { font-size: 30px; }
+p { margin: 0px 0px 10px; }
+.container { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
+.container::after, .container::before { display: table; content: " "; }
+.container::after { clear: both; }
+
+
+html, body { margin: 0px; padding: 0px; }
+* { margin: 0px; padding: 0px; }
+img { border: medium none; }
+p, h2, form, img, div, p { margin: 0px; padding: 0px; border: 0px none; list-style: outside none none; }
+html { -moz-text-size-adjust: none; }
+html { color: rgb(0, 0, 0); }
+body, div, h2, form, input, p { margin: 0px; padding: 0px; }
+
+
+.she-btn { text-transform: uppercase; }
+img { border: medium none; }
+.container { padding-right: 10px; padding-left: 10px; margin-right: auto; margin-left: auto; }
+* { margin: 0px; padding: 0px; }
+body, html { font-family: Arial,Helvetica,sans-serif !important; font-size: 12px; color: rgb(34, 34, 34); }
+input { font-family: Arial,Helvetica,sans-serif; }
+.she-btn { display: inline-block; }
+.she-btn { box-sizing: border-box; min-width: 184px; height: 44px; margin-bottom: 0px; border: 1px solid rgb(34, 34, 34); background-color: rgb(34, 34, 34); background-image: none; cursor: pointer; text-align: center; vertical-align: middle; font-size: 16px; font-weight: 700; color: rgb(255, 255, 255); white-space: nowrap; }
+.she-btn-sm-prim:hover, .she-btn:hover { background-color: rgb(92, 92, 92); text-decoration: none; }
+.she-btn:focus { outline: 0px none; }
+.she-btn-sm-prim { min-width: 150px; height: 36px; font-size: 14px; }
+.she-btn-sm-prim { text-transform: uppercase; }
+.forget-password { margin-top: 60px; font-family: Arial,Helvetica,sans-serif; }
+.forget-password .forget-password-con { padding: 0px 10%; text-align: center; }
+.forget-password .forget-password-con h2 { font-size: 30px; font-weight: 700; color: rgb(34, 34, 34); padding-bottom: 15px; }
+.forget-password .forget-password-con p { font-size: 14px; color: rgb(102, 102, 102); padding-bottom: 25px; }
+.forget-password .forget-input-bg { text-align: center; width: 100%; padding: 20px; }
+.forget-password .forget-input-bg .forget-email-input { height: 36px; width: 320px; border: 1px solid rgb(204, 204, 204); }
+.forget-password .forget-input-bg .forget-email-input:focus { box-shadow: none; border-color: rgb(51, 51, 51); }
+.forget-password .forget_verify_success { text-align: left !important; }
+.forget_submit { background-color: rgb(0, 0, 0); border: medium none; color: rgb(255, 255, 255); cursor: pointer; min-width: 100px; height: 36px; padding: 0px 10px; text-transform: uppercase; }
+.forget_waiting { display: none; vertical-align: middle; }
+.forget_error_title, .forget_success_title { color: rgb(255, 0, 0); line-height: 20px; margin-top: 10px; font-size: 14px; }
+.forget_success_title { color: rgb(0, 0, 0); }
+
