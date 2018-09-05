@@ -19,10 +19,14 @@ $_['text_register_account']        = '注册一个账户以便您更快捷地购
 $_['text_returning_customer']      = '会员登录';
 $_['text_i_am_returning_customer'] = '如果您已经是本站会员，请直接登录。';
 $_['text_forgotten']               = '忘记密码？';
+$_['text_sign']                    = '登录';
 
 // Entry
-$_['entry_email']                  = '邮箱地址/手机号码';
+$_['entry_fullname']               = '姓名';
+$_['entry_phone']                  = '手机号';
 $_['entry_password']               = '密码';
+$_['entry_confirm']                = '确认密码';
+$_['entry_email']                  = '电子邮箱';
 
 // Error
 $_['error_login']                  = '警告：邮箱地址/电话号码或密码不匹配。';

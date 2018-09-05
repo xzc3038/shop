@@ -6,7 +6,7 @@
     <div class="col-sm-3 login-con">
       <div class="sign-in">
         <div class="sign-in-title">
-          <h2>Sign In</h2>
+          <h2>{{ text_sign }}</h2>
         </div>
         <div class="sign-in-detail">
           <p class="login-prompt" id="login_error"></p>
@@ -14,7 +14,7 @@
             <form name="theForm" method="post" class="j-login-form" action="">
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">Email Address:</span>
+                  <span class="undone">{{ entry_email }}:</span>
                 </div>
                 <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
                 <input class="inputMailList" name="email" value="" id="returning_email" type="text" />
@@ -22,7 +22,7 @@
               </div>
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">Password:</span>
+                  <span class="undone">{{ entry_password }}:</span>
                 </div>
                 <input name="password" value="" id="returning_password" type="password" />
                 <p class="login-title-p"> <font id="login_password_tip"></font> </p>
@@ -38,20 +38,21 @@
                     <div></div>
                     <div></div>
                   </div> </button>
-                <input class="submit-button she-btn-black she-btn-l j-signin-submit" name="submit" value="Sign In" type="submit" />
-                <p> <a class="forget-sign-in" href="http://www.shein.com/forget_password.php">Forgot your password?</a> </p>
+                <input class="submit-button she-btn-black she-btn-l j-signin-submit" name="submit" value="{{ text_sign }}" type="submit" />
+                <p> <a class="forget-sign-in" href="#">{{ text_forgotten }}</a> </p>
               </div>
-              <div class="sign-in-con-divide">
-                <span>Or</span>
-              </div>
-              <div class="sign-in-facebook">
-                <div class="facebook-lodin">
-                  <a class="she-btn-black she-btn-l" href="javascript:fbLoginBegin('login');"><i class="iconfont facebook-icon"></i>Sign in With Facebook</a>
-                </div>
-                <div style="margin-top: 16px;">
-                  <span class="facebook_title"> <strong>US$3 off</strong> for the first order <em>Review&amp;earn extra <strong style="display: none;">5</strong> <strong>100</strong> points</em> </span>
-                </div>
-              </div>
+              {#<div class="sign-in-con-divide">#}
+                {#<span>Or</span>#}
+              {#</div>#}
+              {#<div class="sign-in-facebook">#}
+                {#<div class="facebook-lodin">#}
+                  {#<a class="she-btn-black she-btn-l" href="javascript:fbLoginBegin('login');"><i class="iconfont facebook-icon"></i>Sign in With Facebook</a>#}
+
+                {#</div>#}
+                {#<div style="margin-top: 16px;">#}
+                  {#<span class="facebook_title"> <strong>US$3 off</strong> for the first order <em>Review&amp;earn extra <strong style="display: none;">5</strong> <strong>100</strong> points</em> </span>#}
+                {#</div>#}
+              {#</div>#}
             </form>
           </div>
         </div>
@@ -63,52 +64,68 @@
     <div class="col-sm-3 login-con">
       <div class="new-toshein">
         <div class="sign-in-title">
-          <h2>New to SheIn</h2>
+          <h2>{{ text_new_customer }}</h2>
         </div>
         <div class="sign-in-detail">
           <div class="list-input">
-            <form action="https://www.shein.com/index.php?model=login_register&amp;action=register" id="check-register" name="theForm_1" method="post">
+            <form action="{{ register }}" id="check-register" name="theForm_1" method="post">
               <p id="register_forbiden" class="register_more_title" style="display: none; text-align: left;">We're so sorry to inform you that your IP is limited to register more . For further help, please <a onclick="showPreRobot()" style="color: rgb(0, 0, 255);" href="javascript:vold(0)">contact us</a> !</p>
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">Email Address:</span>
+                  <span class="undone">{{ entry_fullname }}:</span>
                 </div>
                 <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
-                <input class="inputMailList-one" name="email" value="" size="41" maxlength="96" id="email" type="text" />
-                <p class="login-title-p"> <font id="error_email">The Email has been used by others. Please specify another Email.</font> </p>
+                <input class="inputMailList-one" name="fullname" value="" size="6" maxlength="32" id="fullname" type="text" />
+                  {#<p class="login-title-p"> <font id="error_email">The Email has been used by others. Please specify another Email.</font> </p>#}
               </div>
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">Password:</span>
+                  <span class="undone">{{ entry_phone }}:</span>
+                </div>
+                <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
+                <input class="inputMailList-one" name="email" value="" size="41" maxlength="96" id="email" type="text" />
+                {#<p class="login-title-p"> <font id="error_email">The Email has been used by others. Please specify another Email.</font> </p>#}
+              </div>
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">{{ entry_email }}:</span>
+                </div>
+                <input name="email" size="21" maxlength="40" id="email"  type="email" />
+                <p class="login-title-p"> <font id="error_confirm_password"></font> </p>
+              </div>
+              <div class="list-item">
+                <div class="item-title">
+                  <span class="undone">{{ entry_password }}::</span>
                 </div>
                 <input name="password" size="21" maxlength="40" id="password" onkeyup="this.value=this.value.replace(/\s+/g,'')" type="password" />
                 <p class="login-title-p"> <font id="error_password"></font> </p>
               </div>
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">Confirm Password:</span>
+                  <span class="undone">{{ entry_confirm }}:</span>
                 </div>
                 <input name="password1" size="21" maxlength="40" id="password1" onkeyup="this.value=this.value.replace(/\s+/g,'')" type="password" />
                 <p class="login-title-p"> <font id="error_confirm_password"></font> </p>
               </div>
+
               <div style="display: none;">
                 <div class="Agree_Provision Provision_register" style="display: none;">
                   <p class="Agree_Provision" id="Agree_Provision"> <input name="privacy" id="privacy" checked="checked" type="checkbox" /> <label for="privacy">Subscribe SheIn fashion news mail. We do not disclose any personal data to third parties.</label> </p>
                 </div>
               </div>
               <div class="sign-in-btn" style="margin-top: 36px;">
-                <input name="last_email" id="last_email" value="16958398@qq.com" type="hidden" />
+                {#<input name="last_email" id="last_email" value="16958398@qq.com" type="hidden" />#}
                 <input name="token" id="token" type="hidden" />
-                <input name="return" value="http://www.shein.com/" type="hidden" />
-                <input name="subscribe" value="subscribe" id="subscribe" type="hidden" />
+                {#<input name="return" value="http://www.shein.com/" type="hidden" />#}
+                {#<input name="subscribe" value="subscribe" id="subscribe" type="hidden" />#}
                 <button class="she-btn-black she-btn-l j-register-loading" disabled="" style="display: none;">
                   <div class="la-ball-pulse la-ball-pulse-white">
                     <div></div>
                     <div></div>
                     <div></div>
                   </div> </button>
-                <input id="submitBtn" onclick="check_form_1();" class="submit-button she-btn-black she-btn-l j-register-submit" value="Register" type="button" />
-                <p class="register_why" style="text-align: center;"> <a class="why-register" href="http://www.shein.com/Why-Register-a-369.html" target="_top">Why Register?</a> ( Get <strong>US$3 off</strong> coupon and <a class="why-register why-register-more" href="http://www.shein.com/Why-Register-a-369.html" target="_top"><strong>more</strong></a>) </p>
+                <input id="submitBtn" class="submit-button she-btn-black she-btn-l j-register-submit" value="{{ text_register }}" type="submit" />
+                {#<p class="register_why" style="text-align: center;"> <a class="why-register" href="http://www.shein.com/Why-Register-a-369.html" target="_top">Why Register?</a> ( Get <strong>US$3 off</strong> coupon and <a class="why-register why-register-more" href="http://www.shein.com/Why-Register-a-369.html" target="_top"><strong>more</strong></a>) </p>#}
               </div>
             </form>
           </div>
