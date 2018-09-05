@@ -1,53 +1,80 @@
 {{ header }}
-<div id="account-reward" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      {% if rewards %}
-      <p>{{ text_total }} <b>{{ total }}</b></p>
-      {% endif %}
-      {% if rewards %}
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-left">{{ column_date_added }}</td>
-              <td class="text-left">{{ column_description }}</td>
-              <td class="text-right">{{ column_points }}</td>
-            </tr>
-          </thead>
-          <tbody>
-          {% for reward in rewards %}
-          <tr>
-            <td class="text-left">{{ reward.date_added }}</td>
-            <td class="text-left">{% if reward.order_id %} <a href="{{ reward.href }}">{{ reward.description }}</a> {% else %}
-              {{ reward.description }}
-              {% endif %}</td>
-            <td class="text-right">{{ reward.points }}</td>
-          </tr>
-          {% endfor %}
-          </tbody>
-        </table>
+    {{ column_left }}
+    <div class="she-center col-sm-9 col-xs-12">
+      <div class="wrapper">
+        <div class="member-point-title-h">
+          <h3 class="member-point-h2 she-tl-h3">Bonus Point Program</h3>
+        </div>
+        <div id="new-contUs">
+          <div class="integral-wrap">
+            <div class="integral">
+              <strong>100</strong>
+              <span>Total Points </span>
+            </div>
+            <div class="integral-form">
+              <form action="https://www.shein.com/index.php?model=member_point" name="theForm_point" method="post" onsubmit="return check_form();">
+                <div class="explain">
+                  <p>Bonus Point Program--Submit your SheIn link(s) to earn up to 100 bonus points.</p>
+                </div>
+                <div class="list-unit">
+                  <div class="list-item">
+                    <label>You added the link(s) on : <span>*</span></label>
+                    <div class="item-drop" id="point_type_list" style="width: 100%; border: medium none;">
+                      <a href="javascript:void(0)" class="she-drop-normal wide-high"> <span class="dr-item"> Youtube +30 </span> <span class="caret"></span> </a>
+                      <ul class="she-drop-normal-ul wide-high">
+                        <li value="10"> Youtube +30 </li>
+                        <li value="8"> Wanelo +6 </li>
+                        <li value="7"> Polyvore +6 </li>
+                        <li value="6"> Lookbook +8 </li>
+                        <li value="3"> Twitter +5 </li>
+                        <li value="2"> Facebook +10 </li>
+                      </ul>
+                      <input name="point_type_id" id="point_type_id" value="10" type="hidden" />
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <label>Exact link(s) : </label>
+                    <textarea class="textarea high resize" name="message" id="message" placeholder="Type Something Here..."></textarea>
+                  </div>
+                  <div class="list-item list-input">
+                    <label>Security code : </label>
+                    <input name="captcha" id="captcha" value="" type="text" />
+                    <img class="code" src="index.php" alt="captcha" style="vertical-align: middle; cursor: pointer;" onclick="this.src='index.php?model=captcha&amp;action=show&amp;'+Math.random()" />
+                  </div>
+                  <div class="list-item ">
+                    <input name="submit" class="she-btn-black" value="Submit" onclick="javascript:check_form()" style="text-transform: uppercase;" type="button" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="link">
+            <table width="100%" cellspacing="0" cellpadding="0" border="1">
+              <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Links</th>
+                <th>Points</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr id="order_info">
+                <td align="center">Youtube</td>
+                <td style="word-break: break-all;" align="center">1122</td>
+                <td align="center">30</td>
+                <td align="center"> Working in progress </td>
+                <td align="center"> 12-30-2017 10:44:08 </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6 text-left">{{ pagination }}</div>
-        <div class="col-sm-6 text-right">{{ results }}</div>
-      </div>
-      {% else %}
-      <div class="no-items">
-        <img src="catalog/view/theme/default/image/no_items.png" class="img-responsive">
-        <span>{{ text_no_results }}</span>
-      </div>
-      {% endif %}
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+    </div>
+  </div>
 </div>
+</body>
+</html>
 {{ footer }}

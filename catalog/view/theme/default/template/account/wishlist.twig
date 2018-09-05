@@ -1,60 +1,79 @@
 {{ header }}
-<div id="account-wishlist" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  {% if success %}
-  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ column_left }}
+    <div id="" class="she-center col-sm-9">
+      <div class="wish-list">
+        <header style="border: medium none;">
+          <div class="title">
+            <h3 class="she-tl-h3">My Wishlist</h3>
+          </div>
+        </header>
+        <div class="wish-conter">
+          <div class="wish-nav">
+            <div class="wish-nav-left">
+              <div class="item-drop fr" id="sort">
+                <span class="she-drop-normal btn1 " name="searchType" onchange="changeFilter()" id="searchType" style="cursor: default;"> Date Added <span class="caret"></span> </span>
+                <ul class="she-drop-normal-ul">
+                  <li attr-value="data_added"> <a href="javascript:void(0)">Date Added</a> </li>
+                  <li attr-value="products_name"> <a href="javascript:void(0)">Products Name</a> </li>
+                  <li attr-value="price_up"> <a href="javascript:void(0)">Price(Up)</a> </li>
+                  <li attr-value="price_down"> <a href="javascript:void(0)">Price(Down)</a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="wish-nav-right">
+              <span> <span id="private_num">1</span>&nbsp;Products </span>
+            </div>
+          </div>
+          <div id="productsContent1_goods" class="products_category" part="1" data-type="1" data-test="wishlist">
+            <div class="qView-imgloading" style="display: none;">
+              <img v-for="val in quickImgCache" :src="val" />
+            </div>
+            <ul class="row" id="goods_info">
+              <input id="update_price_type" name="update_price_type" value="list" type="hidden" />
+              <div data-sku="tee171114706" data-spu="tee171114706" class="prd-ct-gd-item col-lg-3 col-md-3 col-sm-4 col-xs-6 j-wishlist-item" vip_sale="yes" sort_order="prepend" special_price_hide="no" alt1="406371" data-ga-stock="InStock">
+                <div class="product j-item-data" data-cat-id="1738" data-ga-price="12.00" data-ga-sku="tee171114706" data-ga-spu="tee171114706" data-ga-name="Checkered Panel Mixed Media T-shirt" viewed="true" style="height: 390px;">
+                  <div class="image">
+                    <a title="" href="#" target="_top"> <img alt="Checkered Panel Mixed Media T-shirt" src="/catalog/view/theme/default/image/wishlist/15105726012808922976_thumbnail_220x293.jpg" style="height: 265px;" border="0" /> <em class="discount_img">37</em>
+                      <div class="item-like">
+                        <div class="item-like-inner">
+                          <span class="num">194</span>
+                          <i class="iconfont like"></i>
+                        </div>
+                        <div class="like-tips">
+                          <span class="num">194</span> people like the item
+                        </div>
+                      </div> </a>
+                  </div>
+                  <div class="description">
+                    <a href="#" title="Checkered Panel Mixed Media T-shirt" target="_top"><span class="goods-brand">SHEIN </span> Checkered Panel Mixed Media T-shirt</a>
+                  </div>
+                  <div id="cat-product-list-406371" alt1="406371" class="price">
+                    <span id="wholesale_11_member_price" class="price" price="US$10.20" style="display: none;"> <strong class="final_price_strong">US$10.20</strong> <b class="show_vip">(vip)</b> </span>
+                    <span id="wholesale_12_member_price" class="price" price="US$9.60" style="display: none;"> <strong class="final_price_strong">US$9.60</strong> <b class="show_vip">(vip)</b> </span>
+                    <span id="special_price_member_price_off" class="price" price="US$12.00"> <strong class="final_price_strong">US$12.00</strong> <b class="show_vip">(Sale)</b> </span>
+                    <span id="shop_price_member_price_off" class="price-r" price="US$19.00">
+             <s>
+              US$19.00
+             </s> </span>
+                    <a href="javascript:void(0)" class="delete" id="delete"> <span class="iconfont "></span> </a>
+                  </div>
+                  <div class="footer">
+                  </div>
+                </div>
+                <div class="save-cate quickview" style="display: none;">
+                  <div class="btn-cart quick-shopping">
+                    <div id="addToCart_406371" onclick="addToBagListPage('406371',0);" class="attribute-list list-cart">
+                      <span></span> + Add to Bag
+                    </div>
+                    <div id="goods_attr_406371" class="attr-size1"></div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  {% endif %}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h2>{{ heading_title }}</h2>
-      {% if products %}
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-center">{{ column_image }}</td>
-              <td class="text-left">{{ column_name }}</td>
-              <td class="text-left">{{ column_model }}</td>
-              <td class="text-right">{{ column_stock }}</td>
-              <td class="text-right">{{ column_price }}</td>
-              <td class="text-right">{{ column_action }}</td>
-            </tr>
-          </thead>
-          <tbody>
-          {% for product in products %}
-          <tr>
-            <td class="text-center">{% if product.thumb %}<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" /></a>{% endif %}</td>
-            <td class="text-left"><a href="{{ product.href }}">{{ product.name }}</a></td>
-            <td class="text-left">{{ product.model }}</td>
-            <td class="text-right">{{ product.stock }}</td>
-            <td class="text-right">{% if product.price %}
-              <div class="price"> {% if not product.special %}
-                {{ product.price }}
-                {% else %} <b>{{ product.special }}</b> <s>{{ product.price }}</s> {% endif %} </div>
-              {% endif %}</td>
-            <td class="text-right"><button type="button" onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" title="{{ button_cart }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
-              <a href="{{ product.remove }}" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger"><i class="fa fa-times"></i></a></td>
-          </tr>
-          {% endfor %}
-            </tbody>
-        </table>
-      </div>
-      {% else %}
-      <div class="no-items">
-        <img src="catalog/view/theme/default/image/no_items.png" class="img-responsive">
-        <span>{{ text_no_results }}</span>
-      </div>
-      {% endif %}
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
 </div>
 {{ footer }}
