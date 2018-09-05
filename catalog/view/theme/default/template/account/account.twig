@@ -1,14 +1,4 @@
 {{ header }}
-<div class="she-my-wrap container">
-  <ol class="position she-breadcrumb">
-    <li>
-      <a href="">Home</a>
-    </li>
-    <li>
-      <span class="selected"> My ACCOUNT</span>
-    </li>
-  </ol>
-  <div class="row">
     {{ column_left }}
     <div class="she-center col-sm-9 col-xs-12 peracc">
       <h3 class="she-tl-h3">My ACCOUNT</h3>
@@ -21,7 +11,8 @@
                   <h4>Hello, <span>16958398</span></h4>
                 </div>
                 <div class="con-left-p">
-                  <p style="margin: 0px;">                                                                                                                                                                    <span>
+                  <p style="margin: 0px;">
+                    <span>
                        You have <strong>100</strong> SheIn Points now, which can be used in your next purchase.
                     </span>
                   </p><p style="margin: 0px;">Want to be a <strong style="color: rgb(0, 0, 0);">VIP</strong>? <a style="color: rgb(0, 0, 0); text-decoration: underline;" href="https://www.shein.com/index.php?model=member_article&amp;action=shein_class">Join new SheIn Membership</a> to get <strong> FREE coupons</strong> !</p>
@@ -126,7 +117,7 @@
         </ul>
         <div class="con-foot">
           <div style="text-align: center;">
-            <a class="she-btn-white j-member-accout-signout" href="https://www.shein.com/logout.php">Sign out</a>
+            <a class="she-btn-white j-member-accout-signout" href="{{ logout }}">Sign out</a>
           </div>
           <div class="con-foot-p">
             <p style="margin-top: 10px;">It’s better to sign out after you finish your shopping so that you could make sure that your account safe.</p>

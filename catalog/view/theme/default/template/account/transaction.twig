@@ -1,49 +1,92 @@
 {{ header }}
-<div id="account-transaction" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      {% if transactions %}
-      <p>{{ text_total }} <b>{{ total }}</b></p>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-left">{{ column_date_added }}</td>
-              <td class="text-left">{{ column_description }}</td>
-              <td class="text-right">{{ column_amount }}</td>
-            </tr>
-          </thead>
-          <tbody>
-          {% for transaction in transactions %}
-          <tr>
-            <td class="text-left">{{ transaction.date_added }}</td>
-            <td class="text-left">{{ transaction.description }}</td>
-            <td class="text-right">{{ transaction.amount }}</td>
-          </tr>
-          {% endfor %}
-          </tbody>
-        </table>
+    {{ column_left }}
+    <div class="she-center col-sm-9 col-xs-12 per-wallet">
+      <h3 class="she-tl-h3">My Wallet</h3>
+      <div class="wallet-balance">
+        <div class="balance-title">
+          <div class="title-image1">
+            <span class="iconfont" style="font-size: 24px;"></span>
+          </div>
+          <div class="title-con1">
+            <p>Wallet Balance <a href="http://www.shein.com/About-My-Wallet-a-609.html" target="_top">What’s This?</a></p>
+          </div>
+        </div>
+        <div class="blance-con-left col-sm-12">
+          <div class="conbox">
+            <table style="width: 100%;">
+              <tbody>
+              <tr class="conbox-item">
+                <td class="conbox-tatal-wrap">
+                  <div class="conbox-title">
+                    Total
+                  </div> <p class="conbox-money">0.00</p> </td>
+                <td class="conbox-unavailabl-wrap">
+                  <div class="conbox-title">
+                    Unavailable SheIn Credit
+                    <i class="iconfont wallet-help-icon"></i>
+                    <p class="wallet-hover">SheIn credit is only applicable for SheIn purchases. Credit cannot be withdrawn.</p>
+                  </div> <p class="conbox-money">0.00</p> <p style="text-align: center; color: rgb(204, 204, 204);">Only Applicable for SheIn Purchases</p> </td>
+                <td class="conbox-availabl-wrap">
+                  <div class="conbox-title">
+                    Available SheIn Credit
+                    <i class="iconfont wallet-help-icon"></i>
+                    <p class="wallet-hover">SheIn credit is applicable for SheIn purchases. Credit can be withdrawn.</p>
+                  </div> <p class="conbox-money">0.00</p>
+                  <div>
+                    <div class="conbox-right" id="withdraw_prpgress_USD" style="display: none;">
+                      <div>
+                        <input id="wallet_balance_text_USD" data-amount="0.00" placeholder="Maximum: 0.00" name="balance" onfocus="setStyle('tags_error')" onkeypress="validate_lt(event,this);" onblur="setStyle_blur();" style="background: rgb(250, 250, 250) none repeat scroll 0% 0%;" value="" type="text" />
+                      </div>
+                      <div>
+                        <p id="error_website_USD" style="display: block;" class="error_website"></p>
+                      </div>
+                      <div class="btns">
+                        <input class="she-btn-black she-btn-xs" value="Submit" onclick="withdraw('USD');" type="button" />
+                        <input class="she-btn-white she-btn-xs" id="cancel" name="Cancel" value="cancel" onclick="toggle_withdraw('USD')" type="button" />
+                      </div>
+                    </div>
+                  </div> </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wallet-history">
+          <div class="history-title">
+            <div class="title-image2">
+              <span class="iconfont" style="font-size: 24px;"></span>
+            </div>
+            <div class="title-con2">
+              <p>Wallet History <a href="http://www.shein.com/contact-us.html" target="_top"> Contact Us </a></p>
+            </div>
+          </div>
+          <div class="history-table">
+            <table class="table" style="border: 1px solid rgb(229, 229, 229);">
+              <thead>
+              <tr style="background: rgb(250, 250, 250) none repeat scroll 0% 0%;">
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Date</th>
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Type</th>
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Order NO.</th>
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Amount</th>
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Status</th>
+              </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="popup_uploading_bg" id="popup_uploading" style="display: none;">
+            <div class="popup_vote_color" onclick="hide_detail()"></div>
+            <div class="popup_uploading_list popup_wallet_list">
+              <a class="close_vote" onclick="hide_detail()"></a>
+              <div class="uploading_timeout_title">
+                <span class="wallet_icon"></span>
+              </div>
+              <p>Your withdrawal request has been submitted, <br />we will update news in 48 hours.</p>
+              <button type="button" class="uploading_button" name="ok" onclick="hide_detail()">OK</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6 text-left">{{ pagination }}</div>
-        <div class="col-sm-6 text-right">{{ results }}</div>
-      </div>
-      {% else %}
-      <div class="no-items">
-        <img src="catalog/view/theme/default/image/no_items.png" class="img-responsive">
-        <span>{{ text_no_results }}</span>
-      </div>
-      {% endif %}
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+    </div>
+  </div>
 </div>
 {{ footer }}

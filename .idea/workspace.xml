@@ -2,84 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e792c2b8-0a62-4d20-8724-593a4b7c256d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/avenirnextdemibold_v962ee52.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/cart_empty.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/1461847285629587639.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/14726932726109321642_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/14759083658948687758_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/14993351443712877669_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15046050697233447108_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15051784508235850021_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15051797550379425344_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15058157203901741088_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15063306896734975569_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15085530077243512625_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15094999978563820752_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15096166689125989720_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15099550940541582496_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15101317370201037603_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15101317412348512256_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103090114461480165_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103105305167291240_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103105394316347638_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103132285170786248.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15105726012808922976_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15105727669345170651_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15106543942369010855_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15107394891031035020_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15107394912945120341_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15108263460352323076_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15108263767554479824_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15111684490044634765_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15112593626499685135_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15113404959132937934_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15113441921195502010_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15114330308554292507_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15114331039067238964_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15117722572370804988_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15117722619223257505_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15117723351702255526_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15118343660416313938_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15118345087512795386_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15121045013235271441_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15123689844887337637_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15127183729867421378_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15131602981231003100_thumbnail_405x552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15133252891396612721_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/adr-border_v30736a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/cartnet@2x_v20ad514.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/empty-cart-bag_v58a1e98.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/loading_vc554483.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/loadinganimation_veb464f0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-1-paypal_va336d76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-16-ideal_v42c1656.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-2-visa_vd35286a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-3-mastercard_vf9b0f97.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-7-american-express_vb186b55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-8-maestro_v781c6fd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-ar-codcard_v9d7b3b8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/oxxo@2x_v0ac9136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/wire_transfer@2x_v0896cc5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/0015151514054314644343629.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/0015151514054315989609834.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15106544277121228270_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15107394892061671204_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15107394912945120341_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15107394912945120341_thumbnail_600x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/adr-border_v30736a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/browse-sprite_v48f3984.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-560x560.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-600x315.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-70x70.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-800x800.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/reward.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/transation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/wishlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/edit/default_avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/edit/sucess_ved748c3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/edit/sucess_ved748c3_001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/wishlist/15105726012808922976_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/wishlist/discount-img-3_vee20329.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart_empty.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart_empty.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/edit.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/edit.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/reward.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/reward.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/transaction.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/transaction.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/wishlist.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/wishlist.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/product.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/product/product.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/cache/index.html" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,173 +33,82 @@
       <file leaf-file-name="account.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="228">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
-              <folding>
-                <element signature="e#2033#2039#1#HTML" expanded="true" />
-                <element signature="e#2051#2057#1#HTML" expanded="true" />
-                <element signature="e#2069#2075#1#HTML" expanded="true" />
-                <element signature="e#2087#2093#1#HTML" expanded="true" />
-                <element signature="e#2105#2111#1#HTML" expanded="true" />
-                <element signature="e#2123#2129#1#HTML" expanded="true" />
-                <element signature="e#2141#2147#1#HTML" expanded="true" />
-                <element signature="e#2159#2165#1#HTML" expanded="true" />
-                <element signature="e#2177#2183#1#HTML" expanded="true" />
-                <element signature="e#2195#2201#1#HTML" expanded="true" />
-                <element signature="e#2213#2219#1#HTML" expanded="true" />
-                <element signature="e#2231#2237#1#HTML" expanded="true" />
-                <element signature="e#2249#2255#1#HTML" expanded="true" />
-                <element signature="e#2267#2273#1#HTML" expanded="true" />
-                <element signature="e#2285#2291#1#HTML" expanded="true" />
-                <element signature="e#2303#2309#1#HTML" expanded="true" />
-                <element signature="e#2321#2327#1#HTML" expanded="true" />
-                <element signature="e#2339#2345#1#HTML" expanded="true" />
-                <element signature="e#2357#2363#1#HTML" expanded="true" />
-                <element signature="e#2375#2381#1#HTML" expanded="true" />
-                <element signature="e#2393#2399#1#HTML" expanded="true" />
-                <element signature="e#2411#2417#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="address_list.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/address_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2309#2315#0#HTML" expanded="true" />
-                <element signature="e#2315#2321#0#HTML" expanded="true" />
-                <element signature="e#2324#2330#0#HTML" expanded="true" />
-                <element signature="e#2330#2336#0#HTML" expanded="true" />
-                <element signature="e#2336#2342#0#HTML" expanded="true" />
-                <element signature="e#2342#2348#0#HTML" expanded="true" />
-                <element signature="e#2355#2361#0#HTML" expanded="true" />
-                <element signature="e#2361#2367#0#HTML" expanded="true" />
-                <element signature="e#2488#2494#0#HTML" expanded="true" />
-                <element signature="e#2494#2500#0#HTML" expanded="true" />
-                <element signature="e#2528#2534#0#HTML" expanded="true" />
-                <element signature="e#2534#2540#0#HTML" expanded="true" />
-                <element signature="e#2600#2606#0#HTML" expanded="true" />
-                <element signature="e#2606#2612#0#HTML" expanded="true" />
-                <element signature="e#3249#3255#0#HTML" expanded="true" />
-                <element signature="e#3255#3261#0#HTML" expanded="true" />
-                <element signature="e#3264#3270#0#HTML" expanded="true" />
-                <element signature="e#3270#3276#0#HTML" expanded="true" />
-                <element signature="e#3276#3282#0#HTML" expanded="true" />
-                <element signature="e#3282#3288#0#HTML" expanded="true" />
-                <element signature="e#3296#3302#0#HTML" expanded="true" />
-                <element signature="e#3302#3308#0#HTML" expanded="true" />
-                <element signature="e#3436#3442#0#HTML" expanded="true" />
-                <element signature="e#3442#3448#0#HTML" expanded="true" />
-                <element signature="e#3476#3482#0#HTML" expanded="true" />
-                <element signature="e#3482#3488#0#HTML" expanded="true" />
-                <element signature="e#3548#3554#0#HTML" expanded="true" />
-                <element signature="e#3554#3560#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#4312#4318#0#HTML" expanded="true" />
-                <element signature="e#4318#4324#0#HTML" expanded="true" />
-                <element signature="e#4327#4333#0#HTML" expanded="true" />
-                <element signature="e#4333#4339#0#HTML" expanded="true" />
-                <element signature="e#4339#4345#0#HTML" expanded="true" />
-                <element signature="e#4345#4351#0#HTML" expanded="true" />
-                <element signature="e#4358#4364#0#HTML" expanded="true" />
-                <element signature="e#4364#4370#0#HTML" expanded="true" />
-                <element signature="e#4485#4491#0#HTML" expanded="true" />
-                <element signature="e#4491#4497#0#HTML" expanded="true" />
-                <element signature="e#4525#4531#0#HTML" expanded="true" />
-                <element signature="e#4531#4537#0#HTML" expanded="true" />
-                <element signature="e#4593#4599#0#HTML" expanded="true" />
-                <element signature="e#4599#4605#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#dd#0;n#dl#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#dd#0;n#dl#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#0;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#1;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#2;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#2;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#3;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#4;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#4;n#dl#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dl#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#10112#10118#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#dd#0;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#dd#0;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#1;n#dd#0;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#dd#1;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#dd#2;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#dd#3;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#4;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#div#1;n#dd#4;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#1;n#dd#4;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#dd#4;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#1;n#dd#4;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#div#1;n#dd#5;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#1;n#dd#5;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#dd#5;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#1;n#dd#5;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#6;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#dd#6;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#dd#6;n#dl#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dl#4;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#4;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dl#5;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#5;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#6;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#7;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dl#8;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#8;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#dd#0;n#dl#8;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#9;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#10;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dl#11;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#11;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dl#12;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#dd#0;n#dl#12;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#1;n#dd#0;n#dl#12;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dd#0;n#dl#12;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#dd#0;n#dl#13;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#1;n#dd#0;n#dl#13;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#34687#34692#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#dl#14;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#dl#14;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#3;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="address.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/address.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="65" column="163" selection-start-line="65" selection-start-column="163" selection-end-line="65" selection-end-column="163" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
+            <state relative-caret-position="646">
+              <caret line="159" column="3778" selection-start-line="159" selection-start-column="3739" selection-end-line="159" selection-end-column="3778" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/edit.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="114" column="20" lean-forward="true" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#li#1;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#3932#3938#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#9829#9863#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#1;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#1;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#2;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#2;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#3;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#3;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#5;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="column_left.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wishlist.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/wishlist.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="42" column="151" selection-start-line="42" selection-start-column="108" selection-end-line="42" selection-end-column="151" />
             </state>
           </provider>
         </entry>
@@ -266,23 +116,22 @@
       <file leaf-file-name="order_list.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reward.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/reward.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#td#3;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -290,9 +139,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>adr-border_v30736a3.png</find>
+      <find>14938011409591745325_thumbnail_220x293.jpg</find>
+      <find>avatar</find>
+      <find>sucess_ved748c3_001.png</find>
+      <find>discount-img-3_vee20329.png</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -301,7 +162,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/reward.twig" />
+        <option value="$PROJECT_DIR$/system/storage/cache/index.html" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/transaction.twig" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/css/edit.css" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/edit.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/siderbar.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/wishlist.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/css/wishlist.css" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig" />
       </list>
     </option>
   </component>
@@ -313,6 +185,11 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-6" />
+    <option name="width" value="1936" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -337,6 +214,20 @@
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shop" type="b2602c69:ProjectViewProjectNode" />
@@ -384,6 +275,16 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="wishlist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -406,12 +307,42 @@
               <item name="template" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\shop\catalog\view\theme\default\css" />
+      <recent name="D:\work\shop\catalog\view\theme\default\template\account" />
+      <recent name="D:\work\shop\catalog\view\theme\default\template" />
+      <recent name="D:\work\shop\catalog\view\theme\default\image\edit" />
+      <recent name="D:\work\shop\catalog\view\theme\default\image\wishlist" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -439,27 +370,28 @@
       <workItem from="1535958757691" duration="12835000" />
       <workItem from="1536023519703" duration="8112000" />
       <workItem from="1536033939378" duration="4095000" />
-      <workItem from="1536110969863" duration="6307000" />
+      <workItem from="1536110969863" duration="13397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104000" />
+    <option name="totallyTimeSpent" value="7194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,42 +401,12 @@
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/affiliate.twig" />
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/login.twig" />
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/content_top.twig" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess.txt" />
-    <entry file="file://$PROJECT_DIR$/storage/logs/error.log" />
-    <entry file="file://$PROJECT_DIR$/storage/logs/openbay.log" />
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/column_left.twig" />
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/cart.twig" />
-    <entry file="file://$PROJECT_DIR$/admin/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/upload/admin/config.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/address_form.twig" />
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/account/account.twig" />
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/version.php" />
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/journal2/template/common/search.twig" />
@@ -608,13 +510,6 @@
         <state relative-caret-position="-1596" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/password.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -627,68 +522,10 @@
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/image/15045224496531736370_thumbnail_220x293.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/address.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#td#3;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#h3#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#891#897#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
-          <folding>
-            <element signature="e#2033#2039#1#HTML" expanded="true" />
-            <element signature="e#2051#2057#1#HTML" expanded="true" />
-            <element signature="e#2069#2075#1#HTML" expanded="true" />
-            <element signature="e#2087#2093#1#HTML" expanded="true" />
-            <element signature="e#2105#2111#1#HTML" expanded="true" />
-            <element signature="e#2123#2129#1#HTML" expanded="true" />
-            <element signature="e#2141#2147#1#HTML" expanded="true" />
-            <element signature="e#2159#2165#1#HTML" expanded="true" />
-            <element signature="e#2177#2183#1#HTML" expanded="true" />
-            <element signature="e#2195#2201#1#HTML" expanded="true" />
-            <element signature="e#2213#2219#1#HTML" expanded="true" />
-            <element signature="e#2231#2237#1#HTML" expanded="true" />
-            <element signature="e#2249#2255#1#HTML" expanded="true" />
-            <element signature="e#2267#2273#1#HTML" expanded="true" />
-            <element signature="e#2285#2291#1#HTML" expanded="true" />
-            <element signature="e#2303#2309#1#HTML" expanded="true" />
-            <element signature="e#2321#2327#1#HTML" expanded="true" />
-            <element signature="e#2339#2345#1#HTML" expanded="true" />
-            <element signature="e#2357#2363#1#HTML" expanded="true" />
-            <element signature="e#2375#2381#1#HTML" expanded="true" />
-            <element signature="e#2393#2399#1#HTML" expanded="true" />
-            <element signature="e#2411#2417#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="287">
+          <caret line="65" column="163" selection-start-line="65" selection-start-column="163" selection-end-line="65" selection-end-column="163" />
         </state>
       </provider>
     </entry>
@@ -804,17 +641,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/address.css">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="65" column="163" selection-start-line="65" selection-start-column="163" selection-end-line="65" selection-end-column="163" />
+        <state relative-caret-position="130">
+          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+          <folding>
+            <element signature="e#2033#2039#1#HTML" expanded="true" />
+            <element signature="e#2051#2057#1#HTML" expanded="true" />
+            <element signature="e#2069#2075#1#HTML" expanded="true" />
+            <element signature="e#2087#2093#1#HTML" expanded="true" />
+            <element signature="e#2105#2111#1#HTML" expanded="true" />
+            <element signature="e#2123#2129#1#HTML" expanded="true" />
+            <element signature="e#2141#2147#1#HTML" expanded="true" />
+            <element signature="e#2159#2165#1#HTML" expanded="true" />
+            <element signature="e#2177#2183#1#HTML" expanded="true" />
+            <element signature="e#2195#2201#1#HTML" expanded="true" />
+            <element signature="e#2213#2219#1#HTML" expanded="true" />
+            <element signature="e#2231#2237#1#HTML" expanded="true" />
+            <element signature="e#2249#2255#1#HTML" expanded="true" />
+            <element signature="e#2267#2273#1#HTML" expanded="true" />
+            <element signature="e#2285#2291#1#HTML" expanded="true" />
+            <element signature="e#2303#2309#1#HTML" expanded="true" />
+            <element signature="e#2321#2327#1#HTML" expanded="true" />
+            <element signature="e#2339#2345#1#HTML" expanded="true" />
+            <element signature="e#2357#2363#1#HTML" expanded="true" />
+            <element signature="e#2375#2381#1#HTML" expanded="true" />
+            <element signature="e#2393#2399#1#HTML" expanded="true" />
+            <element signature="e#2411#2417#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/reward.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/reward.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/storage/cache/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/transation.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/transaction.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/image/edit/sucess_ved748c3_001.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/reward.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/edit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1571">
+          <caret line="103" column="92" lean-forward="true" selection-start-line="103" selection-start-column="92" selection-end-line="103" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_right.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/edit.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="114" column="20" lean-forward="true" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#li#1;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3932#3938#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#2;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9829#9863#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#1;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#2;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#2;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#3;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#3;n#div#4;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#5;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#0;n#form#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/siderbar.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
+        <state relative-caret-position="646">
+          <caret line="159" column="3778" selection-start-line="159" selection-start-column="3739" selection-end-line="159" selection-end-column="3778" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/wishlist.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="138" column="108" selection-start-line="138" selection-start-column="108" selection-end-line="138" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/wishlist.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="42" column="151" selection-start-line="42" selection-start-column="108" selection-end-line="42" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
