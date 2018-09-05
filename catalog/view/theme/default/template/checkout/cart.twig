@@ -1,112 +1,260 @@
 {{ header }}
-<div id="checkout-cart" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  {% if attention %}
-  <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ attention }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+<div class="indexHomeBody index_checkout_body">
+  <div class="pay-head">
+    <div class="container-fluid checkout-header" style="margin-bottom: 10px;">
+      <a class="logo-check iconfont shein-icon"> <i class="iconfont">  </i> </a>
+      <span class="checkout-header-title"> <i class="iconfont secure-icon">  </i> secure checkout </span>
+      <a class="checkout-header-title-r" style="color: rgb(153, 153, 153);"> continue shopping <span> </span> </a>
+    </div>
   </div>
-  {% endif %}
-  {% if success %}
-  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  {% endif %}
-  {% if error_warning %}
-  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  {% endif %}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}
-        {% if weight %}
-        &nbsp;({{ weight }})
-        {% endif %} </h1>
-      <form action="{{ action }}" method="post" enctype="multipart/form-data">
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <td class="text-center">{{ column_image }}</td>
-                <td class="text-left">{{ column_name }}</td>
-                <td class="text-left">{{ column_model }}</td>
-                <td class="text-left">{{ column_quantity }}</td>
-                <td class="text-right">{{ column_price }}</td>
-                <td class="text-right">{{ column_total }}</td>
-              </tr>
-            </thead>
-            <tbody>
-            {% for product in products %}
-            <tr>
-              <td class="text-center">{% if product.thumb %} <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" /></a> {% endif %}</td>
-              <td class="text-left product-name">
-                <a class="name" href="{{ product.href }}">{{ product.name }}</a> {% if not product.stock %} <span class="text-danger">***</span> {% endif %}
-                {% if product.option %}
-                {% for option in product.option %} <br />
-                <small>{{ option.name }}: {{ option.value }}</small> {% endfor %}
-                {% endif %}
-                {% if product.reward %} <br />
-                <small>{{ product.reward }}</small> {% endif %}
-              <td class="text-left">{{ product.model }}</td>
-              <td class="text-left"><div class="input-group btn-block" style="min-width: 150px;">
-                  <input type="text" name="quantity[{{ product.cart_id }}]" value="{{ product.quantity }}" size="1" class="form-control" />
-                  <div class="input-group-btn">
-                  <button type="submit" data-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
-                  <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');"><i class="fa fa-times-circle"></i></button>
-                  </div></div></td>
-              <td class="text-right">{{ product.price }}</td>
-              <td class="text-right">{{ product.total }}</td>
-            </tr>
-            {% endfor %}
-            {% for voucher in vouchers %}
-            <tr>
-              <td></td>
-              <td class="text-left">{{ voucher.description }}</td>
-              <td class="text-left"></td>
-              <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
-                  <input type="text" name="" value="1" size="1" disabled="disabled" class="form-control" />
-                  <div class="input-group-btn">
-                  <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="voucher.remove('{{ voucher.key }}');"><i class="fa fa-times-circle"></i></button>
-                  </div></div></td>
-              <td class="text-right">{{ voucher.amount }}</td>
-              <td class="text-right">{{ voucher.amount }}</td>
-            </tr>
-            {% endfor %}
-              </tbody>
-          </table>
+  <div class="container-fluid mbag-step1">
+    <ul class="flow j-empty-cart-hide shoppingTitle_o" style="visibility: visible; display: block;">
+      <li class="step1"> Shopping Bag </li>
+      <li class="step2"> Place Order </li>
+      <li class="step3"> Pay </li>
+      <li class="step4"> Order Complete </li>
+    </ul>
+    <div class="shopbag-details row no-margin">
+      <div class="shopping-list j-empty-cart-hide col-md-8 col-sm-8" style="visibility: visible; display: block;">
+        <div class="heading no-border row j-heading-fixed" style="width: auto;">
+          <h2 class="she-h1"> Shopping Bag </h2>
+          <span> Prices are subject to change based on the price in effect the day you checkout. </span>
+          <span class="saves-num j-saves-num"> <i class="iconfont icon-like16"> </i> <i class="j-text"> 6 </i> </span>
         </div>
-      </form>
-      {% if modules %}
-      <h2>{{ text_next }}</h2>
-      <p>{{ text_next_choice }}</p>
-      <div class="panel-group" id="accordion">{% for module in modules %}
-        {{ module }}
-        {% endfor %} </div>
-      {% endif %} <br />
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-8">
-          <table class="table table-bordered">
-            {% for total in totals %}
-            <tr>
-              <td class="text-right"><strong>{{ total.title }}</strong></td>
-              <td class="text-right">{{ total.text }}</td>
-            </tr>
-            {% endfor %}
-          </table>
+        <div class="sl-table-h row">
+          <ul>
+            <li class="col-xs-6"> Item </li>
+            <li class="col-xs-2"> Price </li>
+            <li class="col-xs-2"> Qty </li>
+            <li class="col-xs-2"> Total </li>
+          </ul>
+        </div>
+        <form action="file:///C:/Users/Administrator/AppData/Roaming/Mozilla/Firefox/Profiles/8llj7apx.default/ScrapBook/data/20180104140459/index.html">
+          <div id="shopping_cart_do_price">
+            <div id="shopping_cart_common_html">
+              <div class="sl-table-item row j-each-goods">
+                <div class="col-xs-6 cart-content">
+                  <div class="prod-details">
+                    <div class="inbasket_img">
+                      <img class="prod-img" src="/catalog/view/theme/default/image/15046050697233447108_thumbnail_220x293.jpg" />
+                    </div>
+                    <div class="intro">
+                      <div class="j-cart-size cart-size edit_item">
+                        <span class="item_name"> Size: </span>
+                        <div class="item_content">
+                          <div data-size="M" data-attr_id="314" data-value="31433" data-stock="1000000">
+                            M
+                          </div>
+                        </div>
+                      </div>
+                      <div class="color j-cart-color edit_item">
+                        <span class="item_name" style="display: table-cell; padding-right: 10px;"> Color: </span>
+                        <ul class="item_content">
+                          Loading
+                        </ul>
+                      </div>
+                      <div class="prod-name">
+                        <a target="_top" href="http://www.shein.com/Tiered-Ruffle-Hem-Peplum-Blouse-p-385492-cat-1733.html" rel="nofollow"> <span class="goods-brand"> SHEIN&nbsp; </span> Tiered Ruffle Hem Peplum Blouse </a>
+                      </div>
+                      <div class="color j-cart-color-show cart-color-show" style="display: table-row;">
+                        <span class="" style="display: table-cell; padding-right: 10px; vertical-align: top;"> Color: </span>
+                        <ul style="display: table-cell;">
+                          <li class="active"> <span> <a style="background: transparent url('15103132285170786248.jpg') repeat scroll 0% 0%;" href="javascript:;"> </a> </span> </li>
+                        </ul>
+                      </div>
+                      <div class="size edit_item" style="margin-bottom: 0px;">
+                        <span class="item_name"> Size: </span>
+                        <span class="item_content"> M </span>
+                      </div>
+                      <div class="is-show-stock j-show-stock" style="margin-top: 10px; color: rgb(102, 102, 102);">
+                        Only
+                        <strong class="units_in_stock"> 1000000 </strong> left!
+                      </div>
+                      <div class="red display-none">
+                      </div>
+                      <div class="operate" style="position: absolute;">
+                        <span class="edit_btn"> <span class="btn_update j-event"> Update </span> <span class="btn_cancel j-event"> Cancel </span> </span>
+                        <span class="edit j-event"> Edit </span>
+                        <span class="wish"> Save for Later </span>
+                        <span class="del"> Delete </span>
+                      </div>
+                      <div class="cart-wish-loading loadding_389423017">
+                        <img src="/catalog/view/theme/default/image/cart/loading_vc554483.gif" width="16" height="16" /> Adding
+                      </div>
+                      <div class="cart-wish-loading addsusess_389423017">
+                        Succeed
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-2 shoppingtop_price_and_discount price_and_discount_389423017_385492">
+                  <div class="price discount_goods_price_389423017">
+                    <div class="basket_cont_cart cart_all_price goods_price_current_price">
+                      <span class="index-price shop_price US$13.00" price="US$13.00" style="display: block;"> <strong class="price">US$13.00</strong> <b class="show_vip" style=""> (Sale) </b> </span>
+                    </div>
+                    <span class="discount_val unit_discount45"> <span> </span> 45% off </span>
+                    <div class="cart_sale_present">
+                      <span class="percent_txt"> Buy 1 Get 1 50% Off </span>
+                    </div>
+                  </div>
+                  <div id="span_389423017" style="display: none;">
+                    Sold Out
+                  </div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="qty she-filter-box j-cart-num">
+                    <ul class="she-swatches she-stock">
+                      <li class="j-reduce-wrap-389423017"> <span class="she-operator reduce iconfont j-reduce-389423017">  </span> </li>
+                      <input class="she-text qty-val quantitySelect_bg j-qty-val" value="2" type="text" />
+                      <li class="j-cart-add-wrap"> <span class="j-cart-add she-operator increase iconfont">  </span> </li>
+                    </ul>
+                  </div>
+                  <p class="only_one_p_footer"> purchase limit exceeded </p>
+                </div>
+                <div class="col-xs-2">
+                  <div class="inbasket_total subtotal_item_total total">
+                    <div class="item_total goods_price_current_price" style="">
+                      US$22.00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix">
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4" id="summary-fill">
+      </div>
+      <div class="emarsys-list j-emarsys-list col-md-8 col-sm-8" style="visibility: visible; display: block;">
+        <h3 class="emarsys-tab"> <span class="j-tab j-tab-also emarsys-tab-active"> You May Also Like </span> <span class="emarsys-tab-line j-tab-line"> | </span> <span class="j-tab j-tab-vc " data-id="vc" style=""> Recommendations For You </span> </h3>
+        <div id="productsContent1_comm" class="recommended-product recommended-also-product j-also-view" style="visibility: visible;">
+          <div class="recommended-viewed-swiper j-recommended-emarsys">
+            <div class="recommended-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">
+              
+            </div>
+            <div class="j-recommended-content recommended-content swiper-container swiper-container-horizontal">
+              <div id="recommend_products_list" class="swiper-wrapper">
+                <div class="swiper-slide box-product-list category_products_bg list_all_items swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">
+                  <div class="goods-aImg">
+                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/15058157203901741088_thumbnail_220x293.jpg" alt="Trumpet Sleeve Pearl Beading Scalloped Dress" border="0" /> </a>
+                    <div class="la-ball-pulse">
+                      <div>
+                      </div>
+                      <div>
+                      </div>
+                      <div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="goods_mz">
+                    <a target="_blank"> Trumpet Sleeve Pearl Beading Scalloped Dress </a>
+                  </div>
+                  <div class="product-list list_all_items_price">
+                    <span class="index-price shop_price final_price"> <strong class="final_price_strong"> US$13 </strong> </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="recommended-next swiper-button-next iconfont shein-arrow">
+              
+            </div>
+          </div>
+        </div>
+        <div class="recommended-product recommended-vc j-saveitems" style="visibility: visible;">
+          <h3>
+            <div class="item-title">
+              Saved Items
+            </div>
+            <div data-num="6" class="item-num">
+              (6)
+            </div> </h3>
+          <div class="recommended-viewed-swiper">
+            <div class="j-sa-prev swiper-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">
+              
+            </div>
+            <div class="swiper-content swiper-container j-sa-container swiper-container-horizontal">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide box-vc-list swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">
+                  <div class="goods-aImg">
+                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/15107394912945120341_thumbnail_220x293.jpg" /> </a>
+                    <div class="la-ball-pulse">
+                      <div>
+                      </div>
+                      <div>
+                      </div>
+                      <div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-vc-name">
+                    <small class="goods-brand"> SHEIN&nbsp; </small> Flounce Embellished Tied Neck Dress
+                  </div>
+                  <div>
+                    <span class="price" style="display: ;"> <strong class="final_price_strong"> US$14.45 </strong> <b class="show_vip"> (vip) </b> </span>
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="j-sa-next swiper-next swiper-button-next iconfont shein-arrow">
+              
+            </div>
+          </div>
         </div>
       </div>
-      <div class="buttons clearfix">
-        <div class="pull-left"><a href="{{ continue }}" class="btn btn-default">{{ button_shopping }}</a></div>
-        <div class="pull-right"><a href="{{ checkout }}" class="btn btn-primary">{{ button_checkout }}</a></div>
+      <div class="right-ctn j-empty-cart-hide" style="position: fixed; width: 393px; right: 41.8333px; top: auto; visibility: visible; display: block;">
+        <div class="order-sum">
+          <div class="cart-placeorder-header">
+            <h2> Order Summary </h2>
+          </div>
+          <div class="order-summary">
+            <div id="shopping_cart_do_price_total" style="margin-top: 10px;">
+              <div class="price-current-item" id="retail_price">
+                <span class="current-t"> Retail Price </span>
+                <div class="current-v" id="shipping_retail_price">
+                  <div class="item_total goods_price_current_price" style="">
+                    US$53.00
+                  </div>
+                </div>
+              </div>
+              <div class="price-total-item">
+                <span class="total-t"> TOTAL </span>
+                <div class="total" id="shipping_total">
+                  <div class="item_total goods_price_current_price">
+                    US$35.00
+                  </div>
+                </div>
+              </div>
+              <div class="get-pt user_get_point">
+                <span class="reward-points-info"> Reward <span class="point-biao"> 35 </span> <span class="point-biao sale-out-img"> <a href="file:///C:/Users/Administrator/AppData/Roaming/Mozilla/Firefox/Profiles/8llj7apx.default/ScrapBook/data/20180104140459/index.html"> SheIn Points </a> </span> <span class="pre_ticket_tips"> The SheIn points will be added to your account after you confirm received your order. </span> </span>
+              </div>
+              <div class="free-express">
+                Got a coupon? Add it in the next step!
+              </div>
+              <input class="she-btn-black she-btn-xl checkout j-checkout-btn" name="checkout" value="checkout securely now" onclick="go_checkout(event);" type="button" />
+              <p class="sold-out-tips j-sold-out-tips"> The items in your shopping bag are unavailable now, please remove them to continue. </p>
+            </div>
+            <div class="ac-card">
+              <h2 class="she-h1"> </h2>
+              <div class="card-img">
+                <img src="/catalog/view/theme/default/image/n-ar-codcard_v9d7b3b8.png" class="card-img-ar" />
+                <img src="/catalog/view/theme/default/image/n-2-visa_vd35286a.png" />
+                <img src="/catalog/view/theme/default/image/n-3-mastercard_vf9b0f97.png" />
+                <img src="/catalog/view/theme/default/image/n-8-maestro_v781c6fd.png" />
+                <img src="/catalog/view/theme/default/image/n-7-american-express_vb186b55.png" class="card-img-common" />
+                <img src="/catalog/view/theme/default/image/cartnet@2x_v20ad514.png" />
+                <img src="/catalog/view/theme/default/image/n-1-paypal_va336d76.png" />
+                <img src="/catalog/view/theme/default/image/n-16-ideal_v42c1656.png" class="card-img-common" />
+                <img src="/catalog/view/theme/default/image/oxxo@2x_v0ac9136.png" />
+                <img src="/catalog/view/theme/default/image/wire_transfer@2x_v0896cc5.png" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+    </div>
+  </div>
 </div>
 {{ footer }}

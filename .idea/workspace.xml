@@ -1,30 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="259846e3-ed26-4194-b1b5-aa81f34d416f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/account.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/address.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/font_92762_b59ma9fqm7fu5wmi.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/font_92762_b59ma9fqm7fu5wmi.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/font_92762_b59ma9fqm7fu5wmi.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/myorder.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/password.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/14805717662107247113_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/14938011409591745325_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/15033896281634703513_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/15045224496531736370_thumbnail_220x293.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/adr-border_v30736a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/shein_class.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/sucess_ved748c3.png" afterDir="false" />
+    <list default="true" id="e792c2b8-0a62-4d20-8724-593a4b7c256d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/avenirnextdemibold_v962ee52.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/cart_empty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/1461847285629587639.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/14726932726109321642_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/14759083658948687758_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/14993351443712877669_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15046050697233447108_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15051784508235850021_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15051797550379425344_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15058157203901741088_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15063306896734975569_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15085530077243512625_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15094999978563820752_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15096166689125989720_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15099550940541582496_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15101317370201037603_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15101317412348512256_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103090114461480165_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103105305167291240_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103105394316347638_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15103132285170786248.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15105726012808922976_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15105727669345170651_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15106543942369010855_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15107394891031035020_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15107394912945120341_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15108263460352323076_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15108263767554479824_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15111684490044634765_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15112593626499685135_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15113404959132937934_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15113441921195502010_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15114330308554292507_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15114331039067238964_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15117722572370804988_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15117722619223257505_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15117723351702255526_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15118343660416313938_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15118345087512795386_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15121045013235271441_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15123689844887337637_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15127183729867421378_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15131602981231003100_thumbnail_405x552.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/15133252891396612721_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/adr-border_v30736a3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/cartnet@2x_v20ad514.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/empty-cart-bag_v58a1e98.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/loading_vc554483.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/loadinganimation_veb464f0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-1-paypal_va336d76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-16-ideal_v42c1656.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-2-visa_vd35286a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-3-mastercard_vf9b0f97.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-7-american-express_vb186b55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-8-maestro_v781c6fd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/n-ar-codcard_v9d7b3b8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/oxxo@2x_v0ac9136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/cart/wire_transfer@2x_v0896cc5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/0015151514054314644343629.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/0015151514054315989609834.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15106544277121228270_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15107394892061671204_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15107394912945120341_thumbnail_220x293.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/15107394912945120341_thumbnail_600x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/adr-border_v30736a3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/detail/browse-sprite_v48f3984.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-560x560.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-600x315.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cache/catalog/demo/product/product-7-800x800.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/address_list.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/address_list.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart_empty.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/checkout/cart_empty.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/product.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/product/product.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -46,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="130">
-              <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+              <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
               <folding>
                 <element signature="e#2033#2039#1#HTML" expanded="true" />
                 <element signature="e#2051#2057#1#HTML" expanded="true" />
@@ -189,7 +245,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="address.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="address.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/address.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
@@ -198,11 +254,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="399">
+              <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -211,7 +267,7 @@
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -236,10 +292,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>include</find>
-      <find>ios_app</find>
-      <find>14938011409591745325_thumbnail_220x293.jpg</find>
-      <find>img</find>
       <find>adr-border_v30736a3.png</find>
     </findStrings>
   </component>
@@ -249,29 +301,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/content_top.twig" />
-        <option value="$PROJECT_DIR$/admin/config.php" />
-        <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/column_left.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/account/account.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/account/address_form.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/search.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/home.twig" />
-        <option value="$PROJECT_DIR$/catalog/controller/common/home.php" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/home.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/header.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/css/index.css" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/common/footer.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/journal2/template/journal2/menu/footer.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/login.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/account/address_list.twig" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/css/address.css" />
       </list>
     </option>
   </component>
@@ -283,11 +313,6 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="width" value="1936" />
-    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -388,21 +413,6 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../upload" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work\shop\catalog\view\theme\default\image" />
-      <recent name="D:\work\shop\catalog\view\theme\default\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\work\shop\catalog\view\theme\journal2\css\icons\fonts" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -429,12 +439,12 @@
       <workItem from="1535958757691" duration="12835000" />
       <workItem from="1536023519703" duration="8112000" />
       <workItem from="1536033939378" duration="4095000" />
-      <workItem from="1536110969863" duration="6016000" />
+      <workItem from="1536110969863" duration="6307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32764000" />
+    <option name="totallyTimeSpent" value="104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -461,9 +471,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -604,7 +611,7 @@
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/account.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -623,7 +630,7 @@
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/order_list.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#strong#0;n#span#0;n#div#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -657,7 +664,7 @@
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/account/password.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
           <folding>
             <element signature="e#2033#2039#1#HTML" expanded="true" />
             <element signature="e#2051#2057#1#HTML" expanded="true" />
@@ -682,13 +689,6 @@
             <element signature="e#2393#2399#1#HTML" expanded="true" />
             <element signature="e#2411#2417#1#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -808,6 +808,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="65" column="163" selection-start-line="65" selection-start-column="163" selection-end-line="65" selection-end-column="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
         </state>
       </provider>
     </entry>
