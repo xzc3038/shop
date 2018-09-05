@@ -172,4 +172,15 @@ class ModelAccountOrder extends Model {
 
 		return $query->row['total'];
 	}
+
+    /**
+     * @author xzc
+     * @param $product_id
+     * @return mixed
+     */
+	public function getOrderImgById($product_id){
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+
+        return $query->rows;
+    }
 }

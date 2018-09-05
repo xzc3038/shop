@@ -17,188 +17,78 @@
           <th>Status</th>
           <th class="member_order_th">Action</th>
         </tr>
-        <tr id="order_info_BHL18525">
-          <td class="order-number"> BHL18525 </td>
-          <td class="order-list-pic">
-            <div class="order_img_list swiper-container order-swiper-container1 swiper-container-horizontal">
-              <div class="swiper-wrapper order-swiper-wrap">
-                <div class="order_img_small swiper-slide swiper-slide-active" style="width: 120px;">
-                  <img src="/catalog/view/theme/default/image/14938011409591745325_thumbnail_220x293.jpg" alt="" />
+        {% for order in orders %}
+          <tr id="order_info_BHL18525">
+            <td class="order-number"> #{{ order.order_id }} </td>
+            <td class="order-list-pic">
+              <div class="order_img_list swiper-container order-swiper-container1 swiper-container-horizontal">
+                <div class="swiper-wrapper order-swiper-wrap">
+                  <div class="order_img_small swiper-slide swiper-slide-active" style="width: 120px;">
+                    <img src="/image/{{ order.img }}" alt="" />
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-button-prev swiper-button-prev1 iconfont swiper-button-disabled">
-                
-              </div>
-              <div class="swiper-button-next swiper-button-next1 iconfont swiper-button-disabled">
-                
-              </div>
-            </div> </td>
-          <td> 12-15-2017 02:57:42 </td>
-          <td>
-            <div id="total">
-              <span class="default_price">US$17.99</span>
-            </div> </td>
-          <td class="order-list-state">
-            <div class="order-list-status">
-              <span id="order_status_BHL18525"> <strong> <span class="status_order"> Canceled </span> <i class="iconfont help-icon"></i> <span class="arrow status-arrow"></span> <p class="post-expired-title" style="display: none;">Your unpaid order is canceled and the point or coupon code you'v used have been back to you.</p> </strong> </span>
-            </div>
-            <div class="order-list-detail">
-              <a class="view_order hover_order" href="https://www.shein.com/index.php?model=member_order&amp;action=detail&amp;order_id=BHL18525">View Details <span class="cancel_risk_info">You can submit a ticket on the order details page</span> <span class="arrow"></span> </a>
-            </div> </td>
-          <td class="member_order_action">
-            <div class="action">
-              <div class="symbol">
-                <div class="canceled-goods-wrap" onclick="cancelShow('BHL18525')">
-                  <span class="she-btn-black she-btn-xs">Repurchase</span>
+                <div class="swiper-button-prev swiper-button-prev1 iconfont swiper-button-disabled">
+                  
                 </div>
-              </div>
-            </div> </td>
-        </tr>
-        <tr id="order_info_BZA18525">
-          <td class="order-number"> BZA18525 </td>
-          <td class="order-list-pic">
-            <div class="order_img_list swiper-container order-swiper-container2 swiper-container-horizontal">
-              <div class="swiper-wrapper order-swiper-wrap">
-                <div class="order_img_small swiper-slide swiper-slide-active" style="width: 120px;">
-                  <img src="/catalog/view/theme/default/image/15033896281634703513_thumbnail_220x293.jpg" alt="" />
+                <div class="swiper-button-next swiper-button-next1 iconfont swiper-button-disabled">
+                  
                 </div>
+              </div> </td>
+            <td> {{ order.date_added }} </td>
+            <td>
+              <div id="total">
+                <span class="default_price">{{ order.total }}</span>
+              </div> </td>
+            <td class="order-list-state">
+              <div class="order-list-status">
+                <span id="order_status_BHL18525">
+                  <strong> <span class="status_order"> {{ order.status }} </span>
+                    {#<i class="iconfont help-icon"></i>#}
+                    {#<span class="arrow status-arrow"></span>#}
+                    {#<p class="post-expired-title" style="display: none;">Your unpaid order is canceled and the point or coupon code you'v used have been back to you.</p>#}
+                  </strong>
+                </span>
               </div>
-              <div class="swiper-button-prev swiper-button-prev2 iconfont swiper-button-disabled">
-                
-              </div>
-              <div class="swiper-button-next swiper-button-next2 iconfont swiper-button-disabled">
-                
-              </div>
-            </div> </td>
-          <td> 12-15-2017 02:56:47 </td>
-          <td>
-            <div id="total">
-              <span class="default_price">US$20.99</span>
-            </div> </td>
-          <td class="order-list-state">
-            <div class="order-list-status">
-              <span id="order_status_BZA18525"> <strong> <span class="status_order"> Canceled </span> <i class="iconfont help-icon"></i> <span class="arrow status-arrow"></span> <p class="post-expired-title" style="display: none;">Your unpaid order is canceled and the point or coupon code you'v used have been back to you.</p> </strong> </span>
-            </div>
-            <div class="order-list-detail">
-              <a class="view_order hover_order" href="https://www.shein.com/index.php?model=member_order&amp;action=detail&amp;order_id=BZA18525">View Details <span class="cancel_risk_info">You can submit a ticket on the order details page</span> <span class="arrow"></span> </a>
-            </div> </td>
-          <td class="member_order_action">
-            <div class="action">
-              <div class="symbol">
-                <div class="canceled-goods-wrap" onclick="cancelShow('BZA18525')">
-                  <span class="she-btn-black she-btn-xs">Repurchase</span>
+              {#<div class="order-list-detail">#}
+                {#<a class="view_order hover_order" href="#">View Details <span class="cancel_risk_info">You can submit a ticket on the order details page</span> <span class="arrow"></span> </a>#}
+              {#</div> </td>#}
+            <td class="member_order_action">
+              <div class="action">
+                <div class="symbol">
+                  <div class="canceled-goods-wrap">
+                    <span class="she-btn-black she-btn-xs"><a href="{{ order.view }}" title="{{ button_view }}" style="color: white">[{{ button_view }}]</a></span>
+                  </div>
                 </div>
-              </div>
-            </div> </td>
-        </tr>
-        <tr id="order_info_APX18525">
-          <td class="order-number"> APX18525 </td>
-          <td class="order-list-pic">
-            <div class="order_img_list swiper-container order-swiper-container3 swiper-container-horizontal">
-              <div class="swiper-wrapper order-swiper-wrap">
-                <div class="order_img_small swiper-slide swiper-slide-active" style="width: 120px;">
-                  <img src="/catalog/view/theme/default/image/15045224496531736370_thumbnail_220x293.jpg" alt="" />
-                </div>
-                <div class="order_img_small swiper-slide swiper-slide-next" style="width: 120px;">
-                  <img src="/catalog/view/theme/default/image/15107379627463171832_thumbnail_220x293.jpg" alt="" />
-                </div>
-              </div>
-              <div class="swiper-button-prev swiper-button-prev3 iconfont swiper-button-disabled">
-                
-              </div>
-              <div class="swiper-button-next swiper-button-next3 iconfont">
-                
-              </div>
-            </div> </td>
-          <td> 12-15-2017 02:56:04 </td>
-          <td>
-            <div id="total">
-              <span class="default_price">US$85.99</span>
-            </div> </td>
-          <td class="order-list-state">
-            <div class="order-list-status">
-              <span id="order_status_APX18525"> <strong> <span class="status_order"> Canceled </span> <i class="iconfont help-icon"></i> <span class="arrow status-arrow"></span> <p class="post-expired-title" style="display: none;">Your unpaid order is canceled and the point or coupon code you'v used have been back to you.</p> </strong> </span>
-            </div>
-            <div class="order-list-detail">
-              <a class="view_order hover_order" href="https://www.shein.com/index.php?model=member_order&amp;action=detail&amp;order_id=APX18525">View Details <span class="cancel_risk_info">You can submit a ticket on the order details page</span> <span class="arrow"></span> </a>
-            </div> </td>
-          <td class="member_order_action">
-            <div class="action">
-              <div class="symbol">
-                <div class="canceled-goods-wrap" onclick="cancelShow('APX18525')">
-                  <span class="she-btn-black she-btn-xs">Repurchase</span>
-                </div>
-              </div>
-            </div> </td>
-        </tr>
-        <tr id="order_info_YCY18466">
-          <td class="order-number"> YCY18466 </td>
-          <td class="order-list-pic">
-            <div class="order_img_list swiper-container order-swiper-container4 swiper-container-horizontal">
-              <div class="swiper-wrapper order-swiper-wrap">
-                <div class="order_img_small swiper-slide swiper-slide-active" style="width: 120px;">
-                  <img src="/catalog/view/theme/default/image/14805717662107247113_thumbnail_220x293.jpg" alt="" />
-                </div>
-                <div class="order_img_small swiper-slide swiper-slide-next" style="width: 120px;">
-                  <img src="/catalog/view/theme/default/image/15111692731405587203_thumbnail_220x293.jpg" alt="" />
-                </div>
-              </div>
-              <div class="swiper-button-prev swiper-button-prev4 iconfont swiper-button-disabled">
-                
-              </div>
-              <div class="swiper-button-next swiper-button-next4 iconfont">
-                
-              </div>
-            </div> </td>
-          <td> 12-13-2017 13:51:00 </td>
-          <td>
-            <div id="total">
-              <span class="default_price">51.11€</span>
-              <span class="usa_price" style="display: block; color: red;">(US$58.99)</span>
-            </div> </td>
-          <td class="order-list-state">
-            <div class="order-list-status">
-              <span id="order_status_YCY18466"> <strong> <span class="status_order"> Canceled </span> <i class="iconfont help-icon"></i> <span class="arrow status-arrow"></span> <p class="post-expired-title" style="display: none;">Your unpaid order is canceled and the point or coupon code you'v used have been back to you.</p> </strong> </span>
-            </div>
-            <div class="order-list-detail">
-              <a class="view_order hover_order" href="https://www.shein.com/index.php?model=member_order&amp;action=detail&amp;order_id=YCY18466">View Details <span class="cancel_risk_info">You can submit a ticket on the order details page</span> <span class="arrow"></span> </a>
-            </div> </td>
-          <td class="member_order_action">
-            <div class="action">
-              <div class="symbol">
-                <div class="canceled-goods-wrap" onclick="cancelShow('YCY18466')">
-                  <span class="she-btn-black she-btn-xs">Repurchase</span>
-                </div>
-              </div>
-            </div> </td>
-        </tr>
+              </div> </td>
+          </tr>
+        {% endfor %}
         </tbody>
       </table>
-      <div id="toolbar_page" style="display: block;">
-        <div id="box-pagelist">
-          <div class="pageNav ">
-            <!-- 					<span class="pagecurrents">Page 1 of 1</span>
-                         -->
-            <div class="pagecurrents2 she-pagination">
-              <!--   -->
-              <a class="she-current">1</a>
-              <!--  -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="productsContent12" class="recommended_product_order">
-        <h3>Recommendations For You</h3>
-        <div style="position: relative;">
-          <a href="javascript:void(0)" class="order-point-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled"></a>
-          <div class=" order-swiper-container swiper-container swiper-container-horizontal" style="max-width: 786px;">
-            <div class="swiper-wrapper" id="personal_recommend_products_list">
-              <img src="loading_vc554483_001.gif" class="cate_products_load" />
-            </div>
-          </div>
-          <a class=" order-point-next swiper-button-next iconfont shein-arrow" href="javascript:void(0)"></a>
-        </div>
-      </div>
+      {#<div id="toolbar_page" style="display: block;">#}
+        {#<div id="box-pagelist">#}
+          {#<div class="pageNav ">#}
+            {#<!-- 					<span class="pagecurrents">Page 1 of 1</span>#}
+                         {#-->#}
+            {#<div class="pagecurrents2 she-pagination">#}
+              {#<!--   -->#}
+              {#<a class="she-current">1</a>#}
+              {#<!--  -->#}
+            {#</div>#}
+          {#</div>#}
+        {#</div>#}
+      {#</div>#}
+      {#<div id="productsContent12" class="recommended_product_order">#}
+        {#<h3>Recommendations For You</h3>#}
+        {#<div style="position: relative;">#}
+          {#<a href="javascript:void(0)" class="order-point-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled"></a>#}
+          {#<div class=" order-swiper-container swiper-container swiper-container-horizontal" style="max-width: 786px;">#}
+            {#<div class="swiper-wrapper" id="personal_recommend_products_list">#}
+              {#<img src="loading_vc554483_001.gif" class="cate_products_load" />#}
+            {#</div>#}
+          {#</div>#}
+          {#<a class=" order-point-next swiper-button-next iconfont shein-arrow" href="javascript:void(0)"></a>#}
+        {#</div>#}
+      {#</div>#}
     </div>
   </div>
 </div>
