@@ -27,6 +27,7 @@ $_['entry_telephone']      = 'Telephone';
 $_['entry_newsletter']     = 'Subscribe';
 $_['entry_password']       = 'Password';
 $_['entry_confirm']        = 'Password Confirm';
+$_['entry_phone']      = 'Telephone';
 
 // Error
 $_['error_exists_email']      = 'Warning: E-Mail Address is already registered!';

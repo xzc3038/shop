@@ -60,39 +60,39 @@ class ControllerAccountRegister extends Controller {
 		}
 
 		if (isset($this->error['fullname'])) {
-			$data['error_fullname'] = $this->error['fullname'];
+			$data['error_fullname_x'] = $this->error['fullname'];
 		} else {
-			$data['error_fullname'] = '';
+			$data['error_fullname_x'] = '';
 		}
 
 		if (isset($this->error['email'])) {
-			$data['error_email'] = $this->error['email'];
+			$data['error_email_x'] = $this->error['email'];
 		} else {
-			$data['error_email'] = '';
+			$data['error_email_x'] = '';
 		}
 
 		if (isset($this->error['telephone'])) {
-			$data['error_telephone'] = $this->error['telephone'];
+			$data['error_telephone_x'] = $this->error['telephone'];
 		} else {
-			$data['error_telephone'] = '';
+			$data['error_telephone_x'] = '';
 		}
 
 		if (isset($this->error['custom_field'])) {
-			$data['error_custom_field'] = $this->error['custom_field'];
+			$data['error_custom_field_x'] = $this->error['custom_field'];
 		} else {
-			$data['error_custom_field'] = array();
+			$data['error_custom_field_x'] = array();
 		}
 
 		if (isset($this->error['password'])) {
-			$data['error_password'] = $this->error['password'];
+			$data['error_password_x'] = $this->error['password'];
 		} else {
-			$data['error_password'] = '';
+			$data['error_password_x'] = '';
 		}
 
 		if (isset($this->error['confirm'])) {
-			$data['error_confirm'] = $this->error['confirm'];
+			$data['error_confirm_x'] = $this->error['confirm'];
 		} else {
-			$data['error_confirm'] = '';
+			$data['error_confirm_x'] = '';
 		}
 
 		$data['action'] = $this->url->link('account/register');
@@ -205,10 +205,10 @@ class ControllerAccountRegister extends Controller {
 			$data['agree'] = false;
 		}
 //        var_dump($data);exit;
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['column_right'] = $this->load->controller('common/column_right');
-		$data['content_top'] = $this->load->controller('common/content_top');
-		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+//		$data['column_left'] = $this->load->controller('common/column_left');
+//		$data['column_right'] = $this->load->controller('common/column_right');
+//		$data['content_top'] = $this->load->controller('common/content_top');
+//		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
@@ -270,7 +270,7 @@ class ControllerAccountRegister extends Controller {
 			$this->error['password'] = $this->language->get('error_password');
 		}
 
-		if ($this->request->post['password'] !== $this->request->post['password1']) {
+		if ($this->request->post['password'] !== $this->request->post['confirm']) {
 
 			$this->error['confirm'] = $this->language->get('error_confirm');
 
