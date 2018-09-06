@@ -18,7 +18,7 @@
               <tr class="conbox-item">
                 <td class="conbox-tatal-wrap">
                   <div class="conbox-title">
-                    Total
+                      {{ text_total }}
                   </div> <p class="conbox-money">{{ total }}</p> </td>
                 <td class="conbox-unavailabl-wrap">
                   <div class="conbox-title">
@@ -65,20 +65,20 @@
               <thead>
               <tr style="background: rgb(250, 250, 250) none repeat scroll 0% 0%;">
                 <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ column_date_added }}</th>
-                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Type</th>
-                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Order NO.</th>
+                {#<th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Type</th>#}
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ column_description }}</th>
                 <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ column_amount }}</th>
-                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Status</th>
+                {#<th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Status</th>#}
               </tr>
               </thead>
               <tbody>
               {% for transaction in transactions %}
                 <tr>
                   <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ transaction.date_added }}</td>
-                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>
+                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ transaction.description }}</td>
                   <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ transaction.amount }}</td>
-                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>
-                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>
+                  {#<td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>#}
+                  {#<td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>#}
                 </tr>
               {% endfor %}
               </tbody>
