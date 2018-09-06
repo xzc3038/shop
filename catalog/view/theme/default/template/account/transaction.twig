@@ -19,7 +19,7 @@
                 <td class="conbox-tatal-wrap">
                   <div class="conbox-title">
                     Total
-                  </div> <p class="conbox-money">0.00</p> </td>
+                  </div> <p class="conbox-money">{{ total }}</p> </td>
                 <td class="conbox-unavailabl-wrap">
                   <div class="conbox-title">
                     Unavailable SheIn Credit
@@ -64,29 +64,45 @@
             <table class="table" style="border: 1px solid rgb(229, 229, 229);">
               <thead>
               <tr style="background: rgb(250, 250, 250) none repeat scroll 0% 0%;">
-                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Date</th>
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ column_date_added }}</th>
                 <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Type</th>
                 <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Order NO.</th>
-                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Amount</th>
+                <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ column_amount }}</th>
                 <th style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">Status</th>
               </tr>
               </thead>
+              <tbody>
+              {% for transaction in transactions %}
+                <tr>
+                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ transaction.date_added }}</td>
+                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>
+                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ transaction.amount }}</td>
+                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>
+                  <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>
+                </tr>
+              {% endfor %}
+              </tbody>
             </table>
           </div>
-          <div class="popup_uploading_bg" id="popup_uploading" style="display: none;">
-            <div class="popup_vote_color" onclick="hide_detail()"></div>
-            <div class="popup_uploading_list popup_wallet_list">
-              <a class="close_vote" onclick="hide_detail()"></a>
-              <div class="uploading_timeout_title">
-                <span class="wallet_icon"></span>
-              </div>
-              <p>Your withdrawal request has been submitted, <br />we will update news in 48 hours.</p>
-              <button type="button" class="uploading_button" name="ok" onclick="hide_detail()">OK</button>
-            </div>
-          </div>
+          {#<div class="popup_uploading_bg" id="popup_uploading" style="display: none;">#}
+            {#<div class="popup_vote_color" onclick="hide_detail()"></div>#}
+            {#<div class="popup_uploading_list popup_wallet_list">#}
+              {#<a class="close_vote" onclick="hide_detail()"></a>#}
+              {#<div class="uploading_timeout_title">#}
+                {#<span class="wallet_icon"></span>#}
+              {#</div>#}
+              {#<p>Your withdrawal request has been submitted, <br />we will update news in 48 hours.</p>#}
+              {#<button type="button" class="uploading_button" name="ok" onclick="hide_detail()">OK</button>#}
+            {#</div>#}
+          {#</div>#}
         </div>
       </div>
     </div>
   </div>
 </div>
 {{ footer }}
+<script>
+    $(function () {
+        $('.j-member-wallet').addClass('area');
+    });
+</script>

@@ -486,7 +486,7 @@ if (!function_exists('address_format')) {
     {
         if (!$format) {
             if (is_pro() || is_free()) {
-                $format = '{fullname} ({telephone})' . "\n" . '{zone}{city}{county}{address_1} {company} {postcode}';
+                $format = '{fullname} ({telephone})' . "\n" . '{zone}{city}{county} '. "\n" .'{address_1}  '. "\n" .'{company}  '. "\n" .'{postcode}';
             } else {
                 $format = '{fullname} ({telephone})' . "\n" . '{country}{zone}{city}{county}{address_1} {company} {postcode}';
             }

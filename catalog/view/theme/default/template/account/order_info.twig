@@ -1,150 +1,170 @@
 {{ header }}
-<div id="account-order" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  {% if success %}
-  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  {% endif %}
-  {% if error_warning %}
-  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  {% endif %}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h2>{{ heading_title }}</h2>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left" colspan="2">{{ text_order_detail }}</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left" style="width: 50%;">{% if invoice_no %} <b>{{ text_invoice_no }}</b> {{ invoice_no }}<br />
-              {% endif %} <b>{{ text_order_id }}</b> #{{ order_id }}<br />
-              <b>{{ text_date_added }}</b> {{ date_added }}</td>
-            <td class="text-left" style="width: 50%;">{% if payment_method %} <b>{{ text_payment_method }}</b> {{ payment_method }}<br />
-              {% endif %}
-              {% if shipping_method %} <b>{{ text_shipping_method }}</b> {{ shipping_method }} {% endif %}</td>
-          </tr>
-        </tbody>
-      </table>
-      {% if shipping_address %}
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left" style="width: 50%; vertical-align: top;">{{ text_shipping_address }}</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">{{ shipping_address }}</td>
-          </tr>
-        </tbody>
-      </table>
-      {% endif %}
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-left">{{ column_name }}</td>
-              <td class="text-left">{{ column_model }}</td>
-              <td class="text-right">{{ column_quantity }}</td>
-              <td class="text-right">{{ column_price }}</td>
-              <td class="text-right">{{ column_total }}</td>
-              {% if products %}
-              <td style="width: 20px;"></td>
-              {% endif %} </tr>
-          </thead>
-          <tbody>
-          {% for product in products %}
-          <tr>
-            <td class="text-left">{{ product.name }}
-              {% for option in product.option %} <br />
-              &nbsp;<small> - {{ option.name }}: {{ option.value }}</small> {% endfor %}</td>
-            <td class="text-left">{{ product.model }}</td>
-            <td class="text-right">{{ product.quantity }}</td>
-            <td class="text-right">{{ product.price }}</td>
-            <td class="text-right">{{ product.total }}</td>
-            <td class="text-right" style="white-space: nowrap;">{% if product.reorder %} <a href="{{ product.reorder }}" data-toggle="tooltip" title="{{ button_reorder }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a> {% endif %} <a href="{{ product.return }}" data-toggle="tooltip" title="{{ button_return }}" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
-          </tr>
-          {% endfor %}
-          {% for voucher in vouchers %}
-          <tr>
-            <td class="text-left">{{ voucher.description }}</td>
-            <td class="text-left"></td>
-            <td class="text-right">1</td>
-            <td class="text-right">{{ voucher.amount }}</td>
-            <td class="text-right">{{ voucher.amount }}</td>
-            {% if products %}
-            <td></td>
-            {% endif %} </tr>
-          {% endfor %}
-            </tbody>
-          <tfoot>
-          {% for total in totals %}
-          <tr>
-            <td colspan="3"></td>
-            <td class="text-right"><b>{{ total.title }}</b></td>
-            <td class="text-right">{{ total.text }}</td>
-            {% if products %}
-            <td></td>
-            {% endif %} </tr>
-          {% endfor %}
-            </tfoot>
-        </table>
+{{ column_left }}
+
+    <div class="she-center col-sm-9 myorder-detail order-wrap j-order-conter j-order-detail" style="padding-top:20px">
+      <div class="detail-title">
+        <h3 class="title-left she-tl-h3">Order details</h3>
+        {#<p class="title-right"> <a href="#"> <i class="iconfont bk-icon" style="font-size: 12px; color: rgb(51, 51, 51);"></i>back </a> </p>#}
       </div>
-      {% if comment %}
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left">{{ text_comment }}</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">{{ comment }}</td>
-          </tr>
-        </tbody>
-      </table>
-      {% endif %}
-      {% if histories %}
-      <h3>{{ text_history }}</h3>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left">{{ column_date_added }}</td>
-            <td class="text-left">{{ column_status }}</td>
-            <td class="text-left">{{ column_comment }}</td>
-          </tr>
-        </thead>
-        <tbody>
-        {% if histories %}
-        {% for history in histories %}
-        <tr>
-          <td class="text-left">{{ history.date_added }}</td>
-          <td class="text-left">{{ history.status }}</td>
-          <td class="text-left">{{ history.comment }}</td>
-        </tr>
-        {% endfor %}
-        {% else %}
-        <tr>
-          <td colspan="3" class="text-center">{{ text_no_results }}</td>
-        </tr>
-        {% endif %}
-          </tbody>
-      </table>
-      {% endif %}
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+      <div class="detail-con" id="order_info_YCB19086">
+        <div class="detail-top">
+          <div class="order-info">
+            <div class="detail-order">
+              <ul>
+                <li>{{ text_order_id }}</li>
+                <li id="billno">#{{ order_id }}</li>
+              </ul>
+            </div>
+            <div class="detail-date">
+              <ul>
+                <li>{{ text_date_added }}</li>
+                <li> {{ date_added }} </li>
+              </ul>
+            </div>
+          </div>
+          {#<div class="unpaid-wrap j-unpaid-wrap" style="display: block;">#}
+            {#<div class="unpaid-list">#}
+              {#<ul>#}
+                {#<li class="list-item"> <span class="item-weight">Remaining Payment Time:</span> <span class="item-time j-count-down"> <span class="j-order-timeh">23</span> : <span class="j-order-timem">59</span> : <span class="j-order-times">03</span> </span> <span class="item-tips">(automatically cancelled if overdue)</span> <a class="she-btn-black she-btn-s" href="javascript:void(0)" onclick="checkoutUrl('YCB19086')">checkout </a> </li>#}
+                {#<li class="list-item"> <p class="item-weight">Current status: Waiting for Payment </p> <p class="item-tips">Please pay as soon as possible, overdue orders will be automatically cancelled</p> </li>#}
+              {#</ul>#}
+            {#</div>#}
+          {#</div>#}
+          <div class="detail-hint">
+            <div class="hint-list">
+              <ul>
+                {#<li class="ticket_status_con"> <a class="ga-tk-order-detail-customer-service" href="https://www.shein.com/index.php?model=zendesk&amp;action=submitTicket&amp;billno=YCB19086"> <i class="iconfont help-icon" style="margin-right: 5px;"></i>Customer Service#}
+                    <div class="help_ticket" style="display: none;">
+                      <span class="arrow"></span>
+                      <img src="helpl_vc723994.gif" class="ticket_tips" style="display: none;" />
+                      <div class="ticket_tips_hide ticket-hover">
+                        Send us your request simply by submitting a ticket.
+                      </div>
+                    </div> </a>
+                  <div class="already_submit" style="display: none;">
+                    <em data-show="1">x</em>You have already submitted a similar Customer Service ticket .You can go to My Tickets to check the progress of your ticket and/or submit an update
+                    <a class="view_ticket" href="https://www.shein.com/index.php?model=ticket&amp;action=show&amp;ticket=">&gt;&gt;View ticket details</a>
+                  </div> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="detail-table table-responsive " id="return-info">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>{{ column_name }}</th>
+              <th>{{ column_quantity }}</th>
+              <th>{{ column_price }}</th>
+              <th>{{ column_total }}</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+              <tr>
+                <td>
+                  <div class="media product">
+                    <a href="#" class="pull-left"> <img src="15120075957714274960_thumbnail_220x293.jpg" alt="High Neck Solid T-shirt" style="max-width: 45px; max-height: 65px;" /> </a>
+                    <div class="media-body">
+                      <ul class="media-list" style="margin: 0px;">
+                        <li>{{  product.name }}</li>
+                        <li class="order_info_li j-good-size-attr">Size:{{ product.option[5].value }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.price }}</td>
+                <td><span class="default_price">{{ product.total }}</span></td>
+                <td class="text-right" style="white-space: nowrap;">{% if product.reorder %} <a href="{{ product.reorder }}" data-toggle="tooltip" title="{{ button_reorder }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a> {% endif %} <a href="{{ product.return }}" data-toggle="tooltip" title="{{ button_return }}" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+          {#<div class="detail-title order_tickets" style="border: medium none; ">#}
+            {#<h3 class="title-left she-tl-h3">ORDER TICKETS</h3>#}
+            {#<table id="ticket_table" class="table table-striped">#}
+              {#<thead>#}
+              {#<tr>#}
+                {#<th>Ticket ID:</th>#}
+                {#<th>Title</th>#}
+                {#<th>Status</th>#}
+                {#<th>Created</th>#}
+                {#<th>Last Updated</th>#}
+              {#</tr>#}
+              {#</thead>#}
+              {#<tbody>#}
+              {#</tbody>#}
+            {#</table>#}
+          {#</div>#}
+          <div class="sub" style="width: 32%;">
+            <p> <span>Sub Total:</span> <span id="sub_total_member" price="" class="order_sub_total">US$86.00</span> </p>
+            <p> <span>Shipping:</span> <span class="order_ship_total">Free</span> </p>
+            <p> <span>Shipping Insurance:</span> <span>US$0.98</span> </p>
+            <p class="total"> <span>Total:</span> <span id="total_member" class="order_price_total">US$86.98</span> </p>
+            <hr style="margin: 0px;" />
+          </div>
+          <div class="delay-prompt delay-share"></div>
+        </div>
+        <div class="detail-info" style="text-align: left;">
+          <div class="col-sm-6 detail-info-left">
+            <div class="bill-info">
+              <h6>Billing Information</h6>
+              <p>Ms. jin tieshan</p>
+              <p>艾斯德斯多</p>
+              <p>adADC</p>
+              <p>ddd,AUSTRALIAN CAPITAL TERRITORY,2600</p>
+              <p>Australia</p>
+              <p>1233444</p>
+              <p>16958398@qq.com</p>
+            </div>
+            <div class="ship-info" style="height: 100px;">
+              <h6>Shipping Method</h6>
+              <p>STANDARD SHIPPING</p>
+            </div>
+            <div class="ship-info">
+              <h6>Comment</h6>
+              <p style="height: auto; max-height: 100px; overflow-y: scroll;">&nbsp; </p>
+            </div>
+          </div>
+          <div class="col-sm-6 detail-info-right">
+            <div class="data-info">
+              <h6>Shipping Information</h6>
+              <p>Ms. jin tieshan </p>
+              <p>艾斯德斯多</p>
+              <p>adADC</p>
+              <p>ddd,AUSTRALIAN CAPITAL TERRITORY,2600</p>
+              <p>Australia</p>
+              <p>1233444</p>
+              <a class="j-edit-shipping" href="javascript:;" style="text-decoration: underline; font-weight: bold; cursor: pointer;">Edit</a>
+            </div>
+            <div class="pay-info" style="height: 100px;">
+              <h6>Payment Method</h6>
+              <p>Credit Card</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {#<div id="productsContent12" class="recommended_product_order">#}
+        {#<h3>Recommendations For You</h3>#}
+        {#<div style="position: relative;">#}
+          {#<a href="javascript:void(0)" class="order-point-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled"></a>#}
+          {#<div class=" order-swiper-container swiper-container swiper-container-horizontal" style="max-width: 786px;">#}
+            {#<div class="swiper-wrapper" id="personal_recommend_products_list">#}
+              {#<img src="loading_vc554483.gif" class="cate_products_load" />#}
+            {#</div>#}
+          {#</div>#}
+          {#<a class=" order-point-next swiper-button-next iconfont shein-arrow" href="javascript:void(0)"></a>#}
+        {#</div>#}
+      {#</div>#}
+    </div>
+  </div>
 </div>
 {{ footer }}
+
+<script>
+    $(function () {
+        $('.j-member-orders').addClass('area');
+    });
+</script>

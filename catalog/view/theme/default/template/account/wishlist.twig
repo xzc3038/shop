@@ -8,67 +8,74 @@
           </div>
         </header>
         <div class="wish-conter">
-          <div class="wish-nav">
-            <div class="wish-nav-left">
-              <div class="item-drop fr" id="sort">
-                <span class="she-drop-normal btn1 " name="searchType" onchange="changeFilter()" id="searchType" style="cursor: default;"> Date Added <span class="caret"></span> </span>
-                <ul class="she-drop-normal-ul">
-                  <li attr-value="data_added"> <a href="javascript:void(0)">Date Added</a> </li>
-                  <li attr-value="products_name"> <a href="javascript:void(0)">Products Name</a> </li>
-                  <li attr-value="price_up"> <a href="javascript:void(0)">Price(Up)</a> </li>
-                  <li attr-value="price_down"> <a href="javascript:void(0)">Price(Down)</a> </li>
-                </ul>
-              </div>
-            </div>
-            <div class="wish-nav-right">
-              <span> <span id="private_num">1</span>&nbsp;Products </span>
-            </div>
-          </div>
+          {#<div class="wish-nav">#}
+            {#<div class="wish-nav-left">#}
+              {#<div class="item-drop fr" id="sort">#}
+                {#<span class="she-drop-normal btn1 " name="searchType" onchange="changeFilter()" id="searchType" style="cursor: default;"> Date Added <span class="caret"></span> </span>#}
+                {#<ul class="she-drop-normal-ul">#}
+                  {#<li attr-value="data_added"> <a href="javascript:void(0)">Date Added</a> </li>#}
+                  {#<li attr-value="products_name"> <a href="javascript:void(0)">Products Name</a> </li>#}
+                  {#<li attr-value="price_up"> <a href="javascript:void(0)">Price(Up)</a> </li>#}
+                  {#<li attr-value="price_down"> <a href="javascript:void(0)">Price(Down)</a> </li>#}
+                {#</ul>#}
+              {#</div>#}
+            {#</div>#}
+            {#<div class="wish-nav-right">#}
+              {#<span> <span id="private_num">1</span>&nbsp;Products </span>#}
+            {#</div>#}
+          {#</div>#}
           <div id="productsContent1_goods" class="products_category" part="1" data-type="1" data-test="wishlist">
             <div class="qView-imgloading" style="display: none;">
               <img v-for="val in quickImgCache" :src="val" />
             </div>
             <ul class="row" id="goods_info">
-              <input id="update_price_type" name="update_price_type" value="list" type="hidden" />
-              <div data-sku="tee171114706" data-spu="tee171114706" class="prd-ct-gd-item col-lg-3 col-md-3 col-sm-4 col-xs-6 j-wishlist-item" vip_sale="yes" sort_order="prepend" special_price_hide="no" alt1="406371" data-ga-stock="InStock">
-                <div class="product j-item-data" data-cat-id="1738" data-ga-price="12.00" data-ga-sku="tee171114706" data-ga-spu="tee171114706" data-ga-name="Checkered Panel Mixed Media T-shirt" viewed="true" style="height: 390px;">
-                  <div class="image">
-                    <a title="" href="#" target="_top"> <img alt="Checkered Panel Mixed Media T-shirt" src="/catalog/view/theme/default/image/wishlist/15105726012808922976_thumbnail_220x293.jpg" style="height: 265px;" border="0" /> <em class="discount_img">37</em>
-                      <div class="item-like">
-                        <div class="item-like-inner">
-                          <span class="num">194</span>
-                          <i class="iconfont like"></i>
-                        </div>
-                        <div class="like-tips">
-                          <span class="num">194</span> people like the item
-                        </div>
-                      </div> </a>
-                  </div>
-                  <div class="description">
-                    <a href="#" title="Checkered Panel Mixed Media T-shirt" target="_top"><span class="goods-brand">SHEIN </span> Checkered Panel Mixed Media T-shirt</a>
-                  </div>
-                  <div id="cat-product-list-406371" alt1="406371" class="price">
-                    <span id="wholesale_11_member_price" class="price" price="US$10.20" style="display: none;"> <strong class="final_price_strong">US$10.20</strong> <b class="show_vip">(vip)</b> </span>
-                    <span id="wholesale_12_member_price" class="price" price="US$9.60" style="display: none;"> <strong class="final_price_strong">US$9.60</strong> <b class="show_vip">(vip)</b> </span>
-                    <span id="special_price_member_price_off" class="price" price="US$12.00"> <strong class="final_price_strong">US$12.00</strong> <b class="show_vip">(Sale)</b> </span>
-                    <span id="shop_price_member_price_off" class="price-r" price="US$19.00">
-             <s>
-              US$19.00
-             </s> </span>
-                    <a href="javascript:void(0)" class="delete" id="delete"> <span class="iconfont "></span> </a>
-                  </div>
-                  <div class="footer">
-                  </div>
-                </div>
-                <div class="save-cate quickview" style="display: none;">
-                  <div class="btn-cart quick-shopping">
-                    <div id="addToCart_406371" onclick="addToBagListPage('406371',0);" class="attribute-list list-cart">
-                      <span></span> + Add to Bag
+                {% for product in products %}
+              <li>
+                <input id="update_price_type" name="update_price_type" value="list" type="hidden" />
+                <div data-sku="tee171114706" data-spu="tee171114706" class="prd-ct-gd-item col-lg-3 col-md-3 col-sm-4 col-xs-6 j-wishlist-item" vip_sale="yes" sort_order="prepend" special_price_hide="no" alt1="406371" data-ga-stock="InStock">
+                  <div class="product j-item-data" data-cat-id="1738" data-ga-price="12.00" data-ga-sku="tee171114706" data-ga-spu="tee171114706" data-ga-name="Checkered Panel Mixed Media T-shirt" viewed="true" style="height: 390px;">
+                    <div class="image">
+                      <a title="" href="{{ product.href }}" target="_top"> <img alt="{{ product.name }}" src="{{ product.thumb }}" style="height: 265px;width: 200px" border="0" title="{{ product.name }}"  />
+                        {#<em class="discount_img">37</em>#}
+                        {#<div class="item-like">#}
+                          {#<div class="item-like-inner">#}
+                            {#<span class="num">194</span>#}
+                            {#<i class="iconfont like"></i>#}
+                          {#</div>#}
+                          {#<div class="like-tips">#}
+                            {#<span class="num">194</span> people like the item#}
+                          {#</div>#}
+                        {#</div> #}
+                      </a>
                     </div>
-                    <div id="goods_attr_406371" class="attr-size1"></div>
+                    <div class="description">
+                      <a href="#" title="{{ product.name }}" target="_top"> {{ product.name }}</a>
+                    </div>
+                    <div id="cat-product-list-406371" alt1="406371" class="price">
+                      {#<span id="wholesale_11_member_price" class="price" price="US$10.20" style="display: none;"> <strong class="final_price_strong">{{ product.price }}</strong> <b class="show_vip">(vip)</b> </span>#}
+                      {#<span id="wholesale_12_member_price" class="price" price="US$9.60" style="display: none;"> <strong class="final_price_strong">{{ product.price }}</strong> <b class="show_vip">(vip)</b> </span>#}
+                      <span id="special_price_member_price_off" class="price" price="US$12.00"> <strong class="final_price_strong">{{ product.price }}</strong> <b class="show_vip">{{ product.stock }}</b> </span>
+                      {#<span id="shop_price_member_price_off" class="price-r" price="US$19.00">#}
+                       {#<s>#}
+                        {#US$19.00#}
+                       {#</s> #}
+                      </span>
+                      <a href="{{ product.remove }}" title="{{ button_remove }}" class="delete" id="delete"> <span class="iconfont "></span> </a>
+                    </div>
+                    <div class="footer">
+                    </div>
+                  </div>
+                  <div class="save-cate quickview" style="display: none;">
+                    <div class="btn-cart quick-shopping">
+                      <div id="addToCart_406371" onclick="addToBagListPage('406371',0);" class="attribute-list list-cart">
+                        <span></span> + Add to Bag
+                      </div>
+                      <div id="goods_attr_406371" class="attr-size1"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+                  {% endfor %}
+              </li>
             </ul>
           </div>
         </div>
@@ -77,3 +84,8 @@
   </div>
 </div>
 {{ footer }}
+<script>
+    $(function () {
+        $('.j-member-wishlist').addClass('area');
+    });
+</script>
