@@ -34,27 +34,27 @@
         </div>
       </div>
       <div class="col-sm-3  col-xs-3 account-setting-upload">
-        {#<div class="email-help-tip">#}
-          {#<span class="triangle"></span>#}
-          {#<ul class="email-help-list">#}
-            {#<li style="margin-top: 14px;">Why do we need verified email address?</li>#}
-            {#<li> <span style="font-weight: 500; color: rgb(209, 0, 0);">100 Points</span> and<span style="font-weight: 500; color: rgb(209, 0, 0);"> US$3 off</span> coupon wil be in your pocket. </li>#}
-            {#<li style="margin-top: 3px;">Be the first to know about latest SALE, special events.</li>#}
-            {#<li class="member_info_content_li" style="margin-top: 0px;">Participate in SheIn exclusive activities and giveaways.</li>#}
-            {#<li>Be able to check my order status and shipping information.</li>#}
-            {#<li>Your account will be more secure, you can shop and save with more reliable payment .</li>#}
-          {#</ul>#}
-        {#</div>#}
-        {#<div class="imagebox" id="personal-img">#}
-          {#<div style="text-align: center;">#}
-            {#<img src="/catalog/view/theme/default/image/edit/default_avatar.png" style="width: 100%; height: 100%;" />#}
-          {#</div>#}
-        {#</div>#}
-        {#<div style="text-align: center; padding-top: 16.4px;">#}
-          {#<button class="show-upload she-btn-white she-btn-s" data-toggle="modal" data-target="#myModal">Upload a Photo</button>#}
-        {#</div>#}
+        <div class="email-help-tip">
+          <span class="triangle"></span>
+          <ul class="email-help-list">
+            <li style="margin-top: 14px;">Why do we need verified email address?</li>
+            <li> <span style="font-weight: 500; color: rgb(209, 0, 0);">100 Points</span> and<span style="font-weight: 500; color: rgb(209, 0, 0);"> US$3 off</span> coupon wil be in your pocket. </li>
+            <li style="margin-top: 3px;">Be the first to know about latest SALE, special events.</li>
+            <li class="member_info_content_li" style="margin-top: 0px;">Participate in SheIn exclusive activities and giveaways.</li>
+            <li>Be able to check my order status and shipping information.</li>
+            <li>Your account will be more secure, you can shop and save with more reliable payment .</li>
+          </ul>
+        </div>
+        <div class="imagebox" id="personal-img">
+          <div style="text-align: center;">
+            <img src="/catalog/view/theme/default/image/edit/default_avatar.png" style="width: 100%; height: 100%;" />
+          </div>
+        </div>
+        <div style="text-align: center; padding-top: 16.4px;">
+          <button class="show-upload she-btn-white she-btn-s" data-toggle="modal" data-target="#myModal">Upload a Photo</button>
+        </div>
       </div>
-      <div class="col-sm-12 col-xs-12 account-setting-info">
+      <div class="col-sm-8 col-xs-8 account-setting-info">
         <form class="formlist" name="theForm" action="{{ action }}" method="post" enctype="multipart/form-data">
           <div class="form-group" style="margin-top: 0px;">
             <label for="inputemail" class="labeltext">{{ entry_email }}:<i>*</i></label>

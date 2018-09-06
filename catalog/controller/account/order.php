@@ -206,6 +206,9 @@ class ControllerAccountOrder extends Controller {
 
 				$product_info = $this->model_catalog_product->getProduct($product['product_id']);
 
+                $product_id = $this->model_account_order->getOrderProducts($product['order_id']);
+                $img = $this->model_account_order->getOrderImgById($product_id[0]['product_id']);
+
 				if ($product_info) {
 					$reorder = $this->url->link('account/order/reorder', 'order_id=' . $order_id . '&order_product_id=' . $product['order_product_id']);
 				} else {
@@ -216,6 +219,7 @@ class ControllerAccountOrder extends Controller {
 					'name'     => $product['name'],
 					'model'    => $product['model'],
 					'option'   => $option_data,
+                    'img'      => $img[0]['image'],
 					'quantity' => $product['quantity'],
 					'price'    => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
 					'total'    => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value']),
@@ -223,7 +227,6 @@ class ControllerAccountOrder extends Controller {
 					'return'   => $this->url->link('account/return/add', 'order_id=' . $order_info['order_id'] . '&product_id=' . $product['product_id'])
 				);
 			}
-
 			// Voucher
 			$data['vouchers'] = array();
 

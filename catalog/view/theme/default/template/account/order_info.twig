@@ -65,7 +65,7 @@
               <tr>
                 <td>
                   <div class="media product">
-                    <a href="#" class="pull-left"> <img src="15120075957714274960_thumbnail_220x293.jpg" alt="High Neck Solid T-shirt" style="max-width: 45px; max-height: 65px;" /> </a>
+                    <a href="javascript:void(0);" class="pull-left"> <img src="/image/{{ product.img }}" alt="{{  product.name }}" style="max-width: 45px; max-height: 65px;" /> </a>
                     <div class="media-body">
                       <ul class="media-list" style="margin: 0px;">
                         <li>{{  product.name }}</li>
@@ -99,49 +99,38 @@
             {#</table>#}
           {#</div>#}
           <div class="sub" style="width: 32%;">
-            <p> <span>Sub Total:</span> <span id="sub_total_member" price="" class="order_sub_total">US$86.00</span> </p>
-            <p> <span>Shipping:</span> <span class="order_ship_total">Free</span> </p>
-            <p> <span>Shipping Insurance:</span> <span>US$0.98</span> </p>
-            <p class="total"> <span>Total:</span> <span id="total_member" class="order_price_total">US$86.98</span> </p>
-            <hr style="margin: 0px;" />
+              {% for total in totals %}
+            <p> <span>{{ total.title }}:</span> <span id="sub_total_member" price="" class="order_sub_total">{{ total.text }}</span> </p>
+              {% endfor %}
           </div>
           <div class="delay-prompt delay-share"></div>
         </div>
         <div class="detail-info" style="text-align: left;">
           <div class="col-sm-6 detail-info-left">
             <div class="bill-info">
-              <h6>Billing Information</h6>
-              <p>Ms. jin tieshan</p>
-              <p>艾斯德斯多</p>
-              <p>adADC</p>
-              <p>ddd,AUSTRALIAN CAPITAL TERRITORY,2600</p>
-              <p>Australia</p>
-              <p>1233444</p>
-              <p>16958398@qq.com</p>
+              <h6>{{ text_shipping_address }}</h6>
+              <p>{{ shipping_address }}</p>
             </div>
             <div class="ship-info" style="height: 100px;">
-              <h6>Shipping Method</h6>
-              <p>STANDARD SHIPPING</p>
+              <h6>{{ text_shipping_method }}</h6>
+              <p>{{ shipping_method }}</p>
             </div>
-            <div class="ship-info">
-              <h6>Comment</h6>
-              <p style="height: auto; max-height: 100px; overflow-y: scroll;">&nbsp; </p>
-            </div>
+            {#<div class="ship-info">#}
+              {#<h6>Comment</h6>#}
+              {#<p style="height: auto; max-height: 100px; overflow-y: scroll;">&nbsp; </p>#}
+            {#</div>#}
           </div>
           <div class="col-sm-6 detail-info-right">
-            <div class="data-info">
-              <h6>Shipping Information</h6>
-              <p>Ms. jin tieshan </p>
-              <p>艾斯德斯多</p>
-              <p>adADC</p>
-              <p>ddd,AUSTRALIAN CAPITAL TERRITORY,2600</p>
-              <p>Australia</p>
-              <p>1233444</p>
-              <a class="j-edit-shipping" href="javascript:;" style="text-decoration: underline; font-weight: bold; cursor: pointer;">Edit</a>
+            <div class="data-info" >
+              {#<h6>Shipping Information</h6>#}
+              {#<p>{{ shipping_address }}</p>#}
+              <h6 style="border-bottom:none">&nbsp;</h6>
+              <p>&nbsp;</p>
+              {#<a class="j-edit-shipping" href="javascript:;" style="text-decoration: underline; font-weight: bold; cursor: pointer;">Edit</a>#}
             </div>
             <div class="pay-info" style="height: 100px;">
-              <h6>Payment Method</h6>
-              <p>Credit Card</p>
+              <h6>{{ text_payment_method }}</h6>
+              <p>{{ payment_method }}</p>
             </div>
           </div>
         </div>

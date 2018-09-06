@@ -86,7 +86,7 @@ class ControllerAccountAddress extends Controller {
 
 			$this->session->data['success'] = $this->language->get('text_edit');
 
-			$this->response->redirect($this->url->link('account/address'));
+			$this->response->redirect($this->url->link('account/address/edit&address_id='.$this->request->get['address_id']));
 		}
 
 		$this->getForm();
@@ -182,6 +182,7 @@ class ControllerAccountAddress extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
+
 		$this->response->setOutput($this->load->view('account/address_list', $data));
 	}
 

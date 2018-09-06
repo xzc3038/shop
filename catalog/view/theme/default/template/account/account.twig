@@ -43,7 +43,7 @@
           <li class="list-item">
             <div class=" col-xs-6 peracc-left">
               <div class="title">
-                <h5 class="item-title"><a href="#"> Account Setting</a></h5>
+                <h5 class="item-title"><a href="{{ edit }}"> Account Setting</a></h5>
               </div>
               <div class="conter">
                 <p class="item-p">Update your email address and we’ll serve you better in the future with personal shopping assistance.</p>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-xs-6 peracc-right">
               <div class="title">
-                <h5 class="item-title"><a href="#">My Orders</a></h5>
+                <h5 class="item-title"><a href="{{ order }}">My Orders</a></h5>
               </div>
               <div class="conter">
                 <p class="item-p">What you bought are all here, you can check them at anytime.</p>
@@ -61,7 +61,7 @@
           <li class="list-item">
             <div class=" col-xs-6 peracc-left">
               <div class="title">
-                <h5 class="item-title"><a href="#">My Address Book</a></h5>
+                <h5 class="item-title"><a href="{{ address }}">My Address Book</a></h5>
               </div>
               <div class="conter">
                 <p class="item-p">Create and store shipping addresses for easy access any time you're signed in at SheIn.com.</p>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-xs-6 peracc-right">
               <div class="title">
-                <h5 class="item-title"><a href="#">Edit Password</a></h5>
+                <h5 class="item-title"><a href="{{ password }}">Edit Password</a></h5>
               </div>
               <div class="conter">
                 <p class="item-p">To keep your account safe that you can edit your password, make it easy to be remembered! We recommend you do it and it won’t  take you long.</p>
@@ -97,7 +97,7 @@
           <li class="list-item">
             <div class=" col-xs-6 peracc-left">
               <div class="title">
-                <h5 class="item-title"><a href="#">My Wishlist</a></h5>
+                <h5 class="item-title"><a href="{{ wishlist }}">My Wishlist</a></h5>
               </div>
               <div class="conter">
                 <p class="item-p">Keep tracking of what you want.</p>
@@ -117,7 +117,7 @@
         </ul>
         <div class="con-foot">
           <div style="text-align: center;">
-            <a class="she-btn-white j-member-accout-signout" href="index.php?route=account/logout">Sign out</a>
+            <a class="she-btn-white j-member-accout-signout" href="{{ logout }}">Sign out</a>
           </div>
           <div class="con-foot-p">
             <p style="margin-top: 10px;">It’s better to sign out after you finish your shopping so that you could make sure that your account safe.</p>

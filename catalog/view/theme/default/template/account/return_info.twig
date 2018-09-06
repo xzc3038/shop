@@ -1,15 +1,6 @@
 {{ header }}
-<div id="account-return" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
+      {{ column_left }}
+    <div id="content" class="{{ class }} col-sm-9">{{ content_top }}
       <h1>{{ heading_title }}</h1>
       <table class="table table-bordered table-hover">
         <thead>
@@ -108,6 +99,12 @@
         </table>
       </div>
       {{ content_bottom }}</div>
-    {{ column_right }}</div>
+    {#{{ column_right }}</div>#}
+</div>
 </div>
 {{ footer }}
+<script>
+    $(function () {
+        $('.j-member-return').addClass('area');
+    });
+</script>

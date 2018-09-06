@@ -8,7 +8,7 @@
       <ul class="address-list j-address-list row">
           {% for result in addresses %}
             <li class="col-md-6 col-xs-6">
-              <div class="address-item default-item j-address-item j-address-12687904" data-addressid="12687904">
+              <div class="address-item default-item j-address-item j-address-12687904" data-addressid="">
                 {#<p class="name">Ms.&nbsp;&nbsp;jin&nbsp;&nbsp;&nbsp;&nbsp;tieshan&nbsp;&nbsp;<span class="default">default Address</span></p>#}
                 {#<p> 艾斯德斯多 </p>#}
                 {#<p> adADC </p>#}
@@ -17,8 +17,8 @@
                 {#<p>1233444&nbsp;&nbsp;</p>#}
                 <div class="operate">
                   {#<a href="javascript:;" class="set-default-address j-default-address">make default</a>#}
-                  <a href="{{ result.delete }}" class="j-delete-address">Delete</a>
-                  <a href="{{ result.update }}" class="edit-address j-edit-address" title="Edit">Edit</a>
+                  <a href="{{ result.delete }}" class="j-delete-address">{{ button_delete }}</a>
+                  <a href="javascript:void(0);" onclick="shows({{ result.address_id }})" class="edit-address j-edit-address" title="Edit">{{ button_edit }}</a>
                 </div>
               </div>
             </li>
@@ -26,12 +26,28 @@
           {% endfor %}
       </ul>
     </div>
-    <div class="adr-mask" style="display: none;"></div>
+<div class="adr-mask shows" style="display: none;"></div>
+<div class="c-member-address j-addressbook j-address-container shows" id="one" style="top: 40px; display: none;">
+    <div class="c-adr j-address-pop">
+        <div class="body" style="overflow: hidden;">
+            <span class="iconfont she-close-btn j-adr-cancel-btn"></span>
+            {#<p class="ind"> Shipping Address </p>#}
+            <iframe src="" name="myframe" style="position:relative;top:-150px;left:-323px;"  width="1200" height="760" scrolling="no" frameborder="0" id="myframe" border="0" ></iframe>
+        </div>
+    </div>
+</div>
 </div>
 {{ footer }}
 
 <script>
     $(function () {
         $('.j-member-address').addClass('area');
+    });
+    function shows(id){
+        $('.shows').css('display','block');
+        $('#myframe').attr('src','index.php?route=account/address/edit&address_id='+id);
+    }
+    $('.she-close-btn').on('click',function () {
+       $('.shows').css('display','none');
     });
 </script>

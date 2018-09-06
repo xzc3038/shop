@@ -1,54 +1,69 @@
 {{ header }}
-<div id="account-return" class="container">
-  {{ include(helper.template('_partial/breadcrumb')) }}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      {% if returns %}
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-right">{{ column_return_id }}</td>
-              <td class="text-left">{{ column_status }}</td>
-              <td class="text-left">{{ column_date_added }}</td>
-              <td class="text-right">{{ column_order_id }}</td>
-              <td class="text-left">{{ column_customer }}</td>
-              <td></td>
-            </tr>
-          </thead>
-          <tbody>
-          {% for return in returns %}
-          <tr>
-            <td class="text-right">#{{ return.return_id }}</td>
-            <td class="text-left">{{ return.status }}</td>
-            <td class="text-left">{{ return.date_added }}</td>
-            <td class="text-right">{{ return.order_id }}</td>
-            <td class="text-left">{{ return.name }}</td>
-            <td class="text-right"><a href="{{ return.href }}" data-toggle="tooltip" title="{{ button_view }}" class="btn btn-info"><i class="fa fa-eye"></i></a></td>
-          </tr>
-          {% endfor %}
-            </tbody>
-        </table>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 text-left">{{ pagination }}</div>
-        <div class="col-sm-6 text-right">{{ results }}</div>
-      </div>
-      {% else %}
-      <div class="no-items">
-        <img src="catalog/view/theme/default/image/no_items.png" class="img-responsive">
-        <span>{{ text_no_results }}</span>
-      </div>
-      {% endif %}
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+      {{ column_left }}
+<div class="she-center col-sm-9 myorder-detail order-wrap j-order-conter j-order-detail" id="orders_new_right">
+  <h3 class="she-tl-h3">My Returns</h3>
+  {#<p>Whatever you need, we’re here to help!</p>#}
+  {#<div class="doubt">#}
+    {#Simply submit a ticket on the Order Details page or in#}
+    {#<a class="ga-tk-order-list-my-tickets" href="https://www.shein.com/index.php?model=zendesk&amp;action=getList"> “My Tickets”.</a>#}
+  {#</div>#}
+  <table class="table table-striped" width="100%" cellspacing="0" cellpadding="3" border="0" align="center">
+    <tbody>
+    <tr>
+      <th>{{ column_return_id }}</th>
+      <th width="16.7%">{{ column_status }}</th>
+      <th>{{ column_date_added }}</th>
+      <th>{{ column_order_id }}</th>
+      <th>{{ column_customer }}</th>
+      <th class="member_order_th"></th>
+    </tr>
+    {% for return in returns %}
+      <tr id="order_info_BHL18525">
+        <td class="order-number"> #{{ return.return_id }} </td>
+        <td class="order-list-pic">{{ return.status }}</td>
+        <td> {{ return.date_added }} </td>
+        <td>{{ return.order_id }}</td>
+        <td>{{ return.name }}</td>
+        <td><a href="{{ return.href }}" data-toggle="tooltip" title="{{ button_view }}" class="btn btn-info"><i class="fa fa-eye"></i></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-sm-6 text-left">{{ pagination }}</div>
+    <div class="col-sm-6 text-right">{{ results }}</div>
+  </div>
+    {#<div id="toolbar_page" style="display: block;">#}
+    {#<div id="box-pagelist">#}
+    {#<div class="pageNav ">#}
+    {#<!-- 					<span class="pagecurrents">Page 1 of 1</span>#}
+    {#-->#}
+    {#<div class="pagecurrents2 she-pagination">#}
+    {#<!--   -->#}
+    {#<a class="she-current">1</a>#}
+    {#<!--  -->#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#<div id="productsContent12" class="recommended_product_order">#}
+    {#<h3>Recommendations For You</h3>#}
+    {#<div style="position: relative;">#}
+    {#<a href="javascript:void(0)" class="order-point-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled"></a>#}
+    {#<div class=" order-swiper-container swiper-container swiper-container-horizontal" style="max-width: 786px;">#}
+    {#<div class="swiper-wrapper" id="personal_recommend_products_list">#}
+    {#<img src="loading_vc554483_001.gif" class="cate_products_load" />#}
+    {#</div>#}
+    {#</div>#}
+    {#<a class=" order-point-next swiper-button-next iconfont shein-arrow" href="javascript:void(0)"></a>#}
+    {#</div>#}
+    {#</div>#}
+</div>
+</div>
 </div>
 {{ footer }}
+<script>
+    $(function () {
+        $('.j-member-return').addClass('area');
+    });
+</script>
