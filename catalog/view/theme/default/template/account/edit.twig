@@ -45,38 +45,43 @@
             {#<li>Your account will be more secure, you can shop and save with more reliable payment .</li>#}
           {#</ul>#}
         {#</div>#}
-        <div class="imagebox" id="personal-img">
-          <div style="text-align: center;">
-            <img src="/catalog/view/theme/default/image/edit/default_avatar.png" style="width: 100%; height: 100%;" />
-          </div>
-        </div>
-        <div style="text-align: center; padding-top: 16.4px;">
-          <button class="show-upload she-btn-white she-btn-s" data-toggle="modal" data-target="#myModal">Upload a Photo</button>
-        </div>
+        {#<div class="imagebox" id="personal-img">#}
+          {#<div style="text-align: center;">#}
+            {#<img src="/catalog/view/theme/default/image/edit/default_avatar.png" style="width: 100%; height: 100%;" />#}
+          {#</div>#}
+        {#</div>#}
+        {#<div style="text-align: center; padding-top: 16.4px;">#}
+          {#<button class="show-upload she-btn-white she-btn-s" data-toggle="modal" data-target="#myModal">Upload a Photo</button>#}
+        {#</div>#}
       </div>
-      <div class="col-sm-8 col-xs-8 account-setting-info">
+      <div class="col-sm-12 col-xs-12 account-setting-info">
         <form class="formlist" name="theForm" action="{{ action }}" method="post" enctype="multipart/form-data">
           <div class="form-group" style="margin-top: 0px;">
             <label for="inputemail" class="labeltext">{{ entry_email }}:<i>*</i></label>
             <div class="input-group verify" style="width: 100%;">
               <input name="email" class="form-control inputtext" id="email" value="{{ email }}" style="height: 36px;" placeholder="{{ entry_email }}" type="text" />
                 {% if error_email %}
-                  <div class="text-danger">{{ error_email }}</div>
+                  <div class="text-danger" style="color: red">{{ error_email }}</div>
                 {% endif %}
             </div>
             {#<span class="verified" id="vetify_status">&nbsp;<em class="pic_sucess"></em> Verified</span>#}
             <div class="form-group">
               <label for="inputname" class="labeltext">{{ entry_fullname }}:<i>*</i></label>
               <input name="fullname" class="form-control inputtext" id="inputname" placeholder="{{ entry_fullname }}" value="{{ fullname }}" style="height: 36px;" maxlength="10" type="text" />
-              <p class="error-red none error-username">3-10 characters for your Nickname.</p>
+                {% if error_fullname %}
+                  <div class="text-danger" style="color: red">{{ error_fullname }}</div>
+                {% endif %}
             </div>
             <div class="form-group">
               <label for="inputphone" class="labeltext">{{ entry_telephone }}:<i>*</i></label>
               <input name="telephone" class="form-control" id="inputphone" value="{{ telephone }}" placeholder="{{ entry_telephone }}" style="height: 36px;" type="text" />
+                {% if error_telephone %}
+                  <div class="text-danger" style="color: red">{{ error_telephone }}</div>
+                {% endif %}
             </div>
-            <div class="form-group update-btn">
+            <div class="form-group update-btn ">
               {#<span class="submit-tip" style="display: inline-block; margin-bottom: 0.1rem;">Gain 100 SHEIN points by completing personal info</span>#}
-              <div style="margin-top: 40px;">
+              <div style="margin: 40px 0 0 42%;">
                 <input class="redeem-btn she-btn-black" style="background-color: rgb(204, 204, 204); border: medium none;" value="{{ button_submit }}" type="submit" />
               </div>
             </div>
