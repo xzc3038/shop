@@ -227,7 +227,6 @@ class ControllerAccountOrder extends Controller {
 					'return'   => $this->url->link('account/return/add', 'order_id=' . $order_info['order_id'] . '&product_id=' . $product['product_id'])
 				);
 			}
-
 			// Voucher
 			$data['vouchers'] = array();
 
