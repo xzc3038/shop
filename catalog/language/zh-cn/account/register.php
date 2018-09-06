@@ -27,6 +27,7 @@ $_['entry_telephone']      = '联系电话';
 $_['entry_newsletter']     = '订阅邮件';
 $_['entry_password']       = '输入密码';
 $_['entry_confirm']        = '确认密码';
+$_['entry_phone']                  = '手机号';
 
 $_['tab_email']            = 'Email注册';
 $_['tab_mobile']           = '手机号注册';

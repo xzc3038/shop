@@ -223,3 +223,8 @@ i { font-style: normal; }
 .la-ball-pulse div:nth-child(2) { background-color: rgba(102, 102, 102, 0.4); border-color: rgba(102, 102, 102, 0.4); }
 .la-ball-pulse div:nth-child(3) { background-color: rgba(102, 102, 102, 0.6); border-color: rgba(102, 102, 102, 0.6); }
 @media (min-width:1200px){.container{width:1170px}}.row{margin-right:-15px;margin-left:-15px}.col-sm-1,.col-sm-2,.col-sm-3{position:relative;min-height:1px;padding-right:15px;padding-left:15px}@media (min-width:768px){.col-sm-1,.col-sm-2,.col-sm-3{float:left}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}}
+
+#sss{
+	color: red;
+	border-color: red;
+}
