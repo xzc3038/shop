@@ -366,7 +366,6 @@ class ControllerCheckoutCart extends Controller {
 
 		// Remove
 		if (isset($this->request->post['key'])) {
-            return $this->request->post['key'];
 			$this->cart->remove($this->request->post['key']);
 
 			unset($this->session->data['vouchers'][$this->request->post['key']]);
