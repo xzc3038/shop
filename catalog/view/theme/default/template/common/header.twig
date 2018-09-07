@@ -123,56 +123,9 @@
             </div>
             <div class="bag" id="logo_rightyy">
               <a class="present shoppingbag j-shoppingbag" href="{{ shopping_cart }}" title="Shopping Bag"> <span class="iconfont">  </span> <span class="bag-count" id="cart_items"> <b id="carts_quantity"></b> </span> </a>
-
-              {#<div id="attr_shopcart" class="c-headsb hd-cart-bag" style="height: 0px; display: none; opacity: 0;">#}
-                {#<div class="basket_empty">#}
-                  {#<em></em>Shopping Bag is Empty#}
-                {#</div>#}
-              {#</div>#}
               {{ cart }}
             </div>
-            <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="display: none; opacity: 0;">
-              <div class="attribute_cart shopcart-cart">
-                <div class="shopcart-top">
-                    {% if products %}
-                    <div style="width: auto;">
-                      <div id="shop-cart-scroll" style="max-height: 100%;overflow-y: scroll; overflow-x: hidden;">
-                        {% for product in products %}
-                          <div class="shopping-product">
-                            <div class="cart_error" style="display: none;" goods_id_value="_396259"></div>
-                            <div class=" shoppingtop-img">
-                              <img src="15081466102147806039_thumbnail_220x293.jpg" border="0" />
-                            </div>
-                            <div class="shoppingtop-right">
-                              <div class=" discount_goods_price_396259 basket-cont shoppingtop-basket">
-                                <span class="shop-index-price shop_price" price="US$15.00"><strong class="final_price_strong">US$15.00</strong></span>
-                              </div>
-                              <span class="she-dispatch"><i class="iconfont"></i>Priority dispatching</span>
-                              <a class="share_button_on share_button_396259" href="javascript:void(0);" onclick="show_facebook_div('396259')"></a>
-                              <div class="share_wenzi_396259 share_header_explain">
-                                <strong>(5%off)</strong>
-                              </div>
-                              <div class="attribute-shopcart">
-                                Size:XL
-                                <a class="shop-remove-a iconfont" href="javascript:void(0)" onclick="setAttrAmount.del(381926375, 396259, '#quantity_sad')"></a>
-                              </div>
-                            </div>
-                          </div>
-                        {% endfor %}
-                      </div>
-                      <p class="attr-total" id="attr_retail_price" style="padding-top: 10px;">Retail Price:<a id="shipping_retail_price">US$48.00</a></p>
-                      <p class="attr-total" id="attr_retail_price_discount" style="display: none;"><span>Discount<a>0</a>off</span></p>
-                      <p class="attr-total" id="attr_total" style="font-weight: bold;"><span class="shipping-total-label">Total:</span><span class="shipping-total" style="color: rgb(209, 0, 0);" id="shipping_total">US$48.00</span></p>
-                      <div class="shoppingtop-baskets">
-                        <input class="she-btn-black she-btn-l viewbag" name="viewcart" value="view bag" type="submit" />
-                      </div>
-                    </div>
-                    {% endif %}
-                </div>
-              </div>
-              <img src="catalog/view/theme/default/image/index/js_grey.gif" style="display: none;" />
->>>>>>> 4a60b8c3a2a4bafda862efe1a6c46bdd853170b2
-            </div>
+           <div></div>
           </div>
         </div>
       </div>
