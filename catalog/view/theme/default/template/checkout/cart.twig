@@ -1,88 +1,72 @@
 {{ header }}
+{% if attention %}
+  <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ attention }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+{% endif %}
+  {% if success %}
+    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+  {% endif %}
+  {% if error_warning %}
+    <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+  {% endif %}
 <div class="indexHomeBody index_checkout_body">
   <div class="pay-head">
     <div class="container-fluid checkout-header" style="margin-bottom: 10px;">
       <a class="logo-check iconfont shein-icon"> <i class="iconfont">  </i> </a>
       <span class="checkout-header-title"> <i class="iconfont secure-icon">  </i> secure checkout </span>
-      <a class="checkout-header-title-r" style="color: rgb(153, 153, 153);"> continue shopping <span> </span> </a>
+      <a href="{{ continue }}" class="checkout-header-title-r" style="color: rgb(153, 153, 153);"> {{ button_shopping }} <span> </span> </a>
     </div>
   </div>
   <div class="container-fluid mbag-step1">
     <ul class="flow j-empty-cart-hide shoppingTitle_o" style="visibility: visible; display: block;">
-      <li class="step1"> Shopping Bag </li>
-      <li class="step2"> Place Order </li>
-      <li class="step3"> Pay </li>
-      <li class="step4"> Order Complete </li>
+      <li class="step1"><a href="index.php">Home</a></li>
+      <li class="step2"><a href="{{ cart }}"> {{ heading_title }} </a></li>
     </ul>
     <div class="shopbag-details row no-margin">
       <div class="shopping-list j-empty-cart-hide col-md-8 col-sm-8" style="visibility: visible; display: block;">
         <div class="heading no-border row j-heading-fixed" style="width: auto;">
-          <h2 class="she-h1"> Shopping Bag </h2>
+          <h2 class="she-h1"> {{ heading_title }} </h2>
           <span> Prices are subject to change based on the price in effect the day you checkout. </span>
-          <span class="saves-num j-saves-num"> <i class="iconfont icon-like16"> </i> <i class="j-text"> 6 </i> </span>
         </div>
         <div class="sl-table-h row">
           <ul>
-            <li class="col-xs-6"> Item </li>
-            <li class="col-xs-2"> Price </li>
-            <li class="col-xs-2"> Qty </li>
-            <li class="col-xs-2"> Total </li>
+            <li class="col-xs-6"> {{ column_name }} </li>
+            <li class="col-xs-2">{{ column_price }}</li>
+            <li class="col-xs-2"> {{ column_quantity }}</li>
+            <li class="col-xs-2"> {{ column_total }} </li>
           </ul>
         </div>
-        <form action="file:///C:/Users/Administrator/AppData/Roaming/Mozilla/Firefox/Profiles/8llj7apx.default/ScrapBook/data/20180104140459/index.html">
+        <form action="{{ action }}" method="post" enctype="multipart/form-data">
+            {% for product in products %}
           <div id="shopping_cart_do_price">
             <div id="shopping_cart_common_html">
               <div class="sl-table-item row j-each-goods">
                 <div class="col-xs-6 cart-content">
                   <div class="prod-details">
                     <div class="inbasket_img">
-                      <img class="prod-img" src="/catalog/view/theme/default/image/15046050697233447108_thumbnail_220x293.jpg" />
+                        {% if product.thumb %} <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" /></a> {% endif %}
                     </div>
                     <div class="intro">
-                      <div class="j-cart-size cart-size edit_item">
-                        <span class="item_name"> Size: </span>
-                        <div class="item_content">
-                          <div data-size="M" data-attr_id="314" data-value="31433" data-stock="1000000">
-                            M
-                          </div>
-                        </div>
-                      </div>
-                      <div class="color j-cart-color edit_item">
-                        <span class="item_name" style="display: table-cell; padding-right: 10px;"> Color: </span>
-                        <ul class="item_content">
-                          Loading
-                        </ul>
-                      </div>
                       <div class="prod-name">
-                        <a target="_top" href="http://www.shein.com/Tiered-Ruffle-Hem-Peplum-Blouse-p-385492-cat-1733.html" rel="nofollow"> <span class="goods-brand"> SHEIN&nbsp; </span> Tiered Ruffle Hem Peplum Blouse </a>
-                      </div>
-                      <div class="color j-cart-color-show cart-color-show" style="display: table-row;">
-                        <span class="" style="display: table-cell; padding-right: 10px; vertical-align: top;"> Color: </span>
-                        <ul style="display: table-cell;">
-                          <li class="active"> <span> <a style="background: transparent url('15103132285170786248.jpg') repeat scroll 0% 0%;" href="javascript:;"> </a> </span> </li>
-                        </ul>
+                        <a class="name" href="{{ product.href }}">{{ product.name }}</a> {% if not product.stock %} <span class="text-danger">***</span> {% endif %}
+                          {% if product.option %}
+                              {% for option in product.option %} <br />
+                                <small>{{ option.name }}: {{ option.value }}</small> {% endfor %}
+                          {% endif %}
+                          {% if product.reward %} <br />
+                            <small>{{ product.reward }}</small> {% endif %}
                       </div>
                       <div class="size edit_item" style="margin-bottom: 0px;">
-                        <span class="item_name"> Size: </span>
-                        <span class="item_content"> M </span>
-                      </div>
-                      <div class="is-show-stock j-show-stock" style="margin-top: 10px; color: rgb(102, 102, 102);">
-                        Only
-                        <strong class="units_in_stock"> 1000000 </strong> left!
-                      </div>
-                      <div class="red display-none">
+                        <span class="item_name"> {{ column_model }}: </span>
+                        <span class="item_content"> {{ product.model }} </span>
                       </div>
                       <div class="operate" style="position: absolute;">
-                        <span class="edit_btn"> <span class="btn_update j-event"> Update </span> <span class="btn_cancel j-event"> Cancel </span> </span>
-                        <span class="edit j-event"> Edit </span>
-                        <span class="wish"> Save for Later </span>
-                        <span class="del"> Delete </span>
-                      </div>
-                      <div class="cart-wish-loading loadding_389423017">
-                        <img src="/catalog/view/theme/default/image/cart/loading_vc554483.gif" width="16" height="16" /> Adding
-                      </div>
-                      <div class="cart-wish-loading addsusess_389423017">
-                        Succeed
+                        <span class="del"  onclick="cart.remove('{{ product.cart_id }}');">{{ button_remove }}</span>
                       </div>
                     </div>
                   </div>
@@ -90,37 +74,31 @@
                 <div class="col-xs-2 shoppingtop_price_and_discount price_and_discount_389423017_385492">
                   <div class="price discount_goods_price_389423017">
                     <div class="basket_cont_cart cart_all_price goods_price_current_price">
-                      <span class="index-price shop_price US$13.00" price="US$13.00" style="display: block;"> <strong class="price">US$13.00</strong> <b class="show_vip" style=""> (Sale) </b> </span>
+                      <span class="index-price shop_price US$13.00" price="US$13.00" style="display: block;"> <strong class="price">{{ product.price }}</strong></span>
                     </div>
-                    <span class="discount_val unit_discount45"> <span> </span> 45% off </span>
-                    <div class="cart_sale_present">
-                      <span class="percent_txt"> Buy 1 Get 1 50% Off </span>
-                    </div>
-                  </div>
-                  <div id="span_389423017" style="display: none;">
-                    Sold Out
                   </div>
                 </div>
                 <div class="col-xs-2">
                   <div class="qty she-filter-box j-cart-num">
                     <ul class="she-swatches she-stock">
-                      <li class="j-reduce-wrap-389423017"> <span class="she-operator reduce iconfont j-reduce-389423017">  </span> </li>
-                      <input class="she-text qty-val quantitySelect_bg j-qty-val" value="2" type="text" />
-                      <li class="j-cart-add-wrap"> <span class="j-cart-add she-operator increase iconfont">  </span> </li>
+                      <li class="j-reduce-wrap-389423017"> <span class="she-operator reduce iconfont j-reduce-389423017"onclick="des({{ product.cart_id }})">  </span> </li>
+                      <input class="she-text qty-val quantitySelect_bg j-qty-val" name="quantity[{{ product.cart_id }}]" id="{{ product.cart_id }}" value="{{ product.quantity }}" type="text" />
+                      <li class="j-cart-add-wrap"> <span class="j-cart-add she-operator increase iconfont" onclick="asc({{ product.cart_id }})">  </span> </li>
+                      <button type="submit" data-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
                     </ul>
                   </div>
-                  <p class="only_one_p_footer"> purchase limit exceeded </p>
                 </div>
                 <div class="col-xs-2">
                   <div class="inbasket_total subtotal_item_total total">
                     <div class="item_total goods_price_current_price" style="">
-                      US$22.00
+                        {{ product.total }}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+            {% endfor %}
           <div class="clearfix">
           </div>
         </form>
@@ -138,7 +116,7 @@
               <div id="recommend_products_list" class="swiper-wrapper">
                 <div class="swiper-slide box-product-list category_products_bg list_all_items swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">
                   <div class="goods-aImg">
-                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/15058157203901741088_thumbnail_220x293.jpg" alt="Trumpet Sleeve Pearl Beading Scalloped Dress" border="0" /> </a>
+                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15058157203901741088_thumbnail_220x293.jpg" alt="Trumpet Sleeve Pearl Beading Scalloped Dress" border="0" /> </a>
                     <div class="la-ball-pulse">
                       <div>
                       </div>
@@ -178,7 +156,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide box-vc-list swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">
                   <div class="goods-aImg">
-                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/15107394912945120341_thumbnail_220x293.jpg" /> </a>
+                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15107394912945120341_thumbnail_220x293.jpg" /> </a>
                     <div class="la-ball-pulse">
                       <div>
                       </div>
@@ -228,7 +206,7 @@
                 </div>
               </div>
               <div class="get-pt user_get_point">
-                <span class="reward-points-info"> Reward <span class="point-biao"> 35 </span> <span class="point-biao sale-out-img"> <a href="file:///C:/Users/Administrator/AppData/Roaming/Mozilla/Firefox/Profiles/8llj7apx.default/ScrapBook/data/20180104140459/index.html"> SheIn Points </a> </span> <span class="pre_ticket_tips"> The SheIn points will be added to your account after you confirm received your order. </span> </span>
+                <span class="reward-points-info"> Reward <span class="point-biao"> 35 </span> <span class="point-biao sale-out-img"> <a href=""> SheIn Points </a> </span> <span class="pre_ticket_tips"> The SheIn points will be added to your account after you confirm received your order. </span> </span>
               </div>
               <div class="free-express">
                 Got a coupon? Add it in the next step!
@@ -239,16 +217,16 @@
             <div class="ac-card">
               <h2 class="she-h1"> </h2>
               <div class="card-img">
-                <img src="/catalog/view/theme/default/image/n-ar-codcard_v9d7b3b8.png" class="card-img-ar" />
-                <img src="/catalog/view/theme/default/image/n-2-visa_vd35286a.png" />
-                <img src="/catalog/view/theme/default/image/n-3-mastercard_vf9b0f97.png" />
-                <img src="/catalog/view/theme/default/image/n-8-maestro_v781c6fd.png" />
-                <img src="/catalog/view/theme/default/image/n-7-american-express_vb186b55.png" class="card-img-common" />
-                <img src="/catalog/view/theme/default/image/cartnet@2x_v20ad514.png" />
-                <img src="/catalog/view/theme/default/image/n-1-paypal_va336d76.png" />
-                <img src="/catalog/view/theme/default/image/n-16-ideal_v42c1656.png" class="card-img-common" />
-                <img src="/catalog/view/theme/default/image/oxxo@2x_v0ac9136.png" />
-                <img src="/catalog/view/theme/default/image/wire_transfer@2x_v0896cc5.png" />
+                <img src="/catalog/view/theme/default/image/cart/n-ar-codcard_v9d7b3b8.png" class="card-img-ar" />
+                <img src="/catalog/view/theme/default/image/cart/n-2-visa_vd35286a.png" />
+                <img src="/catalog/view/theme/default/image/cart/n-3-mastercard_vf9b0f97.png" />
+                <img src="/catalog/view/theme/default/image/cart/n-8-maestro_v781c6fd.png" />
+                <img src="/catalog/view/theme/default/image/cart/n-7-american-express_vb186b55.png" class="card-img-common" />
+                <img src="/catalog/view/theme/default/image/cart/cartnet@2x_v20ad514.png" />
+                <img src="/catalog/view/theme/default/image/cart/n-1-paypal_va336d76.png" />
+                <img src="/catalog/view/theme/default/image/cart/n-16-ideal_v42c1656.png" class="card-img-common" />
+                <img src="/catalog/view/theme/default/image/cart/oxxo@2x_v0ac9136.png" />
+                <img src="/catalog/view/theme/default/image/cart/wire_transfer@2x_v0896cc5.png" />
               </div>
             </div>
           </div>
@@ -258,3 +236,12 @@
   </div>
 </div>
 {{ footer }}
+
+<script>
+  function des(id) {
+      console.log($('#'+id).val());
+  }
+  function asc(id) {
+      console.log($('#'+id).val());
+  }
+</script>
