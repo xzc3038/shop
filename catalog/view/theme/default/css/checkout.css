@@ -224,7 +224,7 @@ i { font-style: normal; }
 .container-fluid .shopbag-details .left-ctn .credit .rem-ctn span { vertical-align: 15%; color: rgb(102, 102, 102); }
 .container-fluid .shopbag-details .right-ctn > .order-summary { margin-left: 40px; }
 .confirm_method_img { width: 100%; height: 40px; margin-bottom: 30px; }
-.confirm_method_img li { width: 58px; height: 100%; float: left; background: transparent url('credit_card_show_v5f0cd60.png') no-repeat scroll 0% 0% / auto 40px; }
+.confirm_method_img li { width: 58px; height: 100%; float: left; background: transparent url('/catalog/view/theme/default/image/checkout/credit_card_show_v5f0cd60.png') no-repeat scroll 0% 0% / auto 40px; }
 .confirm_method_img .card_visa { background-position: -3px 0px; }
 .confirm_method_img .card_master { background-position: -69px 0px; }
 .confirm_method_img .card_mae { background-position: -267px 0px; }
@@ -232,7 +232,7 @@ i { font-style: normal; }
 .confirm-label-bg { width: 100%; overflow: hidden; margin-bottom: 15px; }
 .confirm-label-bg > label { width: 66px; height: 70px; float: left; text-align: center; cursor: pointer; }
 .confirm-label-bg label label { text-align: center; margin-top: 5px; margin-right: 0px; }
-.confirm-label-bg label span { width: 66px; height: 40px; background: transparent url('credit_card_v13b0db4.jpg') no-repeat scroll 0% 0% / 1188px 40px; display: block; text-align: center; }
+.confirm-label-bg label span { width: 66px; height: 40px; background: transparent url('/catalog/view/theme/default/image/checkout/credit_card_v13b0db4.jpg') no-repeat scroll 0% 0% / 1188px 40px; display: block; text-align: center; }
 .confirm-loading-p { color: rgb(0, 0, 0); padding: 0px 0px 15px 10px; text-align: left; font-size: 14px; font-weight: 700; height: 25px; line-height: 25px; }
 .confirm-label-bg .card_paymethod_err { margin: 0px 0px 5px 10px; color: red; }
 .confirm-label-bg label input { margin-top: 8px; }
@@ -244,7 +244,7 @@ i { font-style: normal; }
 .remember-menu { width: 100%; height: 42px; }
 .remember-menu .item { float: left; width: 50%; height: 42px; text-align: center; line-height: 42px; font-size: 14px; font-weight: 700; cursor: pointer; border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); color: rgb(153, 153, 153); }
 .ckout-card-input { height: 36px; box-sizing: border-box; outline: 0px none; padding: 0px 12px; border: 1px solid rgb(204, 204, 204); font-size: 13px; }
-.order-summary span.payment-secure { background: rgb(250, 250, 250) url('payment-secure_ve0d0cb8.png') no-repeat scroll center center / contain ; display: block; height: 65px; margin: 0px; padding: 0px; width: 100%; }
+.order-summary span.payment-secure { background: rgb(250, 250, 250) url('/catalog/view/theme/default/image/checkout/payment-secure_ve0d0cb8.png') no-repeat scroll center center / contain ; display: block; height: 65px; margin: 0px; padding: 0px; width: 100%; }
 .order-summary p { background: transparent none repeat scroll 0px 0px; border-top: 1px dashed rgb(224, 224, 224); padding: 8px 0px; margin-top: 8px; text-align: left; border-bottom: medium none; }
 .card-input-error { text-align: left; color: red; }
 .card-local-promt { margin: 10px 0px; font-size: 14px; font-weight: 700; height: 25px; line-height: 25px; }

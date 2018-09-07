@@ -16,12 +16,12 @@
       </div>
       <div class="j-empty-cart-bag" style="display: block;">
         <img src="/catalog/view/theme/default/image/cart/empty-cart-bag_v58a1e98.png" />
-        <p style="font-size: 14px;"> Your bag is empty </p>
-        <div style="">
-          <a class="j-cart-login" href="https://www.shein.com/login_register.php" style="font-weight: bold; text-decoration: underline; text-transform: uppercase;"> SIGN IN </a>
-          <span style="color: rgb(102, 102, 102);"> to see the items you added previously! </span>
-        </div>
-        <a href="http://www.shein.com/WWW-GoShopping-vc-38091.html" class="she-btn she-btn-sm-prim j-go-shopping" style="padding: 0px 20px;"> go shopping </a>
+        <p style="font-size: 14px;"> {{ text_error }} </p>
+        {#<div style="">#}
+          {#<a class="j-cart-login" href="https://www.shein.com/login_register.php" style="font-weight: bold; text-decoration: underline; text-transform: uppercase;"> SIGN IN </a>#}
+          {#<span style="color: rgb(102, 102, 102);"> to see the items you added previously! </span>#}
+        {#</div>#}
+        <a href="{{ continue }}" class="she-btn she-btn-sm-prim j-go-shopping" style="padding-top: 5px"> {{ button_shopping }} </a>
       </div>
       <div class="emarsys-list j-emarsys-list col-md-12 col-sm-12" style="visibility: visible; display: block;">
         <h3 class="emarsys-tab"> <span class="j-tab j-tab-also emarsys-tab-active" data-id="emarsys"> You May Also Like </span> <span class="emarsys-tab-line j-tab-line"> | </span> <span class="j-tab j-tab-history" data-id="history" style=""> Recently Viewed </span> </h3>
@@ -857,4 +857,4 @@
     </div>
   </div>
 </div>
-{{ footer }}
+{#{{ footer }}#}

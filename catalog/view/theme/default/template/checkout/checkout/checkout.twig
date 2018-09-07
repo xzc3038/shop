@@ -1,55 +1,49 @@
 {{ header }}
+{% if error_warning %}
+  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+{% endif %}
 <input data-html="checkout_confirmation_worldpay" type="hidden" />
 <div class="indexHomeBody index_checkout_body">
   <div class="pay-head">
     <div class="container-fluid checkout-header" style="margin-bottom: 10px;">
-      <a class="logo-check iconfont shein-icon" href="http://www.shein.com/" title=""> <i class="iconfont"></i> </a>
-      <span class="checkout-header-title"> <i class="iconfont secure-icon"></i> secure checkout </span>
+      <a class="logo-check iconfont shein-icon" href="index.php" title=""> <i class="iconfont"></i> </a>
+      <span class="checkout-header-title"> <i class="iconfont secure-icon"></i> {{ heading_title }} </span>
     </div>
-  </div>
-  <div id="imgcontainer" style="display: none;">
-    <img src="/catalog/view/theme/default/image/checkout/cookieid.html" style="display: none;" />
-  </div>
-  <div id="waiting_refresh_image">
-    <img src="/catalog/view/theme/default/image/checkout/loadinganimation_veb464f0.gif" alt="" />
   </div>
   <div class="container-fluid mbag-step3">
-    <ul class="flow j-empty-cart-hide shoppingTitle_f">
-      <li class="step1">Shopping Bag</li>
-      <li class="step2">Place Order</li>
-      <li class="step3">Pay</li>
+    <ul class="flow  shoppingTitle_f">
+      <li class="step1"><a href="index.php">Home</a></li>
+      <li class="step2"><a href="index.php?route=checkout/cart">Orders</a></li>
+      <li class="step3"><a href="/">{{ heading_title }}</a></li>
       <li class="step4">Order Complete</li>
     </ul>
-    <div class="gc_fail_info" id="gc_fail_info" style="display: none;">
-      We’re sorry, we weren’t able to confirm your card information. If your information was entered correctly，please confirm with your card issuing bank or try again with other payment methods. For assistance, please contact us.
-    </div>
-    <div class="gc_fail_info" id="is_have_order" style="display: none;">
-      Your order: is paid successfully within 30mins!
-    </div>
-    <div class="update_address_msg" id="update_address_msg" style="display: none;">
-      Indicates required fields
-    </div>
     <div class="shopbag-details row ">
       <div class="left-ctn col-md-8 col-xs-8">
         <div class="pay-back">
           <i class="iconfont"></i>
-          <a href="https://www.shein.com/index.php?model=order&amp;action=place_order_again&amp;billno=ZHB19213&amp;order_token=12132299aa04dff6cd977351dda9e99b">Back to Place Order Page</a>
+          <a href="index.php?route=checkout/cart">Back to Place Order Page</a>
         </div>
+
+      {#地址栏#}
         <div class="bill-ads">
           <div class="heading">
             <h2 class="she-h1"> Billing Address </h2>
             <span> Please make sure the billing address you enter below matches the name and address associated with the credit card you are using for this purchase. </span>
           </div>
-          <div class="ads" id="billing_address_2">
-            <div id="new_billing_address">
-              <strong>jin tieshan2</strong>
-              <div style="display: inline-block;">
-                (sdsdsdsd sdsd 2600 AUSTRALIAN CAPITAL TERRITORY Australia)
-              </div>
+            <div class="ads" id="billing_address_2">
+                <div id="new_billing_address">
+                    <div class="left-section-wrapper">
+                        {{ shipping_address_section }}
+                    </div>
+                </div>
+                {#<a id="pay-edit" class="she-text-btn-light" href="javascript:void(0)"> edit </a>#}
             </div>
-            <a id="pay-edit" class="she-text-btn-light" href="javascript:void(0)"> edit </a>
-          </div>
         </div>
+      {#地址栏#}
+
+      {#银行卡#}
         <div class="credit">
           <input value="2" class="is_bind" type="hidden" />
           <div class="heading">
@@ -57,7 +51,7 @@
           </div>
           <div class="confirm_masked" id="confirm_masked_2">
           </div>
-          <form class="list-unit" action="https://www.shein.com/index.php?model=worldpay&amp;action=checkout&amp;billno=ZHB19213&amp;payment_direct=&amp;pay_phone=&amp;BankCode=select&amp;token_pay_id=55026d3b3b8e00304f06da065f0a4dbb">
+          <form class="list-unit" action="#">
             <input value="2" class="is_bind" type="hidden" />
             <div class="remember-menu" style="display: none;">
               <div class="remember_old item">
@@ -91,79 +85,6 @@
                 <div class="confirm-loading-p" style="display: none;">
                   Payment details:
                 </div>
-                <p id="card_paymethod_error" class="card_paymethod_err" style="display: none;"></p>
-                <label class="card_type_v"> <span></span> <input value="1" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="1"> <i></i> </label> </label>
-                <label class="card_type_mc"> <span></span> <input value="2" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="2"> <i></i> </label> </label>
-                <label class="card_type_ae"> <span></span> <input value="3" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="3"> <i></i> </label> </label>
-                <label class="card_type_discover"> <span></span> <input value="14" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="14"> <i></i> </label> </label>
-                <!-- <label class="card_type_vi">
-                                              <span></span>
-                                              <input type="radio" value="1" name="card_paymethod"  style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="1" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                          <label class="card_type_mcd">
-                                              <span></span>
-                                              <input type="radio" value="2" name="card_paymethod"  style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="2" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                          <label class="card_type_ve">
-                                              <span></span>
-                                              <input type="radio" value="1" name="card_paymethod"  style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="1" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                          <label class="card_type_ac">
-                                              <span></span>
-                                              <input type="radio" value="4" name="card_paymethod" style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="4" >
-                                                  <i></i>
-                                              </label>
-                                          </label>-->
-                <label class="card_type_mae"> <span></span> <input value="5" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="5"> <i></i> </label> </label>
-                <label class="card_type_din"> <span></span> <input value="6" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="6"> <i></i> </label> </label>
-                <label class="card_type_jcb"> <span></span> <input value="16" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="16"> <i></i> </label> </label>
-                <!-- 以下本地支付方式取消
-                                                                              <label class="local_payment card_type_sofort">
-                                              <span></span>
-                                              <input type="radio" value="7" data-payment-type="local" data-country-id="[82]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[82]"  name="card_paymethod" type="radio" class="she-radioed" value="7">
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                                                                  <label class="local_payment card_type_poli">
-                                              <span></span>
-                                              <input type="radio" value="9" data-payment-type="local" data-country-id="[13]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[13]"  name="card_paymethod" type="radio" class="she-radioed" value="9" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                              <label class="local_payment card_type_giropay">
-                                              <span></span>
-                                              <input type="radio" value="10" data-payment-type="local" data-country-id="[82]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[82]"  name="card_paymethod" type="radio" class="she-radioed" value="10" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                              <label class="local_payment card_type_qiwi">
-                                              <span></span>
-                                              <input type="radio" value="11" data-payment-type="local" data-country-id="[178,110]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[178,110]"  name="card_paymethod" type="radio" class="she-radioed" value="11" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                              -->
-                <!-- <label class="local_payment card_type_instadebit">
-                                              <span></span>
-                                              <input type="radio" value="12" data-payment-type="local" data-country-id="[38]" name="card_paymethod"  style="display:none">
-                                              <label data-payment-type="local" data-country-id="[38]"  name="card_paymethod" type="radio" class="she-radioed" value="12" >
-                                                  <i></i>
-                                              </label>
-                                          </label> -->
               </div>
               <ul class="confirm_method_img">
                 <li class="card_visa"></li>
@@ -214,144 +135,32 @@
             </div>
           </form>
         </div>
-        <div id="local_payment_detail" style="display: none;">
-          <p class="card-local-promt"> Please click the button and continue payment </p>
-          <input class="ckout-card-local-btn she-btn she-btn-lg-prim" value="CONTINUE" onclick="gc_insert_order('ZHB19213');" type="button" />
-        </div>
-        <iframe id="iframe_str" style="display: none;" src="index_1.html" width="100%" height="350" frameborder="0"></iframe>
+      {#银行卡#}
+
       </div>
+
+    {#右边栏#}
       <div class="right-ctn col-md-4 col-xs-4">
         <div class="order-summary">
-          <div class="heading">
-            <h2 class="she-h1"> Order Summary </h2>
-          </div>
-          <!-- <div class="price-current-item">
-                               <span class="current-t">Ratail Price</span>
-                               <div class="current">US$<span>95.00</span></div>
-                           </div> -->
-          <div class="item">
-            <span>Order NO.</span>
-            <div class="value">
-              ZHB19213
+            <div>
+                {{ cart_section }}
             </div>
-          </div>
-          <div class="item">
-            <span>Subtotal</span>
-            <div class="value" id="sub_total_member" price="">
-              US$35.00
-            </div>
-          </div>
-          <div class="item">
-            <span>Shipping</span>
-            <div class="value" id="shipping_price_member">
-              US$7.28
-            </div>
-          </div>
-          <div class="item">
-            <span>Insurance</span>
-            <div class="value">
-              US$1.00
-            </div>
-          </div>
-          <div style="display: none;">
-            1
-          </div>
-          <div class="price-total-item">
-            <span class="total-t">Total</span>
-            <div class="total" id="total_member">
-              US$43.28
-            </div>
-          </div>
+
           <p>Additional payment security with:</p>
           <span class="payment-secure"></span>
-          <input id="pay_sb_btn" class="she-btn-black she-btn-xl mar-top-20" value="CONTINUE" onclick="gc_insert_order('ZHB19213');" type="button" />
+          <input id="button-submit" class="she-btn-black she-btn-xl mar-top-20" value="{{ text_checkout_confirm }}"  data-loading-text="{{ text_loading }}" class="btn btn-primary btn-block" />
           <p class="card-local-promt" style="display: none;"> Please click the button and continue payment </p>
           <div id="payment_error" style="display: none;">
             <span class="card-input-error"></span>
           </div>
         </div>
       </div>
+    {#右边栏#}
+
     </div>
   </div>
-  <div class="confirm_masked" id="confirm_masked_1"></div>
-  <div class="confirm_address_show" id="confirm_show_cancel" style="display: none;">
-    <div class="confirm_address_show_bg"></div>
-    <div class="shipping-address-border">
-      <span class="iconfont address-show-cancel" onclick="$('#confirm_show_cancel').hide();" style="position: absolute; right: 15px; top: 15px;"></span>
-      <p class="indicates"><font color="#FF0000">*</font>Indicates required fields</p>
-      <div class="shipping-address-tab">
-        <dl class="row list-input">
-          <dd class="list-item col-lg-6 col-md-6 col-sm-6">
-            <div class="item-title">
-              <span class="undone">First Name: <span> *</span></span>
-            </div>
-            <input name="billing_fname" value="jin" size="33" id="billing_fname" type="text" />
-            <p id="error_billing_fname"></p>
-          </dd>
-          <dd class="list-item col-lg-6 col-md-6 col-sm-6">
-            <div class="item-title">
-              <span>Last Name: <span> *</span></span>
-            </div>
-            <input name="billing_lname" value="tieshan2" size="33" id="billing_lname" type="text" />
-            <p id="error_billing_lname"></p>
-          </dd>
-          <p class="tips_grey col-lg-12" data-target="country_ru">To make sure the delivery successful, please fill in the middle name with the first name.</p>
-        </dl>
-        <dl class="row list-input">
-          <dd class="col-lg-6 col-md-6 col-sm-6 list-item country">
-            <div class="item-title">
-              <span>Country:*</span>
-            </div>
-            <div class="item-drop">
-              <select name="billing_country" id="billing_country" class="she-drop-large" style="width: 100%;"> <option value=""> Please Choose Your Country </option> <option value="13" selected="selected">Australia</option><option value="226">United States</option><option value="225">United Kingdom</option><option value="38">Canada</option><option value="224">United Arab Emirates</option><option value="74">France</option><option value="82">Germany</option><option value="161">Norway</option><option value="97">Hong Kong</option><option value="186">Saudi Arabia</option><option value="100">India</option><option value="1">Afghanistan</option><option value="3">Algeria</option><option value="5">Andorra</option><option value="6">Angola</option><option value="7">Anguilla</option><option value="9">Antigua and Barbuda</option><option value="10">Argentina</option><option value="12">Aruba</option><option value="14">Austria</option><option value="15">Azerbaijan</option><option value="16">Bahamas</option><option value="17">Bahrain</option><option value="18">Bangladesh</option><option value="19">Barbados</option><option value="20">Belarus</option><option value="21">Belgium</option><option value="22">Belize</option><option value="23">Benin</option><option value="24">Bermuda</option><option value="25">Bhutan</option><option value="26">Bolivia</option><option value="27">Bosnia and Herzegovina</option><option value="28">Botswana</option><option value="29">Bouvet Island</option><option value="30">Brazil</option><option value="32">Brunei Darussalam</option><option value="33">Bulgaria</option><option value="34">Burkina Faso</option><option value="35">Burundi</option><option value="36">Cambodia</option><option value="37">Cameroon</option><option value="39">Cape Verde</option><option value="40">Cayman Islands</option><option value="41">Central African Republic</option><option value="42">Chad</option><option value="43">Chile</option><option value="47">Colombia</option><option value="48">Comoros</option><option value="49">Congo</option><option value="51">Cook Islands</option><option value="52">Costa Rica</option><option value="54">Croatia (local name: Hrvatska)</option><option value="55">Cuba</option><option value="56">Cyprus</option><option value="57">Czech Republic</option><option value="58">Denmark</option><option value="59">Djibouti</option><option value="60">Dominica</option><option value="61">Dominican Republic</option><option value="62">East Timor</option><option value="63">Ecuador</option><option value="64">Egypt</option><option value="65">El Salvador</option><option value="66">Equatorial Guinea</option><option value="67">Eritrea</option><option value="68">Estonia</option><option value="69">Ethiopia</option><option value="71">Faroe Islands</option><option value="72">Fiji</option><option value="73">Finland</option><option value="76">French Guiana</option><option value="77">French Polynesia</option><option value="79">Gabon</option><option value="80">Gambia</option><option value="81">Georgia</option><option value="84">Gibraltar</option><option value="85">Greece</option><option value="86">Greenland</option><option value="87">Grenada</option><option value="88">Guadeloupe</option><option value="89">Guam</option><option value="91">Guinea</option><option value="92">Guinea-Bissau</option><option value="93">Guyana</option><option value="94">Haiti</option><option value="96">Honduras</option><option value="98">Hungary</option><option value="99">Iceland</option><option value="104">Ireland</option><option value="105">Israel</option><option value="106">Italy</option><option value="107">Jamaica</option><option value="108">Japan</option><option value="109">Jordan</option><option value="110">Kazakhstan</option><option value="111">Kenya</option><option value="113">Kuwait</option><option value="114">Kyrgyzstan</option><option value="115">Lao People's Democratic Republic</option><option value="116">Latvia</option><option value="117">Lebanon</option><option value="118">Lesotho</option><option value="119">Liberia</option><option value="121">Liechtenstein</option><option value="122">Lithuania</option><option value="123">Luxembourg</option><option value="124">Macau</option><option value="125">Macedonia</option><option value="126">Madagascar</option><option value="127">Malawi</option><option value="128">Malaysia</option><option value="129">Maldives</option><option value="130">Mali</option><option value="131">Malta</option><option value="133">Martinique</option><option value="135">Mauritius</option><option value="136">Mayotte</option><option value="137">Mexico</option><option value="138">Micronesia</option><option value="139">Moldova</option><option value="140">Monaco</option><option value="141">Mongolia</option><option value="143">Montenegro</option><option value="142">Montserrat</option><option value="144">Morocco</option><option value="145">Mozambique</option><option value="146">Myanmar</option><option value="147">Namibia</option><option value="148">Nauru</option><option value="149">Nepal</option><option value="150">Netherlands</option><option value="151">Netherlands Antilles</option><option value="152">New Caledonia</option><option value="153">New Zealand</option><option value="154">Nicaragua</option><option value="156">Nigeria</option><option value="157">Niue</option><option value="158">Norfolk Island</option><option value="162">Oman</option><option value="166">Panama</option><option value="167">Papua New Guinea</option><option value="168">Paraguay</option><option value="169">Peru</option><option value="170">Philippines</option><option value="172">Poland</option><option value="173">Portugal</option><option value="174">Puerto Rico</option><option value="175">Qatar</option><option value="176">Reunion</option><option value="178">Russian Federation</option><option value="179">Rwanda</option><option value="181">Saint Lucia</option><option value="183">Samoa</option><option value="184">San Marino</option><option value="188">Senegal</option><option value="187">Serbia</option><option value="189">Seychelles</option><option value="190">Sierra Leone</option><option value="191">Singapore</option><option value="192">Slovakia (Slovak Republic)</option><option value="193">Slovenia</option><option value="194">Solomon Islands</option><option value="195">Somalia</option><option value="196">South Africa</option><option value="197">South Korea</option><option value="198">Spain</option><option value="199">Sri Lanka</option><option value="202">Sudan</option><option value="203">Suriname</option><option value="205">Swaziland</option><option value="206">Sweden</option><option value="207">Switzerland</option><option value="209">Taiwan</option><option value="210">Tajikistan</option><option value="211">Tanzania</option><option value="212">Thailand</option><option value="213">Togo</option><option value="214">Tokelau</option><option value="216">Trinidad and Tobago</option><option value="218">Turkey</option><option value="220">Turks and Caicos Islands</option><option value="222">Uganda</option><option value="229">Uzbekistan</option><option value="230">Vanuatu</option><option value="231">Vatican City State (Holy See)</option><option value="235">Virgin Islands (U.S.)</option><option value="236">Wallis And Futuna Islands</option><option value="237">Western Sahara</option><option value="240">Zambia</option><option value="241">Zimbabwe</option> </select>
-              <p id="error_billing_country"></p>
-            </div>
-          </dd>
-          <dd class="col-lg-6 col-md-6 col-sm-6  list-item">
-            <div class="item-title">
-              <span>State/Province:*</span>
-            </div>
-            <div class="item-drop" id="billing_states">
-              <input class="she-drop-large btn2" name="billing_state" id="billing_state" value="AUSTRALIAN CAPITAL TERRITORY" size="33" maxlength="32" />
-              <p id="error_billing_state"></p>
-            </div>
-          </dd>
-        </dl>
-        <dl class="row list-input">
-          <dd class="list-item col-lg-12 col-md-12 col-sm-12">
-            <div class="item-title">
-              <span class="undone">City: <span> *</span></span>
-            </div>
-            <input name="billing_city" value="sdsd" size="33" maxlength="32" id="billing_city" autocomplete="off" type="text" />
-            <p id="error_billing_city"></p>
-          </dd>
-        </dl>
-        <dl class="row list-input">
-          <dd class="list-item col-lg-12 col-md-12 col-sm-12">
-            <div class="item-title">
-              <span class="undone">Address Line: <span> *</span></span>
-            </div>
-            <input name="billing_address" value="sdsdsdsd" size="41" id="billing_address" type="text" />
-            <p id="error_billing_address"></p>
-          </dd>
-        </dl>
-        <dl class="row list-input">
-          <dd class="list-item col-sm-12">
-            <div class="item-title">
-              <span class="undone">Post/Zip Code: <span> *</span></span>
-            </div>
-            <input name="billing_postcode" value="2600" size="11" maxlength="10" id="billing_postcode" type="text" />
-            <p id="error_billing_postcode"></p>
-          </dd>
-        </dl>
-        <dl style="margin-bottom: 0px; text-align: center;">
-          <input class="she-btn-black" onclick="update_address('ZHB19213')" value="Use This Billing Address" name="save" type="button" />
-        </dl>
-      </div>
-      <table class="shipping_address_tab" id="billing_address_table" cellspacing="0" cellpadding="0" border="0">
-      </table>
-    </div>
-  </div>
+
+{#安全码弹窗#}
   <div id="divCVVHelp" class="cvv_help" style="display: none;">
     <div class="cvv_help_bg"></div>
     <div class="cvv_help_title">
@@ -374,34 +183,271 @@
       </table>
     </div>
   </div>
-  <div id="pay_fail_frame">
-    <div class="confirm_color"></div>
-    <div class="fail_frame_box">
-      <p></p>
-      <div class="cvv_help_close" onclick="javascript:$('#pay_fail_frame').hide();"></div>
-    </div>
-  </div>
-  <div id="checkout_paypal_2" class="confirm_bg" style="display: none;">
-    <div class="confirm_color"></div>
-    <div class="checkout_confirm_title checkout_confirm_success">
-      <div class="confirm_title_bg">
-        <a href="https://www.shein.com/index.php?model=pay_result&amp;cm=19213042&amp;method=gc&amp;amt=US$43.28"> payment successful </a>
-      </div>
-    </div>
-  </div>
-  <div class="checkout-black-mask" style="display: none;">
-    <div class="black-ctn">
-      <i class="black-close">x</i>
-      <div class="black-text">
-        رقم البطاقة غير صحيح. يُرجى الاتصال بالبنك التابع للبطاقة للحصول على المساعدة.
-      </div>
-    </div>
-  </div>
+{#安全码弹窗#}
+
 </div>
-<div class="back-wrap" style="display: none;">
-  <div class="back-top">
-    <span class="iconfont"></span>
-  </div>
-</div>
-<iframe src="index_2.html" aria-hidden="true" tabindex="-1" style="display: none;" width="0" hidden="" height="0"></iframe>
-{{ footer }}
+
+<script type="text/javascript"><!--
+    {% if shipping_required %}
+    // Shipping address change
+    $('#shipping-address-section').on('change', function() {
+        save_shipping_address();
+    });
+
+    $('#shipping-address-section select[name=\'shipping_address_id\']').on('change', function() {
+        change_existing_address_id('shipping');
+    });
+
+    // Shipping address new or existing address toggle
+    $('#shipping-address-section input[name=\'shipping_address\']').on('change', function() {
+        if ($(this).val() == 'new') {
+            save_shipping_address();
+        } else {
+            change_existing_address_id('shipping');
+        }
+    });
+    {% endif %}
+
+    // Payment method changed
+    $(document).delegate('#payment-method-section input[type=\'radio\']', 'change', function() {
+        save_payment_method();
+    });
+
+    // Payment method changed
+    $(document).delegate('#shipping-method-section input[type=\'radio\']', 'change', function() {
+        save_shipping_method();
+    });
+
+    // Comment changed
+    $(document).delegate('#comment-section textarea[name=\'comment\']', 'change', function() {
+        save_comment();
+    });
+
+    // Agreement changed
+    $(document).delegate('#agree-section input[name=\'terms\']', 'change', function() {
+        save_agreement();
+    });
+
+    // Submit button clicked
+    $(document).delegate('#button-submit', 'click', function () {
+        submit();
+    });
+
+    {% if shipping_required %}
+    function save_shipping_address() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#shipping-address-section input[type=\'text\'], #shipping-address-section input[type=\'date\'], #shipping-address-section input[type=\'datetime-local\'], #shipping-address-section input[type=\'time\'], #shipping-address-section input[type=\'password\'], #shipping-address-section input[type=\'checkbox\']:checked, #shipping-address-section input[type=\'radio\']:checked, #shipping-address-section textarea, #shipping-address-section select'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#shipping-address-section .alert-danger').remove();
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                    return;
+                }
+
+                if (json['error'] && json['error']['warning']) {
+                    $('#shipping-address-section').append('<div class="alert alert-danger">' + json['error']['warning'] + '</div>')
+                    return;
+                }
+
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+
+    function change_existing_address_id(type) {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#' + type + '-address-section select[name=\'' + type + '_address_id\']'),
+            dataType: 'json',
+            beforeSend: function() {
+                // TODO
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                    return;
+                }
+
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+    {% endif %}
+
+    // Payment method & shipping method
+    {% set types = (shipping_required ? ['payment', 'shipping'] : ['payment']) %}
+    {% for type in types %}
+    function save_{{ type }}_method() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#{{ type }}-method-section input[type=\'radio\']:checked'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('.container .alert-danger').remove();
+                $('#{{ type }}-method-section .alert-danger').remove();
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                }
+
+                if (json['error'] && json['error']['warning']) {
+                    $('#{{ type }}-method-section').append('<div class="alert alert-danger">' + json['error']['warning'] + '</div>')
+                }
+
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+            }
+        });
+    }
+    {% endfor %}
+
+    function save_comment() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#comment-section textarea[name=\'comment\']'),
+            dataType: 'json',
+            beforeSend: function() {
+                // TODO
+            },
+            success: function(json) {
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+
+    function save_agreement() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: {terms: $('#agree-section input[name=\'terms\']').prop('checked') ? 1 : 0},
+            dataType: 'json',
+            beforeSend: function() {
+                // TODO
+            },
+            success: function(json) {
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+
+    function submit() {
+        var data = {};
+        {% if not logged %}
+        data['account'] = account_type;
+        {% endif %}
+        $('.quick-checkout-wrapper input[type="text"], .quick-checkout-wrapper input[type="password"], .quick-checkout-wrapper select, .quick-checkout-wrapper input:checked, .quick-checkout-wrapper textarea[name="comment"]').each(function () {
+            data[$(this).attr('name')] = $(this).val();
+        });
+
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/confirm',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            beforeSend: function() {
+                $('.form-group').removeClass('has-error');
+                $('.alert-danger').remove();
+                $('.text-danger').remove();
+                $('#button-submit').button('loading');
+                block_section('.quick-checkout-wrapper');
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                    return;
+                }
+
+                if (json['error']) {
+                    $('#button-submit').button('reset');
+
+                    if (json['error']['shipping_address']) {
+                        $.each(json['error']['shipping_address'], function (key, value) {
+                            if (key === 'country' || key === 'zone' || key === 'city' || key === 'county') {
+                                var control = $('#shipping-new [name="shipping_' + key + '_id"]');
+                            } else if (key.indexOf('custom_field') === 0) {
+                                var control = $('#shipping-new [name="shipping_custom_field[' + key.replace('custom_field', '') + ']"]');
+                            } else {
+                                var control = $('#shipping-new [name="shipping_' + key + '"]');
+                            }
+
+                            control.closest('.form-group').addClass('has-error');
+                            control.closest('.form-group').append('<div class="text-danger">' + value + '</div>');
+                        });
+                    }
+
+                    {% set types = ['payment', 'shipping']%}
+                    {% for type in types %}
+                    if (json['error']['{{ type }}_method'] && json['error']['{{ type }}_method']['warning']) {
+                        $('#{{ type }}-method-section').append('<div class="alert alert-danger">' + json['error']['{{ type }}_method']['warning'] + '</div>')
+                    }
+                    {% endfor %}
+
+                    if (json['error']['agree']) {
+                        if (json['error']['agree']['terms']) {
+                            var control = $('#agree-section [name="terms"]');
+                            control.closest('label').addClass('has-error');
+                            control.closest('label').after('<div class="text-danger">' + json['error']['agree']['terms'] + '</div>');
+                        }
+                    }
+                } else {
+                    // Order created go to payment connect page
+                    location = 'index.php?route=checkout/checkout/connect';
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+                $('#button-submit').button('reset');
+            },
+            complete: function () {
+                unblock_section('.quick-checkout-wrapper');
+            }
+        });
+    }
+
+    function reload_right_section_html() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/reload',
+            dataType: 'html',
+            beforeSend: function () {
+                block_section('.right-section-wrapper');
+            },
+            success: function(html) {
+                $('.right-section-wrapper').replaceWith(html);
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+            },
+            complete: function () {
+            }
+        });
+    }
+
+    function block_section(section_id) {
+        if (!$(section_id).children('.loading-mask').length) {
+            $(section_id).append('<div class="loading-mask"></div>');
+        }
+    }
+
+    function unblock_section(section_id) {
+        $(section_id).children('.loading-mask').remove();
+    }
+    //--></script>
