@@ -1,54 +1,46 @@
 {{ header }}
+{% if error_warning %}
+  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+{% endif %}
 <input data-html="checkout_confirmation_worldpay" type="hidden" />
 <div class="indexHomeBody index_checkout_body">
   <div class="pay-head">
     <div class="container-fluid checkout-header" style="margin-bottom: 10px;">
-      <a class="logo-check iconfont shein-icon" href="http://www.shein.com/" title=""> <i class="iconfont"></i> </a>
-      <span class="checkout-header-title"> <i class="iconfont secure-icon"></i> secure checkout </span>
+      <a class="logo-check iconfont shein-icon" href="index.php" title=""> <i class="iconfont"></i> </a>
+      <span class="checkout-header-title"> <i class="iconfont secure-icon"></i> {{ heading_title }} </span>
     </div>
-  </div>
-  <div id="imgcontainer" style="display: none;">
-    <img src="/catalog/view/theme/default/image/checkout/cookieid.html" style="display: none;" />
-  </div>
-  <div id="waiting_refresh_image">
-    <img src="/catalog/view/theme/default/image/checkout/loadinganimation_veb464f0.gif" alt="" />
   </div>
   <div class="container-fluid mbag-step3">
-    <ul class="flow j-empty-cart-hide shoppingTitle_f">
-      <li class="step1">Shopping Bag</li>
-      <li class="step2">Place Order</li>
-      <li class="step3">Pay</li>
+    <ul class="flow  shoppingTitle_f">
+      <li class="step1"><a href="index.php">Home</a></li>
+      <li class="step2"><a href="index.php?route=checkout/cart">Orders</a></li>
+      <li class="step3"><a href="/">{{ heading_title }}</a></li>
       <li class="step4">Order Complete</li>
     </ul>
-    <div class="gc_fail_info" id="gc_fail_info" style="display: none;">
-      We’re sorry, we weren’t able to confirm your card information. If your information was entered correctly，please confirm with your card issuing bank or try again with other payment methods. For assistance, please contact us.
-    </div>
-    <div class="gc_fail_info" id="is_have_order" style="display: none;">
-      Your order: is paid successfully within 30mins!
-    </div>
-    <div class="update_address_msg" id="update_address_msg" style="display: none;">
-      Indicates required fields
-    </div>
     <div class="shopbag-details row ">
       <div class="left-ctn col-md-8 col-xs-8">
         <div class="pay-back">
           <i class="iconfont"></i>
-          <a href="https://www.shein.com/index.php?model=order&amp;action=place_order_again&amp;billno=ZHB19213&amp;order_token=12132299aa04dff6cd977351dda9e99b">Back to Place Order Page</a>
+          <a href="index.php?route=checkout/cart">Back to Place Order Page</a>
         </div>
         <div class="bill-ads">
           <div class="heading">
             <h2 class="she-h1"> Billing Address </h2>
             <span> Please make sure the billing address you enter below matches the name and address associated with the credit card you are using for this purchase. </span>
           </div>
-          <div class="ads" id="billing_address_2">
-            <div id="new_billing_address">
-              <strong>jin tieshan2</strong>
-              <div style="display: inline-block;">
-                (sdsdsdsd sdsd 2600 AUSTRALIAN CAPITAL TERRITORY Australia)
+          {% if shipping_required %}
+            <div class="ads" id="billing_address_2">
+              <div id="new_billing_address">
+                {#<strong>jin tieshan2</strong>#}
+                {#<div style="display: inline-block;">#}
+                    {{ shipping_address_section }}
+                {#</div>#}
               </div>
+              {#<a id="pay-edit" class="she-text-btn-light" href="javascript:void(0)"> edit </a>#}
             </div>
-            <a id="pay-edit" class="she-text-btn-light" href="javascript:void(0)"> edit </a>
-          </div>
+          {% endif %}
         </div>
         <div class="credit">
           <input value="2" class="is_bind" type="hidden" />
@@ -57,7 +49,7 @@
           </div>
           <div class="confirm_masked" id="confirm_masked_2">
           </div>
-          <form class="list-unit" action="https://www.shein.com/index.php?model=worldpay&amp;action=checkout&amp;billno=ZHB19213&amp;payment_direct=&amp;pay_phone=&amp;BankCode=select&amp;token_pay_id=55026d3b3b8e00304f06da065f0a4dbb">
+          <form class="list-unit" action="#">
             <input value="2" class="is_bind" type="hidden" />
             <div class="remember-menu" style="display: none;">
               <div class="remember_old item">
@@ -96,74 +88,9 @@
                 <label class="card_type_mc"> <span></span> <input value="2" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="2"> <i></i> </label> </label>
                 <label class="card_type_ae"> <span></span> <input value="3" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="3"> <i></i> </label> </label>
                 <label class="card_type_discover"> <span></span> <input value="14" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="14"> <i></i> </label> </label>
-                <!-- <label class="card_type_vi">
-                                              <span></span>
-                                              <input type="radio" value="1" name="card_paymethod"  style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="1" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                          <label class="card_type_mcd">
-                                              <span></span>
-                                              <input type="radio" value="2" name="card_paymethod"  style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="2" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                          <label class="card_type_ve">
-                                              <span></span>
-                                              <input type="radio" value="1" name="card_paymethod"  style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="1" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                          <label class="card_type_ac">
-                                              <span></span>
-                                              <input type="radio" value="4" name="card_paymethod" style="display:none">
-                                              <label  name="card_paymethod" type="radio" class="she-radioed" value="4" >
-                                                  <i></i>
-                                              </label>
-                                          </label>-->
                 <label class="card_type_mae"> <span></span> <input value="5" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="5"> <i></i> </label> </label>
                 <label class="card_type_din"> <span></span> <input value="6" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="6"> <i></i> </label> </label>
                 <label class="card_type_jcb"> <span></span> <input value="16" name="card_paymethod" style="display: none;" type="radio" /> <label name="card_paymethod" type="radio" class="she-radioed" value="16"> <i></i> </label> </label>
-                <!-- 以下本地支付方式取消
-                                                                              <label class="local_payment card_type_sofort">
-                                              <span></span>
-                                              <input type="radio" value="7" data-payment-type="local" data-country-id="[82]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[82]"  name="card_paymethod" type="radio" class="she-radioed" value="7">
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                                                                  <label class="local_payment card_type_poli">
-                                              <span></span>
-                                              <input type="radio" value="9" data-payment-type="local" data-country-id="[13]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[13]"  name="card_paymethod" type="radio" class="she-radioed" value="9" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                              <label class="local_payment card_type_giropay">
-                                              <span></span>
-                                              <input type="radio" value="10" data-payment-type="local" data-country-id="[82]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[82]"  name="card_paymethod" type="radio" class="she-radioed" value="10" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                              <label class="local_payment card_type_qiwi">
-                                              <span></span>
-                                              <input type="radio" value="11" data-payment-type="local" data-country-id="[178,110]" name="card_paymethod" style="display:none">
-                                              <label data-payment-type="local" data-country-id="[178,110]"  name="card_paymethod" type="radio" class="she-radioed" value="11" >
-                                                  <i></i>
-                                              </label>
-                                          </label>
-                                                                              -->
-                <!-- <label class="local_payment card_type_instadebit">
-                                              <span></span>
-                                              <input type="radio" value="12" data-payment-type="local" data-country-id="[38]" name="card_paymethod"  style="display:none">
-                                              <label data-payment-type="local" data-country-id="[38]"  name="card_paymethod" type="radio" class="she-radioed" value="12" >
-                                                  <i></i>
-                                              </label>
-                                          </label> -->
               </div>
               <ul class="confirm_method_img">
                 <li class="card_visa"></li>
@@ -225,10 +152,6 @@
           <div class="heading">
             <h2 class="she-h1"> Order Summary </h2>
           </div>
-          <!-- <div class="price-current-item">
-                               <span class="current-t">Ratail Price</span>
-                               <div class="current">US$<span>95.00</span></div>
-                           </div> -->
           <div class="item">
             <span>Order NO.</span>
             <div class="value">
@@ -374,34 +297,298 @@
       </table>
     </div>
   </div>
-  <div id="pay_fail_frame">
-    <div class="confirm_color"></div>
-    <div class="fail_frame_box">
-      <p></p>
-      <div class="cvv_help_close" onclick="javascript:$('#pay_fail_frame').hide();"></div>
-    </div>
-  </div>
-  <div id="checkout_paypal_2" class="confirm_bg" style="display: none;">
-    <div class="confirm_color"></div>
-    <div class="checkout_confirm_title checkout_confirm_success">
-      <div class="confirm_title_bg">
-        <a href="https://www.shein.com/index.php?model=pay_result&amp;cm=19213042&amp;method=gc&amp;amt=US$43.28"> payment successful </a>
-      </div>
-    </div>
-  </div>
-  <div class="checkout-black-mask" style="display: none;">
-    <div class="black-ctn">
-      <i class="black-close">x</i>
-      <div class="black-text">
-        رقم البطاقة غير صحيح. يُرجى الاتصال بالبنك التابع للبطاقة للحصول على المساعدة.
-      </div>
-    </div>
-  </div>
+  {#<div id="pay_fail_frame">#}
+    {#<div class="confirm_color"></div>#}
+    {#<div class="fail_frame_box">#}
+      {#<p></p>#}
+      {#<div class="cvv_help_close" onclick="javascript:$('#pay_fail_frame').hide();"></div>#}
+    {#</div>#}
+  {#</div>#}
+  {#<div id="checkout_paypal_2" class="confirm_bg" style="display: none;">#}
+    {#<div class="confirm_color"></div>#}
+    {#<div class="checkout_confirm_title checkout_confirm_success">#}
+      {#<div class="confirm_title_bg">#}
+        {#<a href="https://www.shein.com/index.php?model=pay_result&amp;cm=19213042&amp;method=gc&amp;amt=US$43.28"> payment successful </a>#}
+      {#</div>#}
+    {#</div>#}
+  {#</div>#}
+  {#<div class="checkout-black-mask" style="display: none;">#}
+    {#<div class="black-ctn">#}
+      {#<i class="black-close">x</i>#}
+      {#<div class="black-text">#}
+        {#رقم البطاقة غير صحيح. يُرجى الاتصال بالبنك التابع للبطاقة للحصول على المساعدة.#}
+      {#</div>#}
+    {#</div>#}
+  {#</div>#}
 </div>
-<div class="back-wrap" style="display: none;">
-  <div class="back-top">
-    <span class="iconfont"></span>
-  </div>
-</div>
+{#<div class="back-wrap" style="display: none;">#}
+  {#<div class="back-top">#}
+    {#<span class="iconfont"></span>#}
+  {#</div>#}
+{#</div>#}
 <iframe src="index_2.html" aria-hidden="true" tabindex="-1" style="display: none;" width="0" hidden="" height="0"></iframe>
-{{ footer }}
+{#{{ footer }}#}
+<script type="text/javascript"><!--
+    {% if shipping_required %}
+    // Shipping address change
+    $('#shipping-address-section').on('change', function() {
+        save_shipping_address();
+    });
+
+    $('#shipping-address-section select[name=\'shipping_address_id\']').on('change', function() {
+        change_existing_address_id('shipping');
+    });
+
+    // Shipping address new or existing address toggle
+    $('#shipping-address-section input[name=\'shipping_address\']').on('change', function() {
+        if ($(this).val() == 'new') {
+            save_shipping_address();
+        } else {
+            change_existing_address_id('shipping');
+        }
+    });
+    {% endif %}
+
+    // Payment method changed
+    $(document).delegate('#payment-method-section input[type=\'radio\']', 'change', function() {
+        save_payment_method();
+    });
+
+    // Payment method changed
+    $(document).delegate('#shipping-method-section input[type=\'radio\']', 'change', function() {
+        save_shipping_method();
+    });
+
+    // Comment changed
+    $(document).delegate('#comment-section textarea[name=\'comment\']', 'change', function() {
+        save_comment();
+    });
+
+    // Agreement changed
+    $(document).delegate('#agree-section input[name=\'terms\']', 'change', function() {
+        save_agreement();
+    });
+
+    // Submit button clicked
+    $(document).delegate('#button-submit', 'click', function () {
+        submit();
+    });
+
+    {% if shipping_required %}
+    function save_shipping_address() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#shipping-address-section input[type=\'text\'], #shipping-address-section input[type=\'date\'], #shipping-address-section input[type=\'datetime-local\'], #shipping-address-section input[type=\'time\'], #shipping-address-section input[type=\'password\'], #shipping-address-section input[type=\'checkbox\']:checked, #shipping-address-section input[type=\'radio\']:checked, #shipping-address-section textarea, #shipping-address-section select'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#shipping-address-section .alert-danger').remove();
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                    return;
+                }
+
+                if (json['error'] && json['error']['warning']) {
+                    $('#shipping-address-section').append('<div class="alert alert-danger">' + json['error']['warning'] + '</div>')
+                    return;
+                }
+
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+
+    function change_existing_address_id(type) {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#' + type + '-address-section select[name=\'' + type + '_address_id\']'),
+            dataType: 'json',
+            beforeSend: function() {
+                // TODO
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                    return;
+                }
+
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+    {% endif %}
+
+    // Payment method & shipping method
+    {% set types = (shipping_required ? ['payment', 'shipping'] : ['payment']) %}
+    {% for type in types %}
+    function save_{{ type }}_method() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#{{ type }}-method-section input[type=\'radio\']:checked'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('.container .alert-danger').remove();
+                $('#{{ type }}-method-section .alert-danger').remove();
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                }
+
+                if (json['error'] && json['error']['warning']) {
+                    $('#{{ type }}-method-section').append('<div class="alert alert-danger">' + json['error']['warning'] + '</div>')
+                }
+
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+            }
+        });
+    }
+    {% endfor %}
+
+    function save_comment() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: $('#comment-section textarea[name=\'comment\']'),
+            dataType: 'json',
+            beforeSend: function() {
+                // TODO
+            },
+            success: function(json) {
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+
+    function save_agreement() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/update',
+            type: 'post',
+            data: {terms: $('#agree-section input[name=\'terms\']').prop('checked') ? 1 : 0},
+            dataType: 'json',
+            beforeSend: function() {
+                // TODO
+            },
+            success: function(json) {
+                reload_right_section_html();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+            }
+        });
+    }
+
+    function submit() {
+        var data = {};
+        {% if not logged %}
+        data['account'] = account_type;
+        {% endif %}
+        $('.quick-checkout-wrapper input[type="text"], .quick-checkout-wrapper input[type="password"], .quick-checkout-wrapper select, .quick-checkout-wrapper input:checked, .quick-checkout-wrapper textarea[name="comment"]').each(function () {
+            data[$(this).attr('name')] = $(this).val();
+        });
+
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/confirm',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            beforeSend: function() {
+                $('.form-group').removeClass('has-error');
+                $('.alert-danger').remove();
+                $('.text-danger').remove();
+                $('#button-submit').button('loading');
+                block_section('.quick-checkout-wrapper');
+            },
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                    return;
+                }
+
+                if (json['error']) {
+                    $('#button-submit').button('reset');
+
+                    if (json['error']['shipping_address']) {
+                        $.each(json['error']['shipping_address'], function (key, value) {
+                            if (key === 'country' || key === 'zone' || key === 'city' || key === 'county') {
+                                var control = $('#shipping-new [name="shipping_' + key + '_id"]');
+                            } else if (key.indexOf('custom_field') === 0) {
+                                var control = $('#shipping-new [name="shipping_custom_field[' + key.replace('custom_field', '') + ']"]');
+                            } else {
+                                var control = $('#shipping-new [name="shipping_' + key + '"]');
+                            }
+
+                            control.closest('.form-group').addClass('has-error');
+                            control.closest('.form-group').append('<div class="text-danger">' + value + '</div>');
+                        });
+                    }
+
+                    {% set types = ['payment', 'shipping']%}
+                    {% for type in types %}
+                    if (json['error']['{{ type }}_method'] && json['error']['{{ type }}_method']['warning']) {
+                        $('#{{ type }}-method-section').append('<div class="alert alert-danger">' + json['error']['{{ type }}_method']['warning'] + '</div>')
+                    }
+                    {% endfor %}
+
+                    if (json['error']['agree']) {
+                        if (json['error']['agree']['terms']) {
+                            var control = $('#agree-section [name="terms"]');
+                            control.closest('label').addClass('has-error');
+                            control.closest('label').after('<div class="text-danger">' + json['error']['agree']['terms'] + '</div>');
+                        }
+                    }
+                } else {
+                    // Order created go to payment connect page
+                    location = 'index.php?route=checkout/checkout/connect';
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+                $('#button-submit').button('reset');
+            },
+            complete: function () {
+                unblock_section('.quick-checkout-wrapper');
+            }
+        });
+    }
+
+    function reload_right_section_html() {
+        $.ajax({
+            url: 'index.php?route=checkout/checkout/reload',
+            dataType: 'html',
+            beforeSend: function () {
+                block_section('.right-section-wrapper');
+            },
+            success: function(html) {
+                $('.right-section-wrapper').replaceWith(html);
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+            },
+            complete: function () {
+            }
+        });
+    }
+
+    function block_section(section_id) {
+        if (!$(section_id).children('.loading-mask').length) {
+            $(section_id).append('<div class="loading-mask"></div>');
+        }
+    }
+
+    function unblock_section(section_id) {
+        $(section_id).children('.loading-mask').remove();
+    }
+    //--></script>

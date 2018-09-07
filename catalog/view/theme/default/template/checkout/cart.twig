@@ -41,7 +41,7 @@
             <li class="col-xs-2"> {{ column_total }} </li>
           </ul>
         </div>
-        <form action="{{ action }}" method="post" enctype="multipart/form-data">
+        <form action="{{ action }}" method="post" id="car" enctype="multipart/form-data">
             {% for product in products %}
           <div id="shopping_cart_do_price">
             <div id="shopping_cart_common_html">
@@ -84,7 +84,7 @@
                       <li class="j-reduce-wrap-389423017"> <span class="she-operator reduce iconfont j-reduce-389423017"onclick="des({{ product.cart_id }})">  </span> </li>
                       <input class="she-text qty-val quantitySelect_bg j-qty-val" name="quantity[{{ product.cart_id }}]" id="{{ product.cart_id }}" value="{{ product.quantity }}" type="text" />
                       <li class="j-cart-add-wrap"> <span class="j-cart-add she-operator increase iconfont" onclick="asc({{ product.cart_id }})">  </span> </li>
-                      <button type="submit" data-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                      {#<button type="submit" data-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fa fa-refresh"></i></button>#}
                     </ul>
                   </div>
                 </div>
@@ -103,85 +103,85 @@
           </div>
         </form>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4" id="summary-fill">
-      </div>
-      <div class="emarsys-list j-emarsys-list col-md-8 col-sm-8" style="visibility: visible; display: block;">
-        <h3 class="emarsys-tab"> <span class="j-tab j-tab-also emarsys-tab-active"> You May Also Like </span> <span class="emarsys-tab-line j-tab-line"> | </span> <span class="j-tab j-tab-vc " data-id="vc" style=""> Recommendations For You </span> </h3>
-        <div id="productsContent1_comm" class="recommended-product recommended-also-product j-also-view" style="visibility: visible;">
-          <div class="recommended-viewed-swiper j-recommended-emarsys">
-            <div class="recommended-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">
-              
-            </div>
-            <div class="j-recommended-content recommended-content swiper-container swiper-container-horizontal">
-              <div id="recommend_products_list" class="swiper-wrapper">
-                <div class="swiper-slide box-product-list category_products_bg list_all_items swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">
-                  <div class="goods-aImg">
-                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15058157203901741088_thumbnail_220x293.jpg" alt="Trumpet Sleeve Pearl Beading Scalloped Dress" border="0" /> </a>
-                    <div class="la-ball-pulse">
-                      <div>
-                      </div>
-                      <div>
-                      </div>
-                      <div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="goods_mz">
-                    <a target="_blank"> Trumpet Sleeve Pearl Beading Scalloped Dress </a>
-                  </div>
-                  <div class="product-list list_all_items_price">
-                    <span class="index-price shop_price final_price"> <strong class="final_price_strong"> US$13 </strong> </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="recommended-next swiper-button-next iconfont shein-arrow">
-              
-            </div>
-          </div>
-        </div>
-        <div class="recommended-product recommended-vc j-saveitems" style="visibility: visible;">
-          <h3>
-            <div class="item-title">
-              Saved Items
-            </div>
-            <div data-num="6" class="item-num">
-              (6)
-            </div> </h3>
-          <div class="recommended-viewed-swiper">
-            <div class="j-sa-prev swiper-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">
-              
-            </div>
-            <div class="swiper-content swiper-container j-sa-container swiper-container-horizontal">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide box-vc-list swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">
-                  <div class="goods-aImg">
-                    <a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15107394912945120341_thumbnail_220x293.jpg" /> </a>
-                    <div class="la-ball-pulse">
-                      <div>
-                      </div>
-                      <div>
-                      </div>
-                      <div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box-vc-name">
-                    <small class="goods-brand"> SHEIN&nbsp; </small> Flounce Embellished Tied Neck Dress
-                  </div>
-                  <div>
-                    <span class="price" style="display: ;"> <strong class="final_price_strong"> US$14.45 </strong> <b class="show_vip"> (vip) </b> </span>
-                  </div>
-                </div>
-                <!---->
-              </div>
-            </div>
-            <div class="j-sa-next swiper-next swiper-button-next iconfont shein-arrow">
-              
-            </div>
-          </div>
-        </div>
-      </div>
+      {#<div class="col-lg-4 col-md-4 col-sm-4" id="summary-fill">#}
+      {#</div>#}
+      {#<div class="emarsys-list j-emarsys-list col-md-8 col-sm-8" style="visibility: visible; display: block;">#}
+        {#<h3 class="emarsys-tab"> <span class="j-tab j-tab-also emarsys-tab-active"> You May Also Like </span> <span class="emarsys-tab-line j-tab-line"> | </span> <span class="j-tab j-tab-vc " data-id="vc" style=""> Recommendations For You </span> </h3>#}
+        {#<div id="productsContent1_comm" class="recommended-product recommended-also-product j-also-view" style="visibility: visible;">#}
+          {#<div class="recommended-viewed-swiper j-recommended-emarsys">#}
+            {#<div class="recommended-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">#}
+              {##}
+            {#</div>#}
+            {#<div class="j-recommended-content recommended-content swiper-container swiper-container-horizontal">#}
+              {#<div id="recommend_products_list" class="swiper-wrapper">#}
+                {#<div class="swiper-slide box-product-list category_products_bg list_all_items swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">#}
+                  {#<div class="goods-aImg">#}
+                    {#<a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15058157203901741088_thumbnail_220x293.jpg" alt="Trumpet Sleeve Pearl Beading Scalloped Dress" border="0" /> </a>#}
+                    {#<div class="la-ball-pulse">#}
+                      {#<div>#}
+                      {#</div>#}
+                      {#<div>#}
+                      {#</div>#}
+                      {#<div>#}
+                      {#</div>#}
+                    {#</div>#}
+                  {#</div>#}
+                  {#<div class="goods_mz">#}
+                    {#<a target="_blank"> Trumpet Sleeve Pearl Beading Scalloped Dress </a>#}
+                  {#</div>#}
+                  {#<div class="product-list list_all_items_price">#}
+                    {#<span class="index-price shop_price final_price"> <strong class="final_price_strong"> US$13 </strong> </span>#}
+                  {#</div>#}
+                {#</div>#}
+              {#</div>#}
+            {#</div>#}
+            {#<div class="recommended-next swiper-button-next iconfont shein-arrow">#}
+              {##}
+            {#</div>#}
+          {#</div>#}
+        {#</div>#}
+        {#<div class="recommended-product recommended-vc j-saveitems" style="visibility: visible;">#}
+          {#<h3>#}
+            {#<div class="item-title">#}
+              {#Saved Items#}
+            {#</div>#}
+            {#<div data-num="6" class="item-num">#}
+              {#(6)#}
+            {#</div> </h3>#}
+          {#<div class="recommended-viewed-swiper">#}
+            {#<div class="j-sa-prev swiper-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">#}
+              {##}
+            {#</div>#}
+            {#<div class="swiper-content swiper-container j-sa-container swiper-container-horizontal">#}
+              {#<div class="swiper-wrapper">#}
+                {#<div class="swiper-slide box-vc-list swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">#}
+                  {#<div class="goods-aImg">#}
+                    {#<a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15107394912945120341_thumbnail_220x293.jpg" /> </a>#}
+                    {#<div class="la-ball-pulse">#}
+                      {#<div>#}
+                      {#</div>#}
+                      {#<div>#}
+                      {#</div>#}
+                      {#<div>#}
+                      {#</div>#}
+                    {#</div>#}
+                  {#</div>#}
+                  {#<div class="box-vc-name">#}
+                    {#<small class="goods-brand"> SHEIN&nbsp; </small> Flounce Embellished Tied Neck Dress#}
+                  {#</div>#}
+                  {#<div>#}
+                    {#<span class="price" style="display: ;"> <strong class="final_price_strong"> US$14.45 </strong> <b class="show_vip"> (vip) </b> </span>#}
+                  {#</div>#}
+                {#</div>#}
+                {#<!---->#}
+              {#</div>#}
+            {#</div>#}
+            {#<div class="j-sa-next swiper-next swiper-button-next iconfont shein-arrow">#}
+              {##}
+            {#</div>#}
+          {#</div>#}
+        {#</div>#}
+      {#</div>#}
       <div class="right-ctn j-empty-cart-hide" style="position: fixed; width: 393px; right: 41.8333px; top: auto; visibility: visible; display: block;">
         <div class="order-sum">
           <div class="cart-placeorder-header">
@@ -189,30 +189,33 @@
           </div>
           <div class="order-summary">
             <div id="shopping_cart_do_price_total" style="margin-top: 10px;">
-              <div class="price-current-item" id="retail_price">
-                <span class="current-t"> Retail Price </span>
-                <div class="current-v" id="shipping_retail_price">
-                  <div class="item_total goods_price_current_price" style="">
-                    US$53.00
+              {#{% for total in totals %}#}
+                {#<div class="price-current-item" id="retail_price">#}
+                  {#<span class="current-t"> {{ total.title }} </span>#}
+                  {#<div class="current-v" id="shipping_retail_price">#}
+                    {#<div class="item_total goods_price_current_price" style="">#}
+                        {#{{ total.text }}#}
+                    {#</div>#}
+                  {#</div>#}
+                {#</div>#}
+              {#{% endfor %}#}
+              {% for total in totals %}
+                <div class="price-total-item">
+                  <span class="total-t"> {{ total.title }} </span>
+                  <div class="total" id="shipping_total">
+                    <div class="item_total goods_price_current_price">
+                        {{ total.text }}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="price-total-item">
-                <span class="total-t"> TOTAL </span>
-                <div class="total" id="shipping_total">
-                  <div class="item_total goods_price_current_price">
-                    US$35.00
-                  </div>
-                </div>
-              </div>
-              <div class="get-pt user_get_point">
-                <span class="reward-points-info"> Reward <span class="point-biao"> 35 </span> <span class="point-biao sale-out-img"> <a href=""> SheIn Points </a> </span> <span class="pre_ticket_tips"> The SheIn points will be added to your account after you confirm received your order. </span> </span>
-              </div>
-              <div class="free-express">
-                Got a coupon? Add it in the next step!
-              </div>
-              <input class="she-btn-black she-btn-xl checkout j-checkout-btn" name="checkout" value="checkout securely now" onclick="go_checkout(event);" type="button" />
-              <p class="sold-out-tips j-sold-out-tips"> The items in your shopping bag are unavailable now, please remove them to continue. </p>
+              {% endfor %}
+              {#<div class="get-pt user_get_point">#}
+                {#<span class="reward-points-info"> Reward <span class="point-biao"> 35 </span> <span class="point-biao sale-out-img"> <a href=""> SheIn Points </a> </span> <span class="pre_ticket_tips"> The SheIn points will be added to your account after you confirm received your order. </span> </span>#}
+              {#</div>#}
+              {#<div class="free-express">#}
+                {#Got a coupon? Add it in the next step!#}
+              {#</div>#}
+              <a href="{{ checkout }}"><input class="she-btn-black she-btn-xl checkout j-checkout-btn" name="checkout" value="{{ button_checkout }}" type="button" /></a>
             </div>
             <div class="ac-card">
               <h2 class="she-h1"> </h2>
@@ -235,13 +238,17 @@
     </div>
   </div>
 </div>
-{{ footer }}
+{#{{ footer }}#}
 
 <script>
   function des(id) {
       console.log($('#'+id).val());
+      $('#'+id).val(parseInt($('#'+id).val())-1);
+      $('#car').submit();
   }
   function asc(id) {
       console.log($('#'+id).val());
+      $('#'+id).val(parseInt($('#'+id).val())+1);
+      $('#car').submit();
   }
 </script>
