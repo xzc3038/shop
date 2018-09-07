@@ -205,69 +205,39 @@
             </div>
             <div class="bag" id="logo_rightyy">
               <a class="present shoppingbag j-shoppingbag" href="{{ shopping_cart }}" title="Shopping Bag"> <span class="iconfont">  </span> <span class="bag-count" id="cart_items"> <b id="carts_quantity"></b> </span> </a>
-              <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="height: 0px; display: none; opacity: 0;">
-                <div class="basket_empty">
-                  <em></em>Shopping Bag is Empty
-                </div>
+              <div style="height: 0px; display: none; opacity: 0;">
+                  {{ cart }}
               </div>
             </div>
-            <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="height: 0px; display: none; opacity: 0;">
+            <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="display: none; opacity: 0;">
               <div class="attribute_cart shopcart-cart">
                 <div class="shopcart-top">
-                  <form action="https://www.shein.com/shopping-cart.html" name="theForm_shop" method="post">
+                    {% if products %}
                     <div style="width: auto;">
-                      <div id="shop-cart-scroll" style="height: 360px; overflow-y: scroll; overflow-x: hidden;">
-                        <input id="update_shopping_price_type" name="update_shopping_price_type" value="shopping_cart" type="hidden" />
-                        <div class="shopping-product" data-sku="sweatsh171017370" data-spu="170908205" data-good-id="396259" data-cate-id="1773" data-ga-price="15.00" id="cart_381926375" vip_sale="no" sort_order="append" special_price_hide="yes">
-                          <div class="cart_error" style="display: none;" goods_id_value="_396259"></div>
-                          <div class=" shoppingtop-img">
-                            <img src="15081466102147806039_thumbnail_220x293.jpg" border="0" />
-                          </div>
-                          <div class="shoppingtop-right">
-                            <div class=" discount_goods_price_396259 basket-cont shoppingtop-basket">
-                              <span class="shop-index-price shop_price" price="US$15.00"><strong class="final_price_strong">US$15.00</strong></span>
+                      <div id="shop-cart-scroll" style="max-height: 100%;overflow-y: scroll; overflow-x: hidden;">
+                        {% for product in products %}
+                          <div class="shopping-product">
+                            <div class="cart_error" style="display: none;" goods_id_value="_396259"></div>
+                            <div class=" shoppingtop-img">
+                              <img src="15081466102147806039_thumbnail_220x293.jpg" border="0" />
                             </div>
-                            <div class="shoppingtop-name">
-                              <a href="http://www.shein.com/Grommet-Lace-Up-Sleeve-Crop-Hoodie-p-396259-cat-1773.html" target="_top"><span class="goods-brand"></span>Grommet Lace Up Sleeve Crop Hoodie</a>
-                            </div>
-                            <span class="she-dispatch"><i class="iconfont"></i>Priority dispatching</span>
-                            <a class="share_button_on share_button_396259" href="javascript:void(0);" onclick="show_facebook_div('396259')"></a>
-                            <div class="share_wenzi_396259 share_header_explain">
-                              <strong>(5%off)</strong>
-                            </div>
-                            <div class="attribute-shopcart">
-                              Size:XL
-                              <a class="shop-remove-a iconfont" href="javascript:void(0)" onclick="setAttrAmount.del(381926375, 396259, '#quantity_sad')"></a>
-                            </div>
-                            <div class="j-attr-goods shop-input" style="left: 0px; position: relative;">
-                              <div class=" inbasket-quantity">
-                                <input name="goods_arr[]" value="396259" type="hidden" />
-                                <input name="goods_name[]" value="Grommet Lace Up Sleeve Crop Hoodie" type="hidden" />
-                                <input name="is_on_sale[]" value="1" type="hidden" />
-                                <div class="red display-none" id="381926375j-limit-tip"></div>
-                                <a class="reduce iconfont j-reduce-381926375 disable" onclick="setAttrAmount.reduce('#381926375',396259)" href="javascript:void(0)"></a>
-                                <input class="quantityselect-bg" name="quantity_396259" value="1" id="381926375" onfocus="setAttrAmount.record('#381926375');" onblur="setAttrAmount.modify('#381926375',396259,undefined,0,7)" type="text" />
-                                <a class="j-cart-add add iconfont" onclick="setAttrAmount.add('#381926375',396259,undefined,0,7)" href="javascript:void(0)"></a>
+                            <div class="shoppingtop-right">
+                              <div class=" discount_goods_price_396259 basket-cont shoppingtop-basket">
+                                <span class="shop-index-price shop_price" price="US$15.00"><strong class="final_price_strong">US$15.00</strong></span>
                               </div>
-                              <div class="is-show-stock j-show-stock" style="padding-left: 8px; color: rgb(102, 102, 102); display: none;">
-                                (Only
-                                <strong class="units_in_stock">1000000</strong>left!)
+                              <span class="she-dispatch"><i class="iconfont"></i>Priority dispatching</span>
+                              <a class="share_button_on share_button_396259" href="javascript:void(0);" onclick="show_facebook_div('396259')"></a>
+                              <div class="share_wenzi_396259 share_header_explain">
+                                <strong>(5%off)</strong>
                               </div>
-                              <div class="attr_basket_cont4 attr-basket-cont4" style="top: 0px;">
-                                <div class="attr_inbasket_total">
-                                  <span class="shop-total-label">Total:</span>
-                                  <span class="shoppingtop-span">
-                    <div id="subtotal_381926375" class="item_total">
-                     US$15.00
-                    </div></span>
-                                </div>
+                              <div class="attribute-shopcart">
+                                Size:XL
+                                <a class="shop-remove-a iconfont" href="javascript:void(0)" onclick="setAttrAmount.del(381926375, 396259, '#quantity_sad')"></a>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div></div>
+                        {% endfor %}
                       </div>
-                      <p class="attr-prompt shipping_price_99">Eligible for<a>FREE Express shipping</a>!</p>
                       <p class="attr-total" id="attr_retail_price" style="padding-top: 10px;">Retail Price:<a id="shipping_retail_price">US$48.00</a></p>
                       <p class="attr-total" id="attr_retail_price_discount" style="display: none;"><span>Discount<a>0</a>off</span></p>
                       <p class="attr-total" id="attr_total" style="font-weight: bold;"><span class="shipping-total-label">Total:</span><span class="shipping-total" style="color: rgb(209, 0, 0);" id="shipping_total">US$48.00</span></p>
@@ -275,7 +245,7 @@
                         <input class="she-btn-black she-btn-l viewbag" name="viewcart" value="view bag" type="submit" />
                       </div>
                     </div>
-                  </form>
+                    {% endif %}
                 </div>
               </div>
               <img src="catalog/view/theme/default/image/index/js_grey.gif" style="display: none;" />
