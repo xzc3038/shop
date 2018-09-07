@@ -1,9 +1,9 @@
 {{ header }}
     {{ column_left }}
     <div class="col-sm-9 col-xs-12 macc-address j-macc-address">
-      <h3 class="she-tl-h3">My Address Book</h3>
+      <h3 class="she-tl-h3">{{ text_address_book }}</h3>
       <div style="margin-top: 60px;">
-        <a class="add-address-btn j-add-address" href="{{ add }}">+ Add New Address</a>
+        <a class="add-address-btn j-add-address" href="{{ add }}">{{ button_new_address }}</a>
       </div>
       <ul class="address-list j-address-list row">
           {% for result in addresses %}
