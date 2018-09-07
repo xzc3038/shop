@@ -1,4 +1,5 @@
-<div id="attr_shopcart" class="c-headsb hd-cart-bag">
+{% if products %}
+            <div id="attr_shopcart" class="c-headsb hd-cart-bag">
                 <div class="attribute_cart shopcart-cart">
                   <div class="shopcart-top">
                     <form action="" name="theForm_shop" method="post">
@@ -64,4 +65,11 @@
                   </div>
                 </div>
                 <img src="/catalog/view/theme/default/image/index/js_grey.gif" style="display: block;" />
-              </div>
+            </div>
+{% else %}
+    <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="height: 0px; display: none; opacity: 0;">
+    <div class="basket_empty">
+    <em></em>Shopping Bag is Empty
+    </div>
+    </div>
+{% endif %}
