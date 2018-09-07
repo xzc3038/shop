@@ -1,21 +1,21 @@
 {{ header }}
       {{ column_left }}
     <div class="she-center col-sm-9 myorder-detail order-wrap j-order-conter j-order-detail" id="orders_new_right">
-      <h3 class="she-tl-h3">My Orders</h3>
-      <p>Whatever you need, we’re here to help!</p>
-      <div class="doubt">
-        Simply submit a ticket on the Order Details page or in
-        <a class="ga-tk-order-list-my-tickets" href="https://www.shein.com/index.php?model=zendesk&amp;action=getList"> “My Tickets”.</a>
-      </div>
+      <h3 class="she-tl-h3">{{ heading_title }}</h3>
+      {#<p>Whatever you need, we’re here to help!</p>#}
+      {#<div class="doubt">#}
+        {#Simply submit a ticket on the Order Details page or in#}
+        {#<a class="ga-tk-order-list-my-tickets" href="https://www.shein.com/index.php?model=zendesk&amp;action=getList"> “My Tickets”.</a>#}
+      {#</div>#}
       <table class="table table-striped" width="100%" cellspacing="0" cellpadding="3" border="0" align="center">
         <tbody>
         <tr>
-          <th>Order NO.</th>
-          <th width="16.7%">Products</th>
-          <th>Date</th>
-          <th>Total</th>
-          <th>Status</th>
-          <th class="member_order_th">Action</th>
+          <th>{{ column_order_id }}</th>
+          <th width="16.7%">{{ column_product }}</th>
+          <th>{{ column_date_added }}</th>
+          <th>{{ column_total }}</th>
+          <th>{{ column_status }}</th>
+          <th class="member_order_th"></th>
         </tr>
         {% for order in orders %}
           <tr id="order_info_BHL18525">

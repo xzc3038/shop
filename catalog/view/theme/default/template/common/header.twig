@@ -2,7 +2,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  <title>My ACCOUNT</title>
+  <title>{{ title }}</title>
   <script language="javascript">
       var seckill_arr = [];
       var js_site_from = 'www';
@@ -30,7 +30,6 @@
   <link media="all" href="catalog/view/theme/default/css/category.css" type="text/css" rel="stylesheet">
   <link media="all" href="catalog/view/theme/default/css/goods-db2c456a45.css" type="text/css" rel="stylesheet">
   <link media="all" href="catalog/view/theme/default/css/orderdetails.css" type="text/css" rel="stylesheet">
-
 </head>
 <body>
 <div class="header_common">
@@ -44,6 +43,7 @@
               <a class="present" href="javascript:void(0)" id="txt_lang">English</a>
               <div class="dropdown" id="lang_list">
                 <a style="display: none;" href="">English</a>
+                <a href="">中文</a>
                 <a href="">Espa&ntilde;ol</a>
                 <a href="">Fran&ccedil;ais</a>
                 <a href="">Русский</a>
@@ -148,15 +148,15 @@
             <div class="sign" id="my_profile">
               <a class="present j-login-present" href="/catalog/account/login" style="text-transform: none;"> <span class="j-login-username">wangjunchao</span><b></b> </a>
               <div class="dropdown user-profile-hidd j-user-profile" style="display: none;">
-                <a href="">My Orders</a>
-                <a href="">My Tickets </a>
-                <a href="">My Wallet</a>
-                <a href="" d="">My Wishlist</a>
-                <a href="">My Address Book</a>
-                <a href="">Style Gallery</a>
-                <a href="">Free Trial Report</a>
-                <a href="">Bonus Point Program</a>
-                <a href="">Sign Out</a>
+                <a href="{{ account }}">{{ text_account }}</a>
+                <a href="{{ order }}">{{ text_order }}</a>
+                <a href="{{ transaction }}">{{ text_transaction }}</a>
+                {#<a href="">My Wishlist</a>#}
+                {#<a href="">My Address Book</a>#}
+                {#<a href="">Style Gallery</a>#}
+                {#<a href="">Free Trial Report</a>#}
+                {#<a href="">Bonus Point Program</a>#}
+                <a href="{{ logout }}">{{ text_logout }}</a>
               </div>
             </div>
             {% else %}
@@ -195,11 +195,11 @@
             </div>
             <script type="text/javascript" src="do_search.js"></script>
             <div class="wish-com" title="My Wishlist">
-              <a class="j-wish" href="https://www.shein.com/index.php?model=wishlist&amp;from=navbar"> <span class="iconfont"></span> </a>
-              <span class="wish-num j-wish-num">1</span>
+              <a class="j-wish" href="{{ wishlist }}"> <span class="iconfont"></span> </a>
+              <span class="wish-num j-wish-num"></span>
             </div>
             <div class="bag" id="logo_rightyy">
-              <a class="present shoppingbag j-shoppingbag" href="https://www.shein.com/shopping-cart.html" title="Shopping Bag"> <span class="iconfont">  </span> <span class="bag-count" id="cart_items"> <b id="carts_quantity">2</b> </span> </a>
+              <a class="present shoppingbag j-shoppingbag" href="{{ shopping_cart }}" title="Shopping Bag"> <span class="iconfont">  </span> <span class="bag-count" id="cart_items"> <b id="carts_quantity"></b> </span> </a>
               <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="height: 0px; display: none; opacity: 0;">
                 <div class="basket_empty">
                   <em></em>Shopping Bag is Empty

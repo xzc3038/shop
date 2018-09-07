@@ -59,7 +59,7 @@ ul, li { list-style: outside none none; }
 a:link { text-decoration: none; color: rgb(0, 0, 0); }
 ul, li, p, h2, form, img, div, p { margin: 0px; padding: 0px; border: 0px none; list-style: outside none none; }
 #chat { margin-bottom: 20px; margin-top: 10px; }
-.USD_flag, .EUR_flag, .GBP_flag, .RUB_flag, .JPY_flag, .CAD_flag, .AUD_flag, .HKD_flag, .CHF_flag, .MXN_flag, .NOK_flag, .SEK_flag, .BRL_flag, .PLN_flag, .DKK_flag, .SAR_flag, .SGD_flag { background: transparent url('flag_vf7b1ad7.png') no-repeat scroll 0px 0px; float: left; font-size: 0px; height: 11px; line-height: 0; margin-top: 5px; overflow: hidden; width: 20px; }
+.USD_flag, .EUR_flag, .GBP_flag, .RUB_flag, .JPY_flag, .CAD_flag, .AUD_flag, .HKD_flag, .CHF_flag, .MXN_flag, .NOK_flag, .SEK_flag, .BRL_flag, .PLN_flag, .DKK_flag, .SAR_flag, .SGD_flag { background: transparent url('/catalog/view/theme/default/image/index/flag_vf7b1ad7.png') no-repeat scroll 0px 0px; float: left; font-size: 0px; height: 11px; line-height: 0; margin-top: 5px; overflow: hidden; width: 20px; }
 .USD_flag { background-position: left top; }
 .EUR_flag { background-position: left -11px; }
 .GBP_flag { background-position: left -33px; }
