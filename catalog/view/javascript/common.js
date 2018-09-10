@@ -469,10 +469,10 @@ $(document).on('click', '.agree', function(e) {
   }
 
   $.fn.productInfoToCart = function (options) {
+    // console.log(options);
     this.each(function(index, el) {
       new ProductInfoToCart(this, options);
     });
-
     return this;
   };
 })(jQuery);
