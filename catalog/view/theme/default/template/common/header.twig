@@ -432,4 +432,16 @@
 
 
 </script>
+<script>
+    function des(id) {
+        console.log($('#'+id).val());
+        $('#'+id).val(parseInt($('#'+id).val())-1);
+        $('#car').submit();
+    }
+    function asc(id) {
+        console.log($('#'+id).val());
+        $('#'+id).val(parseInt($('#'+id).val())+1);
+        $('#car').submit();
+    }
+</script>
 {{ menu }}

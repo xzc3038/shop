@@ -2,7 +2,7 @@
             <div id="attr_shopcart" class="c-headsb hd-cart-bag">
                 <div class="attribute_cart shopcart-cart">
                   <div class="shopcart-top">
-                    <form action="" name="theForm_shop" method="post">
+                    <form >
                       <div style="width: auto;">
                         <div id="shop-cart-scroll" style=" height:300px; overflow-y: scroll; overflow-x: hidden;">
                           {#<input id="update_shopping_price_type" name="update_shopping_price_type" value="shopping_cart" type="hidden" />#}
@@ -33,9 +33,11 @@
                                   <input name="goods_name[]" value="Grommet Lace Up Sleeve Crop Hoodie" type="hidden" />
                                   <input name="is_on_sale[]" value="1" type="hidden" />
                                   <div class="red display-none" id="381926375j-limit-tip"></div>
-                                  <a class="reduce iconfont j-reduce-381926375 disable" onclick="setAttrAmount.reduce('#381926375',396259)" href="javascript:void(0)"></a>
-                                  <input class="quantityselect-bg" name="quantity_396259" value="1" id="381926375" onfocus="setAttrAmount.record('#381926375');" onblur="setAttrAmount.modify('#381926375',396259,undefined,0,7)" type="text" />
-                                  <a class="j-cart-add add iconfont" onclick="setAttrAmount.add('#381926375',396259,undefined,0,7)" href="javascript:void(0)"></a>
+                                  <a class="reduce iconfont j-reduce-381926375 disable" onclick="des({{ product.cart_id }})" href="javascript:void(0)"></a>
+
+                                  <input class="quantityselect-bg" name="" id="" value="{{ product.quantity }}" type="text"/>
+
+                                  <a class="j-cart-add add iconfont" onclick="asc({{ product.cart_id }})" href="javascript:void(0)"></a>
                                 </div>
                                 <div class="attr_basket_cont4 attr-basket-cont4" style="top: 0px;">
                                   <div class="attr_inbasket_total">
