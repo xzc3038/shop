@@ -224,7 +224,8 @@ class ControllerAccountOrder extends Controller {
 					'price'    => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
 					'total'    => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value']),
 					'reorder'  => $reorder,
-					'return'   => $this->url->link('account/return/add', 'order_id=' . $order_info['order_id'] . '&product_id=' . $product['product_id'])
+					'return'   => $this->url->link('account/return/add', 'order_id=' . $order_info['order_id'] . '&product_id=' . $product['product_id']),
+                    'review'   => $this->url->link('product/product/write','product_id='.$product['product_id'])
 				);
 			}
 			// Voucher
@@ -258,13 +259,17 @@ class ControllerAccountOrder extends Controller {
 
 			$results = $this->model_account_order->getOrderHistories($this->request->get['order_id']);
 
-			foreach ($results as $result) {
-				$data['histories'][] = array(
-					'date_added' => date($this->language->get('datetime_format'), strtotime($result['date_added'])),
-					'status'     => $result['status'],
-					'comment'    => $result['notify'] ? nl2br($result['comment']) : ''
-				);
-			}
+//			foreach ($results as $result) {
+//				$data['histories'][] = array(
+//					'date_added' => date($this->language->get('datetime_format'), strtotime($result['date_added'])),
+//					'status'     => $result['status'],
+//					'comment'    => $result['notify'] ? nl2br($result['comment']) : ''
+//				);
+//			}
+
+            foreach ($results as $result) {
+                $data['histories'] = $result['status'];
+            }
 
 			$data['continue'] = $this->url->link('account/order');
 
@@ -274,7 +279,7 @@ class ControllerAccountOrder extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
+var_dump($data);
 			$this->response->setOutput($this->load->view('account/order_info', $data));
 		} else {
 			return new Action('error/not_found');

@@ -1,5 +1,5 @@
 <h2>{{ text_write }}</h2>
-{% if review_guest %}
+{#{% if review_guest %}#}
 <div class="form-group required">
   <div class="col-sm-12">
     <label class="control-label" for="input-name">{{ entry_name }}</label>
@@ -25,9 +25,9 @@
 </div>
 {{ captcha }}
 <button type="button" id="button-review" data-loading-text="{{ text_loading }}" class="btn btn-primary">{{ button_submit }}</button>
-{% else %}
-{{ text_login }}
-{% endif %}
+{#{% else %}#}
+{#{{ text_login }}#}
+{#{% endif %}#}
 
 <script type="text/javascript">
   jQuery(document).ready(function($) {
