@@ -329,7 +329,7 @@
         <!---->
         <!---->
         <div class="goodsd-btn">
-          <button class="she-btn-black she-btn-xl"> Add To Bag </button>
+          <button class="she-btn-black she-btn-xl" id="button-cart"> Add To Bag </button>
           <button class="she-btn-white-no-hover wishlist-btn she-btn-xl"><i class="iconfont icon-like-hollow"></i>
             <div class="la-ball-pulse" style="display: none;">
               <div></div>
@@ -1903,7 +1903,15 @@
         galleryActiveClass: 'active',
         cursor:'pointer',
     });
-
+        $('#button-cart').productInfoToCart({
+            data: [
+                '#product input[type=\'text\']',
+                '#product input[type=\'hidden\']',
+                '#product input[type=\'radio\']:checked',
+                '#product input[type=\'checkbox\']:checked',
+                '#product select, #product textarea'
+            ],
+        });
     });
 </script>
 {{ footer }}
