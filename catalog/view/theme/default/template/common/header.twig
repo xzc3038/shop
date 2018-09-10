@@ -49,99 +49,12 @@
       <div class="container-fluid mar-b-0">
         <div class="row">
           <div class="left col-xs-5">
-            <div class="country" id="switch_lang">
-              <a class="present" href="javascript:void(0)" id="txt_lang">English</a>
-              <div class="dropdown" id="lang_list">
-                <a style="display: none;" href="">English</a>
-                <a href="">中文</a>
-                <a href="">Espa&ntilde;ol</a>
-                <a href="">Fran&ccedil;ais</a>
-                <a href="">Русский</a>
-                <a href="">Deutsch</a>
-                <a href="">Italiano</a>
-                <a href="">اللغة العربية</a>
-              </div>
+            <div style="margin-top: -7%">
+              {{ language }}
             </div>
+
             <div class="currency" id="user_menu3">
-              <a class="present three outer j-present-currency" href="javascript:void(0);">US$</a>
-              <div class="dropdown user_menu3_update" id="user_menu3_coon">
-                <div class="currency-list1">
-                  <a class="ga-cur-USD">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="USD_flag"></div>US Dollar</a>
-                  <a class="ga-cur-EUR">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="EUR_flag"></div>Euro</a>
-                  <a class="ga-cur-GBP">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="GBP_flag"></div>Pound Sterling</a>
-                  <a class="ga-cur-CAD">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="CAD_flag"></div>Canadian Dollar</a>
-                  <a class="ga-cur-NOK">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="NOK_flag"></div>Norwegian Krone</a>
-                  <a class="ga-cur-AED">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="AED_flag"></div>United Arab Emirates Dirham</a>
-                  <a class="ga-cur-INR">
-                    <div id="currency" class="j-nav-currency" currency="INR"></div>
-                    <div class="INR_flag"></div>Indian Rupee</a>
-                  <a class="ga-cur-SEK">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="SEK_flag"></div>Swedish Krona</a>
-                  <a class="ga-cur-SAR">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="SAR_flag"></div>Saudi Arabian Riyal</a>
-                  <a class="ga-cur-PLN">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="PLN_flag"></div>Polish Zloty</a>
-                  <a class="ga-cur-HKD">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="HKD_flag"></div>Hongkong Dollar</a>
-                  <a class="ga-cur-MXN">
-                    <div id="currency" class="j-nav-currency"></div>
-                    <div class="MXN_flag"></div>Mexican Peso</a>
-                </div>
-                <div class="currency-list2">
-                  <a class="ga-cur-DKK">
-                    <div id="currency"></div>
-                    <div class="DKK_flag"></div>Danish Krona</a>
-                  <a class="ga-cur-JPY">
-                    <div id="currency"></div>
-                    <div class="JPY_flag"></div>Japanese Yen</a>
-                  <a class="ga-cur-BRL">
-                    <div id="currency"></div>
-                    <div class="BRL_flag"></div>Brazil Reais</a>
-                  <a class="ga-cur-SGD">
-                    <div id="currency"></div>
-                    <div class="SGD_flag"></div>Singapore Dollar</a>
-                  <a class="ga-cur-RUB">
-                    <div id="currency"></div>
-                    <div class="RUB_flag"></div>Russian Ruble</a>
-                  <a class="ga-cur-QAR">
-                    <div id="currency"></div>
-                    <div class="QAR_flag"></div>Qatar Riyal</a>
-                  <a class="ga-cur-NZD">
-                    <div id="currency"></div>
-                    <div class="NZD_flag"></div>New Zealand Dollar</a>
-                  <a class="ga-cur-BHD">
-                    <div id="currency"></div>
-                    <div class="BHD_flag"></div>Bahrain Dinar</a>
-                  <a class="ga-cur-KWD">
-                    <div id="currency"></div>
-                    <div class="KWD_flag"></div>Kuwait Dinar</a>
-                  <a class="ga-cur-AUD">
-                    <div id="currency"></div>
-                    <div class="AUD_flag"></div>Australian Dollar</a>
-                  <a class="ga-cur-CHF">
-                    <div id="currency"></div>
-                    <div class="CHF_flag"></div>Switzerland Francs</a>
-                  <a class="ga-cur-TWD">
-                    <div id="currency"></div>
-                    <div class="TWD_flag"></div>New Taiwan Dollar</a>
-                </div>
-              </div>
+                {{ currency }}
             </div>
             <div class="switch">
               <ul class="hd-swicth" id="user_banner">
