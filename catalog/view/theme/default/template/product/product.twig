@@ -126,26 +126,26 @@
         {#</ul>#}
       {#</div>#}
     </div>
-    <div class="goodsd-right j-goodsd-right-ctn col-sm-5 ">
-      <h4 class="name"> Plunging V-neckline Surplice Backless Halter Dress </h4>
-      <div class="summary">
-        <span class="state j-in-stock-status ">In Stock</span>
-        <span class="state j-out-stock-status she-hide">Out of Stock</span>
-        <span class="sku">SKU: dress180514094</span>
-        <div class="comments">
-       <span class="j-vue-review-rate">
-        <div class="c-star">
-         <span><i index="1" class="iconfont icon-star"></i><i index="2" class="iconfont icon-star"></i><i index="3" class="iconfont icon-star"></i><i index="4" class="iconfont icon-star"></i><i index="5" class="iconfont icon-star"></i></span>
-          <!---->
-        </div></span>
-          <a href="#to_review" rel="nofollow"> (<span class="cmtNum"> 3 </span>) </a>
-        </div>
-      </div>
+    <div class="goodsd-right j-goodsd-right-ctn col-sm-5 " id="product">
+      <h4 class="name"> {{ heading_title }} </h4>
+      {#<div class="summary">#}
+        {#<span class="state j-in-stock-status ">In Stock</span>#}
+        {#<span class="state j-out-stock-status she-hide">Out of Stock</span>#}
+        {#<span class="sku">SKU: dress180514094</span>#}
+        {#<div class="comments">#}
+       {#<span class="j-vue-review-rate">#}
+        {#<div class="c-star">#}
+         {#<span><i index="1" class="iconfont icon-star"></i><i index="2" class="iconfont icon-star"></i><i index="3" class="iconfont icon-star"></i><i index="4" class="iconfont icon-star"></i><i index="5" class="iconfont icon-star"></i></span>#}
+          {#<!---->#}
+        {#</div></span>#}
+          {#<a href="#to_review" rel="nofollow"> (<span class="cmtNum"> 3 </span>) </a>#}
+        {#</div>#}
+      {#</div>#}
       <div class="price">
         <div class="price-ctn static">
           <!-- 没有折扣价的, 加she-color-black -->
-          <div class="price-discount j-price-discount she-color-black">
-            US$16.00
+          <div class="price-discount j-price-discount she-color-black" id="price">
+            {{ price }}
           </div>
           <div class="price-origin j-price-origin" style="display: none;"></div>
           <span class="j-price-unit_discount" style="display: none;"></span>
@@ -176,114 +176,8 @@
       <div class="j-vue-dt-addbag-opt">
         <div class="goodsd-opt">
           <div class="goodsd-size">
-            <span><span class="opt-title">Size</span> <a href="javascript:;" class="a-size-guide j-btn-size-guide j-open-size-guide">size guide</a></span>
+            <span class="opt-title">Size</span>
             <a href="javascript:;" class="check-size-btn" style="display: none;"> Check my size <span class="check-size-sym"> ? </span></a>
-            <div class="c-modal-wrap" style="display: none;">
-              <div class="she-mask"></div>
-              <div class="c-modal">
-                <div class="modal-dialog vertical-center modal-full">
-                  <div class="modal-content" style="display: none;">
-                    <div class="modal-header">
-                      <i class="iconfont icon-close she-close"></i>
-                      <div class="modal-title">
-                        <span></span>
-                      </div>
-                    </div>
-                    <div class="modal-body">
-                      <div class="size-recommend size-recommend-modal j-size-recommend">
-                        <img src="//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_405x552.jpg" alt="alt" class="size-img" />
-                        <div class="size-wrap-right">
-                          <div class="size-wrap-title">
-                            choose my size
-                          </div>
-                          <p class="size-wrap-tips">according to the information you enter, a size will be recommended with other customers' feedback on the size, which you can use for your reference.</p>
-                          <div class="size-switch">
-                            <div></div>
-                          </div>
-                          <div class="size-range-wrap">
-                            <div class="range-item" inputvalue="[object Object]">
-                              <label class="range-prev">Height:</label>
-                              <div class="range-body">
-                                <div class="range-arrow-before"></div>
-                                <div class="range-contain j-body-h">
-                                  <div class="runway"></div>
-                                  <div class="rang-point j-point j-height" style="left: 51.7241%;">
-                                    170
-                                    <span> CM</span>
-                                  </div>
-                                </div>
-                                <div class="range-arrow-after"></div>
-                                <div class="range-text"></div>
-                              </div>
-                              <label class="range-lab"><input type="number" min="140" max="198" class="single" /> <span>CM</span></label>
-                            </div>
-                            <div class="range-item" inputvalue="[object Object]">
-                              <label class="range-prev">Weight:</label>
-                              <div class="range-body">
-                                <div class="range-arrow-before"></div>
-                                <div class="range-contain j-body-h">
-                                  <div class="runway"></div>
-                                  <div class="rang-point j-point j-height" style="left: 28%;">
-                                    60
-                                    <span> KG</span>
-                                  </div>
-                                </div>
-                                <div class="range-arrow-after"></div>
-                                <div class="range-text"></div>
-                              </div>
-                              <label class="range-lab"><input type="number" min="25" max="150" class="single" /> <span>KG</span></label>
-                            </div>
-                            <div class="range-item">
-                              <label class="range-prev">Preference:</label>
-                              <div class="range-body">
-                                <!---->
-                                <div class="range-contain j-body-h">
-                                  <div class="runway"></div>
-                                  <div class="rang-point j-point j-height" style="left: 50%;"></div>
-                                </div>
-                                <!---->
-                                <div class="range-text">
-                                  <span class="range-text-left"> Thin </span>
-                                  <span class=""> Average </span>
-                                  <span class="range-text-right"> Thick </span>
-                                </div>
-                              </div>
-                              <label class="range-lab">Average</label>
-                            </div>
-                          </div>
-                          <div class="she-btn-white">
-                            <div class="she-btn-findsize">
-                              Find my size
-                            </div>
-                          </div>
-                        </div>
-                        <div class="size-wrap-right size-wrap-right-s" style="display: none;">
-                          <div class="size-wrap-title">
-                            sorry
-                          </div>
-                          <p class="size-wrap-tips">No size can be recommended. <br /></p>
-                          <!---->
-                          <div data-attr_value="" class="size-result">
-                            <!---->
-                          </div>
-                          <!---->
-                          <div class="she-btn-white continue_shopping">
-                            Continue shopping
-                          </div>
-                          <br />
-                          <div class="size-edit">
-                            <a href="javascript:void(0);" class="edit-my-size"> Edit My Size </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="c-opt j-opt-size-wrap static">
               <label size="S" class="opt-size j-opt-size"><input type="radio" name="size" class="opt" value="[object Object]" /> <span class="opt-real">S</span></label>
               <label size="M" class="opt-size j-opt-size"><input type="radio" name="size" class="opt" value="[object Object]" /> <span class="opt-real">M</span></label>
@@ -291,17 +185,7 @@
               <span class="size-tip" style="display: none;">Please Select Size</span>
             </div>
             <div class="size-tag-wrap">
-              <div class="j-size-tag-wrap">
-                <div size="S" class="size-tag j-size-tag she-inline-block">
-                  <span>Waist Size : 58 cm, &nbsp;Hip Size : 74 cm, &nbsp;Length : 90 cm.</span>
-                </div>
-                <div size="M" class="size-tag j-size-tag">
-                  <span>Waist Size : 62 cm, &nbsp;Hip Size : 78 cm, &nbsp;Length : 91 cm.</span>
-                </div>
-                <div size="L" class="size-tag j-size-tag">
-                  <span>Waist Size : 66 cm, &nbsp;Hip Size : 82 cm, &nbsp;Length : 92 cm.</span>
-                </div>
-              </div>
+
             </div>
           </div>
           <div class="goodsd-qty">
@@ -318,10 +202,8 @@
             </div>
           </div>
         </div>
-        <div class="collect">
-          Total :
-          <span> US$16.00&nbsp;&nbsp; </span>&nbsp;&nbsp; Earn&nbsp;
-          <span> 16 </span> &nbsp;SheIn Points
+        <div class="collect" >
+          Total :¥ <span id="price_x">{{ price_x }}</span>
         </div>
         <!---->
         <p class="she-color-error" style="display: none;">purchase limit exceeded</p>
@@ -329,7 +211,7 @@
         <!---->
         <!---->
         <div class="goodsd-btn">
-          <button class="she-btn-black she-btn-xl" id="button-cart"> Add To Bag </button>
+          <button class="she-btn-black she-btn-xl"> Add To Bag </button>
           <button class="she-btn-white-no-hover wishlist-btn she-btn-xl"><i class="iconfont icon-like-hollow"></i>
             <div class="la-ball-pulse" style="display: none;">
               <div></div>
@@ -1883,8 +1765,11 @@
     jQuery(document).ready(function($) {
     $('.quantity-input-wrapper').click(function(e) {
         e.preventDefault();
+        var price = $('#price').text();
+        var price_x = $('#price_x').text();
         if( $(this).hasClass('quantity-up')) {
             $('#input-quantity').val( parseInt($('#input-quantity').val()) + 1 );
+            $('#price_x').text(price_x + price);
         } else {
             if( parseInt($('#input-quantity').val())  > {{ minimum }} ) {
                 $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
