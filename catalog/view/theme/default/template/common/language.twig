@@ -1,20 +1,20 @@
 {% if languages|length > 1 %}
 <div class="pull-left country" id="switch_lang">
   <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-language">
-    <div class="btn-group">
-      <a class="btn btn-link dropdown-toggle present" data-toggle="dropdown"  id="txt_lang">
+    <div class="btn-group" id="switch_lang">
+      <a class="btn btn-link dropdown-toggle present" data-toggle="dropdown"  id="txt_lang" style=" color: #666;text-decoration: none;font-size: 12px;padding-bottom: 50px">
       {% for language in languages %}
       {% if language.code == code %}
-        <img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}">&nbsp;
+        {#<img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}">&nbsp;#}
           {{ language.name }}
       {% endif %}
       {% endfor %}
       </a>
-      <div class="dropdown-menu dropdown" id="lang_list">
+      <div class="dropdown" id="lang_list" style="width: auto;padding: 0;left: 5px;top: 54px;">
         {% for language in languages %}
         <a>
-          <button class="btn btn-link btn-block language-select" type="button" name="{{ language.code }}">
-            <img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}" />
+          <button class="btn btn-link btn-block language-select" type="button" name="{{ language.code }}" style="color: #666;text-decoration: none;font-size: 12px;line-height: 5px;text-align: left">
+            {#<img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}" />#}
               {{ language.name }}</button>
         </a>
         {% endfor %}
