@@ -265,7 +265,7 @@
           <div class="pull-right">
             <input type="submit" value="{{ button_submit }}" class="btn btn-primary" />
           </div>
-          <div class="pull-left"><a href="{{ back }}" class="btn btn-default">{{ button_back }}</a></div>
+          {#<div class="pull-left"><a href="{{ back }}" class="btn btn-default">{{ button_back }}</a></div>#}
         </div>
       </form>
         <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
@@ -463,4 +463,9 @@ $('select[name=\'city_id\']').bind('change', function() {
   showCityOrCountyOptions($(this), changeEl, 0, countyId);
 });
 //--></script>
+    <script>
+        $(function () {
+            $('.j-member-address').addClass('area');
+        });
+    </script>
 {{ footer }}

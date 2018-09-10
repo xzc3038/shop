@@ -565,7 +565,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->language('product/product');
 
 		$json = array();
-
+        $data['id'] = $this->request->get['product_id'];
 		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
 			if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 25)) {
 				$json['error'] = $this->language->get('error_name');
@@ -580,13 +580,14 @@ class ControllerProductProduct extends Controller {
 			}
 
 			// Captcha
-			if ($this->config->get('captcha_' . $this->config->get('config_captcha') . '_status') && in_array('review', (array)$this->config->get('config_captcha_page'))) {
-				$captcha = $this->load->controller('extension/captcha/' . $this->config->get('config_captcha') . '/validate');
+//			if ($this->config->get('captcha_' . $this->config->get('config_captcha') . '_status') && in_array('review', (array)$this->config->get('config_captcha_page'))) {
+//				$captcha = $this->load->controller('extension/captcha/' . $this->config->get('config_captcha') . '/validate');
+//
+//				if ($captcha) {
+//					$json['error'] = $captcha;
+//				}
+//			}
 
-				if ($captcha) {
-					$json['error'] = $captcha;
-				}
-			}
 
 			if (!isset($json['error'])) {
 				$this->load->model('catalog/review');
@@ -595,10 +596,12 @@ class ControllerProductProduct extends Controller {
 
 				$json['success'] = $this->language->get('text_success');
 			}
+            $this->response->setOutput(json_encode($json));
+			var_dump($json);
 		}
-
-		$this->response->addHeader('Content-Type: application/json');
-		$this->response->setOutput(json_encode($json));
+//		$this->response->addHeader('Content-Type: application/json');
+//		$this->response->setOutput(json_encode($json));
+        $this->response->setOutput($this->load->view('product/write',$data));
 	}
 
 	public function getRecurringDescription() {
