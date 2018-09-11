@@ -66,4 +66,38 @@ class ModelCatalogReview extends Model {
 
 		return $query->row['total'];
 	}
+
+    public function getReviewsByProductIdAndASC($product_id, $start = 0, $limit = 20) {
+        if ($start < 0) {
+            $start = 0;
+        }
+
+        if ($limit < 1) {
+            $limit = 20;
+        }
+
+        $query = $this->db->query("SELECT r.review_id, r.author, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added ASC LIMIT " . (int)$start . "," . (int)$limit);
+
+        return $query->rows;
+    }
+
+
+    public function getRating($product_id) {
+        $five = $this->db->query("SELECT count(*) as five FROM review where rating = 5 and status = 1 and product_id =". (int)$product_id);
+        $four = $this->db->query("SELECT count(*) as four FROM review where rating = 4 and status = 1 and product_id =". (int)$product_id);
+        $three = $this->db->query("SELECT count(*) as three FROM review where rating = 3 and status = 1 and product_id =". (int)$product_id);
+        $two = $this->db->query("SELECT count(*) as two FROM review where rating = 2 and status = 1 and product_id =". (int)$product_id);
+        $one = $this->db->query("SELECT count(*) as one FROM review where rating = 1 and status = 1 and product_id =". (int)$product_id);
+        if ($five->rows) {
+            return array(
+                'five'       => $five->row['five'],
+                'four'       => $four->row['four'],
+                'three'      => $three->row['three'],
+                'two'        => $two->row['two'],
+                'one'        => $one->row['one']
+            );
+        } else {
+            return false;
+        }
+    }
 }
