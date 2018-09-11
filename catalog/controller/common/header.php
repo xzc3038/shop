@@ -94,8 +94,11 @@ class ControllerCommonHeader extends Controller {
 		$data['cart'] = $this->load->controller('common/cart');
 		$data['menu'] = $this->load->controller('common/menu');
 
+
+
         $this->load->model('account/customer');
         $data['user'] = $this->model_account_customer->getCustomer($this->customer->getId());
+
 		return $this->load->view('common/header', $data);
 	}
 }

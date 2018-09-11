@@ -234,6 +234,7 @@ var wishlist = {
       data: 'product_id=' + product_id,
       dataType: 'json',
       success: function(json) {
+
         $('.alert-dismissible').remove();
 
         if (json['redirect']) {
@@ -241,7 +242,7 @@ var wishlist = {
         }
 
         if (json['success']) {
-          showAlert('wishlist', json['success']);
+          // showAlert('wishlist', json['success']);
         }
 
         $('#wishlist-total span').html(json['total']);
@@ -460,8 +461,38 @@ $(document).on('click', '.agree', function(e) {
           }
 
           if (json['success']) {
-            showAlert('cart', json['success']);
-            cart_ajax_load_html();
+            // console.log('成功');
+            // $('#attr_shopcart').show();
+            //   history.go(0);
+            //   parent.location.reload();
+              $("#attr_shopcart").stop(true);
+              var currentHeight = $("#attr_shopcart").height();
+              $("#attr_shopcart").css('height', 'auto');
+              var animateHeight = $("#attr_shopcart").height();
+              $("#attr_shopcart").css('height', currentHeight);
+              $("#attr_shopcart").animate({
+                  height: animateHeight,
+                  paddingTop: "show",
+                  paddingBottom: "show",
+                  marginTop: "show",
+                  marginBottom: "show",
+                  opacity: '1'
+              }, 200);
+            setTimeout(function () {
+                $("#attr_shopcart").stop(true);
+                $("#attr_shopcart").animate({
+                    height: 0,
+                    paddingTop: "hide",
+                    paddingBottom: "hide",
+                    marginTop: "hide",
+                    marginBottom: "hide",
+                    opacity: '0'
+                }, 200);
+            },3000)
+            // showAlert('cart', json['success']);
+            // cart_ajax_load_html();
+          }else{
+            alert("添加失败");
           }
         },
       });

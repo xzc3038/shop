@@ -1,4 +1,5 @@
 {% if products %}
+    <a class="present shoppingbag j-shoppingbag" href="{{ shopping_cart }}" title="Shopping Bag"> <span class="iconfont">  </span> <span class="bag-count" id="cart_items"> <b id="carts_quantity">{{ text_items }}</b> </span> </a>
             <div id="attr_shopcart" class="c-headsb hd-cart-bag">
                 <div class="attribute_cart shopcart-cart">
                   <div class="shopcart-top">
@@ -69,6 +70,7 @@
                 <img src="/catalog/view/theme/default/image/index/js_grey.gif" style="display: block;" />
             </div>
 {% else %}
+    <a class="present shoppingbag j-shoppingbag" href="{{ shopping_cart }}" title="Shopping Bag"> <span class="iconfont">  </span> <span class="bag-count" id="cart_items"> <b id="carts_quantity"></b> </span> </a>
     <div id="attr_shopcart" class="c-headsb hd-cart-bag" style="height: 0px; display: none; opacity: 0;">
     <div class="basket_empty">
     <em></em>Shopping Bag is Empty

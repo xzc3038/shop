@@ -4,7 +4,7 @@
     <ul class="c-breadcrumb">
       <li> <a rel="nofollow" href="/">Home</a> </li>
       <!-- 实体 -->
-      <li><a href="SHEIN-Red-Dresses-vc-71585.html">Sale</a></li>
+      <li><a href="">Sale</a></li>
       <!-- dailynew -->
     </ul>
     <!--部分虚拟分类 & discount-list & promo-discount 会有banner-->
@@ -31,17 +31,71 @@
         <div class="c-goodsli-absolute">
           <div class="j-switch-color-wrap">
             <div class="gds-li-ratiowrap">
-              <a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="0" title="{{ product.name }}"> <img src="{{ product.thumb }}" class="j-verlok-lazy loaded" data-was-processed="true" /> </a>
+              <a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="2" title="{{ product.name }}"> <img style="width:405px;height:552px;" src="{{ product.thumb }}" class="j-verlok-lazy loaded" data-was-processed="true" /> </a>
+              <!-- add to bag 用的遮罩 -->
+              <span class="add-result-mask add-bag-mask j-add-result-mask-556827" style="display: none;">
+     <div class="result-txt j-result-txt" style="display: none;"></div>
+     <div class="la-ball-pulse la-ball-pulse-sm j-la-ball-pulse">
+      <div></div>
+      <div></div>
+      <div></div>
+     </div> </span>
+              <!-- 切换颜色 用的遮罩 -->
+              <span class="add-result-mask j-color-loader-556827" style="display: none;">
+     <div class="la-ball-pulse la-ball-pulse-sm">
+      <div></div>
+      <div></div>
+      <div></div>
+     </div> </span>
             </div>
-            <a class="goods-name" href="{{ product.href }}" target="_blank" title="{{ product.name }}"> <span class="goods-brand">{{ product.name }}</a>
-            <div class="btm-price j-gds-li-price j-gds-li-price-450271 she-show" style="display: none">
+            <a class="goods-name" href="{{ product.href }}" target="_blank" title="{{ product.name }}">{{ product.name }}</a>
+            <div class="btm-price j-gds-li-price j-gds-li-price-556827 she-show" style="display: none">
               <span class="disc-price j-price-discount" style="display: none"></span>
               <span class="btm-sale j-price-sale-txt" style="display: none">(Sale)</span>
               <span class="orig-price j-price-original">{{ product.price }}</span>
             </div>
+            <!-- quick view & add to bag -->
+            <button class="she-btn-white-opacity she-btn-s quickv-btn j-gds-li-qvbtn" data-id="556827" data-index="2"> QUICK VIEW </button>
+            <button class="she-btn-white-opacity she-btn-s quickv-btn j-qv-loading" style="display: none;">
+              <div class="la-ball-pulse">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div> </button>
+            <div class="btm-wrap">
+              <div class="btm-icon">
+                <div class="btm-icon-comment j-btm-goods-comment" data-id="556827">
+                  <i class="iconfont icon-no-comment j-btm-comment-icon" ref="commentIcon"></i>
+                  <div class="btm-comment-tip j-btm-comment-tip " ref="commentTip" style="display: none">
+                    <span class="comment-arrow-ctn"><span class="comment-arrow"></span></span>
+                    <div class="no-comment-img">
+                      <div class="comment-img-ctn j-comment-img-ctn" data-src="//img.ltwebstatic.com/origin/images2_pi/2018/08/27/15353520202706500465_im_405x552.jpg" data-webp="//img.ltwebstatic.com/origin/images2_pi/2018/08/27/15353520202706500465_im_405x552.jpg" style="background-image: url(&quot;//img.ltwebstatic.com/origin/images2_pi/2018/08/27/15353520202706500465_im_405x552.jpg&quot;);"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btm-icon-save j-gds-li-save j-gds-li-save-556827" data-id="556827" data-sku="tee180807705" data-index="2">
+                  <i class="iconfont icon-like-hollow with-arrow-bottom j-save-icon"> </i>
+                  <div class="btm-save-tip j-btm-save-tip" style="display: none;">
+                    Save to Wishlist
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          {#<div class="j-switch-color-wrap">#}
+            {#<div class="gds-li-ratiowrap">#}
+              {#<a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="0" title="{{ product.name }}"> <img src="{{ product.thumb }}" class="j-verlok-lazy loaded" data-was-processed="true" /> </a>#}
+            {#</div>#}
+            {#<a class="goods-name" href="{{ product.href }}" target="_blank" title="{{ product.name }}"> <span class="goods-brand">{{ product.name }}</a>#}
+            {#<div class="btm-price j-gds-li-price j-gds-li-price-450271 she-show" style="display: none">#}
+              {#<span class="disc-price j-price-discount" style="display: none"></span>#}
+              {#<span class="btm-sale j-price-sale-txt" style="display: none">(Sale)</span>#}
+              {#<span class="orig-price j-price-original">{{ product.price }}</span>#}
+            {#</div>#}
+          {#</div>#}
         </div>
       </div>
+
       {% endfor %}
     </div>
   </div>
@@ -334,4 +388,5 @@
   {#</div>#}
   {#<!-- 侧边栏配置（daily/daily new/back in stock） -->#}
 </div>
+
 {{ footer }}

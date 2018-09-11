@@ -46,14 +46,6 @@
                   <li class="image-additional"><a class="thumbnail elevatezoom-gallery" rel="group" data-image="{{ image.preview }}" data-zoom-image="{{ image.popup }}" href="{{ image.popup }}" title="{{ heading_title }}"> <img src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
                 {% endfor %}
             </ul>
-            {#{% for image in images %}#}
-            {#<div class="thumbs-item j-slideto elevatezoom-gallery" data-slideto="-1">#}
-              {#<div class="vertical-wrap elevatezoom-gallery ">#}
-                {#<img style="display: none" class="j-change-grey-bg" src="//sheinsz.ltwebstatic.com/she_dist/images/bg-grey.png" />#}
-                {#<img id="product-thumbnail-gallery" class="j-verlok-lazy j-change-main_image loaded" src="{{ image.thumb }}"  data-was-processed="true" />#}
-              {#</div>#}
-            {#</div>#}
-            {#{% endfor %}#}
           </div>
         </div>
         {% set first = images|first %}
@@ -67,64 +59,6 @@
           {#<div class="img-top-next j-img-top-next swiper-button-next iconfont icon-right"></div>#}
         </div>
       </div>
-      {#<div class="share">#}
-        {#<ul class="addthis_custom_sharing" data-url="http://www.shein.com/Plunging-V-neckline-Surplice-Backless-Halter-Dress-p-481666-cat-1727.html" data-title="Plunging V-neckline Surplice Backless Halter Dress" data-description="Shop Plunging V-neckline Surplice Backless Halter Dress online. SheIn offers Plunging V-neckline Surplice Backless Halter Dress &amp; more to fit your fashionable needs." style="clear: both;">#}
-          {#<div id="atstbx2" class="at-share-tbx-element addthis-smartlayers addthis-animated at4-show" aria-labelledby="at-81fe3db4-e75a-4ad2-be5b-a09398c8efb1" role="region">#}
-            {#<span id="at-81fe3db4-e75a-4ad2-be5b-a09398c8efb1" class="at4-visually-hidden">AddThis Sharing Buttons</span>#}
-            {#<div class="at-share-btn-elements">#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-facebook" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Facebook</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-1" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-facebook">#}
-            {#<title id="at-svg-facebook-1">Facebook</title>#}
-            {#<g>#}
-             {#<path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-messenger" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Messenger</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-messenger-2" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-messenger">#}
-            {#<title id="at-svg-messenger-2">Messenger</title>#}
-            {#<g>#}
-             {#<path d="M16 6C9.925 6 5 10.56 5 16.185c0 3.205 1.6 6.065 4.1 7.932V28l3.745-2.056c1 .277 2.058.426 3.155.426 6.075 0 11-4.56 11-10.185C27 10.56 22.075 6 16 6zm1.093 13.716l-2.8-2.988-5.467 2.988 6.013-6.383 2.868 2.988 5.398-2.987-6.013 6.383z" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-twitter" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Twitter</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-3" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-twitter">#}
-            {#<title id="at-svg-twitter-3">Twitter</title>#}
-            {#<g>#}
-             {#<path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-pinterest_share" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Pinterest</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-pinterest_share-4" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-pinterest_share">#}
-            {#<title id="at-svg-pinterest_share-4">Pinterest</title>#}
-            {#<g>#}
-             {#<path d="M7 13.252c0 1.81.772 4.45 2.895 5.045.074.014.178.04.252.04.49 0 .772-1.27.772-1.63 0-.428-1.174-1.34-1.174-3.123 0-3.705 3.028-6.33 6.947-6.33 3.37 0 5.863 1.782 5.863 5.058 0 2.446-1.054 7.035-4.468 7.035-1.232 0-2.286-.83-2.286-2.018 0-1.742 1.307-3.43 1.307-5.225 0-1.092-.67-1.977-1.916-1.977-1.692 0-2.732 1.77-2.732 3.165 0 .774.104 1.63.476 2.336-.683 2.736-2.08 6.814-2.08 9.633 0 .87.135 1.728.224 2.6l.134.137.207-.07c2.494-3.178 2.405-3.8 3.533-7.96.61 1.077 2.182 1.658 3.43 1.658 5.254 0 7.614-4.77 7.614-9.067C26 7.987 21.755 5 17.094 5 12.017 5 7 8.15 7 13.252z" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-vk" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Vkontakte</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-vk-5" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-vk">#}
-            {#<title id="at-svg-vk-5">Vkontakte</title>#}
-            {#<g>#}
-             {#<path d="M26.712 10.96s-.167-.48-1.21-.348l-3.447.024a.785.785 0 0 0-.455.072s-.204.108-.3.37a22.1 22.1 0 0 1-1.28 2.695c-1.533 2.61-2.156 2.754-2.407 2.587-.587-.372-.43-1.51-.43-2.323 0-2.54.382-3.592-.756-3.868-.37-.084-.646-.144-1.616-.156-1.232-.012-2.274 0-2.86.287-.396.193-.695.624-.515.648.227.036.742.143 1.017.515 0 0 .3.49.347 1.568.13 2.982-.48 3.353-.48 3.353-.466.252-1.28-.167-2.478-2.634 0 0-.694-1.222-1.233-2.563-.097-.25-.288-.383-.288-.383s-.216-.168-.527-.216l-3.28.024c-.504 0-.683.228-.683.228s-.18.19-.012.587c2.562 6.022 5.483 9.04 5.483 9.04s2.67 2.79 5.7 2.597h1.376c.418-.035.634-.263.634-.263s.192-.214.18-.61c-.024-1.843.838-2.12.838-2.12.838-.262 1.915 1.785 3.065 2.575 0 0 .874.6 1.532.467l3.064-.048c1.617-.01.85-1.352.85-1.352-.06-.108-.442-.934-2.286-2.647-1.916-1.784-1.665-1.496.658-4.585 1.413-1.88 1.976-3.03 1.796-3.52z" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-google_plusone_share" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Google+</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-google_plusone_share-6" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-google_plusone_share">#}
-            {#<title id="at-svg-google_plusone_share-6">Google+</title>#}
-            {#<g>#}
-             {#<path d="M12 15v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12zm15 0h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-              {#<a role="button" tabindex="1" class="at-icon-wrapper at-share-btn at-svc-tumblr" style="background-color: rgb(34, 34, 34); border-radius: 50%;"><span class="at4-visually-hidden">Share to Tumblr</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px;">#}
-           {#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-tumblr-7" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;" class="at-icon at-icon-tumblr">#}
-            {#<title id="at-svg-tumblr-7">Tumblr</title>#}
-            {#<g>#}
-             {#<path d="M19.59 22.176c-.392.186-1.14.348-1.695.362-1.682.045-2.008-1.18-2.022-2.07V13.93h4.218v-3.18H15.89V5.403h-3.076c-.05 0-.138.044-.15.157-.18 1.636-.947 4.51-4.133 5.66v2.71h2.124v6.862c0 2.35 1.733 5.688 6.308 5.61 1.544-.028 3.258-.674 3.637-1.23l-1.01-2.996" fill-rule="evenodd"></path>#}
-            {#</g>#}
-           {#</svg></span></a>#}
-            {#</div>#}
-          {#</div>#}
-        {#</ul>#}
-      {#</div>#}
     </div>
     <div class="goodsd-right j-goodsd-right-ctn col-sm-5 " id="product">
       <h4 class="name"> {{ heading_title }} </h4>
@@ -177,229 +111,45 @@
         <div class="collect" >
           Total : <span id="price_x">{{ price }}</span>
         </div>
-        <!---->
         <p class="she-color-error" style="display: none;">purchase limit exceeded</p>
-        <!---->
-        <!---->
-        <!---->
         <div class="goodsd-btn">
-          <button class="she-btn-black she-btn-xl"> Add To Bag </button>
-          <button class="she-btn-white-no-hover wishlist-btn she-btn-xl"><i class="iconfont icon-like-hollow"></i>
-            <div class="la-ball-pulse" style="display: none;">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div></button>
-        </div>
-        <div class="c-modal-wrap" style="display: none;">
-          <div class="she-mask"></div>
-          <div class="c-modal">
-            <div class="modal-dialog vertical-center modal-full">
-              <div class="modal-content" style="display: none;">
-                <div class="modal-header">
-                  <i class="iconfont icon-close she-close"></i>
-                  <div class="modal-title">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="modal-body">
-                  <div>
-                    Please review your shopping cart as the item count has reached the limit.
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button class="she-btn-black she-btn-xl" id="button-cart"> Add To Bag </button>
+          <button class="she-btn-white-no-hover wishlist-btn she-btn-xl" onclick="wishlist.add('{{ product_id }}');"><i class="iconfont icon-like-hollow"></i>
+          </button>
         </div>
       </div>
       <div class="desc-accordion">
-        <div class="desc-title-ctn j-desc-title-ctn desc-title-0 desc-title-3">
-          <span class="desc-title j-desc-title">Description</span>
-          <span class="desc-title j-desc-title">Size &amp; Fit</span>
-          <span class="desc-title j-desc-title">Delivery</span>
-          <span class="desc-title j-desc-title desc-title-active"><span>Return Policy</span></span>
+        <div class="desc-title-ctn j-desc-title-ctn desc-title-0">
+          <span id="0" class="desc-title j-desc-title desc-title-active" >Description</span>
+          <span id="1" class="desc-title j-desc-title">Size &amp; Fit</span>
+          <span id="2" class="desc-title j-desc-title">Delivery</span>
+          <span id="3" class="desc-title j-desc-title "><span>Return Policy</span></span>
         </div>
         <div class="desc-wrap j-desc-wrap">
-          <div class="desc-con j-desc-con">
-            <div class="kv">
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Color:
-                </div>
-                <div class="val">
-                  Red
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Style:
-                </div>
-                <div class="val">
-                  Sexy
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Material:
-                </div>
-                <div class="val">
-                  Polyester
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Neckline:
-                </div>
-                <div class="val">
-                  Deep V Neck, Halter
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Sleeve Length:
-                </div>
-                <div class="val">
-                  Sleeveless
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Silhouette:
-                </div>
-                <div class="val">
-                  Sheath
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Dresses Length:
-                </div>
-                <div class="val">
-                  Short
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Decoration:
-                </div>
-                <div class="val">
-                  Backless
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Pattern Type:
-                </div>
-                <div class="val">
-                  Plain
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Fabric:
-                </div>
-                <div class="val">
-                  Fabric has no stretch
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Season:
-                </div>
-                <div class="val">
-                  Summer
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Waist Line:
-                </div>
-                <div class="val">
-                  Natural
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Clothing Type:
-                </div>
-                <div class="val">
-                  Slim
-                </div>
-              </div>
-              <div class="kv-row">
-                <div class="key" valign="top">
-                  Occasion:
-                </div>
-                <div class="val">
-                  Night Out
-                </div>
-              </div>
-            </div>
+          <div class="desc-con j-desc-con desc-wrap-default 0">
+            <div>11</div>
           </div>
-          <div class="j-vue-desc-accordion">
-            <div class="desc-con j-desc-con j-desc-con-size">
-              <table class="kv">
-                <!---->
-                <tbody>
-                <tr class="kv-row">
-                  <td valign="top" class="key"><a href="javascript:;" class="a-size-guide j-open-size-guide j-ga-size-fit-size-guide">size guide</a></td>
-                </tr>
-                </tbody>
-              </table>
+          <div class="1 desc-con j-desc-con">
+            <div>
+              32222
             </div>
             <!---->
-            <div type="delivery" class="desc-con j-desc-con">
-              <!---->
-              <div>
-                <p><font size="2"><br /> Receiving time = Processing time + Shipping time<u><br /> <br /> <a href="/Shipping-Info-a-280.html">Learn More</a></u></font></p>
-              </div>
-              <br />
-            </div>
-            <div type="policy" class="desc-con j-desc-con desc-wrap-default">
-              <p><font size="2"><strong>Our Guarantee</strong><br /> Return or exchange <u><strong>within 30 days</strong></u> from the delivered date.<br /> </font></p>
-              <p><font size="2">Request:<br /> 1. Items received within 30 days from the delivered date.<br /> 2. Items received unused, undamaged and in original package.<br /> 3. Return shipping fee is paid by buyer.</font></p>
-              <p><font size="2"><br /> <a href="/Return-Policy-a-281.html">Learn More</a></font></p>
-            </div>
-            <!---->
-            <div class="c-modal-wrap" style="display: none;">
-              <div class="she-mask"></div>
-              <div class="c-modal">
-                <div class="modal-dialog vertical-center modal-sm">
-                  <div class="modal-content" style="display: none;">
-                    <div class="modal-header">
-                      <i class="iconfont icon-close she-close"></i>
-                      <div class="modal-title">
-                        <div>
-                          <h5>Enter Delivery Pincode</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-body">
-                      <p style="text-align: center; margin-bottom: 20px;">Please enter Pincode to check delivery&amp;services</p>
-                      <div class="c-input">
-                        <div class="c-input">
-                          <!---->
-                          <input placeholder="" type="pincode" name="" class="" />
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <div class="modal-btn">
-                        <!---->
-                        <button class="she-btn-black">Submit</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+          <div type="delivery" class="2 desc-con j-desc-con">
+            <!---->
+            <div>
+              <p><font size="2"><br /> Receiving time = Processing time + Shipping time<u><br /> <br /> <a href="/Shipping-Info-a-280.html">Learn More</a></u></font></p>
+            </div>
+            <br />
+          </div>
+          <div type="policy" class="3 desc-con j-desc-con ">
+            <p><font size="2"><strong>Our Guarantee</strong><br /> Return or exchange <u><strong>within 30 days</strong></u> from the delivered date.<br /> </font></p>
+            <p><font size="2">Request:<br /> 1. Items received within 30 days from the delivered date.<br /> 2. Items received unused, undamaged and in original package.<br /> 3. Return shipping fee is paid by buyer.</font></p>
+            <p><font size="2"><br /> <a href="/Return-Policy-a-281.html">Learn More</a></font></p>
+          </div>
+
         </div>
+
       </div>
     </div>
   </div>
@@ -1503,6 +1253,14 @@
                 '#product select, #product textarea'
             ],
         });
+    });
+    $('.desc-title').click(function (){
+        var id = this.id;
+        $(".desc-title-ctn").attr("class","desc-title-ctn j-desc-title-ctn desc-title-"+id);
+        $('.desc-title').attr("class","desc-title j-desc-title");
+        $('#'+id).attr("class","desc-title j-desc-title desc-title-active");
+        $('.j-desc-con').removeClass("desc-wrap-default");
+        $('.'+id).addClass("desc-wrap-default");
     });
 </script>
 {{ footer }}
