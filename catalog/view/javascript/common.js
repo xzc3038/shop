@@ -234,7 +234,7 @@ var wishlist = {
       data: 'product_id=' + product_id,
       dataType: 'json',
       success: function(json) {
-
+        alert("收藏成功");
         $('.alert-dismissible').remove();
 
         if (json['redirect']) {

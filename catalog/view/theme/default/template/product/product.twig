@@ -1194,21 +1194,9 @@
 <script>
     jQuery(document).ready(function($) {
         $('#review').load('index.php?route=product/product/review&product_id={{ product_id }}');
-
-        $('.quantity-input-wrapper').click(function(e) {
-            e.preventDefault();
-            var price = $('#price').text();
-            var price_x = $('#price_x').text();
-            if( $(this).hasClass('quantity-up')) {
-                $('#input-quantity').val( parseInt($('#input-quantity').val()) + 1 );
-                $('#price_x').text(price_x + price);
-            } else {
-                if( parseInt($('#input-quantity').val())  > {{ minimum }} ) {
-                    $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
-                }
-                var price = $('#price').text().trim();
-                var symbol = price.substring(0,1);
-                var price_single = parseFloat(price.substr(1));
+        var price = $('#price').text().trim();
+        var symbol = price.substring(0,1);
+        var price_single = parseFloat(price.substr(1));
 
                 $('.quantity-input-wrapper').click(function(e) {
                     e.preventDefault();
@@ -1229,9 +1217,6 @@
                         }
                     }
                 });
-
-                    }
-            });
         $('#elevate-zoom').elevateZoom({
             lensShape: 'basic',
             lensSize: 150,
