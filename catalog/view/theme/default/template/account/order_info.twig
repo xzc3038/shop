@@ -77,7 +77,11 @@
                 <td>{{ product.quantity }}</td>
                 <td>{{ product.price }}</td>
                 <td><span class="default_price">{{ product.total }}</span></td>
-                <td class="text-right" style="white-space: nowrap;">{% if product.reorder %} <a href="{{ product.reorder }}" data-toggle="tooltip" title="{{ button_reorder }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a> {% endif %} <a href="{{ product.return }}" data-toggle="tooltip" title="{{ button_return }}" class="btn btn-danger"><i class="fa fa-reply"></i></a><a href="{{ product.review }}">评论</a></td>
+                <td class="text-right" style="white-space: nowrap;">{% if product.reorder %} <a href="{{ product.reorder }}" data-toggle="tooltip" title="{{ button_reorder }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a> {% endif %} <a href="{{ product.return }}" data-toggle="tooltip" title="{{ button_return }}" class="btn btn-danger"><i class="fa fa-reply"></i></a>
+                  {% if  histories == 'Complete' or histories == '已完成' %}
+                    <a href="{{ product.review }}">评论</a>
+                  {% endif %}
+                </td>
               </tr>
             {% endfor %}
             </tbody>

@@ -88,7 +88,9 @@ class ControllerAccountAccount extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-		
+
+        $this->load->model('account/customer');
+        $data['user'] = $this->model_account_customer->getCustomer($this->customer->getId());
 		$this->response->setOutput($this->load->view('account/account', $data));
 	}
 
