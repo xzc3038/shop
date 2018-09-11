@@ -447,7 +447,7 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-//            var_dump($data['price']);exit;
+//            var_dump($data);
 			$this->response->setOutput($this->load->view('product/product', $data));
 		} else {
 			$url = '';
@@ -558,6 +558,14 @@ class ControllerProductProduct extends Controller {
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($review_total) ? (($page - 1) * 5) + 1 : 0, ((($page - 1) * 5) > ($review_total - 5)) ? $review_total : ((($page - 1) * 5) + 5), $review_total, ceil($review_total / 5));
 
+
+        $this->load->model('catalog/product');
+        $product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
+        $data['reviewsTotol'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
+        $data['ratingTotol'] = (int)$product_info['rating'];
+
+//        var_dump($data);
+
 		$this->response->setOutput($this->load->view('product/review', $data));
 	}
 
@@ -565,7 +573,9 @@ class ControllerProductProduct extends Controller {
 		$this->load->language('product/product');
 
 		$json = array();
+        $this->load->model('account/customer');
         $data['id'] = $this->request->get['product_id'];
+        $data['user'] = $this->model_account_customer->getCustomer($this->customer->getId());
 		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
 			if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 25)) {
 				$json['error'] = $this->language->get('error_name');
@@ -596,11 +606,10 @@ class ControllerProductProduct extends Controller {
 
 				$json['success'] = $this->language->get('text_success');
 			}
+            $this->response->addHeader('Content-Type: application/json');
             $this->response->setOutput(json_encode($json));
-			var_dump($json);
+            return false;
 		}
-//		$this->response->addHeader('Content-Type: application/json');
-//		$this->response->setOutput(json_encode($json));
         $this->response->setOutput($this->load->view('product/write',$data));
 	}
 

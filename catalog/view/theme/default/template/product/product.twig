@@ -432,19 +432,6 @@
     </div>
   </div>
 
-
-
-
-
-  
-
-{#评论#}
-
-
-
-
-
-
   <!-- 详情细节图 -->
   <div class="j-change-color-detail-img">
   </div>
@@ -466,6 +453,11 @@
         <!---->
       </div>
     </div>
+  </div>
+
+      {#评论#}
+    <div id="review"></div>
+
     <div class="c-modal-wrap" style="display: none;">
       <div class="she-mask"></div>
       <div class="c-modal">
@@ -1479,31 +1471,33 @@
 
 <script>
     jQuery(document).ready(function($) {
-    $('.quantity-input-wrapper').click(function(e) {
-        e.preventDefault();
-        var price = $('#price').text();
-        var price_x = $('#price_x').text();
-        if( $(this).hasClass('quantity-up')) {
-            $('#input-quantity').val( parseInt($('#input-quantity').val()) + 1 );
-            $('#price_x').text(price_x + price);
-        } else {
-            if( parseInt($('#input-quantity').val())  > {{ minimum }} ) {
-                $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
+        $('#review').load('index.php?route=product/product/review&product_id={{ product_id }}');
+
+        $('.quantity-input-wrapper').click(function(e) {
+            e.preventDefault();
+            var price = $('#price').text();
+            var price_x = $('#price_x').text();
+            if( $(this).hasClass('quantity-up')) {
+                $('#input-quantity').val( parseInt($('#input-quantity').val()) + 1 );
+                $('#price_x').text(price_x + price);
+            } else {
+                if( parseInt($('#input-quantity').val())  > {{ minimum }} ) {
+                    $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
+                }
             }
-        }
-    });
-    $('#elevate-zoom').elevateZoom({
-        lensShape: 'basic',
-        lensSize: 150,
-        zoomWindowOffetx: 10,
-        zoomWindowWidth: 350,
-        zoomWindowHeight: 350,
-        borderSize: 1,
-        borderColour: '#eaeaea',
-        gallery: 'product-thumbnail-gallery',
-        galleryActiveClass: 'active',
-        cursor:'pointer',
-    });
+        });
+        $('#elevate-zoom').elevateZoom({
+            lensShape: 'basic',
+            lensSize: 150,
+            zoomWindowOffetx: 10,
+            zoomWindowWidth: 350,
+            zoomWindowHeight: 350,
+            borderSize: 1,
+            borderColour: '#eaeaea',
+            gallery: 'product-thumbnail-gallery',
+            galleryActiveClass: 'active',
+            cursor:'pointer',
+        });
         $('#button-cart').productInfoToCart({
             data: [
                 '#product input[type=\'text\']',
