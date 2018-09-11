@@ -1456,28 +1456,32 @@
                 if( parseInt($('#input-quantity').val())  > {{ minimum }} ) {
                     $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
                 }
-        var price = $('#price').text().trim();
-        var symbol = price.substring(0,1);
-        var price_single = parseFloat(price.substr(1));
+                var price = $('#price').text().trim();
+                var symbol = price.substring(0,1);
+                var price_single = parseFloat(price.substr(1));
 
-    $('.quantity-input-wrapper').click(function(e) {
-        e.preventDefault();
-        var price_x = parseFloat($('#price_x').text().trim().substr(1));
+                $('.quantity-input-wrapper').click(function(e) {
+                    e.preventDefault();
+                    var price_x = parseFloat($('#price_x').text().trim().substr(1));
 
-        if( $(this).hasClass('quantity-up')) {
-            $('#input-quantity').val( parseInt($('#input-quantity').val()) + 1 );
-            var total = (price_x + price_single).toFixed(2);
-            price_x =symbol + total;
-            $('#price_x').html(price_x);
+                    if ($(this).hasClass('quantity-up')) {
+                        $('#input-quantity').val(parseInt($('#input-quantity').val()) + 1);
+                        var total = (price_x + price_single).toFixed(2);
+                        price_x = symbol + total;
+                        $('#price_x').html(price_x);
 
-        } else {
-            if( parseInt($('#input-quantity').val())  > 1 ) {
-                $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
-                var total = (price_x - price_single).toFixed(2);
-                price_x =symbol + total;
-                $('#price_x').html(price_x);
-            }
-        });
+                    } else {
+                        if (parseInt($('#input-quantity').val()) > 1) {
+                            $('#input-quantity').val(parseInt($('#input-quantity').val()) - 1);
+                            var total = (price_x - price_single).toFixed(2);
+                            price_x = symbol + total;
+                            $('#price_x').html(price_x);
+                        }
+                    }
+                });
+
+                    }
+            });
         $('#elevate-zoom').elevateZoom({
             lensShape: 'basic',
             lensSize: 150,
