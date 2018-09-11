@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html xml:lang="en" >
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   <title>{{ title }}</title>
@@ -7,6 +7,7 @@
       var seckill_arr = [];
       var js_site_from = 'www';
   </script>
+
   <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
   <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
@@ -24,23 +25,23 @@
   <link media="all" href="catalog/view/theme/default/css/address.css" type="text/css" rel="stylesheet">
   <link media="all" href="catalog/view/theme/default/css/reward.css" type="text/css" rel="stylesheet">
 
-  <link media="all" href="catalog/view/theme/default/css/wishlist.css" type="text/css" rel="stylesheet">
-  <link media="all" href="catalog/view/theme/default/css/transation.css" type="text/css" rel="stylesheet">
-  <link media="all" href="catalog/view/theme/default/css/edit.css" type="text/css" rel="stylesheet">
-  <link media="all" href="catalog/view/theme/default/css/category.css" type="text/css" rel="stylesheet">
-  <link media="all" href="catalog/view/theme/default/css/goods-db2c456a45.css" type="text/css" rel="stylesheet">
-  <link media="all" href="catalog/view/theme/default/css/ticket.css" type="text/css" rel="stylesheet">
-
+  <link media="all" href="/catalog/view/theme/default/css/wishlist.css" type="text/css" rel="stylesheet">
+  <link media="all" href="/catalog/view/theme/default/css/transation.css" type="text/css" rel="stylesheet">
+  <link media="all" href="/catalog/view/theme/default/css/edit.css" type="text/css" rel="stylesheet">
+  <link media="all" href="/catalog/view/theme/default/css/category.css" type="text/css" rel="stylesheet">
+  <link media="all" href="/catalog/view/theme/default/css/goods-db2c456a45.css" type="text/css" rel="stylesheet">
+  <link media="all" href="/catalog/view/theme/default/css/ticket.css" type="text/css" rel="stylesheet">
+  {#<link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">#}
   <link media="all" href="/catalog/view/theme/default/css/orderdetails.css" type="text/css" rel="stylesheet">
-  {#<link media="all" href="catalog/view/theme/javascript/common.js" type="text/js" rel="stylesheet">#}
-  <script src="/catalog/view/theme/default/js/jquery-new.mins.js" type="text/javascript"></script>
-  {#<script src="/catalog/view/javascript/common.js" type="text/javascript"></script>#}
-  <link media="all" href="catalog/view/theme/default/css/orderdetails.css" type="text/css" rel="stylesheet">
-
+  <script src="/catalog/view/theme/default/js/jquery-1.8.3.min.js"></script>
+  <script src="catalog/view/theme/default/js/jquery-new.mins.js" type="text/javascript"></script>
   <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
   <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="catalog/view/javascript/layer/layer.js" type="text/javascript"></script>
   <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+
+  <script src="/catalog/view/theme/default/js/jquery-labelauty.js"></script>
+
 </head>
 <body>
 <div class="header_common">
@@ -117,7 +118,7 @@
                 <a class="present iconfont" id="search_ico" href="javascript:void(0)" title="Search" aria-hidden="true">  </a>
               </form>
             </div>
-            <script type="text/javascript" src="do_search.js"></script>
+            {#<script type="text/javascript" src="do_search.js"></script>#}
             <div class="wish-com" title="My Wishlist">
               <a class="j-wish" href="{{ wishlist }}"> <span class="iconfont"></span> </a>
               <span class="wish-num j-wish-num"></span>

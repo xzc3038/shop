@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/catalog/view/theme/default/css/jquery-labelauty.css">
 {% if options %}
 {% for option in options %}
 {% if option.type == 'select' %}
@@ -17,11 +18,11 @@
 {% if option.type == 'radio' %}
 <div class="form-group{% if option.required %} required {% endif %}">
   <label class="control-label">{{ option.name }}</label>
-  <div id="input-option{{ option.product_option_id }}"> {% for option_value in option.product_option_value %}
-    <label class="radio">
-      <input type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}" />
+  <div id="input-option{{ option.product_option_id }}" class="dowebok"> {% for option_value in option.product_option_value %}
+    <label class="">
+      <input type="radio"  name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}" data-labelauty={% if option_value.image %}/>
       <span>
-        {% if option_value.image %}
+
         <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" class="img-thumbnail" /> {% endif %}
         {{ option_value.name }}
         {% if option_value.price %}
@@ -106,10 +107,15 @@
 {% endfor %}
 {% endif %}
 
+<script>
+    $(function(){
+        $(':input').labelauty();
+    });
+</script>
 <script type="text/javascript"><!--
-  $('.date, .datetime, .time').datetimepicker({
-    language: '{{ datepicker }}',
-  });
+  {#$('.date, .datetime, .time').datetimepicker({#}
+    {#language: '{{ datepicker }}',#}
+  {#});#}
 
   $('button[id^=\'button-upload\']').on('click', function() {
     var element = this;

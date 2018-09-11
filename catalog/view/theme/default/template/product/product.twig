@@ -154,48 +154,20 @@
       </div>
       <div class="dts-promotion">
       </div>
-      <div class="goodsd-opt">
-        <div class="goodsd-color j-goodsd-color">
-          <span class="opt-title">Color</span>
-          <div class="c-opt">
-            <div class="opt-color">
-              <a class="j-opt-color-link opt-color-link  j-verlok-lazy" id="398636" sku="dress171023371" data-goods_id="398636" href="javascript:;" data-src="//img.ltwebstatic.com/images/pi/201710/29/15084859652341115281_thumbnail_100x100.jpg" data-webp="//img.ltwebstatic.com/images/pi/201710/29/15084859652341115281_thumbnail_100x100.jpg" style="background-image: url(&quot;//img.ltwebstatic.com/images/pi/201710/29/15084859652341115281_thumbnail_100x100.jpg&quot;);" data-was-processed="true"> </a>
-              <div class="color-img-preview-wrap">
-                <img class="color-img-preview j-verlok-lazy loaded" src="//img.ltwebstatic.com/images/pi/201710/29/15084859652341115281_thumbnail_405x552.jpg" data-src="//img.ltwebstatic.com/images/pi/201710/29/15084859652341115281_thumbnail_405x552.jpg" data-webp="//img.ltwebstatic.com/images/pi/201710/29/15084859652341115281_thumbnail_405x552.jpg" data-was-processed="true" />
-              </div>
-            </div>
-            <div class="opt-color">
-              <a class="j-opt-color-link opt-color-link active j-verlok-lazy" id="481666" sku="dress180514094" data-goods_id="481666" href="javascript:;" data-src="//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_100x100.jpg" data-webp="//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_100x100.jpg" style="background-image: url(&quot;//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_100x100.jpg&quot;);" data-was-processed="true"> </a>
-              <div class="color-img-preview-wrap">
-                <img class="color-img-preview j-verlok-lazy loaded" src="//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_405x552.jpg" data-src="//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_405x552.jpg" data-webp="//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_405x552.jpg" data-was-processed="true" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="j-vue-dt-addbag-opt">
-        <div class="goodsd-opt">
-          <div class="goodsd-size">
-            <span class="opt-title">Size</span>
-            <a href="javascript:;" class="check-size-btn" style="display: none;"> Check my size <span class="check-size-sym"> ? </span></a>
-            <div class="c-opt j-opt-size-wrap static">
-              <label size="S" class="opt-size j-opt-size"><input type="radio" name="size" class="opt" value="[object Object]" /> <span class="opt-real">S</span></label>
-              <label size="M" class="opt-size j-opt-size"><input type="radio" name="size" class="opt" value="[object Object]" /> <span class="opt-real">M</span></label>
-              <label size="L" class="opt-size j-opt-size"><input type="radio" name="size" class="opt" value="[object Object]" /> <span class="opt-real">L</span></label>
-              <span class="size-tip" style="display: none;">Please Select Size</span>
-            </div>
-            <div class="size-tag-wrap">
+        <div class="goodsd-opt" id="product">
 
-            </div>
-          </div>
+        {% include(helper.template('_partial/product/options')) %}
+
           <div class="goodsd-qty">
             <div class="opt-title-qty">
               Qty
             </div>
             <div class="c-opt-qty j-ItemDetail ">
               <span class="opt-qty-span iconfont icon-reduce quantity-input-wrapper "></span>
-              <input type="text" id="input-quantity" class="opt-qty-input j-qty-input " value="1"/>
+              <input type="text" name="quantity" id="input-quantity" class="opt-qty-input j-qty-input form-control" value="{{ minimum }}"/>
               <span class="opt-qty-span iconfont icon-add quantity-input-wrapper quantity-up"></span>
+                <input type="hidden" name="product_id" value="{{ product_id }}" />
             </div>
             <div class="goodsd-residue">
               <!---->
@@ -203,7 +175,7 @@
           </div>
         </div>
         <div class="collect" >
-          Total :¥ <span id="price_x">{{ price_x }}</span>
+          Total : <span id="price_x">{{ price }}</span>
         </div>
         <!---->
         <p class="she-color-error" style="display: none;">purchase limit exceeded</p>
@@ -1484,6 +1456,26 @@
                 if( parseInt($('#input-quantity').val())  > {{ minimum }} ) {
                     $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
                 }
+        var price = $('#price').text().trim();
+        var symbol = price.substring(0,1);
+        var price_single = parseFloat(price.substr(1));
+
+    $('.quantity-input-wrapper').click(function(e) {
+        e.preventDefault();
+        var price_x = parseFloat($('#price_x').text().trim().substr(1));
+
+        if( $(this).hasClass('quantity-up')) {
+            $('#input-quantity').val( parseInt($('#input-quantity').val()) + 1 );
+            var total = (price_x + price_single).toFixed(2);
+            price_x =symbol + total;
+            $('#price_x').html(price_x);
+
+        } else {
+            if( parseInt($('#input-quantity').val())  > 1 ) {
+                $('#input-quantity').val( parseInt($('#input-quantity').val()) - 1 );
+                var total = (price_x - price_single).toFixed(2);
+                price_x =symbol + total;
+                $('#price_x').html(price_x);
             }
         });
         $('#elevate-zoom').elevateZoom({
