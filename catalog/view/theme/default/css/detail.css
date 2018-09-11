@@ -276,9 +276,11 @@ i { font-style: normal; }
 .product-review .custom-reviews .summary.dts-summary .fit-well li .bar-unfill { height: 6px; }
 .product-review .custom-reviews .summary .fit-well li .bar-unfill .bar-fill { float: left; height: 8px; background: rgb(34, 34, 34) none repeat scroll 0% 0%; width: 135px; }
 .product-review .custom-reviews .summary.dts-summary .fit-well li .bar-unfill .bar-fill { height: 6px; }
-.product-review .custom-reviews .summary .fit-well li .bar-unfill .small-bar { width: 10%; }
-.product-review .custom-reviews .summary .fit-well li .bar-unfill .true-bar { width: 80%; }
-.product-review .custom-reviews .summary .fit-well li .bar-unfill .large-bar { width: 30%; }
+.product-review .custom-reviews .summary .fit-well li .bar-unfill .five-bar { width: 0%; }
+.product-review .custom-reviews .summary .fit-well li .bar-unfill .four-bar { width: 0%; }
+.product-review .custom-reviews .summary .fit-well li .bar-unfill .three-bar { width: 0%; }
+.product-review .custom-reviews .summary .fit-well li .bar-unfill .two-bar { width: 0%; }
+.product-review .custom-reviews .summary .fit-well li .bar-unfill .one-bar { width: 0%; }
 .product-review .custom-reviews .summary .fit-well ul li .filter-title-box { width: 115px; white-space: nowrap; }
 .item-drop .she-drop-normal-ul { box-shadow: none; }
 .recommend .also-viewed-prev, .recommend .best-sellers-prev { text-indent: -5px; }

@@ -534,6 +534,11 @@ class ControllerProductProduct extends Controller {
 			$page = 1;
 		}
 
+//		$type = 0;
+//		if ($this->request->server['REQUEST_METHOD'] == 'POST'){
+//		    $type = $this->request->post['type'];
+//        }
+
 		$data['reviews'] = array();
 
 		$review_total = $this->model_catalog_review->getTotalReviewsByProductId($this->request->get['product_id']);
@@ -559,13 +564,20 @@ class ControllerProductProduct extends Controller {
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($review_total) ? (($page - 1) * 5) + 1 : 0, ((($page - 1) * 5) > ($review_total - 5)) ? $review_total : ((($page - 1) * 5) + 5), $review_total, ceil($review_total / 5));
 
-
+//取评论数
         $this->load->model('catalog/product');
         $product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
         $data['reviewsTotol'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
         $data['ratingTotol'] = (int)$product_info['rating'];
 
-//        var_dump($data);
+//        取评论百分比
+        $this->load->model('catalog/review');
+        $data['ratings'] = $this->model_catalog_review->getRating($this->request->get['product_id']);
+        $data['one'] = floor(($data['ratings']['one'] / $data['reviewsTotol'])*100);
+        $data['two'] = floor(($data['ratings']['two'] / $data['reviewsTotol'])*100);
+        $data['three'] = floor(($data['ratings']['three'] / $data['reviewsTotol'])*100);
+        $data['four'] = floor(($data['ratings']['four'] / $data['reviewsTotol'])*100);
+        $data['five'] = floor(($data['ratings']['five'] / $data['reviewsTotol'])*100);
 
 		$this->response->setOutput($this->load->view('product/review', $data));
 	}
