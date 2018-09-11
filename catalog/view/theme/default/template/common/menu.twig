@@ -52,54 +52,53 @@
       </ul>
     </div>
   </div>
-  <script>
-
-      function GB_isMobile_she(){
-          return navigator.userAgent.toLowerCase().match(/phone|pad|pod|iphone|ipod|ios|ipad|android/);
-      }
-      /*hover延迟0.2秒加载 2017.2.5 wxy*/
-      (function(a) {
-          a.fn.hoverDelay = function(c, f, g, b) {
-              var g = g || 200,   //hover entry time
-                  b = b || 200,       //hover departure time
-                  f = f || c;
-              var e = [],
-                  d = [];
-              return this.each(function(h) {
-                  a(this).mouseenter(function() {
-                      var i = this;
-                      clearTimeout(d[h]);
-                      e[h] = setTimeout(function() {
-                              c.apply(i)
-                          },
-                          g)
-                  }).mouseleave(function() {
-                      var i = this;
-                      clearTimeout(e[h]);
-                      d[h] = setTimeout(function() {
-                              f.apply(i)
-                          },
-                          b)
-                  })
-              })
-          }
-      })(jQuery);
-
-      //移动设备不延时。
-      $(".nav-wrap > li")[GB_isMobile_she()?"hover":"hoverDelay"](function(){
-          var $first_link = $(this).find('.first-link')
-          $(this).find('.dropdown-mask').show();
-          $(this).find('.dropdown-wrap').show();
-          var link = $(this).find(".first-link").attr('link');
-          $first_link.attr({href: $first_link.attr('link')});
-
-      },function(i){
-          $(this).find('.dropdown-mask').hide();
-          $(this).find('.dropdown-wrap').hide();
-      });
-
-
-
-  </script>
 {% endif %}
+<script>
 
+    function GB_isMobile_she(){
+        return navigator.userAgent.toLowerCase().match(/phone|pad|pod|iphone|ipod|ios|ipad|android/);
+    }
+    /*hover延迟0.2秒加载 2017.2.5 wxy*/
+    (function(a) {
+        a.fn.hoverDelay = function(c, f, g, b) {
+            var g = g || 200,   //hover entry time
+                b = b || 200,       //hover departure time
+                f = f || c;
+            var e = [],
+                d = [];
+            return this.each(function(h) {
+                a(this).mouseenter(function() {
+                    var i = this;
+                    clearTimeout(d[h]);
+                    e[h] = setTimeout(function() {
+                            c.apply(i)
+                        },
+                        g)
+                }).mouseleave(function() {
+                    var i = this;
+                    clearTimeout(e[h]);
+                    d[h] = setTimeout(function() {
+                            f.apply(i)
+                        },
+                        b)
+                })
+            })
+        }
+    })(jQuery);
+
+    //移动设备不延时。
+    $(".nav-wrap > li")[GB_isMobile_she()?"hover":"hoverDelay"](function(){
+        var $first_link = $(this).find('.first-link')
+        $(this).find('.dropdown-mask').show();
+        $(this).find('.dropdown-wrap').show();
+        var link = $(this).find(".first-link").attr('link');
+        $first_link.attr({href: $first_link.attr('link')});
+
+    },function(i){
+        $(this).find('.dropdown-mask').hide();
+        $(this).find('.dropdown-wrap').hide();
+    });
+
+
+
+</script>
