@@ -1,6 +1,7 @@
 <?php
 class ControllerProductSearch extends Controller {
 	public function index() {
+//        var_dump($this->request->get['search']);
 		$this->load->language('product/search');
 
 		$this->load->model('catalog/category');
@@ -422,13 +423,15 @@ class ControllerProductSearch extends Controller {
 		$data['order'] = $order;
 		$data['limit'] = $limit;
 
+//        $data['category'] = $this->load->controller('product/category');
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-
+//        var_dump($data);
 		$this->response->setOutput($this->load->view('product/search', $data));
 	}
 }

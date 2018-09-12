@@ -1,20 +1,15 @@
 {{ header }}
-<div class="j-list-cate-inner  c-list-cate-inner">
 
-  <div class="mgds-goodsl  container-fluid-1200  j-mgds-goodsl-wrap">
+ {{ column_left }}
+
+  <div  class="mgds-goodsl  container-fluid-1200  j-mgds-goodsl-wrap">
     <ul class="c-breadcrumb">
       <li> <a rel="nofollow" href="/">Home</a> </li>
       <!-- 实体 -->
       <li><a href="">Sale</a></li>
       <!-- dailynew -->
     </ul>
-    <!--部分虚拟分类 & discount-list & promo-discount 会有banner-->
-    <!-- discount-list -->
-    <!-- topbanner 配置 -->
-    <div class="she-clearfix">
-      <div></div>
-    </div>
-    <!--排序 & 结果总数-->
+
     <div class="list-line" style="">
       <div class="line-center">
         <span class="j-search-num">{{ heading_title }}</span>
@@ -90,51 +85,12 @@
     </div>
 
   </div>
-    <!-- 侧边栏配置（实体分类和虚拟分类） -->
-
-        <div class="cate-leftnav"  >
-            <div class="line-dropdown">
-                <div class="sort-by-title">
-                    Sort By
-                </div>
-                <div class="line-dropdown-sort" >
-                    <div class="c-dropdown j-toggle-menu" >
-                        {{ include(helper.template('_partial/product/filter_bar_block')) }}
-                    </div>
-                </div>
-                {% if categories_x %}
-                    {% for category in categories_x %}
-                        <div class="category-list j-attrauto-list" >
-                            <ul class="list-classify-filter">
-                                <li class="filter-title j-attr-auto">
-                                    <div class=" j-filter-up-info">
-                                        <span> <a href="{{ category.href }}"></a> {{ category.name }}</span>
-                                        <i class="iconfont icon-down " id="{{ category.name }}"></i>
-                                    </div>
-                                    <div class="filter-dropdown {{ category.name }}">
-                                        {% for child in category.children %}
-                                            <div class="attr-filter-third j-subattr-auto">
-                                                <a href="{{ child.href }}" class=" j-auto-attrlink">{{ child.name }} </a>
-                                            </div>
-                                        {% endfor %}
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
 
 
-
-        </div>
-
-</div>
 
 <script>
 
-$('.iconfont').click(function () {
+$('.iconfont_x').click(function () {
 
     var id = this.id;
 
@@ -146,5 +102,6 @@ $('.iconfont').click(function () {
         history.go(0);
     });
 });
+
 </script>
 {{ footer }}
