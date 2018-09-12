@@ -45,6 +45,7 @@ class ModelCatalogReview extends Model {
 				}
 			}
 		}
+		return $review_id;
 	}
 
 	public function getReviewsByProductId($product_id, $start = 0, $limit = 20) {
@@ -99,5 +100,13 @@ class ModelCatalogReview extends Model {
         } else {
             return false;
         }
+    }
+    public function getReviewImg($id) {
+        $query = $this->db->query("SELECT image1 from " . DB_PREFIX . "review_image where review_id = '".$id."'");
+        return $query->row;
+    }
+    public function addReviewImg($id,$data) {
+	    $query = $this->db->query("INSERT INTO " . DB_PREFIX . "review_image set review_id = '".$id."',image1 = '".$data."'");
+	    return $query;
     }
 }

@@ -550,10 +550,11 @@ class ControllerProductProduct extends Controller {
 				'author'     => $result['author'],
 				'text'       => nl2br($result['text']),
 				'rating'     => (int)$result['rating'],
-				'date_added' => date($this->language->get('datetime_format'), strtotime($result['date_added']))
+				'date_added' => date($this->language->get('datetime_format'), strtotime($result['date_added'])),
+                'image'      => '\image\review\\'.$this->model_catalog_review->getReviewImg($result['review_id'])['image1'],
+                'status'     => $this->model_catalog_review->getReviewImg($result['review_id'])['image1']
 			);
 		}
-
 		$pagination = new Pagination();
 		$pagination->total = $review_total;
 		$pagination->page = $page;
@@ -579,6 +580,7 @@ class ControllerProductProduct extends Controller {
         $data['four'] = floor(($data['ratings']['four'] / $data['reviewsTotol'])*100);
         $data['five'] = floor(($data['ratings']['five'] / $data['reviewsTotol'])*100);
 
+//        var_dump($data);
 		$this->response->setOutput($this->load->view('product/review', $data));
 	}
 
@@ -601,6 +603,18 @@ class ControllerProductProduct extends Controller {
 			if (empty($this->request->post['rating']) || $this->request->post['rating'] < 0 || $this->request->post['rating'] > 5) {
 				$json['error'] = $this->language->get('error_rating');
 			}
+			if (!empty($_FILES['file'])){
+                //获取文件的大小
+                $file_size=$_FILES['file']['size'];
+                if($file_size>2*1024*1024) {
+                    $json['error'] = "文件过大，不能上传大于2M的文件";
+                }
+
+                $file_type=$_FILES['file']['type'];
+                if($file_type!="image/jpeg" && $file_type!='image/pjpeg'&& $file_type!='image/png') {
+                    $json['error'] = "文件类型只能为jpg/png格式";
+                }
+            }
 
 			// Captcha
 //			if ($this->config->get('captcha_' . $this->config->get('config_captcha') . '_status') && in_array('review', (array)$this->config->get('config_captcha_page'))) {
@@ -615,7 +629,33 @@ class ControllerProductProduct extends Controller {
 			if (!isset($json['error'])) {
 				$this->load->model('catalog/review');
 
-				$this->model_catalog_review->addReview($this->request->get['product_id'], $this->request->post);
+                $review_id = $this->model_catalog_review->addReview($this->request->get['product_id'], $this->request->post);
+                //判断是否上传成功（是否使用post方式上传）
+                if(is_uploaded_file($_FILES['file']['tmp_name'])) {
+                    //把文件转存到你希望的目录（不要使用copy函数）
+                    $uploaded_file=$_FILES['file']['tmp_name'];
+
+                    //我们给每个用户动态的创建一个文件夹
+                    $user_path = $_SERVER['DOCUMENT_ROOT'].'\image\review\\'.$this->request->get['product_id'];
+                    //判断该用户文件夹是否已经有这个文件夹
+                    if(!file_exists($user_path)) {
+                        mkdir($user_path);
+                    }
+
+                    $file_true_name=$_FILES['file']['name'];
+                    $move_to_file=$user_path."/".time().rand(1,1000).substr($file_true_name,strrpos($file_true_name,"."));
+                    if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) {
+                        $json['success'] = $_FILES['file']['name']."上传成功";
+                    } else {
+                        $json['error'] = "上传失败";
+                    }
+                } else {
+                    $json['error'] = "上传失败";
+                }
+
+                $this->load->model('catalog/review');
+                $path = str_replace($_SERVER['DOCUMENT_ROOT'].'\image\review','',$move_to_file);
+                $this->model_catalog_review->addReviewImg($review_id,$path);
 
 				$json['success'] = $this->language->get('text_success');
 			}
