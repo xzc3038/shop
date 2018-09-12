@@ -1,6 +1,7 @@
 {{ header }}
-<div class="j-list-cate-inner j-mgds-goodsl c-list-cate-inner">
-  <div class="mgds-goodsl j-mgds-goodsl-ctn container-fluid-1200 j-mgds-goodsl j-mgds-goodsl-wrap">
+<div class="j-list-cate-inner  c-list-cate-inner">
+
+  <div class="mgds-goodsl  container-fluid-1200  j-mgds-goodsl-wrap">
     <ul class="c-breadcrumb">
       <li> <a rel="nofollow" href="/">Home</a> </li>
       <!-- 实体 -->
@@ -87,74 +88,63 @@
 
       {% endfor %}
     </div>
+
   </div>
-  <!-- 侧边栏配置（实体分类和虚拟分类） -->
-  <div class="j-goodsli-leftnav">
-    <!-- autoConfigList.leftBanner.length > 12 后台配置之后又修改配置为空时返回空的div -->
-    <div class="cate-leftnav j-cate-leftnav" style="transform: translateY(144px);">
-      <div class="line-dropdown">
-        <div class="sort-by-title">
-          Sort By
+    <!-- 侧边栏配置（实体分类和虚拟分类） -->
+
+        <div class="cate-leftnav"  >
+            <div class="line-dropdown">
+                <div class="sort-by-title">
+                    Sort By
+                </div>
+                <div class="line-dropdown-sort" >
+                    <div class="c-dropdown j-toggle-menu" >
+                        {{ include(helper.template('_partial/product/filter_bar_block')) }}
+                    </div>
+                </div>
+                {% if categories_x %}
+                    {% for category in categories_x %}
+                        <div class="category-list j-attrauto-list" >
+                            <ul class="list-classify-filter">
+                                <li class="filter-title j-attr-auto">
+                                    <div class=" j-filter-up-info">
+                                        <span> <a href="{{ category.href }}"></a> {{ category.name }}</span>
+                                        <i class="iconfont icon-down " id="{{ category.name }}"></i>
+                                    </div>
+                                    <div class="filter-dropdown {{ category.name }}">
+                                        {% for child in category.children %}
+                                            <div class="attr-filter-third j-subattr-auto">
+                                                <a href="{{ child.href }}" class=" j-auto-attrlink">{{ child.name }} </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+
+
         </div>
-        <div class="line-dropdown-sort">
-          <div class="c-dropdown j-toggle-menu">
-            <div class="dropdown-toggle">
-              <em class="j-dropsort-title"> Most Popular </em>
-              <span class="dropdown-caret"></span>
-            </div>
-            <ul class="dropdown-menu j-dropsort-menu she-none">
-              <li class="j-dropsort-list j-dropdown-keep" data-sortindex="0"> Recommend </li>
-              <li class="j-dropsort-list j-dropdown-keep" data-sortindex="3"> Most Popular </li>
-              <li class="j-dropsort-list j-dropdown-keep" data-sortindex="1"> New Arrivals </li>
-              <li class="j-dropsort-list j-dropdown-keep" data-sortindex="2"> Price Low to High </li>
-              <li class="j-dropsort-list j-dropdown-keep" data-sortindex="5"> Price High to Low </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    {% if categories_x %}
-        {% for category in categories_x %}
-        <div class="category-list j-attrauto-list">
-        <ul class="list-classify-filter">
-          <li class="filter-title j-attr-auto">
-            <div class="filter-up-info j-filter-up-info">
-              <span> <a href="{{ category.href }}"></a> {{ category.name }}</span>
-              <i class="iconfont icon-down" id="{{ category.name }}"></i>
-            </div>
-            <div class="filter-dropdown ">
-            {% for child in category.children %}
-              <div class="attr-filter-third j-subattr-auto">
-                <a href="{{ child.href }}" class=" j-auto-attrlink">{{ child.name }} </a>
-              </div>
-            {% endfor %}
-            </div>
-          </li>
-        </ul>
-
-      </div>
-        {% endfor %}
-    {% endif %}
-
-    </div>
-  </div>
 
 </div>
+
 <script>
+
 $('.iconfont').click(function () {
+
     var id = this.id;
-    $('#'+id).toggle(
-        function(){
-            $('#'+id).toggleClass("iconfont icon-down");
-            // $('#'+id).css("style","");
-        },
-        function(){
-            $('#'+id).toggleClass("iconfont icon-up");
-        },
 
-
-    );
-    // alert(id);
+    $('.'+id).addClass("she-hide");
+    $('#' + id).attr("class", "iconfont icon-up "+id+'a');
+    $('.' + id+'a').click(function(){
+        $('.'+id).removeClass("she-hide");
+        $('#' + id).attr("class", "iconfont icon-down");
+        history.go(0);
+    });
 });
 </script>
 {{ footer }}
