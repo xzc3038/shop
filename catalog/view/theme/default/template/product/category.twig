@@ -1,6 +1,7 @@
 {{ header }}
-<div class="j-list-cate-inner j-mgds-goodsl c-list-cate-inner">
-  <div class="mgds-goodsl j-mgds-goodsl-ctn container-fluid-1200 j-mgds-goodsl j-mgds-goodsl-wrap">
+<div class="j-list-cate-inner  c-list-cate-inner">
+
+  <div class="mgds-goodsl  container-fluid-1200  j-mgds-goodsl-wrap">
     <ul class="c-breadcrumb">
       <li> <a rel="nofollow" href="/">Home</a> </li>
       <!-- 实体 -->
@@ -55,7 +56,7 @@
               <span class="orig-price j-price-original">{{ product.price }}</span>
             </div>
             <!-- quick view & add to bag -->
-            <button class="she-btn-white-opacity she-btn-s quickv-btn j-gds-li-qvbtn" data-id="556827" data-index="2"> QUICK VIEW </button>
+            {#<button class="she-btn-white-opacity she-btn-s quickv-btn j-gds-li-qvbtn" data-id="556827" data-index="2"> QUICK VIEW </button>#}
             <button class="she-btn-white-opacity she-btn-s quickv-btn j-qv-loading" style="display: none;">
               <div class="la-ball-pulse">
                 <div></div>
@@ -82,311 +83,68 @@
               </div>
             </div>
           </div>
-          {#<div class="j-switch-color-wrap">#}
-            {#<div class="gds-li-ratiowrap">#}
-              {#<a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="0" title="{{ product.name }}"> <img src="{{ product.thumb }}" class="j-verlok-lazy loaded" data-was-processed="true" /> </a>#}
-            {#</div>#}
-            {#<a class="goods-name" href="{{ product.href }}" target="_blank" title="{{ product.name }}"> <span class="goods-brand">{{ product.name }}</a>#}
-            {#<div class="btm-price j-gds-li-price j-gds-li-price-450271 she-show" style="display: none">#}
-              {#<span class="disc-price j-price-discount" style="display: none"></span>#}
-              {#<span class="btm-sale j-price-sale-txt" style="display: none">(Sale)</span>#}
-              {#<span class="orig-price j-price-original">{{ product.price }}</span>#}
-            {#</div>#}
-          {#</div>#}
         </div>
       </div>
 
       {% endfor %}
     </div>
+
   </div>
-  <!-- 侧边栏配置（实体分类和虚拟分类） -->
-  {#<div class="j-goodsli-leftnav">#}
-    {#<!-- autoConfigList.leftBanner.length > 12 后台配置之后又修改配置为空时返回空的div -->#}
-    {#<div class="cate-leftnav j-cate-leftnav" style="transform: translateY(144px);">#}
-      {#<div class="line-dropdown">#}
-        {#<div class="sort-by-title">#}
-          {#Sort By#}
-        {#</div>#}
-        {#<div class="line-dropdown-sort">#}
-          {#<div class="c-dropdown j-toggle-menu">#}
-            {#<div class="dropdown-toggle">#}
-              {#<em class="j-dropsort-title"> Most Popular </em>#}
-              {#<span class="dropdown-caret"></span>#}
-            {#</div>#}
-            {#<ul class="dropdown-menu j-dropsort-menu she-none">#}
-              {#<li class="j-dropsort-list j-dropdown-keep" data-sortindex="0"> Recommend </li>#}
-              {#<li class="j-dropsort-list j-dropdown-keep" data-sortindex="3"> Most Popular </li>#}
-              {#<li class="j-dropsort-list j-dropdown-keep" data-sortindex="1"> New Arrivals </li>#}
-              {#<li class="j-dropsort-list j-dropdown-keep" data-sortindex="2"> Price Low to High </li>#}
-              {#<li class="j-dropsort-list j-dropdown-keep" data-sortindex="5"> Price High to Low </li>#}
-            {#</ul>#}
-          {#</div>#}
-        {#</div>#}
-      {#</div>#}
-      {#<!-- refine by -->#}
-      {#<!-- 没有配置时接口返回实体分类属性展示 -->#}
-      {#<!-- 自定义配置二期 -->#}
-      {#<div class="category-list j-attrauto-list">#}
-        {#<ul class="list-classify-filter">#}
-          {#<li class="filter-title j-attr-auto">#}
-            {#<div class="filter-up-info j-filter-up-info">#}
-              {#<span> <a href="javascript:;" data-itemattr="101">Style</a> </span>#}
-              {#<i class="iconfont icon-up j-autolinkfold" style="transform: "></i>#}
-            {#</div>#}
-            {#<div class="filter-dropdown j-dropdown-fit j-ga-filter-dropdown ">#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_167"> <em>Casual</em>(<span>128</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_257"> <em>Elegant</em>(<span>67</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_493"> <em>Party</em>(<span>86</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_576"> <em>Preppy</em>(<span>8</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_580"> <em>Sexy</em>(<span>17</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_725"> <em>Vacation</em>(<span>76</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_730"> <em>Vintage</em>(<span>37</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="101_" data-attrid="101_752"> <em>Workwear</em>(<span>7</span>) </a>#}
-              {#</div>#}
-            {#</div> </li>#}
-        {#</ul>#}
-        {#<ul class="list-classify-filter">#}
-          {#<li class="filter-title j-attr-auto">#}
-            {#<div class="filter-up-info j-filter-up-info">#}
-              {#<span> <a href="javascript:;" data-itemattr="31">Decoration</a> </span>#}
-              {#<i class="iconfont icon-up j-autolinkfold" style="transform: "></i>#}
-            {#</div>#}
-            {#<div class="filter-dropdown j-dropdown-fit j-ga-filter-dropdown ">#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_77"> <em>Appliques</em>(<span>1</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_83"> <em>Asymmetrical</em>(<span>27</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_87"> <em>Backless</em>(<span>26</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_102"> <em>Beaded</em>(<span>4</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_106"> <em>Belted</em>(<span>58</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_131"> <em>Bow</em>(<span>4</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_146"> <em>Button</em>(<span>81</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_190"> <em>Cold Shoulder</em>(<span>4</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_195"> <em>Colorblock</em>(<span>5</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_198"> <em>Contrast Collar</em>(<span>1</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_200"> <em>Contrast Lace</em>(<span>13</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_202"> <em>Contrast Mesh</em>(<span>2</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_221"> <em>Criss Cross</em>(<span>6</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_230"> <em>Cut Out</em>(<span>19</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_243"> <em>Double Button</em>(<span>3</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_250"> <em>Drawstring</em>(<span>5</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_258"> <em>Embroidery</em>(<span>6</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_297"> <em>Flared</em>(<span>3</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_309"> <em>Frill</em>(<span>17</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_310"> <em>Fringe</em>(<span>7</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_386"> <em>Knot</em>(<span>98</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_389"> <em>Lace Up</em>(<span>8</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_402"> <em>Lettuce Trim</em>(<span>3</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_501"> <em>Pearls</em>(<span>3</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_519"> <em>Pleated</em>(<span>9</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_521"> <em>Pocket</em>(<span>20</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_564"> <em>Ruched</em>(<span>5</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_565"> <em>Ruffle</em>(<span>103</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_566"> <em>Ruffle Hem</em>(<span>40</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_574"> <em>Scallop</em>(<span>6</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_586"> <em>Sheer</em>(<span>2</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_625"> <em>Split</em>(<span>40</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_681"> <em>Tie Neck</em>(<span>2</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_682"> <em>Tiered Layer</em>(<span>10</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_753"> <em>Wrap</em>(<span>40</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="31_" data-attrid="31_769"> <em>Zipper</em>(<span>72</span>) </a>#}
-              {#</div>#}
-            {#</div> </li>#}
-        {#</ul>#}
-        {#<ul class="list-classify-filter">#}
-          {#<li class="filter-title j-attr-auto">#}
-            {#<div class="filter-up-info j-filter-up-info">#}
-              {#<span> <a href="javascript:;" data-itemattr="73">Pattern Type</a> </span>#}
-              {#<i class="iconfont icon-up j-autolinkfold" style="transform: "></i>#}
-            {#</div>#}
-            {#<div class="filter-dropdown j-dropdown-fit j-ga-filter-dropdown ">#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_303"> <em>Floral</em>(<span>74</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_323"> <em>Gingham</em>(<span>7</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_401"> <em>Letter</em>(<span>4</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_514"> <em>Plaid</em>(<span>18</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_515"> <em>Plain</em>(<span>196</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_524"> <em>Polka Dot</em>(<span>30</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_649"> <em>Striped</em>(<span>54</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="73_" data-attrid="73_694"> <em>Tropical</em>(<span>2</span>) </a>#}
-              {#</div>#}
-            {#</div> </li>#}
-        {#</ul>#}
-        {#<ul class="list-classify-filter">#}
-          {#<li class="filter-title j-attr-auto">#}
-            {#<div class="filter-up-info j-filter-up-info">#}
-              {#<span> <a href="javascript:;" data-itemattr="27">Color</a> </span>#}
-              {#<i class="iconfont icon-up j-autolinkfold" style="transform: "></i>#}
-            {#</div>#}
-            {#<div class="filter-dropdown j-dropdown-fit j-ga-filter-dropdown ">#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_144"> <em>Burgundy</em>(<span>26</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_364"> <em>Hot Pink</em>(<span>4</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_447"> <em>Multicolor</em>(<span>10</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_513"> <em>Pink</em>(<span>10</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_536"> <em>Purple</em>(<span>2</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_544"> <em>Red</em>(<span>346</span>) </a>#}
-              {#</div>#}
-              {#<div class="attr-filter-third j-subattr-auto">#}
-                {#<a href="javascript:;" class=" j-auto-attrlink" data-attritemid="27_" data-attrid="27_939"> <em>Bright</em>(<span>36</span>) </a>#}
-              {#</div>#}
-            {#</div> </li>#}
-        {#</ul>#}
-      {#</div>#}
-      {#<!-- category  -->#}
-      {#<!-- 自定义链接 -->#}
-      {#<!-- discount 1 -->#}
-      {#<!-- discount filter -->#}
-      {#<!-- price filter -->#}
-      {#<!-- category  -->#}
-      {#<!-- 自定义链接 -->#}
-      {#<!-- discount 1 -->#}
-      {#<!-- discount filter -->#}
-      {#<!-- price filter -->#}
-      {#<div class="price-range">#}
-        {#<label> <em> Price Range </em> (<span class="j-range-currency">USD</span>) </label>#}
-        {#<ul class="price-range-auto j-price-auto" data-currency="USD">#}
-        {#</ul>#}
-        {#<div class="range-info">#}
-          {#<input type="text" class="j-range-min-price" onkeyup="value=value.replace(/[^\d|^\\.]/g,'')" placeholder="min" /> -#}
-          {#<input type="text" class="j-range-max-price" onkeyup="value=value.replace(/[^\d|^\\.]/g,'')" placeholder="max" />#}
-          {#<button class="she-btn-black j-sphinx-priceset j-ga-sphinx-price" data-type="price">SET</button>#}
-        {#</div>#}
-      {#</div>#}
-      {#<!-- category  -->#}
-      {#<!-- 自定义链接 -->#}
-      {#<!-- discount 1 -->#}
-      {#<!-- discount filter -->#}
-      {#<div class="price-range">#}
-        {#<label>Discount</label>#}
-        {#<div class="range-info">#}
-          {#<input type="text" class="j-discount-min-price" onkeyup="(value=value.replace(/[^\d|^\\.]/g,'')) &amp;&amp; value &gt; 100 &amp;&amp; (value = (value + '').slice(0, 2))" placeholder="min" /> -#}
-          {#<input type="text" class="j-discount-max-price" onkeyup="(value=value.replace(/[^\d|^\\.]/g,'')) &amp;&amp; value &gt; 100 &amp;&amp; (value = (value + '').slice(0, 2))" placeholder="max" />#}
-          {#<span>%</span>#}
-          {#<em>off</em>#}
-          {#<button class="she-btn-black j-sphinx-pricediscount j-ga-sphinx-price" data-type="discount">SET</button>#}
-        {#</div>#}
-      {#</div>#}
-      {#<!-- price filter -->#}
-      {#<!-- leftbanner 配置 -->#}
-      {#<div class="she-clearfix">#}
-        {#<div class="" data-is-component="true" data-type-name="LEFT_BANNER" data-config-id="auto_969129923276" data-type="CONTAINER" style="position: relative; margin-top: 0px; padding-bottom: 185.185%; width: 100%;">#}
-          {#<div class="col-sm-12" data-sub-component="true" data-is-component="true" data-config-id="auto_006184047881" data-type="STATIC_IMG" style="z-index: 1; top: 0%; left: 0%; position: absolute; padding-bottom: 185.185%;">#}
-            {#<a href="//www.shein.com/global-Up-to-85-off-vc-60431.html?icn=sale&amp;ici=www_sidebanner" style="cursor: pointer; margin: auto; right: 0.555556%; left: 0.555556%; bottom: 0%; top: 0%; position: absolute;" target="_self" data-extra-style-target="true"> <img class="ga_promo" style="width: 100%; height: 100%; border: none;" src="//img.shein.com/images2/2018/05/18/15266234231561627036.jpg" data-name="sidebanner" /> </a>#}
-          {#</div>#}
-        {#</div>#}
-      {#</div>#}
-    {#</div>#}
-  {#</div>#}
-  {#<!-- 侧边栏配置（daily/daily new/back in stock） -->#}
+    <!-- 侧边栏配置（实体分类和虚拟分类） -->
+
+        <div class="cate-leftnav"  >
+            <div class="line-dropdown">
+                <div class="sort-by-title">
+                    Sort By
+                </div>
+                <div class="line-dropdown-sort" >
+                    <div class="c-dropdown j-toggle-menu" >
+                        {{ include(helper.template('_partial/product/filter_bar_block')) }}
+                    </div>
+                </div>
+                {% if categories_x %}
+                    {% for category in categories_x %}
+                        <div class="category-list j-attrauto-list" >
+                            <ul class="list-classify-filter">
+                                <li class="filter-title j-attr-auto">
+                                    <div class=" j-filter-up-info">
+                                        <span> <a href="{{ category.href }}"></a> {{ category.name }}</span>
+                                        <i class="iconfont icon-down " id="{{ category.name }}"></i>
+                                    </div>
+                                    <div class="filter-dropdown {{ category.name }}">
+                                        {% for child in category.children %}
+                                            <div class="attr-filter-third j-subattr-auto">
+                                                <a href="{{ child.href }}" class=" j-auto-attrlink">{{ child.name }} </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+
+
+        </div>
+
 </div>
 
+<script>
+
+$('.iconfont').click(function () {
+
+    var id = this.id;
+
+    $('.'+id).addClass("she-hide");
+    $('#' + id).attr("class", "iconfont icon-up "+id+'a');
+    $('.' + id+'a').click(function(){
+        $('.'+id).removeClass("she-hide");
+        $('#' + id).attr("class", "iconfont icon-down");
+        history.go(0);
+    });
+});
+</script>
 {{ footer }}
