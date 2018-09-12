@@ -127,7 +127,7 @@ class ControllerAccountEdit extends Controller {
 		}
 
 		$data['back'] = $this->url->link('account/account');
-
+        $data['column_left_user'] = $this->load->controller('common/column_left_user');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
