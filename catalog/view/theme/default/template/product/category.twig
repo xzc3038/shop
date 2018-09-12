@@ -1,8 +1,9 @@
 {{ header }}
+{{ include(helper.template('_partial/product/filter_bar_block')) }}
+{{ column_left }}
+<div class="j-list-cate-inner  c-list-cate-inner">
 
- {{ column_left }}
-
-  <div  class="mgds-goodsl  container-fluid-1200  j-mgds-goodsl-wrap">
+  <div class="mgds-goodsl  container-fluid-1200  j-mgds-goodsl-wrap">
     <ul class="c-breadcrumb">
       <li> <a rel="nofollow" href="/">Home</a> </li>
       <!-- 实体 -->
@@ -10,11 +11,6 @@
       <!-- dailynew -->
     </ul>
 
-    <div class="list-line" style="">
-      <div class="line-center">
-        <span class="j-search-num">{{ heading_title }}</span>
-      </div>
-    </div>
     <!-- 列表项 -->
     <div class="row">
       {% for product in products %}
@@ -87,10 +83,11 @@
   </div>
 
 
+</div>
 
 <script>
 
-$('.iconfont_x').click(function () {
+$('.iconfont').click(function () {
 
     var id = this.id;
 
@@ -99,9 +96,7 @@ $('.iconfont_x').click(function () {
     $('.' + id+'a').click(function(){
         $('.'+id).removeClass("she-hide");
         $('#' + id).attr("class", "iconfont icon-down");
-        history.go(0);
     });
 });
-
 </script>
 {{ footer }}
