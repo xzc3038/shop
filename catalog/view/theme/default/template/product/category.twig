@@ -109,7 +109,7 @@
                                 <li class="filter-title j-attr-auto">
                                     <div class=" j-filter-up-info">
                                         <span> <a href="{{ category.href }}"></a> {{ category.name }}</span>
-                                        <i class="iconfont icon-down " id="{{ category.name }}"></i>
+                                        <i class="iconfont iconfont_x icon-down " id="{{ category.name }}"></i>
                                     </div>
                                     <div class="filter-dropdown {{ category.name }}">
                                         {% for child in category.children %}
@@ -134,7 +134,7 @@
 
 <script>
 
-$('.iconfont').click(function () {
+$('.iconfont_x').click(function () {
 
     var id = this.id;
 

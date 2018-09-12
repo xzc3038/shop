@@ -1,10 +1,62 @@
-<div class="product-thumb">
-  <div class="image"><a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a></div>
-  <div class="caption">
-    <h4 class="product-name"><a href="{{ product.href }}" title="{{ product.name }}">{{ product.name }}</a></h4>
-    <p class="product-description hidden-xs">{{ product.description }}</p>
-    {{ include(helper.template('_partial/product/rating_block')) }}
-    {{ include(helper.template('_partial/product/price_block')) }}
+<div class="c-goodsli j-goodsli j-goodsli-450271 col-lg-3 col-sm-4 col-xs-6" preload="1">
+  <!-- 占位, 勿删 -->
+  <div class="gds-li-ratiowrap"></div>
+
+  <div style="height: 90px"></div>
+  <!-- 占位, 勿删 -->
+  <div class="c-goodsli-absolute">
+    <div class="j-switch-color-wrap">
+      <div class="gds-li-ratiowrap">
+        <a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="2" title="{{ product.name }}"> <img  src="{{ product.thumb }}" class="j-verlok-lazy loaded" data-was-processed="true" /> </a>
+        <!-- add to bag 用的遮罩 -->
+        <span class="add-result-mask add-bag-mask j-add-result-mask-556827" style="display: none;">
+     <div class="result-txt j-result-txt" style="display: none;"></div>
+     <div class="la-ball-pulse la-ball-pulse-sm j-la-ball-pulse">
+      <div></div>
+      <div></div>
+      <div></div>
+     </div> </span>
+        <!-- 切换颜色 用的遮罩 -->
+        <span class="add-result-mask j-color-loader-556827" style="display: none;">
+     <div class="la-ball-pulse la-ball-pulse-sm">
+      <div></div>
+      <div></div>
+      <div></div>
+     </div> </span>
+      </div>
+      <a class="goods-name" href="{{ product.href }}" target="_blank" title="{{ product.name }}">{{ product.name }}</a>
+      <div class="btm-price j-gds-li-price j-gds-li-price-556827 she-show" style="display: none">
+        <span class="disc-price j-price-discount" style="display: none"></span>
+        <span class="btm-sale j-price-sale-txt" style="display: none">(Sale)</span>
+        <span class="orig-price j-price-original">{{ product.price }}</span>
+      </div>
+      <!-- quick view & add to bag -->
+        {#<button class="she-btn-white-opacity she-btn-s quickv-btn j-gds-li-qvbtn" data-id="556827" data-index="2"> QUICK VIEW </button>#}
+      <button class="she-btn-white-opacity she-btn-s quickv-btn j-qv-loading" style="display: none;">
+        <div class="la-ball-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div> </button>
+      <div class="btm-wrap">
+        <div class="btm-icon">
+          <div class="btm-icon-comment j-btm-goods-comment" data-id="556827">
+            <i class="iconfont icon-no-comment j-btm-comment-icon" ref="commentIcon"></i>
+            <div class="btm-comment-tip j-btm-comment-tip " ref="commentTip" style="display: none">
+              <span class="comment-arrow-ctn"><span class="comment-arrow"></span></span>
+              <div class="no-comment-img">
+                <div class="comment-img-ctn j-comment-img-ctn" data-src="//img.ltwebstatic.com/origin/images2_pi/2018/08/27/15353520202706500465_im_405x552.jpg" data-webp="//img.ltwebstatic.com/origin/images2_pi/2018/08/27/15353520202706500465_im_405x552.jpg" style="background-image: url(&quot;//img.ltwebstatic.com/origin/images2_pi/2018/08/27/15353520202706500465_im_405x552.jpg&quot;);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="btm-icon-save j-gds-li-save j-gds-li-save-556827" data-id="556827" data-sku="tee180807705" data-index="2">
+            <i class="iconfont icon-like-hollow with-arrow-bottom j-save-icon" onclick="wishlist.add('{{ product.product_id }}');"> </i>
+            <div class="btm-save-tip j-btm-save-tip" style="display: none;" >
+              Save to Wishlist
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  {{ include(helper.template('_partial/product/product_button_block')) }}
 </div>

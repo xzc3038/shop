@@ -109,22 +109,22 @@
               </div>
               <script type="text/javascript">$(function(){ $('#livechat').hover(function(){$('.j-livechat-con').show();},function(){$('.j-livechat-con').hide();})})</script>
             </div>
-            <div class="search-wrap">
-              <form action="javascript:void(0);" style="position: relative;">
-                <div class="serch-suggest" id="serchSuggest" style="display: none;">
-                  <ul></ul>
-                </div>
-                <input class="txt she-input-txt" id="searchKeyword" value="Search SHEIN" name="searchKeyword" autocomplete="off" type="text" />
-                <a class="present iconfont" id="search_ico" href="javascript:void(0)" title="Search" aria-hidden="true">  </a>
-              </form>
-            </div>
+            {{ search }}
+            {#<div class="search-wrap">#}
+              {#<form action="javascript:void(0);" style="position: relative;">#}
+                {#<div class="serch-suggest" id="serchSuggest" style="display: none;">#}
+                  {#<ul></ul>#}
+                {#</div>#}
+                {#<input class="txt she-input-txt" id="searchKeyword" value="Search SHEIN" name="searchKeyword" autocomplete="off" type="text" />#}
+                {#<a class="present iconfont" id="search_ico" href="javascript:void(0)" title="Search" aria-hidden="true">  </a>#}
+              {#</form>#}
+            {#</div>#}
             {#<script type="text/javascript" src="do_search.js"></script>#}
             <div class="wish-com" title="My Wishlist">
               <a class="j-wish" href="{{ wishlist }}"> <span class="iconfont"></span> </a>
               <span class="wish-num j-wish-num">{{ text_wishlist }}</span>
             </div>
             <div class="bag" id="logo_rightyy">
-
               {{ cart }}
             </div>
            <div></div>
@@ -349,12 +349,13 @@
 </script>
 <script>
     function des(id) {
-        console.log($('#'+id).val());
+        // alert(id);
+        // console.log($('#'+id).val());
         $('#'+id).val(parseInt($('#'+id).val())-1);
         $('#car').submit();
     }
     function asc(id) {
-        console.log($('#'+id).val());
+        // console.log($('#'+id).val());
         $('#'+id).val(parseInt($('#'+id).val())+1);
         $('#car').submit();
     }

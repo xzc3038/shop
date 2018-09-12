@@ -1,4 +1,10 @@
-<div id="search" class="input-group">
-  <input type="text" name="search" value="{{ search }}" placeholder="{{ text_search }}" class="form-control" />
-  <button type="button" class="btn btn-primary">{{ text_search }}</button>
+
+<div class="search-wrap" id="search">
+  {#<form action="javascript:void(0);" style="position: relative;">#}
+
+    <input class="txt she-input-txt" id="searchKeyword" value="{{ search }}" name="search" placeholder="{{ text_search }}" autocomplete="off" type="text" />
+
+    <a class="present iconfont" id="search_ico" href="javascript:void(0)" title="Search" aria-hidden="true">  </a>
+  {#</form>#}
+  <button type="button" class="btn btn-primary" style="display: none">{{ text_search }}</button>
 </div>
