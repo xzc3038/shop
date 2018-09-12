@@ -17,7 +17,37 @@ class ControllerAccountForgotten extends Controller {
 			$customer_info = $this->model_account_customer->getCustomerByEmail($this->request->post['email']);
 			$this->model_account_customer->editCode($customer_info['customer_id'], token(40));
 
-			$this->session->data['success'] = $this->language->get('text_success');
+            require 'class.phpmailer.php';
+            require 'class.smtp.php';
+            $config = include('config.php');
+            $mail = new PHPMailer;
+            //$mail->SMTPDebug = 3; // Enable verbose debug output
+            $mail->isSMTP(); // Set mailer to use SMTP
+            $mail->Host = 'smtp.qq.com'; // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true; // Enable SMTP authentication
+            $mail->Username = $config['username']; // SMTP username
+            $mail->Password = $config['password']; // SMTP password
+            $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = $config['port']; // TCP port to connect to
+            $mail->setFrom($config['address'], $config['name']);
+
+            $email = $_POST['email'];
+            $mail->addAddress($email, '.'); // Add a recipient
+            $mail->addReplyTo($email, 'php');
+
+            $mail->isHTML(true); // Set email format to HTML
+            $mail->Subject = $config['title'];
+            $code = $this->get_code(6,0);
+            $mail->Body = '您的验证码是（请不要告诉别人）:  '.$code;
+            if(!$mail->send()) {
+                //输出错误信息
+                $this->session->data['success'] = '发送失败';
+            } else {
+                $this->session->data['success'] = $this->language->get('text_success');
+            }
+
+
+//			$this->session->data['success'] = $this->language->get('text_success');
 
 			$this->response->redirect($this->url->link('account/login'));
 		}
@@ -81,4 +111,44 @@ class ControllerAccountForgotten extends Controller {
 
 		return !$this->error;
 	}
+
+    function get_code($length=6,$mode=0)//获取随机验证码函数
+    {
+//        $mode 0为大小写英文和数字,1为数字,2为小写字母,3为大写字母,
+//        4为大小写字母,5为大写字母和数字,6为小写字母和数字
+        switch ($mode)
+        {
+            case '1':
+                $str='123456789';
+                break;
+            case '2':
+                $str='abcdefghijklmnopqrstuvwxyz';
+                break;
+            case '3':
+                $str='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                break;
+            case '4':
+                $str='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+                break;
+            case '5':
+                $str='ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+                break;
+            case '6':
+                $str='abcdefghijklmnopqrstuvwxyz1234567890';
+                break;
+            default:
+                $str='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
+                break;
+        }
+        $checkstr='';
+        $len=strlen($str)-1;
+        for ($i=0;$i<$length;$i++)
+        {
+            //$num=rand(0,$len);//产生一个0到$len之间的随机数
+            $num=mt_rand(0,$len);//产生一个0到$len之间的随机数
+            $checkstr.=$str[$num];
+        }
+        return $checkstr;
+    }
+
 }

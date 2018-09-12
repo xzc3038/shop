@@ -28,3 +28,18 @@ define('DB_PASSWORD', '');
 define('DB_DATABASE', 'shop');
 define('DB_PORT', '3306');
 define('DB_PREFIX', '');
+
+//email
+return array(
+    'username'  =>  '1805793040@qq.com',
+    'password'  =>  'wqpcodarqyzxeghf',
+    'port'      =>  465,
+    'address'   =>  '1805793040@qq.com',
+    'name'      =>  '发件人',
+    'title'     =>  '忘记密码'
+);
+//define('username','1805793040@qq.com');
+//define('password','wqpcodarqyzxeghf');
+//define('port',465);
+//define('address','1805793040@qq.com');
+//define('name','发件人');
