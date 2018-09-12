@@ -148,10 +148,11 @@
           </div>
           <p class="remark"> {{ review.text }}</p>
         </div>
-        {#<div class="comment-img pic-wrap" data-swiper-index="0">#}
-          {#<img src="catalog/view/theme/default/image/product/0015151514054314644343629.jpg" style="height: 100px;margin-right: 5px;margin-bottom: 5px;cursor: pointer;position: relative;vertical-align: top;"/>#}
-          {#<img src="catalog/view/theme/default/image/product/0015151514054315989609834.jpg" style="height: 100px;margin-right: 5px;margin-bottom: 5px;cursor: pointer;position: relative;vertical-align: top;" />#}
-        {#</div>#}
+        <div class="comment-img pic-wrap" data-swiper-index="0">
+          {% if review.status %}
+            <img src="{{ review.image }}" style="height: 100px;margin-right: 5px;margin-bottom: 5px;cursor: pointer;position: relative;vertical-align: top;"/>
+          {% endif %}
+        </div>
         {#<div class="reviw_issue">#}
           {#<div class="praise-wrap">#}
             {#<em> Was this review helpful to you? </em>#}
