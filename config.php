@@ -43,5 +43,11 @@ return array(
     //0为大小写英文和数字,1为数字,2为小写字母,3为大写字母,4为大小写字母,5为大写字母和数字,6为小写字母和数字
     'mode'      =>  0,
     'link'      =>  'http://www.shop.com/index.php?route=account/forgotten/resetpwd',//链接地址
-    'time'      =>  300 //验证码过期时间
+    'time'      =>  300, //验证码过期时间
+
+    //每页显示“其他人也在看”的条数
+    'limit_view'  => 15,
+
+    //每页显示“销量最高”的条数
+    'limit_best'  => 10,
 );

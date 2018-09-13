@@ -666,6 +666,56 @@ class ControllerProductProduct extends Controller {
         $this->response->setOutput($this->load->view('product/write',$data));
 	}
 
+    /**
+     * 其他人也在看
+     */
+    public function view(){
+        $this->load->language('product/product');
+
+        $this->load->model('catalog/view');
+        $results = $this->model_catalog_view->getViews();
+        $this->load->model('catalog/product');
+
+        $data['views'] = array();
+        foreach ($results as $result) {
+            $data['views'][] = array(
+                'product_id'  => $result['product_id'],
+                'image'       => $result['image'],
+                'price'       => $result['price'],
+                'reviewsTotol'=> (int)$this->model_catalog_product->getProduct($result['product_id'])['reviews'],
+                'ratingTotol' => (int)$this->model_catalog_product->getProduct($result['product_id'])['rating'],
+            );
+        }
+        $data['size'] = count($results);
+//            var_dump($results);
+        $this->response->setOutput($this->load->view('product/view',$data));
+    }
+
+    /**
+     * 销量最高
+     */
+    public function best(){
+        $this->load->language('product/product');
+
+        $data['best'] = array();
+        $this->load->model('catalog/best');
+        $this->load->model('catalog/product');
+        $results = $this->model_catalog_best->getBest();
+        foreach ($results as $result) {
+            $data['best'][] = array(
+                'product_id'  => $result['product_id'],
+                'image'       => $result['image'],
+                'price'       => $result['price'],
+                'reviewsTotol'=> (int)$this->model_catalog_product->getProduct($result['product_id'])['reviews'],
+                'ratingTotol' => (int)$this->model_catalog_product->getProduct($result['product_id'])['rating'],
+            );
+        }
+        $data['size'] = count($results);
+//        var_dump($data);
+        $this->response->setOutput($this->load->view('product/best',$data));
+    }
+
+
 	public function getRecurringDescription() {
 		$this->load->language('product/product');
 		$this->load->model('catalog/product');
