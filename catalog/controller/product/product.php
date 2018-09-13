@@ -663,6 +663,8 @@ class ControllerProductProduct extends Controller {
             $this->response->setOutput(json_encode($json));
             return false;
 		}
+        $data['footer'] = $this->load->controller('common/footer');
+        $data['header'] = $this->load->controller('common/header');
         $this->response->setOutput($this->load->view('product/write',$data));
 	}
 
