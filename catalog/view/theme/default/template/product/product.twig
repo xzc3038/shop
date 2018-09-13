@@ -1,41 +1,7 @@
 {{ header }}
 <script src="/catalog/view/javascript/jquery/elevatezoom/jquery.elevateZoom.min.js" type="text/javascript"></script>
 <div class="mgds-goodsd j-mgds-goodsd container-fluid-1200 j-detail-page ">
-  <ul class="c-breadcrumb">
-    <li> <a title="Home" href="/">Home</a> </li>
-    <li> <span title="Women">Women</span> </li>
-    <li> <span title="Clothing">Clothing</span> </li>
-    <li> <a title="Women's Dresses" href="women-dresses-c-1727.html">Women's Dresses</a> </li>
-    <!-- 面包屑下拉框 -->
-    <li class="bc-dropdown">
-      <div class="bc-dropdown-title">
-        <span> <a href="/attribute-279_27973-1727.html">Sexy</a> </span>
-        <span class="bc-arrow"></span>
-      </div>
-      <ul class="bc-dropdown-menu">
-        <li> <a href="/attribute-279_27973-1727.html">Sexy</a> </li>
-        <li> <a href="/attribute-284_28443-1727.html">Short</a> </li>
-        <li> <a href="/attribute-2376_237644-1727.html">Night Out</a> </li>
-        <li> <a href="/attribute-286_286423-1727.html">Backless</a> </li>
-        <li> <a href="/attribute-278_27833-1727.html">Red</a> </li>
-        <li> <a href="/attribute-283_28333-1727.html">Sheath</a> </li>
-        <li> <a href="/attribute-280_28053-1727.html">Polyester</a> </li>
-        <li> <a href="/attribute-290_29003-1727.html">Plain</a> </li>
-        <li> <a href="/attribute-281_281183-1727.html">Deep V Neck</a> </li>
-        <li> <a href="/attribute-281_28103-1727.html">Halter</a> </li>
-        <li> <a href="/attribute-282_28223-1727.html">Sleeveless</a> </li>
-        <li> <a href="/attribute-1761_176114-1727.html">Summer</a> </li>
-      </ul> </li>
-    <li class="j-change-color-bc">Plunging V-neckline Surplice Backless Halter Dress</li>
-    <!-- 面包屑筛选tag -->
-    <!-- <li>
-        <div cl//img.ltwebstatic.com/images2_pi/2018/05/11/15260223133183131482_thumbnail_405x552.webp          endkey: endval.name
-            <a class="tag-del" href="endvalurl">
-                <i class="iconfont icon-close"></i>
-            </a>
-        </div>
-    </li> -->
-  </ul>
+    {{ include(helper.template('_partial/breadcrumb')) }}
   <div class="row c-goodsdc">
     <div class="goodsd-left col-sm-7">
       <div class="img-ctn">

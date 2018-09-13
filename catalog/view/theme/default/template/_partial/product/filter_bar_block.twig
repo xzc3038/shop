@@ -1,10 +1,10 @@
 
-<select id="input-sort" class="form-control" onchange="location = this.value;">
+<select id="input-sort" class="form-control" onchange="location = this.value;" style="width:16%">
     {% for sorts in sorts %}
         {% if sorts.value == '%s-%s'|format(sort, order) %}
-          <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+            <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
         {% else %}
-          <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+            <option value="{{ sorts.href }}">{{ sorts.text }}</option>
         {% endif %}
     {% endfor %}
 </select>
