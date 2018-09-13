@@ -1,0 +1,35 @@
+{{ header }}
+  {% if error_warning %}
+    <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
+  {% endif %}
+<div class="container forget-password">
+  <div class="forget-password-con">
+    <div class="operate-hint">
+      <h2>Forgotten Password</h2>
+      <p class="forget-top-title">输入验证码及新密码</p>
+    </div>
+    <div class="input-email-bg">
+      <form  action="{{ action }}" method="post" enctype="multipart/form-data" name="theForm">
+        <div class="forget-input-bg forget_verify">
+          <input value="" placeholder="验证码" type="text" name="code" style="height: 36px;width: 70%;border: 1px solid #ccc;padding-left: 1%">
+        </div>
+        <div class="forget-input-bg forget_verify">
+          <input value="" placeholder="新密码" type="password" name="password" style="height: 36px;width: 70%;border: 1px solid #ccc;padding-left: 1%">
+        </div>
+        <div class="forget-input-bg forget_verify">
+          <input value="" placeholder="确认新密码" type="password" name="comfirm" style="height: 36px;width: 70%;border: 1px solid #ccc;padding-left: 1%"> <div style="display: none;" class="input-error-txt she-text-left"></div>
+        </div>
+        <input type="hidden" name="eid" value="{{ eid }}">
+        <a href="{{ back }}"><button type="button" class="she-btn-white">{{ button_back }}</button></a>
+          <button type="submit" class="she-btn-black">{{ button_submit }}</button>
+          <img src="loading_vc554483.gif" class="forget_waiting" />
+          <p id="tip" class="forget_error_title" style="color: rgb(255, 0, 0);"></p>
+        </div>
+        <div class="forget-input-bg forget_verify_success">
+          <p id="verify_success_title" class="forget_success_title" style="color: rgb(255, 0, 0);"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{ footer }}

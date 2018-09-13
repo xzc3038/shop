@@ -31,15 +31,17 @@ define('DB_PREFIX', '');
 
 //email
 return array(
+    //email
     'username'  =>  '1805793040@qq.com',
     'password'  =>  'wqpcodarqyzxeghf',
     'port'      =>  465,
-    'address'   =>  '1805793040@qq.com',
-    'name'      =>  '发件人',
-    'title'     =>  '忘记密码'
+    'address'   =>  '1805793040@qq.com',//邮箱地址
+    'name'      =>  '发件人',//发件人名称
+    'title'     =>  '忘记密码',//邮件标题
+
+    'length'    =>  6,//验证码长度
+    //0为大小写英文和数字,1为数字,2为小写字母,3为大写字母,4为大小写字母,5为大写字母和数字,6为小写字母和数字
+    'mode'      =>  0,
+    'link'      =>  'http://www.shop.com/index.php?route=account/forgotten/resetpwd',//链接地址
+    'time'      =>  300 //验证码过期时间
 );
-//define('username','1805793040@qq.com');
-//define('password','wqpcodarqyzxeghf');
-//define('port',465);
-//define('address','1805793040@qq.com');
-//define('name','发件人');
