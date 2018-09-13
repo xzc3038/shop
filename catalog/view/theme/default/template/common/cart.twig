@@ -15,7 +15,7 @@
                             </div>
                             <div class="shoppingtop-right">
                               <div class=" discount_goods_price_396259 basket-cont shoppingtop-basket">
-                                <span class="shop-index-price shop_price" price="US$15.00"><strong class="final_price_strong">{{ product.total }}</strong></span>
+                                <span class="shop-index-price shop_price" ><strong class="final_price_strong">{{ product.price }}</strong></span>
                               </div>
                               <div class="shoppingtop-name">
                                 <a href="{{ product.href }}" target="_top"><span class="goods-brand"></span>{{ product.name }}</a>
@@ -57,7 +57,7 @@
                         {% endfor %}
                         </div>
                      {% set first = totals|first %}
-                        {#<p class="attr-total" id="attr_retail_price" style="padding-top: 10px;">Retail Price:<a id="shipping_retail_price">{{ first.text }}</a></p>#}
+                        {#<p class="attr-total" id="attr_retail_price" style="padding-top: 10px;">Retail Price:<a id="shipping_retail_price">{{ first.text }}111</a></p>#}
                         {#<p class="attr-total" id="attr_retail_price_discount" style="display: none;"><span>Discount<a>0</a>off</span></p>#}
                         <p class="attr-total" id="attr_total" style="font-weight: bold;"><span class="shipping-total-label">Total:</span><span class="shipping-total" style="color: rgb(209, 0, 0);" id="shipping_total">{{ first.text }}</span></p>
                         <div class="shoppingtop-baskets">

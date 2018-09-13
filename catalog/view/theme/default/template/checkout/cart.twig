@@ -1,4 +1,5 @@
 {{ header }}
+{#{{ include(helper.template('_partial/breadcrumb')) }}#}
 {% if attention %}
   <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ attention }}
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -24,8 +25,7 @@
   </div>
   <div class="container-fluid mbag-step1">
     <ul class="flow j-empty-cart-hide shoppingTitle_o" style="visibility: visible; display: block;">
-      <li class="step1"><a href="index.php">Home</a></li>
-      <li class="step2"><a href="{{ cart }}"> {{ heading_title }} </a></li>
+
     </ul>
     <div class="shopbag-details row no-margin">
       <div class="shopping-list j-empty-cart-hide col-md-8 col-sm-8" style="visibility: visible; display: block;">
@@ -54,6 +54,7 @@
                     <div class="intro">
                       <div class="prod-name">
                         <a class="name" href="{{ product.href }}">{{ product.name }}</a> {% if not product.stock %} <span class="text-danger">***</span> {% endif %}
+                       <div></div>
                           {% if product.option %}
                               {% for option in product.option %} <br />
                                 <small>{{ option.name }}: {{ option.value }}</small> {% endfor %}
@@ -61,10 +62,10 @@
                           {% if product.reward %} <br />
                             <small>{{ product.reward }}</small> {% endif %}
                       </div>
-                      <div class="size edit_item" style="margin-bottom: 0px;">
-                        <span class="item_name"> {{ column_model }}: </span>
-                        <span class="item_content"> {{ product.model }} </span>
-                      </div>
+                      {#<div class="size edit_item" style="margin-bottom: 0px;">#}
+                        {#<span class="item_name"> {{ column_model }}: </span>#}
+                        {#<span class="item_content"> {{ product.model }} </span>#}
+                      {#</div>#}
                       <div class="operate" style="position: absolute;">
                         <span class="del"  onclick="cart.remove('{{ product.cart_id }}');">{{ button_remove }}</span>
                       </div>
@@ -103,85 +104,7 @@
           </div>
         </form>
       </div>
-      {#<div class="col-lg-4 col-md-4 col-sm-4" id="summary-fill">#}
-      {#</div>#}
-      {#<div class="emarsys-list j-emarsys-list col-md-8 col-sm-8" style="visibility: visible; display: block;">#}
-        {#<h3 class="emarsys-tab"> <span class="j-tab j-tab-also emarsys-tab-active"> You May Also Like </span> <span class="emarsys-tab-line j-tab-line"> | </span> <span class="j-tab j-tab-vc " data-id="vc" style=""> Recommendations For You </span> </h3>#}
-        {#<div id="productsContent1_comm" class="recommended-product recommended-also-product j-also-view" style="visibility: visible;">#}
-          {#<div class="recommended-viewed-swiper j-recommended-emarsys">#}
-            {#<div class="recommended-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">#}
-              {##}
-            {#</div>#}
-            {#<div class="j-recommended-content recommended-content swiper-container swiper-container-horizontal">#}
-              {#<div id="recommend_products_list" class="swiper-wrapper">#}
-                {#<div class="swiper-slide box-product-list category_products_bg list_all_items swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">#}
-                  {#<div class="goods-aImg">#}
-                    {#<a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15058157203901741088_thumbnail_220x293.jpg" alt="Trumpet Sleeve Pearl Beading Scalloped Dress" border="0" /> </a>#}
-                    {#<div class="la-ball-pulse">#}
-                      {#<div>#}
-                      {#</div>#}
-                      {#<div>#}
-                      {#</div>#}
-                      {#<div>#}
-                      {#</div>#}
-                    {#</div>#}
-                  {#</div>#}
-                  {#<div class="goods_mz">#}
-                    {#<a target="_blank"> Trumpet Sleeve Pearl Beading Scalloped Dress </a>#}
-                  {#</div>#}
-                  {#<div class="product-list list_all_items_price">#}
-                    {#<span class="index-price shop_price final_price"> <strong class="final_price_strong"> US$13 </strong> </span>#}
-                  {#</div>#}
-                {#</div>#}
-              {#</div>#}
-            {#</div>#}
-            {#<div class="recommended-next swiper-button-next iconfont shein-arrow">#}
-              {##}
-            {#</div>#}
-          {#</div>#}
-        {#</div>#}
-        {#<div class="recommended-product recommended-vc j-saveitems" style="visibility: visible;">#}
-          {#<h3>#}
-            {#<div class="item-title">#}
-              {#Saved Items#}
-            {#</div>#}
-            {#<div data-num="6" class="item-num">#}
-              {#(6)#}
-            {#</div> </h3>#}
-          {#<div class="recommended-viewed-swiper">#}
-            {#<div class="j-sa-prev swiper-prev swiper-button-prev iconfont shein-arrow swiper-button-disabled">#}
-              {##}
-            {#</div>#}
-            {#<div class="swiper-content swiper-container j-sa-container swiper-container-horizontal">#}
-              {#<div class="swiper-wrapper">#}
-                {#<div class="swiper-slide box-vc-list swiper-slide-active" style="width: 144.875px; margin-right: 22.5px;">#}
-                  {#<div class="goods-aImg">#}
-                    {#<a style="cursor: pointer;"> <img src="/catalog/view/theme/default/image/cart/15107394912945120341_thumbnail_220x293.jpg" /> </a>#}
-                    {#<div class="la-ball-pulse">#}
-                      {#<div>#}
-                      {#</div>#}
-                      {#<div>#}
-                      {#</div>#}
-                      {#<div>#}
-                      {#</div>#}
-                    {#</div>#}
-                  {#</div>#}
-                  {#<div class="box-vc-name">#}
-                    {#<small class="goods-brand"> SHEIN&nbsp; </small> Flounce Embellished Tied Neck Dress#}
-                  {#</div>#}
-                  {#<div>#}
-                    {#<span class="price" style="display: ;"> <strong class="final_price_strong"> US$14.45 </strong> <b class="show_vip"> (vip) </b> </span>#}
-                  {#</div>#}
-                {#</div>#}
-                {#<!---->#}
-              {#</div>#}
-            {#</div>#}
-            {#<div class="j-sa-next swiper-next swiper-button-next iconfont shein-arrow">#}
-              {##}
-            {#</div>#}
-          {#</div>#}
-        {#</div>#}
-      {#</div>#}
+
       <div class="right-ctn j-empty-cart-hide" style="position: fixed; width: 393px; right: 41.8333px; top: auto; visibility: visible; display: block;">
         <div class="order-sum">
           <div class="cart-placeorder-header">
