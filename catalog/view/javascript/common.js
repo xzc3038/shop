@@ -441,6 +441,7 @@ $(document).on('click', '.agree', function(e) {
         data: $(settings.data.join(',')),
         dataType: 'json',
         success: function(json) {
+          console.log(json);
           $('.alert-dismissible, .text-danger').remove();
           $('.form-group').removeClass('has-error');
 
@@ -491,8 +492,6 @@ $(document).on('click', '.agree', function(e) {
             },3000)
             // showAlert('cart', json['success']);
             // cart_ajax_load_html();
-          }else{
-            alert("添加失败");
           }
         },
       });
