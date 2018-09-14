@@ -7,7 +7,7 @@
       <div class="img-ctn">
         <div class="img-thumbs j-img-thumbs">
           <div class="thumbs-wrapper j-thumbs" style="height: 790px;">
-            <ul class="thumbnails list-inline" id="product-thumbnail-gallery">
+            <ul class="thumbnails list-inline" id="product-thumbnail-gallery" style="margin-top: 5px">
                 {% for image in images %}
                   <li class="image-additional"><a class="thumbnail elevatezoom-gallery" rel="group" data-image="{{ image.preview }}" data-zoom-image="{{ image.popup }}" href="{{ image.popup }}" title="{{ heading_title }}"> <img src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
                 {% endfor %}
@@ -65,8 +65,8 @@
             </div>
             <div class="c-opt-qty j-ItemDetail ">
               <span class="opt-qty-span iconfont icon-reduce quantity-input-wrapper "></span>
-              <input type="text" name="quantity" id="input-quantity" class="opt-qty-input j-qty-input form-control" value="{{ minimum }}"/>
-              <span class="opt-qty-span iconfont icon-add quantity-input-wrapper quantity-up"></span>
+              <input type="text" name="quantity" id="input-quantity" class="opt-qty-input j-qty-input " value="{{ minimum }}"/>
+              <span class="opt-qty-span iconfont icon-add quantity-input-wrapper quantity-up" ></span>
                 <input type="hidden" name="product_id" value="{{ product_id }}" />
             </div>
             <div class="goodsd-residue">

@@ -1,8 +1,8 @@
 {% if currencies|length > 1 %}
-<div class="pull-left" style="margin-top: -13%;margin-left: -30px">
+<div class="pull-left">
   <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-currency">
     <div class="btn-group currency" id="user_menu3">
-      <a class="btn btn-link dropdown-toggle present three outer j-present-currency" data-toggle="dropdown">{% for currency in currencies %}
+      <a class="btn btn-link dropdown-toggle present three outer j-present-currency" data-toggle="dropdown" style="padding-bottom: 50px">{% for currency in currencies %}
       {% if currency.symbol_left and currency.code == code %} <span  style=" color: #666;text-decoration: none;font-size: 12px;">{{ currency.title }}</span> {% elseif currency.symbol_right and currency.code == code %} <span  style=" color: #666;text-decoration: none;font-size: 12px;">{{ currency.title }}</span> {% endif %}
       {% endfor %} </a>
       <div class="dropdown user_menu3_update" id="user_menu3_coon" style="width: auto;padding: 0;top: 55px;">
