@@ -65,8 +65,8 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-ALTER TABLE currency ADD flag VARCHAR(32) NOT NULL DEFAULT 'flag/flag_ch' COMMIT '国旗',
-UPDATE currency SET flag = 'flag/flag_en.jpg' WHERE currency_id = 1,
-UPDATE currency SET flag = 'flag/flag_us.jpg' WHERE currency_id = 2,
-UPDATE currency SET flag = 'flag/flag_eu.jpg' WHERE currency_id = 3,
+ALTER TABLE currency ADD flag VARCHAR(32) NOT NULL DEFAULT 'flag/flag_ch' COMMENT '国旗';
+UPDATE currency SET flag = 'flag/flag_en.jpg' WHERE currency_id = 1;
+UPDATE currency SET flag = 'flag/flag_us.jpg' WHERE currency_id = 2;
+UPDATE currency SET flag = 'flag/flag_eu.jpg' WHERE currency_id = 3;
 UPDATE currency SET flag = 'flag/flag_ch.jpg' WHERE currency_id = 4;
