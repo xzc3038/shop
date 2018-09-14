@@ -3,12 +3,12 @@
 define('HTTP_SERVER', 'http://www.shop.com/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://www.shop.com/');
+define('HTTPS_SERVER', 'https://www.shop.com/');
 
 // DIR
-define('DIR_APPLICATION', 'D:/work/shop/catalog/');
-define('DIR_SYSTEM', 'D:/work/shop/system/');
-define('DIR_IMAGE', 'D:/work/shop/image/');
+define('DIR_APPLICATION', __DIR__.'/catalog/');
+define('DIR_SYSTEM', __DIR__.'/system/');
+define('DIR_IMAGE', __DIR__.'/image/');
 define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/theme/');
