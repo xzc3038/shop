@@ -15,11 +15,11 @@
           </div>
         </div>
         {% set first = images|first %}
-        <div class="img-top swiper-container j-goods-img-swiper swiper-container-horizontal">
+        <div class="img-top swiper-container j-goods-img-swiper swiper-container-horizontal"style="height: 778.647px; cursor: -webkit-grab;">
           {#<div class="img-top-prev j-img-top-prev swiper-button-prev iconfont icon-left"></div>#}
           <div class="swiper-wrapper">
             <div class="swiper-slide ">
-                <img id="elevate-zoom" data-zoom-image="{{ first.popup }}" class="img-responsive" src={{ first.preview }} />
+                <img id="elevate-zoom" style="width: 100%;height:100%;" data-zoom-image="{{ first.popup }}" class="img-responsive" src={{ first.preview }} />
             </div>
           </div>
           {#<div class="img-top-next j-img-top-next swiper-button-next iconfont icon-right"></div>#}
