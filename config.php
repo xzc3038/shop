@@ -29,7 +29,7 @@ define('DB_DATABASE', 'shop');
 define('DB_PORT', '3306');
 define('DB_PREFIX', '');
 
-//email
+
 return array(
     //email
     'username'  =>  '1805793040@qq.com',

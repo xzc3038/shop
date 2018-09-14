@@ -86,6 +86,17 @@
                 <div class="text-danger">{{ error_rating }}</div>
               {% endif %} </div>
           </div>
+            {% if image %}
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-date-added">买家秀</label>
+                <div class="col-sm-3">
+                    <img src="/image/review/{{ image }}" alt="" style="width: 60%" id="one">
+                    <img src="/image/review/del.jpg" alt="" style="width: 60%;display: none" id="two">
+                    <button type="button" id="del"><i class="fa fa-trash-o"></i></button>
+                    <input type="hidden" name="image" id="image" value="normal">
+                </div>
+            </div>
+            {% endif %}
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-date-added">{{ entry_date_added }}</label>
             <div class="col-sm-3">
@@ -144,5 +155,12 @@ $('input[name=\'product\']').autocomplete({
 		$('input[name=\'product_id\']').val(item['value']);
 	}
 });
+
+$('#del').click(function () {
+    $("#image").val('del');
+    $('#one').css('display','none');
+    $('#two').css('display','block');
+    $('#del').css('display','none');
+})
 //--></script>
 {{ footer }}

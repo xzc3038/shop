@@ -70,6 +70,12 @@ class ControllerCatalogReview extends Controller {
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_review->editReview($this->request->get['review_id'], $this->request->post);
 
+			if (($this->request->post['image']) == 'del'){
+                $this->load->model('catalog/review');
+                $this->model_catalog_review->delReviewImage($this->request->get['review_id']);
+//                $this->session->data['success'] = 'del';
+            }
+
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			$url = '';
@@ -529,10 +535,14 @@ class ControllerCatalogReview extends Controller {
 			$data['status'] = '';
 		}
 
+
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
+		$data['image'] = $this->model_catalog_review->getReviewImage($this->request->get['review_id'])['image1'];
+//		$data['review_id'] = $this->request->get['review_id'];
+//		var_dump($data);
 		$this->response->setOutput($this->load->view('catalog/review_form', $data));
 	}
 
@@ -567,4 +577,19 @@ class ControllerCatalogReview extends Controller {
 
 		return !$this->error;
 	}
+
+	public function reviewImageDelete(){
+	    return '大大的';
+	    if($this->request->server['REQUEST_METHOD'] == 'POST'){
+	        var_dump($this->request->post['review_id']);
+            $config = include('config.php');
+            $this->load->model('catalog/review');
+            if($this->model_catalog_review->delReviewImage($this->request->post['review_id'])){
+                return $config['del'];
+            }else{
+                return "fail";
+            }
+
+        }
+    }
 }

@@ -113,4 +113,25 @@ class ModelCatalogReview extends Model {
 
 		return $query->row['total'];
 	}
+
+    /**
+     * 读图
+     * @param $review_id
+     * @return mixed
+     */
+    public function getReviewImage($review_id) {
+        $query = $this->db->query("SELECT image1 FROM " . DB_PREFIX . "review_image WHERE review_id = '" . $review_id . "'");
+
+        return $query->row;
+    }
+
+    /**
+     * 删图
+     * @param $review_id
+     * @return mixed
+     */
+    public function delReviewImage($review_id){
+        $query = $this->db->query("update review_image set " . DB_PREFIX . "image1 = 'del.jpg' WHERE review_id = '" . $review_id . "'");
+        return $query;
+    }
 }

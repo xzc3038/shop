@@ -43,10 +43,14 @@
 </div>
 
   {#图片#}
-    <img src="" id="img0" style="width: 20rem;height: 15rem;position: relative">
-  <input id="file" class="ufile" type="file" name="file" accept="image/gif,image/jpeg,image/jpg,image/png" style="border: 1px solid red;opacity: 0;height: 19%;width: 12.5%;position: absolute;left: 20%;top: 49%;">
-  <button type="button" onclick="clean()" style="position: absolute;left: 31.8%;background:rgba(0,0,0,0);border: none;">X</button>
-    <div></div>
+    <label class="control-label mr-1">买家秀</label>
+    <div style="position: relative;width: 20rem;height: 15rem;margin-bottom: 50px;display: inline-block">
+        <img src="" id="img0" style="width: 100%;height: 100%">
+      <input id="file" class="ufile" type="file" name="file" accept="image/gif,image/jpeg,image/jpg,image/png" style="border: 1px solid red;opacity: 0;height:100%;width: 100%;position: absolute;left: 0;top: 0;">
+      <button type="button" onclick="clean()" id="btn" style="position: absolute;right: -20%;top: 2%;background:rgba(0,0,0,0);border: none;display: none;">
+          <img src="/catalog/view/theme/default/image/upload/close.png" style="width: 20%" alt="">
+      </button>
+    </div>
 
     {#{{ captcha }}#}
   <div style="text-align: center;">
@@ -69,10 +73,11 @@
         console.log("objUrl = "+objUrl);
         if (objUrl) {
             $("#img0").attr("src", objUrl);
+            $('#btn').css('display','block');
         }
     }) ;
     function getObjectURL(file) {
-        var url = '/catalog/view/theme/default/image/upload/up.png';
+        var url = '/catalog/view/theme/default/image/upload/add.jpg';
         if (window.createObjectURL!=undefined) {
             url = window.createObjectURL(file) ;
         } else if (window.URL!=undefined) { // mozilla(firefox)
@@ -84,12 +89,13 @@
     }
     function clean() {
         $('#file').val('');
-        $("#img0").attr("src", '/catalog/view/theme/default/image/upload/up.png');
+        $("#img0").attr("src", '/catalog/view/theme/default/image/upload/add.jpg');
+        $('#btn').css('display','none')
     }
 </script>
 <script type="text/javascript">
     $(function($) {
-        $("#img0").attr("src", '/catalog/view/theme/default/image/upload/up.png');
+        $("#img0").attr("src", '/catalog/view/theme/default/image/upload/add.jpg');
           $('#button-review').on('click', function() {
               var file = document.getElementById("file").files[0];
               var formFile = new FormData();
