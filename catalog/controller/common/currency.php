@@ -19,11 +19,12 @@ class ControllerCommonCurrency extends Controller {
 					'title'        => $result['title'],
 					'code'         => $result['code'],
 					'symbol_left'  => $result['symbol_left'],
-					'symbol_right' => $result['symbol_right']
+					'symbol_right' => $result['symbol_right'],
+                    'flag'         => $this->model_localisation_currency->getCurrenciesFlag($result['currency_id'])['flag']
 				);
 			}
 		}
-
+//var_dump($data);
 		if (!isset($this->request->get['route'])) {
 			$data['redirect'] = $this->url->link('common/home');
 		} else {

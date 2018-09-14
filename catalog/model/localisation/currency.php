@@ -33,4 +33,9 @@ class ModelLocalisationCurrency extends Model {
 
 		return $currency_data;
 	}
+
+	public function getCurrenciesFlag($currency_id){
+        $query = $this->db->query("SELECT flag FROM " . DB_PREFIX . "currency where currency_id = '".$currency_id."'");
+        return $query->row;
+    }
 }

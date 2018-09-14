@@ -9,11 +9,11 @@
         {% for currency in currencies %}
         {% if currency.symbol_left %}
         <a>
-          <button class="currency-select btn btn-link btn-block" type="button" name="{{ currency.code }}" style="color: #666;text-decoration: none;font-size: 12px;line-height: 5px;text-align: left"><img src="/catalog/view/theme/default/image/flag/flag_us.gif" style="width: 16px;height: 12px;margin-right: 10px;margin-top: -2px;"> {{ currency.title }}</button>
+          <button class="currency-select btn btn-link btn-block" type="button" name="{{ currency.code }}" style="color: #666;text-decoration: none;font-size: 12px;line-height: 5px;text-align: left"><img src="/image/{{ currency.flag }}" style="width: 16px;height: 12px;margin-right: 10px;margin-top: -2px;"> {{ currency.title }}</button>
         </a>
         {% else %}
         <a>
-          <button class="currency-select btn btn-link btn-block" type="button" name="{{ currency.code }}"  style="color: #666;text-decoration: none;font-size: 12px;line-height: 5px"><img src="/catalog/view/theme/default/image/flag/flag_us.gif" style="width: 16px;height: 12px;margin-right: 10px;margin-top: -2px;"> {{ currency.title }}</button>
+          <button class="currency-select btn btn-link btn-block" type="button" name="{{ currency.code }}"  style="color: #666;text-decoration: none;font-size: 12px;line-height: 5px"><img src="{{ currency.flag }}" style="width: 16px;height: 12px;margin-right: 10px;margin-top: -2px;"> {{ currency.title }}</button>
         </a>
         {% endif %}
         {% endfor %}
