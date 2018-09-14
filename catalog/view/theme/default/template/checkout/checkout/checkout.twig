@@ -20,43 +20,52 @@
             </a>
         </div>
     </div>
+    {#{{ include(helper.template('_partial/breadcrumb')) }}#}
+    {% if error_warning %}
+        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+    {% endif %}
+
+
     <div class="checkout-root mbag-step2 container-fluid " style="margin-bottom: 50px;">
 
         <div style="margin-top: 20px;">
 
             <div class="row">
-                <form name="theForm_checkout" method="post" onsubmit="return check_form();" action="#">
-                    <div class="col-lg-8 col-md-8 col-sm-8 cart-main cart-order-border">
-                        <div class="c-ship-address j-ship-address">
-                            <div class="cart-placeorder-header cart-address-state">
-                                <h2>
-                                    Shipping Address
-                                </h2>
-                                <span class="iconfont j-address-list-closed" style="float: right; font-size: 16px; color: rgb(34, 34, 34); cursor: pointer; display: none;">
-                                            
-                                        </span>
+
+                    <div class=" {{ class }}"  id="content">
+
+                        <div class="quick-checkout-wrapper">
+                            <div class="row">
+                                {% if shipping_required %}
+                                    <div class="col-md-4">
+                                        <div class="left-section-wrapper">
+                                            {{ shipping_address_section }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class="">
+                                    {{ include(helper.template('checkout/checkout/_right_section')) }}
+                                </div>
                             </div>
-                            <div class="shipping_address_color" style="display: none;">
-                            </div>
-                            {{ shipping_address_section }}
                         </div>
-                        {{ payment_method_section }}
 
-                        {{ cart_section }}
+                        {#{{ payment_method_section }}#}
 
-                        {{ comment_section }}
+                        {#{{ cart_section }}#}
+
+                        {#{{ comment_section }}#}
 
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4" id="summary-fill">
-                    </div>
+
                     {{ total }}
-                </form>
+
             </div>
         </div>
         <br class="clear">
     </div>
 </div>
-
 
 {{ footer }}
 

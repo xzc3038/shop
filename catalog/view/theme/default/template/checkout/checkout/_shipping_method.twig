@@ -1,11 +1,14 @@
-<div class="checkout-section" id="shipping-method-section">
-  <h2>{{ text_checkout_shipping_method }}</h2>
+<div class="" id="shipping-method-section" style="margin-left: 40%;margin-top: 20%;">
+    <div class="cart-placeorder-header  ">
+        <h2>{{ text_checkout_shipping_method }}</h2>
+    </div>
+
   {% if shipping %}
     {% if error_warning %}
       <div class="alert alert-warning alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
     {% endif %}
     {% if shipping_methods %}
-      <p>{{ text_shipping_method }}</p>
+      {#<p>{{ text_shipping_method }}</p>#}
       {% for shipping_method in shipping_methods %}
         {% if false %}
         <p><strong>{{ shipping_method.title }}</strong></p>
