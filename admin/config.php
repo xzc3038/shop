@@ -8,11 +8,13 @@ define('HTTPS_SERVER', 'http://www.shop.com/admin/');
 define('HTTPS_CATALOG', 'http://www.shop.com/');
 
 // DIR
-define('DIR_APPLICATION', __DIR__.'/admin/');
-define('DIR_SYSTEM', __DIR__.'/system/');
-define('DIR_IMAGE', __DIR__.'/image/');
+define('DIR_ADMIN',str_replace('\admin','',__DIR__));
+
+define('DIR_APPLICATION', DIR_ADMIN.'/admin/');
+define('DIR_SYSTEM', DIR_ADMIN.'/system/');
+define('DIR_IMAGE', DIR_ADMIN.'/image/');
 define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
-define('DIR_CATALOG', __DIR__.'/catalog/');
+define('DIR_CATALOG', DIR_ADMIN.'/catalog/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
