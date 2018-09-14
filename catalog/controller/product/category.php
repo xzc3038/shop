@@ -375,7 +375,7 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-//var_dump( $data['column_left']);
+//var_dump( $data);
 			$this->response->setOutput($this->load->view('product/category', $data));
 		} else {
 			$url = '';
