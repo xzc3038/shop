@@ -1,191 +1,73 @@
 {{ header }}
-{% if error_warning %}
-  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-{% endif %}
-<input data-html="checkout_confirmation_worldpay" type="hidden" />
-<div class="indexHomeBody index_checkout_body">
-  <div class="pay-head">
-    <div class="container-fluid checkout-header" style="margin-bottom: 10px;">
-      <a class="logo-check iconfont shein-icon" href="index.php" title=""> <i class="iconfont"></i> </a>
-      <span class="checkout-header-title"> <i class="iconfont secure-icon"></i> {{ heading_title }} </span>
-    </div>
-  </div>
-  <div class="container-fluid mbag-step3">
-    <ul class="flow  shoppingTitle_f">
-      <li class="step1"><a href="index.php">Home</a></li>
-      <li class="step2"><a href="index.php?route=checkout/cart">Orders</a></li>
-      <li class="step3"><a href="/">{{ heading_title }}</a></li>
-      <li class="step4">Order Complete</li>
-    </ul>
-    <div class="shopbag-details row ">
-      <div class="left-ctn col-md-8 col-xs-8">
-        <div class="pay-back">
-          <i class="iconfont"></i>
-          <a href="index.php?route=checkout/cart">Back to Place Order Page</a>
+<div class="indexHomeBody index_checkout_body cart-placeorder2" id="GA_SHE_ID">
+    <div class="pay-head">
+        <div class="container-fluid checkout-header" style="margin-bottom: 10px;">
+            <a class="logo-check iconfont shein-icon" href="http://www.shop.com/" title="Women's High Street Fashion Online">
+                <i class="iconfont">
+                    
+                </i>
+            </a>
+            <span class="checkout-header-title">
+                        <i class="iconfont secure-icon">
+                            
+                        </i>
+                        secure checkout
+                    </span>
+            <a class="checkout-header-title-r" href="http://www.shein.com/daily-new.html" style="color: rgb(153, 153, 153);">
+                continue shopping
+                <span>
+                        </span>
+            </a>
         </div>
+    </div>
+    {#{{ include(helper.template('_partial/breadcrumb')) }}#}
+    {% if error_warning %}
+        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+    {% endif %}
 
-      {#地址栏#}
-        <div class="bill-ads">
-          <div class="heading">
-            <h2 class="she-h1"> Billing Address </h2>
-            <span> Please make sure the billing address you enter below matches the name and address associated with the credit card you are using for this purchase. </span>
-          </div>
-            <div class="ads" id="billing_address_2">
-                <div id="new_billing_address">
-                    <div class="left-section-wrapper">
-                        {{ shipping_address_section }}
+
+    <div class="checkout-root mbag-step2 container-fluid " style="margin-bottom: 50px;">
+
+        <div style="margin-top: 20px;">
+
+            <div class="row">
+
+                    <div class=" {{ class }}"  id="content">
+
+                        <div class="quick-checkout-wrapper">
+                            <div class="row">
+                                {% if shipping_required %}
+                                    <div class="col-md-4">
+                                        <div class="left-section-wrapper">
+                                            {{ shipping_address_section }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class="">
+                                    {{ include(helper.template('checkout/checkout/_right_section')) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        {#{{ payment_method_section }}#}
+
+                        {#{{ cart_section }}#}
+
+                        {#{{ comment_section }}#}
+
                     </div>
-                </div>
-                {#<a id="pay-edit" class="she-text-btn-light" href="javascript:void(0)"> edit </a>#}
+
+                    {{ total }}
+
             </div>
         </div>
-      {#地址栏#}
-
-      {#银行卡#}
-        <div class="credit">
-          <input value="2" class="is_bind" type="hidden" />
-          <div class="heading">
-            <h2 class="she-h1"> Credit And Debit Card Information <i class="iconfont" style="font-size: 16px;"></i> </h2>
-          </div>
-          <div class="confirm_masked" id="confirm_masked_2">
-          </div>
-          <form class="list-unit" action="#">
-            <input value="2" class="is_bind" type="hidden" />
-            <div class="remember-menu" style="display: none;">
-              <div class="remember_old item">
-                <div class="remember-old-card">
-                  Use Current Card
-                </div>
-              </div>
-              <div class="remember_add item">
-                <div class="remember-old-card">
-                  Use A New Card
-                </div>
-              </div>
-              <br class="clear" />
-            </div>
-            <div class="inf remember_old_card" style="display: none;">
-              <div class="card-num list-item card-radioed">
-              </div>
-              <div class="sec-cod list-item">
-                <div class="item-title">
-                  <span class="undone"> Security code: <span>*</span> </span>
-                </div>
-                <input id="card_cvc" class="ckout-card-input" name="card_cvn" placeholder="CVV/CVC/CID" maxlength="4" autocomplete="off" onclick="javascript:$('#card_cvc_error').hide();" value="" type="text" />
-                <a class="she-text-btn-light pay-code" onclick="javascript:$('#divCVVHelp').show();"> What is a security code? </a>
-                <div id="card_cvc_error" style="display: none;">
-                  <span class="card-input-error"></span>
-                </div>
-              </div>
-            </div>
-            <div class="inf remember_add_card">
-              <div class="confirm-label-bg" style="display: none;">
-                <div class="confirm-loading-p" style="display: none;">
-                  Payment details:
-                </div>
-              </div>
-              <ul class="confirm_method_img">
-                <li class="card_visa"></li>
-                <li class="card_master"></li>
-                <li class="card_mae"></li>
-                <li class="card_ame"></li>
-              </ul>
-              <div id="confirm_loading_table">
-                <div class="card-num list-item" style="position: relative;">
-                  <div class="item-title">
-                    <span class="undone">Card No.<span>*</span></span>
-                  </div>
-                  <input id="card_number" class="ckout-card-input j-card-number" name="card_number" maxlength="24" autocomplete="off" onclick="javascript:$('#card_number_error').hide();" value="" type="text" />
-                  <div id="card_number_error" style="display: none;">
-                    <span class="card-input-error"></span>
-                  </div>
-                </div>
-                <div class="list-item">
-                  <div class="drop mon">
-                    <div class="item-title">
-                      <span class="undone">Expiration date</span>
-                      <span>*</span>
-                    </div>
-                    <select id="card_exp_month" class="card_exp_time" name="card_exp_month"> <option value="-1"> Month </option> <option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
-                  </div>
-                  <div class="drop year">
-                    <select id="card_exp_year" class="card_exp_time" name="card_exp_year"> <option value="-1"> Year </option> <option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option><option value="2041">2041</option><option value="2042">2042</option><option value="2043">2043</option><option value="2044">2044</option></select>
-                  </div>
-                  <div id="expiration_date_error" style="display: none;">
-                    <span class="card-input-error"></span>
-                  </div>
-                </div>
-                <div class="sec-cod list-item">
-                  <div class="item-title">
-                    <span class="undone j-security-code"> Security code <span>*</span> </span>
-                  </div>
-                  <input id="card_cvn" class="ckout-card-input" name="card_cvn" placeholder="CVV/CVC/CID" maxlength="4" autocomplete="off" onclick="javascript:$('#card_cvn_error').hide();" value="" type="text" />
-                  <a class="she-text-btn-light pay-code" onclick="javascript:$('#divCVVHelp').show();"> What is a security code? </a>
-                  <div id="card_cvn_error" style="display: none;">
-                    <span class="card-input-error"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="rem-ctn" style="display: none;">
-                <input class="she-check" id="remember_card" value="1" type="checkbox" />
-                <span>Remember this card for later use</span>
-              </div>
-            </div>
-          </form>
-        </div>
-      {#银行卡#}
-
-      </div>
-
-    {#右边栏#}
-      <div class="right-ctn col-md-4 col-xs-4">
-        <div class="order-summary">
-            <div>
-                {{ cart_section }}
-            </div>
-
-          <p>Additional payment security with:</p>
-          <span class="payment-secure"></span>
-          <input id="button-submit" class="she-btn-black she-btn-xl mar-top-20" value="{{ text_checkout_confirm }}"  data-loading-text="{{ text_loading }}" class="btn btn-primary btn-block" />
-          <p class="card-local-promt" style="display: none;"> Please click the button and continue payment </p>
-          <div id="payment_error" style="display: none;">
-            <span class="card-input-error"></span>
-          </div>
-        </div>
-      </div>
-    {#右边栏#}
-
+        <br class="clear">
     </div>
-  </div>
-
-{#安全码弹窗#}
-  <div id="divCVVHelp" class="cvv_help" style="display: none;">
-    <div class="cvv_help_bg"></div>
-    <div class="cvv_help_title">
-      <a class="cvv_help_close" onclick="javascript:$('#divCVVHelp').hide();"></a>
-      <table width="100%" cellspacing="0" cellpadding="0" border="0">
-        <tbody>
-        <tr>
-          <td width="99%"></td>
-        </tr>
-        <tr>
-          <td> <h5>Information on Security Code</h5> </td>
-        </tr>
-        <tr>
-          <td> <p style="word-break: break-all;">We require that you enter your credit card verification number (CVV) to make sure the payment goes through. Your CVV number can be located on the back of your credit card.</p> </td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"> <img src="/catalog/view/theme/default/image/checkout/creditcard.jpg" border="0" /> </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-{#安全码弹窗#}
-
 </div>
+
+{{ footer }}
 
 <script type="text/javascript"><!--
     {% if shipping_required %}

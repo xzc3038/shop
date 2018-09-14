@@ -18,31 +18,17 @@
         <div class="c-goodsli-absolute">
           <div class="j-switch-color-wrap">
             <div class="gds-li-ratiowrap">
-              <a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="2" title="{{ product.name }}"> <img style="width:405px;height:552px;" src="{{ product.thumb }}" class="j-verlok-lazy loaded" data-was-processed="true" /> </a>
-              <!-- add to bag 用的遮罩 -->
-              <span class="add-result-mask add-bag-mask j-add-result-mask-556827" style="display: none;">
-     <div class="result-txt j-result-txt" style="display: none;"></div>
-     <div class="la-ball-pulse la-ball-pulse-sm j-la-ball-pulse">
-      <div></div>
-      <div></div>
-      <div></div>
-     </div> </span>
-              <!-- 切换颜色 用的遮罩 -->
-              <span class="add-result-mask j-color-loader-556827" style="display: none;">
-     <div class="la-ball-pulse la-ball-pulse-sm">
-      <div></div>
-      <div></div>
-      <div></div>
-     </div> </span>
+              <a href="{{ product.href }}" class="gds-li-ratioimg j-item-msg j-item-msg-a" target="_blank" index="2" title="{{ product.name }}"> <img style="width:100%;height:100%;" src="{{ product.thumb }}"data-was-processed="true" /> </a>
+
             </div>
-            <a class="goods-name" href="{{ product.href }}" target="_blank" title="{{ product.name }}">{{ product.name }}</a>
+
+            <a class="" href="{{ product.href }}" target="_blank" title="{{ product.name }}">{{ product.name }}</a>
             <div class="btm-price j-gds-li-price j-gds-li-price-556827 she-show" style="display: none">
               <span class="disc-price j-price-discount" style="display: none"></span>
               <span class="btm-sale j-price-sale-txt" style="display: none">(Sale)</span>
               <span class="orig-price j-price-original">{{ product.price }}</span>
             </div>
-            <!-- quick view & add to bag -->
-            {#<button class="she-btn-white-opacity she-btn-s quickv-btn j-gds-li-qvbtn" data-id="556827" data-index="2"> QUICK VIEW </button>#}
+
             <button class="she-btn-white-opacity she-btn-s quickv-btn j-qv-loading" style="display: none;">
               <div class="la-ball-pulse">
                 <div></div>

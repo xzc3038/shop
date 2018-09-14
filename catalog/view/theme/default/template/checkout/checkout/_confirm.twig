@@ -1,59 +1,108 @@
-<div class="checkout-section" id="cart-section">
-  <h4>{{ text_checkout_cart }}</h4>
+  <div class="checkout-section" id="cart-section" style="margin-top:30px;">
+
   {% if redirect %}
     <script type="text/javascript"><!--
     location = '{{ redirect }}';
     //--></script>
   {% else %}
-    <div class="table-responsive">
-      <table class="table table-hover" style="border: 0px;">
-        <thead>
-          {#<tr>#}
-            {#<td class="text-left"></td>#}
-            {#<td class="text-left">{{ column_name }}</td>#}
-            {#<td class="text-left">{{ column_model }}</td>#}
-            {#<td class="text-right">{{ column_quantity }}</td>#}
-            {#<td class="text-right">{{ column_price }}</td>#}
-            {#<td class="text-right">{{ column_total }}</td>#}
-          {#</tr>#}
-        </thead>
+    <div id="shopping_cart_do_price" class="cart-address-state-wrap cart-dt-wrap">
+      <div class="cart-placeorder-header cat-address-state ">
+        <h2>
+          Shopping Bag
+        </h2>
+      </div>
+      <input id="update_shopping_price_type" name="update_shopping_price_type" value="checkout" type="hidden">
+      <table class="cart-list-details" width="100%" cellspacing="0" cellpadding="0" border="0">
         <tbody>
-          {#{% for product in products %}#}
-          {#<tr>#}
-            {#<td style="width:60px"><img src="{{ product.image }}" class="thumbnail"></td>#}
-            {#<td class="text-left">{{ product.name }}#}
-              {#{% for option in product.option %}#}
-              {#<br />#}
-              {#&nbsp;<small> - {{ option.name }}: {{ option.value }}</small>#}
-              {#{% endfor %}#}
-            {#</td>#}
-            {#<td class="text-left">{{ product.model }}</td>#}
-            {#<td class="text-right">{{ product.quantity }}</td>#}
-            {#<td class="text-right">{{ product.price }}</td>#}
-            {#<td class="text-right">{{ product.total }}</td>#}
-          {#</tr>#}
-          {#{% endfor %}#}
-          {#{% for voucher in vouchers %}#}
-          {#<tr>#}
-            {#<td></td>#}
-            {#<td class="text-left">{{ voucher.description }}</td>#}
-            {#<td class="text-left"></td>#}
-            {#<td class="text-right">1</td>#}
-            {#<td class="text-right">{{ voucher.amount }}</td>#}
-            {#<td class="text-right">{{ voucher.amount }}</td>#}
-          {#</tr>#}
-          {#{% endfor %}#}
-        &nbsp;
+        <tr class="cart-list-details-title">
+          <th class="gray" style="width: 13.7%;">
+          </th>
+          <th class="gray" style="width: 43.1%;">
+              {{ column_name }}
+          </th>
+          <th class="gray" style="width: 8.2%;">
+              {{ column_quantity }}
+          </th>
+          <th class="gray" style="width: 26.8%;">
+              {{ column_price }}
+          </th>
+          <th class="gray" style="width: 8.2%;">
+              {{ column_total }}
+          </th>
+        </tr>
+        {% for product in products %}
+        <tr id="basket_cont" class="cart-item-details">
+          <td class="pic">
+            <img src="{{ product.image }}">
+          </td>
+          <td class="cart-item-details-info gray">
+            <a href="">
+                {{ product.name }}
+            </a>
+              {% for option in product.option %}
+                <br />
+                &nbsp;<small> {{ option.name }}: {{ option.value }}</small>
+              {% endfor %}
+          </td>
+          <td class="quantity-td gray">
+              {{ product.quantity }}
+          </td>
+          <td class="cart-check-price shoppingtop_price_and_discount discount_goods_price_389423017_385492">
+              {{ product.price }}
+          </td>
+          <td class="sum-td">
+              {{ product.total }}
+          </td>
+        </tr>
+        {% endfor %}
         </tbody>
-        <tfoot>
-          {% for total in totals %}
-          <tr>
-            <td colspan="5" class="text-left"><strong style="color: #000;">{{ total.title }}:</strong></td>
-            <td class="text-right">{{ total.text }}</td>
-          </tr>
-          {% endfor %}
-        </tfoot>
       </table>
+      <div class="basket_totalPrice">
+      </div>
     </div>
   {% endif %}
+    <div class="right-ctn " style="width: 393px; right: 41.8333px; top: auto; visibility: visible; display: block;">
+      <div class="order-sum">
+        {#<div class="cart-placeorder-header">#}
+          {#<h2> Order Summary </h2>#}
+        {#</div>#}
+        <div class="order-summary">
+          <div id="shopping_cart_do_price_total" style="margin-top: 10px;">
+
+              {% for total in totals %}
+                <div class="price-total-item" >
+                  <div class="total-t" style="float: left"> {{ total.title }} </div>
+                  <div class="total" id="shipping_total" style="margin-left: 160%;">
+                    <div class="item_total goods_price_current_price" >
+                        {{ total.text }}
+                    </div>
+                  </div>
+                </div>
+                  <br>
+              {% endfor %}
+
+
+          </div>
+          {#<div class="ac-card">#}
+            {#<h2 class="she-h1"> </h2>#}
+            {#<div class="card-img">#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-ar-codcard_v9d7b3b8.png" class="card-img-ar" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-2-visa_vd35286a.png" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-3-mastercard_vf9b0f97.png" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-8-maestro_v781c6fd.png" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-7-american-express_vb186b55.png" class="card-img-common" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/cartnet@2x_v20ad514.png" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-1-paypal_va336d76.png" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/n-16-ideal_v42c1656.png" class="card-img-common" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/oxxo@2x_v0ac9136.png" />#}
+              {#<img src="/catalog/view/theme/default/image/cart/wire_transfer@2x_v0896cc5.png" />#}
+            {#</div>#}
+          {#</div>#}
+        </div>
+      </div>
+
+    </div>
+    <input class="she-btn-black she-btn-xl checkout j-checkout-btn" name="checkout" value="{{ button_checkout }}" type="button" style="margin-left: 160%" id="button-submit"/>
 </div>
+
+
