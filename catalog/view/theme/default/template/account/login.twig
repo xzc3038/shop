@@ -7,7 +7,7 @@
     <div class="col-sm-3 login-con">
       <div class="sign-in">
         <div class="sign-in-title">
-          <h2>{{ text_account }}</h2>
+          <h2>{{ text_login }}</h2>
             {% if success %}
               <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
             {% endif %}
@@ -21,7 +21,7 @@
             <form name="theForm" method="post" class="j-login-form" action="">
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">{{ entry_customer }}:</span>
+                  <span class="undone">{{ entry_email }}:</span>
                 </div>
                 <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
                   {% if error_warning %}
@@ -56,7 +56,7 @@
                     <div></div>
                     <div></div>
                   </div> </button>
-                <input class="submit-button she-btn-black she-btn-l j-signin-submit" name="submit" value="{{ text_sign }}" type="submit" />
+                <input class="submit-button she-btn-black she-btn-l j-signin-submit" name="submit" value="{{ text_login }}" type="submit" />
                 <p> <a class="forget-sign-in" href="{{ forgotten }}">{{ text_forgotten }}</a> </p>
               </div>
               {#<div class="sign-in-con-divide">#}
@@ -90,7 +90,7 @@
               <p id="register_forbiden" class="register_more_title" style="display: none; text-align: left;">We're so sorry to inform you that your IP is limited to register more . For further help, please <a onclick="showPreRobot()" style="color: rgb(0, 0, 255);" href="javascript:vold(0)">contact us</a> !</p>
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">{{ entry_fullname }}:</span>
+                  <span class="undone">{{ entry_lastname }}:</span>
                 </div>
                 <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
 
@@ -103,7 +103,7 @@
               </div>
               <div class="list-item">
                 <div class="item-title">
-                  <span class="undone">{{ entry_phone }}:</span>
+                  <span class="undone">{{ entry_telephone }}:</span>
                 </div>
                 <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
                   {% if error_telephone_x %}

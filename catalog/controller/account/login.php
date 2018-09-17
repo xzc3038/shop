@@ -112,6 +112,8 @@ class ControllerAccountLogin extends Controller {
 			$data['password'] = '';
 		}
 
+//        $data['text_register'] = $this->language->get('text_register');
+
 //		$data['column_left'] = $this->load->controller('common/column_left');
 //		$data['column_right'] = $this->load->controller('common/column_right');
 //		$data['content_top'] = $this->load->controller('common/content_top');
