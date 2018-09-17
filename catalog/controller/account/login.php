@@ -6,7 +6,7 @@ class ControllerAccountLogin extends Controller {
 		if ($this->customer->isLogged()) {
 			$this->response->redirect($this->url->link('account/account'));
 		}
-
+//        var_dump(111);
 		$this->load->language('account/login');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -112,7 +112,7 @@ class ControllerAccountLogin extends Controller {
 			$data['password'] = '';
 		}
 
-//        $data['text_register'] = $this->language->get('text_register');
+        $data['text_new_customer'] = $this->language->get('text_new_customer');
 
 //		$data['column_left'] = $this->load->controller('common/column_left');
 //		$data['column_right'] = $this->load->controller('common/column_right');
@@ -120,7 +120,7 @@ class ControllerAccountLogin extends Controller {
 //		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-//var_dump($data);
+//var_dump($data['text_new_customer']);
 		$this->response->setOutput($this->load->view('account/login', $data));
 	}
 

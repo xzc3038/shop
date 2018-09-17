@@ -8,23 +8,18 @@
       <div class="sign-in">
         <div class="sign-in-title">
           <h2>{{ text_login }}</h2>
-            {% if success %}
-              <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
-            {% endif %}
-            {% if error_warning %}
-              <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
-            {% endif %}
+
         </div>
         <div class="sign-in-detail">
           <p class="login-prompt" id="login_error"></p>
           <div class="list-input">
-            <form name="theForm" method="post" class="j-login-form" action="">
+            <form name="theForm" method="post" class="j-login-form" action="{{ login }}">
               <div class="list-item">
                 <div class="item-title">
                   <span class="undone">{{ entry_email }}:</span>
                 </div>
                 <ul style="position: absolute; margin-top: 36px; min-width: 271px; visibility: hidden; z-index: 11;" class="emailist"></ul>
-                  {% if error_warning %}
+                  {% if error_login %}
                     <input class="inputMailList" name="email" value="" style="border-color:red;" required id="returning_email" type="text" />
                     <div class="input-error-txt" style="color:red;">{{ error_login }}</div>
                       {#<p class="login-title-p"> <font id="login_password_tip"></font> </p>#}
@@ -37,7 +32,7 @@
                 <div class="item-title">
                   <span class="undone">{{ entry_password }}:</span>
                 </div>
-                {% if error_warning %}
+                {% if error_passwords %}
                 <input name="password" value="" id="returning_password" required style="border-color:red;" type="password" />
                 <div class="input-error-txt" style="color:red;">{{ error_passwords }}</div>
                 {#<p class="login-title-p"> <font id="login_password_tip"></font> </p>#}
@@ -59,18 +54,6 @@
                 <input class="submit-button she-btn-black she-btn-l j-signin-submit" name="submit" value="{{ text_login }}" type="submit" />
                 <p> <a class="forget-sign-in" href="{{ forgotten }}">{{ text_forgotten }}</a> </p>
               </div>
-              {#<div class="sign-in-con-divide">#}
-                {#<span>Or</span>#}
-              {#</div>#}
-              {#<div class="sign-in-facebook">#}
-                {#<div class="facebook-lodin">#}
-                  {#<a class="she-btn-black she-btn-l" href="javascript:fbLoginBegin('login');"><i class="iconfont facebook-icon"></i>Sign in With Facebook</a>#}
-
-                {#</div>#}
-                {#<div style="margin-top: 16px;">#}
-                  {#<span class="facebook_title"> <strong>US$3 off</strong> for the first order <em>Review&amp;earn extra <strong style="display: none;">5</strong> <strong>100</strong> points</em> </span>#}
-                {#</div>#}
-              {#</div>#}
             </form>
           </div>
         </div>
@@ -133,10 +116,10 @@
 
                 {#<p class="login-title-p"> <font id="error_password"></font> </p>#}
                   {% if error_password_x %}
-                    <input name="password" size="" maxlength="32" id="password" required style="border-color: red;" onkeyup="this.value=this.value.replace(/\s+/g,'')" type="password" />
+                    <input name="password" size="" maxlength="32" id="password" required style="border-color: red;"  type="password" />
                     <div class="input-error-txt" style="color: red;">{{ error_password }}</div>
                       {% else %}
-                    <input name="password" size="" maxlength="32" id="password" required onkeyup="this.value=this.value.replace(/\s+/g,'')" type="password" />
+                    <input name="password" size="" maxlength="32" id="password" required type="password" />
                   {% endif %}
               </div>
               <div class="list-item">

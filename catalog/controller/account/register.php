@@ -7,7 +7,7 @@ class ControllerAccountRegister extends Controller {
 			$this->response->redirect($this->url->link('account/account'));
 		}
 
-		$this->load->language('account/register');
+		$this->load->language('account/login');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -17,7 +17,7 @@ class ControllerAccountRegister extends Controller {
 		$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
 		$this->load->model('account/customer');
-
+//var_dump($_POST);
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 
 			unset($this->session->data['guest']);
@@ -49,7 +49,7 @@ class ControllerAccountRegister extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_register'),
-			'href' => $this->url->link('account/register')
+			'href' => $this->url->link('account/login')
 		);
 		$data['text_account_already'] = sprintf($this->language->get('text_account_already'), $this->url->link('account/login'));
 
@@ -211,7 +211,7 @@ class ControllerAccountRegister extends Controller {
 //		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-
+//var_dump($data);
 		$this->response->setOutput($this->load->view('account/login', $data));
 	}
 
@@ -297,8 +297,8 @@ class ControllerAccountRegister extends Controller {
 //				$this->error['warning'] = sprintf($this->language->get('error_agree'), $information_info['title']);
 //			}
 //		}
-		
-		return !$this->error;
+        $this->response->setOutput($this->load->view('account/login', !$this->error));
+//		return !$this->error;
 	}
 
 	public function customfield() {
