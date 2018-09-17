@@ -1,25 +1,23 @@
 <?php
-/**
- *
- * @copyright        2017 www.guangdawangluo.com - All Rights Reserved
- * @author           opencart.cn <support@opencart.cn>
- * @created          2016-10-22 09:12:56
- * @modified         2016-11-05 17:35:21
- */
-
 // Heading
-$_['heading_title']      = 'OpenCart';
+$_['heading_title']        = 'MyCnCart';
 
 // Text
-$_['text_profile']       = '账号信息';
-
-$_['text_store']         = '网店名称';
-$_['text_help']          = '帮助';
-$_['text_homepage']      = '技术支持';
-$_['text_support']       = '技术论坛';
-$_['text_documentation'] = '支持文档';
-$_['text_logout']        = '退出登录';
-$_['text_sort']          = '排序';
-$_['text_delete']        = '删除';
-$_['text_delete']        = '删除';
-$_['text_main_image']    = '设置为主图';
+$_['text_order']           = '订单';
+$_['text_processing_status'] = '处理中';
+$_['text_complete_status'] = '已完成';
+$_['text_customer']        = '会员';
+$_['text_online']          = '在线会员';
+$_['text_approval']        = '待审核';
+$_['text_product']         = '商品';
+$_['text_stock']           = '库存不足';
+$_['text_review']          = '评论';
+$_['text_return']          = '退货';
+$_['text_affiliate']       = '加盟';
+$_['text_store']           = '商店';
+$_['text_front']           = '商店前台';
+$_['text_help']            = '帮助';
+$_['text_homepage']        = 'MyCnCart官网';
+$_['text_support']         = '支持论坛';
+$_['text_documentation']   = '手册教程';
+$_['text_logout']          = '安全退出';

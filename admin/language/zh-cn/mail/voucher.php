@@ -1,18 +1,9 @@
 <?php
-/**
- *
- * @copyright        2017 www.guangdawangluo.com - All Rights Reserved
- * @author           opencart.cn <support@opencart.cn>
- * @created          2016-10-22 09:12:56
- * @modified         2016-11-05 17:35:25
- */
 
 // Text
-$_['text_success']  = '成功：礼品券已修改！';
-$_['text_subject']  = '您收到来自 %s 的礼品券';
-$_['text_greeting'] = '恭喜，您收到了一份礼品券，价值 %s';
-$_['text_from']     = '礼品券由 %s 发送';
-$_['text_message']  = '留言';
-$_['text_redeem']   = '要使用此礼品券时，您只需记录下兑换代码 <b>%s</b>，通过以下网址并购买商品，在购物车页面上输入礼品券代码即可。';
-$_['text_footer']   = '如您有任何问题，请回复此邮件。';
-$_['text_sent']     = '成功：礼品券邮件已发送！';
+$_['text_subject']  = '您已从 %s 收到了一张礼品券';
+$_['text_greeting'] = '恭喜，您收到了一张价值 %s 的礼品券';
+$_['text_from']     = '%s 将本礼品券送给您';
+$_['text_message']  = '附加信息';
+$_['text_redeem']   = '如果想使用本礼品券，请记录下礼品券代码（本礼品券代码为 <b>%s</b>），然后点击如下链接点击您想购买的商品。您可以在账单结算前在购物车页面使用本礼品券。';
+$_['text_footer']   = '如有任何问题，请回复本邮件。';

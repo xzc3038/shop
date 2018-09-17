@@ -1,47 +1,33 @@
 <?php
-/**
- * description
- *
- * @copyright        2017/11/29 opencart.cn - All Rights Reserved
- * @link             http://www.guangdawangluo.com
- * @author           Eric Yang <yangyw@opencart.cn>
- * @created          2017/11/29 14:22
- * @modified         2017/11/29 14:22
- */
 
 // Heading
-$_['heading_title']		= 'City';
+$_['heading_title']          = '城市';
 
 // Text
-$_['text_success']		= 'Success: City have been modified!';
-$_['text_list']         = 'City List';
-$_['text_add']          = 'Add City';
-$_['text_edit']         = 'Modify City';
-$_['text_city_area']    = 'Province';
-$_['text_city']         = 'City';
-$_['text_county']       = 'Area / County';
+$_['text_success']           = '成功: 已修改城市！';
+$_['text_list']              = '城市列表';
+$_['text_add']               = '添加城市';
+$_['text_edit']              = '编辑城市';
 
 // Column
-$_['column_name']		= 'County Name';
-$_['column_zone']		= 'Province';
-$_['column_status']		= 'Status';
-$_['column_action']		= 'Action';
+$_['column_name']            = '城市名称';
+$_['column_code']            = '城市编码';
+$_['column_country']         = '国家';
+$_['column_zone']            = '省份';
+$_['column_action']          = '操作';
 
 // Entry
-$_['entry_name']		= 'City Name：';
-$_['entry_country']		= 'Country：';
-$_['entry_zone']		= 'Province：';
-$_['entry_status']		= 'Status：';
-$_['entry_parent']		= 'Upper Level：';
-$_['text_province']		= 'Province';
-$_['text_city']			= 'City';
-$_['entry_filter_name']	= 'Search keywords';
-$_['text_search']		= 'Filter';
-$_['column_city']		= 'City';
-$_['column_type']       = 'Type';
+$_['entry_status']           = '状态';
+$_['entry_name']             = '城市名称';
+$_['entry_code']             = '城市编码';
+$_['entry_country']          = '国家';
+$_['entry_zone']          	 = '省份';
 
 // Error
-$_['error_permission']	= 'Warning：you haven\'t permission to modify city！';
-$_['error_name']		= 'city name\'s characters must between 3 and 128 characters！';
-$_['error_zone']		= 'please select province！';
-$_['error_country']		= 'please select country！';
+$_['error_permission']       = '警告: 无权限修改城市！';
+$_['error_name']             = '城市名称必须为3-128字符！';
+$_['error_default']          = '警告: 不能删除此城市，该城市已被关联为商店默认城市！';
+$_['error_store']            = '警告: 不能删除此城市，该城市已被关联到 %s 个商店！';
+$_['error_address']          = '警告: 不能删除此城市，该城市已被关联到 %s 地址簿！';
+$_['error_affiliate']        = '警告: 不能删除此城市，该城市已被关联到 %s 推广会员！';
+$_['error_city_to_geo_city'] = '警告: 不能删除此城市，该城市已被关联到 %s 个区域群组中的城市！';

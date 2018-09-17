@@ -1,29 +1,22 @@
 <?php
-/**
- *
- * @copyright        2017 www.guangdawangluo.com - All Rights Reserved
- * @author           opencart.cn <support@opencart.cn>
- * @created          2016-10-22 09:12:56
- * @modified         2016-11-05 17:35:24
- */
 
 // Heading
-$_['heading_title']    = '退货动作';
+$_['heading_title']    = '退货操作';
 
 // Text
-$_['text_success']     = '成功：退货动作已修改！';
-$_['text_list']        = '退货动作列表';
-$_['text_add']         = '添加退货动作';
-$_['text_edit']        = '编辑退货动作';
+$_['text_success']     = '成功: 已修改退货操作！';
+$_['text_list']        = '退货操作列表';
+$_['text_add']         = '添加退货操作';
+$_['text_edit']        = '编辑退货操作';
 
 // Column
-$_['column_name']      = '退货动作名称';
-$_['column_action']    = '管理';
+$_['column_name']      = '退货操作名称';
+$_['column_action']    = '操作';
 
 // Entry
-$_['entry_name']       = '退货动作名称';
+$_['entry_name']       = '退货操作名称';
 
 // Error
-$_['error_permission'] = '错误：您没有权限修改退货动作！';
-$_['error_name']       = '退货动作名必须在 3 至 64 个字符之间！';
-$_['error_return']     = '错误：该退货动作不能删除，%s 退货商品正在使用！';
+$_['error_permission'] = '警告: 无权限修改退货操作！';
+$_['error_name']       = '退货操作名称必须为3-64字符！';
+$_['error_return']     = '警告: 不能删除此退货操作，该退货操作已被关联到 %s 个退货商品！';
