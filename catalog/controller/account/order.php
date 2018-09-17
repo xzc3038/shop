@@ -257,7 +257,7 @@ class ControllerAccountOrder extends Controller {
 			// History
 			$data['histories'] = array();
 
-			$results = $this->model_account_order->getOrderHistories($this->request->get['order_id']);
+//			$results = $this->model_account_order->getOrderHistories($this->request->get['order_id']);
 
 //			foreach ($results as $result) {
 //				$data['histories'][] = array(
@@ -266,9 +266,9 @@ class ControllerAccountOrder extends Controller {
 //					'comment'    => $result['notify'] ? nl2br($result['comment']) : ''
 //				);
 //			}
-
+			$results = $this->model_account_order->getOrderHistorie($this->request->get['order_id']);
             foreach ($results as $result) {
-                $data['histories'] = $result['status'];
+                $data['histories'] = $result['order_status_id'];
             }
 
 			$data['continue'] = $this->url->link('account/order');

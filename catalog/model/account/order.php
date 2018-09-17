@@ -183,4 +183,10 @@ class ModelAccountOrder extends Model {
 
         return $query->rows;
     }
+
+    public function getOrderHistorie($order_id) {
+        $query = $this->db->query("SELECT order_status_id FROM " . DB_PREFIX . "order_history WHERE order_id = '" . (int)$order_id . "'");
+
+        return $query->rows;
+    }
 }

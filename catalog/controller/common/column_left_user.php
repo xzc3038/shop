@@ -68,7 +68,39 @@ class ControllerCommonColumnLeftUser extends Controller {
 				}
 			}
 		}
+        $data['account'] = $this->url->link('account/account');
+        $data['edit'] = $this->url->link('account/edit');
+        $data['order'] = $this->url->link('account/order');
+        $data['return'] = $this->url->link('account/return');
+        $data['tickets'] = $this->url->link('account/tickets');
+        $data['transaction'] = $this->url->link('account/transaction');
+        $data['address'] = $this->url->link('account/address');
+        $data['password'] = $this->url->link('account/password');
+        $data['wishlist'] = $this->url->link('account/wishlist');
+        $data['reward'] = $this->url->link('account/reward');
+        $data['logout'] = $this->url->link('account/logout');
 
+        $this->load->language('account/account');
+        $data['text_account'] =  $this->language->get('text_account');
+        $data['text_edit'] =  $this->language->get('text_edit');
+        $data['text_my_orders'] =  $this->language->get('text_my_orders');
+        $data['text_password'] =  $this->language->get('text_password');
+        $data['text_transaction'] =  $this->language->get('text_transaction');
+        $data['text_return'] =  $this->language->get('text_return');
+
+        $this->load->language('account/address');
+        $data['text_address_book'] =  $this->language->get('text_address_book');
+
+        $this->load->language('account/logout');
+        $data['text_logout'] =  $this->language->get('text_logout');
+
+        $this->load->language('account/reward');
+        $data['text_logout'] =  $this->language->get('text_logout');
+
+        $this->load->language('account/wishlist');
+        $data['heading_title'] =  $this->language->get('heading_title');
+
+//var_dump($data);
 		return $this->load->view('common/column_left_user', $data);
 	}
 }
