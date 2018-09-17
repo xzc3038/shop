@@ -73,6 +73,9 @@ class ControllerCommonHeader extends Controller {
 
 		$data['text_logged'] = sprintf($this->language->get('text_logged'), $this->url->link('account/account'), $this->customer->getFullName(), $this->url->link('account/logout'));
 
+        $data['text_account'] = $this->language->get('text_account');
+        $data['text_register'] = $this->language->get('text_register');
+
 		$data['home'] = $this->url->link('common/home');
 		$data['wishlist'] = $this->url->link('account/wishlist');
 		$data['logged'] = $this->customer->isLogged();
@@ -98,7 +101,7 @@ class ControllerCommonHeader extends Controller {
 
         $this->load->model('account/customer');
         $data['user'] = $this->model_account_customer->getCustomer($this->customer->getId());
-
+//var_dump($data);
 		return $this->load->view('common/header', $data);
 	}
 }
