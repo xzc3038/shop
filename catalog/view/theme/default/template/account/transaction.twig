@@ -57,9 +57,10 @@
               <span class="iconfont" style="font-size: 24px;"></span>
             </div>
             <div class="title-con2">
-              <p>Wallet History <a href="http://www.shein.com/contact-us.html" target="_top"> Contact Us </a></p>
+              <p>{{ text_transaction }}</p>
             </div>
           </div>
+            {% if  transactions%}
           <div class="history-table">
             <table class="table" style="border: 1px solid rgb(229, 229, 229);">
               <thead>
@@ -72,6 +73,7 @@
               </tr>
               </thead>
               <tbody>
+
               {% for transaction in transactions %}
                 <tr>
                   <td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">{{ transaction.date_added }}</td>
@@ -81,9 +83,13 @@
                   {#<td  style="border-left: 1px solid rgb(221, 221, 221); text-transform: uppercase; text-align: center;">324</td>#}
                 </tr>
               {% endfor %}
+
               </tbody>
             </table>
           </div>
+            {% else %}
+                <div style="text-align: center">{{ text_empty }}</div>
+            {% endif %}
           {#<div class="popup_uploading_bg" id="popup_uploading" style="display: none;">#}
             {#<div class="popup_vote_color" onclick="hide_detail()"></div>#}
             {#<div class="popup_uploading_list popup_wallet_list">#}

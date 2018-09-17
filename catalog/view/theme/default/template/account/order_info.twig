@@ -30,24 +30,6 @@
               {#</ul>#}
             {#</div>#}
           {#</div>#}
-          <div class="detail-hint">
-            <div class="hint-list">
-              <ul>
-                {#<li class="ticket_status_con"> <a class="ga-tk-order-detail-customer-service" href="https://www.shein.com/index.php?model=zendesk&amp;action=submitTicket&amp;billno=YCB19086"> <i class="iconfont help-icon" style="margin-right: 5px;"></i>Customer Service#}
-                    <div class="help_ticket" style="display: none;">
-                      <span class="arrow"></span>
-                      <img src="helpl_vc723994.gif" class="ticket_tips" style="display: none;" />
-                      <div class="ticket_tips_hide ticket-hover">
-                        Send us your request simply by submitting a ticket.
-                      </div>
-                    </div> </a>
-                  <div class="already_submit" style="display: none;">
-                    <em data-show="1">x</em>You have already submitted a similar Customer Service ticket .You can go to My Tickets to check the progress of your ticket and/or submit an update
-                    <a class="view_ticket" href="https://www.shein.com/index.php?model=ticket&amp;action=show&amp;ticket=">&gt;&gt;View ticket details</a>
-                  </div> </li>
-              </ul>
-            </div>
-          </div>
         </div>
         <div class="detail-table table-responsive " id="return-info">
           <table class="table table-striped">
@@ -69,7 +51,7 @@
                     <div class="media-body">
                       <ul class="media-list" style="margin: 0px;">
                         <li>{{  product.name }}</li>
-                        <li class="order_info_li j-good-size-attr">Size:{{ product.option[5].value }}</li>
+                        {#<li class="order_info_li j-good-size-attr">Size:{{ product.option[5].value }}</li>#}
                       </ul>
                     </div>
                   </div>
@@ -78,7 +60,7 @@
                 <td>{{ product.price }}</td>
                 <td><span class="default_price">{{ product.total }}</span></td>
                 <td class="text-right" style="white-space: nowrap;">{% if product.reorder %} <a href="{{ product.reorder }}" data-toggle="tooltip" title="{{ button_reorder }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a> {% endif %} <a href="{{ product.return }}" data-toggle="tooltip" title="{{ button_return }}" class="btn btn-danger"><i class="fa fa-reply"></i></a>
-                  {% if  histories == 'Complete' or histories == '已完成' %}
+                  {% if  histories == 5 %}
                     <a href="{{ product.review }}" data-toggle="tooltip"  class="btn btn-primary"><i class="fa fa-commenting"></i></a>
                   {% endif %}
                 </td>

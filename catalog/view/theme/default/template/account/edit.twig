@@ -2,37 +2,6 @@
    {{ column_left_user }}
     <div class="she-center col-sm-9 col-xs-12 per-setting">
       <h3 class="she-tl-h3">{{ heading_title }}</h3>
-      <div class="info-line_sucess" id="info-line_sucessid1" style="display: none;">
-        <p class="info-line_sucess_font pa"><em class="pic_warm"></em>We only resend three times per day, please verify tomorrow.</p>
-        <div class="info-line_sucess_left">
-          <img src="tunoff_v0404eb0.png" alt="" />
-        </div>
-      </div>
-      <div class="info-line_sucess" id="info-line_sucessid2" style="display: none;">
-        <p class="info-line_sucess_font pa"><em class="pic_right"></em>The confirmation email has been sent to you.</p>
-        <div class="info-line_sucess_left">
-          <img src="tunoff_v0404eb0.png" alt="" />
-        </div>
-      </div>
-      <div class="info-line_sucess" id="info-line_sucessid3" style="display: none;">
-        <p class="info-line_sucess_font pa"><em class="pic_warm"></em>The confirmation email can only be sent once per minute.</p>
-        <div class="info-line_sucess_left">
-          <img src="tunoff_v0404eb0.png" alt="" />
-        </div>
-      </div>
-      <div class="post_accset">
-        <div class="post_accset_color"></div>
-        <div class="post_accset_font">
-          <h1>Mail sent</h1>
-          <p id="post_accset_font_p"></p>
-          <div class="off">
-            OK
-          </div>
-          <div class="turnoff">
-            x
-          </div>
-        </div>
-      </div>
       <div class="col-sm-3  col-xs-3 account-setting-upload">
         <div class="email-help-tip">
           <span class="triangle"></span>
@@ -66,7 +35,7 @@
             </div>
             {#<span class="verified" id="vetify_status">&nbsp;<em class="pic_sucess"></em> Verified</span>#}
             <div class="form-group">
-              <label for="inputname" class="labeltext">{{ entry_fullname }}:<i>*</i></label>
+              <label for="inputname" class="labeltext">{{ entry_lastname }}:<i>*</i></label>
               <input name="fullname" class="form-control inputtext" id="inputname" placeholder="{{ entry_fullname }}" value="{{ fullname }}" style="height: 36px;" maxlength="10" type="text" />
                 {% if error_fullname %}
                   <div class="text-danger" style="color: red">{{ error_fullname }}</div>
